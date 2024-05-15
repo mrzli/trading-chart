@@ -7,6 +7,22 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@gmjs/apply-function':
+        specifier: ^0.0.3
+        version: 0.0.3
+      '@gmjs/array-create':
+        specifier: ^0.0.1
+        version: 0.0.1
+      '@gmjs/data-container-util':
+        specifier: ^0.0.1
+        version: 0.0.1
+      '@gmjs/number-util':
+        specifier: ^0.0.3
+        version: 0.0.3
+      '@gmjs/value-transformers':
+        specifier: ^0.0.11
+        version: 0.0.11
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^1.3.5
@@ -897,8 +913,44 @@ packages:
   '@fal-works/esbuild-plugin-global-externals@2.1.2':
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
 
+  '@gmjs/apply-function@0.0.3':
+    resolution: {integrity: sha512-J+GYW5yTBEjryQsqm7rQn4KXr9aoDExyXhzxa6LwOy0UDKSceYVmLAex6ut1hN4RYi8FsXZIJGeAdI1w5qaRfg==}
+    engines: {node: '>=18.17.0'}
+
+  '@gmjs/array-create@0.0.1':
+    resolution: {integrity: sha512-sgahvPdokMh0+rpeaMXNalWVWigsckVVmD++kXCAEdx34nnxj+Xv5xsfkIffNbiu7PJe+RBb1Aj6W8hH7KbkIQ==}
+    engines: {node: '>=16.0.0'}
+
+  '@gmjs/compose-function@0.0.1':
+    resolution: {integrity: sha512-z4wCZ9CkmtDts7hxa/nS2gTbz5SlD4ofMK8MXeJfcQr5YW5hJ6j9uqykkhJQFBvMBs6uMhdAoTYo+9arh7M31Q==}
+    engines: {node: '>=16.0.0'}
+
+  '@gmjs/compose-function@0.0.2':
+    resolution: {integrity: sha512-QuG9lFPiRzcmjIiHA5EdC8EjvWxGpjGa17WZcunHCUPmca8F7E6dU5WPLoHGrv7r91mjzB+ZMJRunGwXY6XAJQ==}
+    engines: {node: '>=16.0.0'}
+
+  '@gmjs/data-container-util@0.0.1':
+    resolution: {integrity: sha512-mN6k1VWxiFWNSpeS2vr+sTlBleh277RNaTfI4isRjsl8m481EWDXNNoqWy3RVtfAldKMpwO/ppLZRiR6E2bmIw==}
+    engines: {node: '>=16.0.0'}
+
   '@gmjs/eslint-config@0.0.36':
     resolution: {integrity: sha512-GuR0Ruv8ihWm1NIAmdyfP3NAStC9MPxbcU1dj0bkkcQ7kk1cKZlZ+O/8c5ccZxCUtL2FbYvTRok01oLFNhijwQ==}
+
+  '@gmjs/generic-functions@0.0.1':
+    resolution: {integrity: sha512-EysFNLu8R6VR1AivcnY9RKK8SwDRnoQmcWZ/viQqnuroGjobWW+F/z3DCbb1mC3hCISGWO+E0aIy/85nT96veg==}
+    engines: {node: '>=16.0.0'}
+
+  '@gmjs/generic-types@0.0.1':
+    resolution: {integrity: sha512-qsC2OGxamsN3oJ9z1R9TyZh3DouXTA4UDPJMMimIy1m6rbbBmBumFY5w8Bh9/7i4yltVmcx6Ccyt3lGuusVM2Q==}
+    engines: {node: '>=16.0.0'}
+
+  '@gmjs/number-util@0.0.3':
+    resolution: {integrity: sha512-+2Tktd3RdDVttk3OFxdD5U18/Fw6+ejSfT0b9URL5FmRNoYEmRthrEX2yrBdubCeb5ifxOZlHH2YNR3UfspSaA==}
+    engines: {node: '>=16.0.0'}
+
+  '@gmjs/value-transformers@0.0.11':
+    resolution: {integrity: sha512-pTVqbDwmjiLlNYigI18qm/RoS7OYiSFq3r0Zn7ynp8xI8dW2MUdIi41WZIUOcpiaWRqcYbpvvtwxuxLVxuiUEg==}
+    engines: {node: '>=18.17.0'}
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -5520,6 +5572,32 @@ snapshots:
 
   '@fal-works/esbuild-plugin-global-externals@2.1.2': {}
 
+  '@gmjs/apply-function@0.0.3':
+    dependencies:
+      '@gmjs/compose-function': 0.0.2
+      '@gmjs/generic-types': 0.0.1
+      tslib: 2.6.2
+
+  '@gmjs/array-create@0.0.1':
+    dependencies:
+      tslib: 2.6.2
+
+  '@gmjs/compose-function@0.0.1':
+    dependencies:
+      '@gmjs/generic-functions': 0.0.1
+      '@gmjs/generic-types': 0.0.1
+      tslib: 2.6.2
+
+  '@gmjs/compose-function@0.0.2':
+    dependencies:
+      '@gmjs/generic-functions': 0.0.1
+      '@gmjs/generic-types': 0.0.1
+      tslib: 2.6.2
+
+  '@gmjs/data-container-util@0.0.1':
+    dependencies:
+      tslib: 2.6.2
+
   '@gmjs/eslint-config@0.0.36(@typescript-eslint/parser@7.9.0(eslint@9.2.0)(typescript@5.4.5))(prettier@3.2.5)(typescript@5.4.5)':
     dependencies:
       '@eslint/js': 9.2.0
@@ -5546,6 +5624,24 @@ snapshots:
       - prettier
       - supports-color
       - typescript
+
+  '@gmjs/generic-functions@0.0.1':
+    dependencies:
+      tslib: 2.6.2
+
+  '@gmjs/generic-types@0.0.1':
+    dependencies:
+      tslib: 2.6.2
+
+  '@gmjs/number-util@0.0.3':
+    dependencies:
+      tslib: 2.6.2
+
+  '@gmjs/value-transformers@0.0.11':
+    dependencies:
+      '@gmjs/compose-function': 0.0.1
+      '@gmjs/generic-types': 0.0.1
+      tslib: 2.6.2
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
