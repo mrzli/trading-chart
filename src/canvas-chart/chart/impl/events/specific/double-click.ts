@@ -29,15 +29,15 @@ export function createHandlerDoubleClick(
       return;
     }
 
-    const firstIndex = getFirstVisibleIndex(seriesPosition, data.length);
-    const lastIndex = getLastVisibleIndex(seriesPosition, data.length);
+    const firstIndex = getFirstVisibleIndex(seriesPosition, data.items.length);
+    const lastIndex = getLastVisibleIndex(seriesPosition, data.items.length);
 
     let minPrice = Number.MAX_VALUE;
     let maxPrice = Number.MIN_VALUE;
     let hasData = false;
 
     for (let i = firstIndex; i <= lastIndex; i++) {
-      const item = data[i];
+      const item = data.items[i];
       minPrice = Math.min(minPrice, item.low);
       maxPrice = Math.max(maxPrice, item.high);
       hasData = true;

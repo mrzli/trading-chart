@@ -1,18 +1,15 @@
 import { expect, describe, it } from 'vitest';
-import { SeriesPosition, Ohlc } from '../../types';
+import { Ohlc } from '../../types';
 import { getTimeAxisTickValues } from './tick-values';
 import { range } from '@gmjs/array-create';
 import { TickValue } from '../types';
+import { TimeAxisInput } from './types';
 
 describe('tick-values', () => {
-  describe('getTimeAxisRawTickValues()', () => {
+  describe('getTimeAxisTickValues()', () => {
     interface Example {
       readonly description: string;
-      readonly input: {
-        readonly position: SeriesPosition;
-        readonly axisLength: number;
-        readonly data: readonly Ohlc[];
-      };
+      readonly input: TimeAxisInput;
       readonly expected: readonly TickValue[];
     }
 
@@ -72,9 +69,7 @@ describe('tick-values', () => {
 
     for (const example of EXAMPLES) {
       it(example.description, () => {
-        const { position, axisLength, data } = example.input;
-
-        const actual = getTimeAxisTickValues(position, axisLength, data);
+        const actual = getTimeAxisTickValues(example.input);
         expect(actual).toEqual(example.expected);
       });
     }
