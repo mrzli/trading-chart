@@ -10,7 +10,7 @@ export function setCanvasChartData(
   input: CanvasChartInput,
   options: CanvasChartOptions,
   stateWrapper: CanvasChartStateWrapper,
-  data: CanvasChartData
+  data: CanvasChartData,
 ): void {
   stateWrapper.state = {
     ...stateWrapper.state,

@@ -1,4 +1,4 @@
-import { Ohlc, SeriesPosition } from "../../../types";
+import { Ohlc, SeriesPosition } from '../../../types';
 
 export interface TimeAxisInput {
   readonly position: SeriesPosition;

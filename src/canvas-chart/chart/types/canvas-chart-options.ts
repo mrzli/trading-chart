@@ -1,2 +1,1 @@
-export interface CanvasChartOptions {
-}
+export interface CanvasChartOptions {}
