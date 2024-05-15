@@ -1,0 +1,55 @@
+{
+  "name": "@gmjs/trading-chart",
+  "version": "0.0.1",
+  "description": "trading-chart",
+  "private": true,
+  "author": {
+    "name": "Goran Mržljak",
+    "email": "goran.mrzljak@gmail.com",
+    "url": "https://mrzli.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrzli/trading-chart"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint --fix . && prettier --write .",
+    "test": "vitest run --passWithNoTests",
+    "testw": "vitest watch --passWithNoTests",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.3.5",
+    "@gmjs/eslint-config": "^0.0.36",
+    "@storybook/addon-essentials": "^8.1.0",
+    "@storybook/addon-interactions": "^8.1.0",
+    "@storybook/addon-links": "^8.1.0",
+    "@storybook/blocks": "^8.1.0",
+    "@storybook/html": "^8.1.0",
+    "@storybook/html-vite": "^8.1.0",
+    "@storybook/test": "^8.1.0",
+    "@storybook/types": "^8.1.0",
+    "@types/node": "^20.12.12",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.2.0",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "storybook": "^8.1.0",
+    "tailwindcss": "^3.4.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=20.10.0"
+  }
+}
