@@ -1,4 +1,4 @@
-import { SeriesPosition, DataInterval, Interval, Ohlc } from '../../../types';
+import { SeriesPosition, DataInterval, Old, Ohlc } from '../../../types';
 import { MIN_X_AXIS_TICK_DISTANCE } from '../../../helpers/constants';
 import { getTimePerTick } from './shared';
 import { TickValue } from '../../types';
@@ -8,7 +8,7 @@ export function getTimeAxisTickValuesMinute(
   axisLength: number,
   data: readonly Ohlc[],
   dataInterval: DataInterval,
-  interval: Interval,
+  interval: Old,
   timezone: string,
 ): readonly TickValue[] {
   const { itemSpan } = position;

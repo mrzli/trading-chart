@@ -1,4 +1,4 @@
-import { SeriesPosition, DataInterval, Interval, Ohlc } from '../../../types';
+import { SeriesPosition, DataInterval, Old, Ohlc } from '../../../types';
 import { TickValue } from '../../types';
 
 export function getTimeAxisTickValuesWeek(
@@ -6,7 +6,7 @@ export function getTimeAxisTickValuesWeek(
   axisLength: number,
   data: readonly Ohlc[],
   dataInterval: DataInterval,
-  interval: Interval,
+  interval: Old,
 ): readonly TickValue[] {
   return [];
 }

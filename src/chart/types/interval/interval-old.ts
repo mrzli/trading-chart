@@ -50,7 +50,7 @@ export interface IntervalYear extends IntervalBase {
   readonly value: 1;
 }
 
-export type Interval =
+export type Old =
   | IntervalSecond
   | IntervalMinute
   | IntervalHour

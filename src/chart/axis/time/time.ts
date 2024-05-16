@@ -1,5 +1,5 @@
 import { invariant } from '@gmjs/assert';
-import { DataInterval, Interval, Ohlc, SeriesPosition } from '../../types';
+import { DataInterval, Old, Ohlc, SeriesPosition } from '../../types';
 import {
   getTimeAxisTickValuesYear,
   getTimeAxisTickValuesMonth,
@@ -16,7 +16,7 @@ export function getTimeAxisTickValues(
   axisLength: number,
   data: readonly Ohlc[],
   dataInterval: DataInterval,
-  interval: Interval,
+  interval: Old,
   timezone: string,
 ): readonly TickValue[] {
   const { unit } = interval;
