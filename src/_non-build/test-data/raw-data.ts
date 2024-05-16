@@ -1,9 +1,8 @@
 /* eslint-disable unicorn/numeric-separators-style */
 import { Ohlc } from '../../chart/types';
 
-export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
+export const TEST_RAW_OHLC_DATA: readonly Omit<Ohlc, 'time'>[] = [
   {
-    time: 1673545380, // '2023-01-12T17:43:00.000Z',
     open: 15103.9,
     high: 15103.9,
     low: 15099.4,
@@ -11,7 +10,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673545440, // '2023-01-12T17:44:00.000Z',
     open: 15103.4,
     high: 15104.4,
     low: 15101.4,
@@ -19,7 +17,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673545500, // '2023-01-12T17:45:00.000Z',
     open: 15103.4,
     high: 15107.9,
     low: 15103.4,
@@ -27,7 +24,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673545560, // '2023-01-12T17:46:00.000Z',
     open: 15107.4,
     high: 15108.4,
     low: 15106.4,
@@ -35,7 +31,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673545620, // '2023-01-12T17:47:00.000Z',
     open: 15106.4,
     high: 15109.9,
     low: 15105.4,
@@ -43,7 +38,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673545680, // '2023-01-12T17:48:00.000Z',
     open: 15108.4,
     high: 15112.9,
     low: 15108.4,
@@ -51,7 +45,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673545740, // '2023-01-12T17:49:00.000Z',
     open: 15109.4,
     high: 15109.4,
     low: 15105.9,
@@ -59,7 +52,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673545800, // '2023-01-12T17:50:00.000Z',
     open: 15106.4,
     high: 15110.4,
     low: 15106.4,
@@ -67,7 +59,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673545860, // '2023-01-12T17:51:00.000Z',
     open: 15109.9,
     high: 15112.4,
     low: 15109.9,
@@ -75,7 +66,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673545920, // '2023-01-12T17:52:00.000Z',
     open: 15110.4,
     high: 15111.4,
     low: 15109.4,
@@ -83,7 +73,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673545980, // '2023-01-12T17:53:00.000Z',
     open: 15109.9,
     high: 15114.9,
     low: 15109.4,
@@ -91,7 +80,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546040, // '2023-01-12T17:54:00.000Z',
     open: 15113.4,
     high: 15113.4,
     low: 15108.9,
@@ -99,7 +87,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546100, // '2023-01-12T17:55:00.000Z',
     open: 15109.9,
     high: 15112.4,
     low: 15109.4,
@@ -107,7 +94,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546160, // '2023-01-12T17:56:00.000Z',
     open: 15110.4,
     high: 15112.9,
     low: 15110.4,
@@ -115,7 +101,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546220, // '2023-01-12T17:57:00.000Z',
     open: 15112.9,
     high: 15113.9,
     low: 15109.9,
@@ -123,7 +108,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546280, // '2023-01-12T17:58:00.000Z',
     open: 15109.4,
     high: 15109.4,
     low: 15106.4,
@@ -131,7 +115,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546340, // '2023-01-12T17:59:00.000Z',
     open: 15105.4,
     high: 15106.9,
     low: 15101.4,
@@ -139,7 +122,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546400, // '2023-01-12T18:00:00.000Z',
     open: 15102.4,
     high: 15106.4,
     low: 15101.4,
@@ -147,7 +129,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546460, // '2023-01-12T18:01:00.000Z',
     open: 15103.4,
     high: 15103.9,
     low: 15097.4,
@@ -155,7 +136,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546520, // '2023-01-12T18:02:00.000Z',
     open: 15099.9,
     high: 15111.4,
     low: 15098.4,
@@ -163,7 +143,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546580, // '2023-01-12T18:03:00.000Z',
     open: 15106.9,
     high: 15109.4,
     low: 15105.9,
@@ -171,7 +150,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546640, // '2023-01-12T18:04:00.000Z',
     open: 15108.4,
     high: 15109.9,
     low: 15104.4,
@@ -179,7 +157,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546700, // '2023-01-12T18:05:00.000Z',
     open: 15106.9,
     high: 15107.9,
     low: 15102.4,
@@ -187,7 +164,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546760, // '2023-01-12T18:06:00.000Z',
     open: 15107.4,
     high: 15111.9,
     low: 15106.4,
@@ -195,7 +171,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546820, // '2023-01-12T18:07:00.000Z',
     open: 15107.9,
     high: 15108.4,
     low: 15102.4,
@@ -203,7 +178,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546880, // '2023-01-12T18:08:00.000Z',
     open: 15105.4,
     high: 15108.4,
     low: 15105.4,
@@ -211,7 +185,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673546940, // '2023-01-12T18:09:00.000Z',
     open: 15105.9,
     high: 15107.9,
     low: 15104.9,
@@ -219,7 +192,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547000, // '2023-01-12T18:10:00.000Z',
     open: 15105.4,
     high: 15107.9,
     low: 15103.4,
@@ -227,7 +199,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547060, // '2023-01-12T18:11:00.000Z',
     open: 15105.9,
     high: 15105.9,
     low: 15101.9,
@@ -235,7 +206,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547120, // '2023-01-12T18:12:00.000Z',
     open: 15103.4,
     high: 15103.4,
     low: 15100.4,
@@ -243,7 +213,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547180, // '2023-01-12T18:13:00.000Z',
     open: 15103.4,
     high: 15108.9,
     low: 15102.9,
@@ -251,7 +220,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547240, // '2023-01-12T18:14:00.000Z',
     open: 15107.4,
     high: 15108.9,
     low: 15106.4,
@@ -259,7 +227,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547300, // '2023-01-12T18:15:00.000Z',
     open: 15106.9,
     high: 15110.4,
     low: 15106.4,
@@ -267,7 +234,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547360, // '2023-01-12T18:16:00.000Z',
     open: 15108.9,
     high: 15112.4,
     low: 15108.4,
@@ -275,7 +241,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547420, // '2023-01-12T18:17:00.000Z',
     open: 15112.4,
     high: 15114.4,
     low: 15110.4,
@@ -283,7 +248,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547480, // '2023-01-12T18:18:00.000Z',
     open: 15113.4,
     high: 15113.4,
     low: 15109.4,
@@ -291,7 +255,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547540, // '2023-01-12T18:19:00.000Z',
     open: 15110.4,
     high: 15111.9,
     low: 15107.4,
@@ -299,7 +262,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547600, // '2023-01-12T18:20:00.000Z',
     open: 15109.9,
     high: 15114.4,
     low: 15109.4,
@@ -307,7 +269,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547660, // '2023-01-12T18:21:00.000Z',
     open: 15113.9,
     high: 15113.9,
     low: 15109.4,
@@ -315,7 +276,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547720, // '2023-01-12T18:22:00.000Z',
     open: 15110.9,
     high: 15111.4,
     low: 15107.9,
@@ -323,7 +283,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547780, // '2023-01-12T18:23:00.000Z',
     open: 15110.4,
     high: 15111.4,
     low: 15108.9,
@@ -331,7 +290,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547840, // '2023-01-12T18:24:00.000Z',
     open: 15109.9,
     high: 15111.9,
     low: 15105.4,
@@ -339,7 +297,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547900, // '2023-01-12T18:25:00.000Z',
     open: 15106.4,
     high: 15107.4,
     low: 15095.5,
@@ -347,7 +304,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673547960, // '2023-01-12T18:26:00.000Z',
     open: 15096,
     high: 15096.5,
     low: 15089.5,
@@ -355,7 +311,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548020, // '2023-01-12T18:27:00.000Z',
     open: 15090.5,
     high: 15090.5,
     low: 15078.5,
@@ -363,7 +318,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548080, // '2023-01-12T18:28:00.000Z',
     open: 15082.5,
     high: 15084.5,
     low: 15072.1,
@@ -371,7 +325,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548140, // '2023-01-12T18:29:00.000Z',
     open: 15073.1,
     high: 15078,
     low: 15069.1,
@@ -379,7 +332,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548200, // '2023-01-12T18:30:00.000Z',
     open: 15073.6,
     high: 15081,
     low: 15070.1,
@@ -387,7 +339,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548260, // '2023-01-12T18:31:00.000Z',
     open: 15073.6,
     high: 15074.6,
     low: 15066.6,
@@ -395,7 +346,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548320, // '2023-01-12T18:32:00.000Z',
     open: 15073.1,
     high: 15082.5,
     low: 15072.6,
@@ -403,7 +353,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548380, // '2023-01-12T18:33:00.000Z',
     open: 15081.5,
     high: 15089.5,
     low: 15079.5,
@@ -411,7 +360,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548440, // '2023-01-12T18:34:00.000Z',
     open: 15088,
     high: 15088.5,
     low: 15083.5,
@@ -419,7 +367,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548500, // '2023-01-12T18:35:00.000Z',
     open: 15086,
     high: 15089.5,
     low: 15083,
@@ -427,7 +374,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548560, // '2023-01-12T18:36:00.000Z',
     open: 15089,
     high: 15090,
     low: 15086.5,
@@ -435,7 +381,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548620, // '2023-01-12T18:37:00.000Z',
     open: 15088,
     high: 15096.5,
     low: 15086.5,
@@ -443,7 +388,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548680, // '2023-01-12T18:38:00.000Z',
     open: 15095.5,
     high: 15096.5,
     low: 15091,
@@ -451,7 +395,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548740, // '2023-01-12T18:39:00.000Z',
     open: 15092.5,
     high: 15094.5,
     low: 15091.5,
@@ -459,7 +402,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548800, // '2023-01-12T18:40:00.000Z',
     open: 15094.5,
     high: 15097.5,
     low: 15092.5,
@@ -467,7 +409,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548860, // '2023-01-12T18:41:00.000Z',
     open: 15095.5,
     high: 15097,
     low: 15095,
@@ -475,7 +416,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548920, // '2023-01-12T18:42:00.000Z',
     open: 15095.5,
     high: 15097.5,
     low: 15094.5,
@@ -483,7 +423,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673548980, // '2023-01-12T18:43:00.000Z',
     open: 15097,
     high: 15101,
     low: 15097,
@@ -491,7 +430,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549040, // '2023-01-12T18:44:00.000Z',
     open: 15100,
     high: 15100.5,
     low: 15097,
@@ -499,7 +437,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549100, // '2023-01-12T18:45:00.000Z',
     open: 15099,
     high: 15101.5,
     low: 15095.5,
@@ -507,7 +444,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549160, // '2023-01-12T18:46:00.000Z',
     open: 15098.5,
     high: 15103,
     low: 15098.5,
@@ -515,7 +451,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549220, // '2023-01-12T18:47:00.000Z',
     open: 15103,
     high: 15103,
     low: 15099.5,
@@ -523,7 +458,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549280, // '2023-01-12T18:48:00.000Z',
     open: 15100.5,
     high: 15105.4,
     low: 15100.5,
@@ -531,7 +465,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549340, // '2023-01-12T18:49:00.000Z',
     open: 15105.9,
     high: 15107.4,
     low: 15105.4,
@@ -539,7 +472,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549400, // '2023-01-12T18:50:00.000Z',
     open: 15106.4,
     high: 15108.9,
     low: 15104.5,
@@ -547,7 +479,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549460, // '2023-01-12T18:51:00.000Z',
     open: 15108.9,
     high: 15109.9,
     low: 15106.4,
@@ -555,7 +486,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549520, // '2023-01-12T18:52:00.000Z',
     open: 15107.9,
     high: 15110.4,
     low: 15107.4,
@@ -563,7 +493,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549580, // '2023-01-12T18:53:00.000Z',
     open: 15109.4,
     high: 15115.9,
     low: 15109.4,
@@ -571,7 +500,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549640, // '2023-01-12T18:54:00.000Z',
     open: 15112.9,
     high: 15123.4,
     low: 15112.9,
@@ -579,7 +507,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549700, // '2023-01-12T18:55:00.000Z',
     open: 15117.4,
     high: 15121.4,
     low: 15114.4,
@@ -587,7 +514,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549760, // '2023-01-12T18:56:00.000Z',
     open: 15120.9,
     high: 15122.4,
     low: 15118.9,
@@ -595,7 +521,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549820, // '2023-01-12T18:57:00.000Z',
     open: 15121.9,
     high: 15124.4,
     low: 15121.4,
@@ -603,7 +528,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549880, // '2023-01-12T18:58:00.000Z',
     open: 15123.4,
     high: 15125.9,
     low: 15120.4,
@@ -611,7 +535,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673549940, // '2023-01-12T18:59:00.000Z',
     open: 15121.4,
     high: 15122.9,
     low: 15117.4,
@@ -619,7 +542,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550000, // '2023-01-12T19:00:00.000Z',
     open: 15120.9,
     high: 15122.4,
     low: 15118.4,
@@ -627,7 +549,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550060, // '2023-01-12T19:01:00.000Z',
     open: 15118.4,
     high: 15120.4,
     low: 15117.4,
@@ -635,7 +556,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550120, // '2023-01-12T19:02:00.000Z',
     open: 15118.9,
     high: 15122.4,
     low: 15115.4,
@@ -643,7 +563,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550180, // '2023-01-12T19:03:00.000Z',
     open: 15115.9,
     high: 15116.4,
     low: 15109.4,
@@ -651,7 +570,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550240, // '2023-01-12T19:04:00.000Z',
     open: 15112.4,
     high: 15112.4,
     low: 15105.4,
@@ -659,7 +577,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550300, // '2023-01-12T19:05:00.000Z',
     open: 15108.4,
     high: 15110.9,
     low: 15106.9,
@@ -667,7 +584,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550360, // '2023-01-12T19:06:00.000Z',
     open: 15106.9,
     high: 15108.4,
     low: 15105,
@@ -675,7 +591,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550420, // '2023-01-12T19:07:00.000Z',
     open: 15106.4,
     high: 15108.4,
     low: 15105.5,
@@ -683,7 +598,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550480, // '2023-01-12T19:08:00.000Z',
     open: 15107.4,
     high: 15111.4,
     low: 15105.9,
@@ -691,7 +605,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550540, // '2023-01-12T19:09:00.000Z',
     open: 15109.4,
     high: 15110.4,
     low: 15104.5,
@@ -699,7 +612,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550600, // '2023-01-12T19:10:00.000Z',
     open: 15106.4,
     high: 15107.9,
     low: 15104.5,
@@ -707,7 +619,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550660, // '2023-01-12T19:11:00.000Z',
     open: 15105,
     high: 15106.9,
     low: 15103.5,
@@ -715,7 +626,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550720, // '2023-01-12T19:12:00.000Z',
     open: 15105.5,
     high: 15110.9,
     low: 15105,
@@ -723,7 +633,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550780, // '2023-01-12T19:13:00.000Z',
     open: 15108.9,
     high: 15110.4,
     low: 15106.5,
@@ -731,7 +640,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550840, // '2023-01-12T19:14:00.000Z',
     open: 15109.9,
     high: 15113.9,
     low: 15109.4,
@@ -739,7 +647,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550900, // '2023-01-12T19:15:00.000Z',
     open: 15112.9,
     high: 15112.9,
     low: 15108.9,
@@ -747,7 +654,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673550960, // '2023-01-12T19:16:00.000Z',
     open: 15110.4,
     high: 15110.4,
     low: 15107,
@@ -755,7 +661,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551020, // '2023-01-12T19:17:00.000Z',
     open: 15108.4,
     high: 15111.9,
     low: 15107.9,
@@ -763,7 +668,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551080, // '2023-01-12T19:18:00.000Z',
     open: 15110.4,
     high: 15113.4,
     low: 15109.9,
@@ -771,7 +675,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551140, // '2023-01-12T19:19:00.000Z',
     open: 15112.9,
     high: 15112.9,
     low: 15108.9,
@@ -779,7 +682,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551200, // '2023-01-12T19:20:00.000Z',
     open: 15109.9,
     high: 15111.9,
     low: 15107,
@@ -787,7 +689,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551260, // '2023-01-12T19:21:00.000Z',
     open: 15111.9,
     high: 15111.9,
     low: 15107.5,
@@ -795,7 +696,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551320, // '2023-01-12T19:22:00.000Z',
     open: 15108,
     high: 15108.9,
     low: 15101.5,
@@ -803,7 +703,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551380, // '2023-01-12T19:23:00.000Z',
     open: 15104,
     high: 15106.5,
     low: 15102.5,
@@ -811,7 +710,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551440, // '2023-01-12T19:24:00.000Z',
     open: 15103.5,
     high: 15105.5,
     low: 15103,
@@ -819,7 +717,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551500, // '2023-01-12T19:25:00.000Z',
     open: 15104,
     high: 15107.5,
     low: 15102.5,
@@ -827,7 +724,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551560, // '2023-01-12T19:26:00.000Z',
     open: 15102.5,
     high: 15105,
     low: 15101.5,
@@ -835,7 +731,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551620, // '2023-01-12T19:27:00.000Z',
     open: 15105.5,
     high: 15109.4,
     low: 15104.5,
@@ -843,7 +738,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551680, // '2023-01-12T19:28:00.000Z',
     open: 15108,
     high: 15108.5,
     low: 15105.5,
@@ -851,7 +745,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551740, // '2023-01-12T19:29:00.000Z',
     open: 15107,
     high: 15107.5,
     low: 15102.5,
@@ -859,7 +752,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551800, // '2023-01-12T19:30:00.000Z',
     open: 15103.5,
     high: 15104,
     low: 15099.5,
@@ -867,7 +759,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551860, // '2023-01-12T19:31:00.000Z',
     open: 15102.5,
     high: 15106,
     low: 15101.5,
@@ -875,7 +766,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551920, // '2023-01-12T19:32:00.000Z',
     open: 15104,
     high: 15107.5,
     low: 15102,
@@ -883,7 +773,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673551980, // '2023-01-12T19:33:00.000Z',
     open: 15105.5,
     high: 15106,
     low: 15102.5,
@@ -891,7 +780,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552040, // '2023-01-12T19:34:00.000Z',
     open: 15106,
     high: 15107.5,
     low: 15103.5,
@@ -899,7 +787,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552100, // '2023-01-12T19:35:00.000Z',
     open: 15104,
     high: 15107,
     low: 15104,
@@ -907,7 +794,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552160, // '2023-01-12T19:36:00.000Z',
     open: 15105,
     high: 15107,
     low: 15104,
@@ -915,7 +801,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552220, // '2023-01-12T19:37:00.000Z',
     open: 15104,
     high: 15108,
     low: 15104,
@@ -923,7 +808,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552280, // '2023-01-12T19:38:00.000Z',
     open: 15108.5,
     high: 15111.4,
     low: 15108,
@@ -931,7 +815,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552340, // '2023-01-12T19:39:00.000Z',
     open: 15110.5,
     high: 15110.5,
     low: 15108.5,
@@ -939,7 +822,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552400, // '2023-01-12T19:40:00.000Z',
     open: 15110.5,
     high: 15110.5,
     low: 15108.5,
@@ -947,7 +829,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552460, // '2023-01-12T19:41:00.000Z',
     open: 15110,
     high: 15112.4,
     low: 15109.5,
@@ -955,7 +836,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552520, // '2023-01-12T19:42:00.000Z',
     open: 15112.4,
     high: 15113.4,
     low: 15111.4,
@@ -963,7 +843,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552580, // '2023-01-12T19:43:00.000Z',
     open: 15112.4,
     high: 15112.9,
     low: 15106,
@@ -971,7 +850,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552640, // '2023-01-12T19:44:00.000Z',
     open: 15109,
     high: 15110.5,
     low: 15106,
@@ -979,7 +857,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552700, // '2023-01-12T19:45:00.000Z',
     open: 15110.5,
     high: 15112,
     low: 15110,
@@ -987,7 +864,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552760, // '2023-01-12T19:46:00.000Z',
     open: 15111.5,
     high: 15114.4,
     low: 15111.5,
@@ -995,7 +871,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552820, // '2023-01-12T19:47:00.000Z',
     open: 15112.4,
     high: 15114.4,
     low: 15110.5,
@@ -1003,7 +878,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552880, // '2023-01-12T19:48:00.000Z',
     open: 15113.9,
     high: 15114.4,
     low: 15111,
@@ -1011,7 +885,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673552940, // '2023-01-12T19:49:00.000Z',
     open: 15112.5,
     high: 15113.4,
     low: 15110.5,
@@ -1019,7 +892,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553000, // '2023-01-12T19:50:00.000Z',
     open: 15110.5,
     high: 15111,
     low: 15106,
@@ -1027,7 +899,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553060, // '2023-01-12T19:51:00.000Z',
     open: 15107,
     high: 15107.5,
     low: 15103.5,
@@ -1035,7 +906,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553120, // '2023-01-12T19:52:00.000Z',
     open: 15104.5,
     high: 15106,
     low: 15097.5,
@@ -1043,7 +913,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553180, // '2023-01-12T19:53:00.000Z',
     open: 15098,
     high: 15102.5,
     low: 15097.5,
@@ -1051,7 +920,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553240, // '2023-01-12T19:54:00.000Z',
     open: 15101,
     high: 15101.5,
     low: 15096.5,
@@ -1059,7 +927,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553300, // '2023-01-12T19:55:00.000Z',
     open: 15099,
     high: 15099.5,
     low: 15094.5,
@@ -1067,7 +934,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553360, // '2023-01-12T19:56:00.000Z',
     open: 15095.5,
     high: 15099.5,
     low: 15093.5,
@@ -1075,7 +941,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553420, // '2023-01-12T19:57:00.000Z',
     open: 15098,
     high: 15100.5,
     low: 15096.5,
@@ -1083,7 +948,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553480, // '2023-01-12T19:58:00.000Z',
     open: 15099,
     high: 15105,
     low: 15098.5,
@@ -1091,7 +955,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553540, // '2023-01-12T19:59:00.000Z',
     open: 15103.5,
     high: 15106,
     low: 15103,
@@ -1099,7 +962,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553600, // '2023-01-12T20:00:00.000Z',
     open: 15105.5,
     high: 15106.5,
     low: 15102.5,
@@ -1107,7 +969,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553660, // '2023-01-12T20:01:00.000Z',
     open: 15104.5,
     high: 15106,
     low: 15102.5,
@@ -1115,7 +976,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553720, // '2023-01-12T20:02:00.000Z',
     open: 15103,
     high: 15105.5,
     low: 15101,
@@ -1123,7 +983,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553780, // '2023-01-12T20:03:00.000Z',
     open: 15104.5,
     high: 15108.5,
     low: 15103,
@@ -1131,7 +990,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553840, // '2023-01-12T20:04:00.000Z',
     open: 15108.5,
     high: 15109,
     low: 15104,
@@ -1139,7 +997,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553900, // '2023-01-12T20:05:00.000Z',
     open: 15106,
     high: 15106,
     low: 15102,
@@ -1147,7 +1004,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673553960, // '2023-01-12T20:06:00.000Z',
     open: 15104.5,
     high: 15105,
     low: 15099,
@@ -1155,7 +1011,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554020, // '2023-01-12T20:07:00.000Z',
     open: 15099,
     high: 15101.5,
     low: 15098,
@@ -1163,7 +1018,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554080, // '2023-01-12T20:08:00.000Z',
     open: 15098,
     high: 15098.5,
     low: 15094.5,
@@ -1171,7 +1025,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554140, // '2023-01-12T20:09:00.000Z',
     open: 15095.5,
     high: 15096.5,
     low: 15090.6,
@@ -1179,7 +1032,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554200, // '2023-01-12T20:10:00.000Z',
     open: 15092.5,
     high: 15093.5,
     low: 15088.6,
@@ -1187,7 +1039,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554260, // '2023-01-12T20:11:00.000Z',
     open: 15089.6,
     high: 15093.5,
     low: 15087.6,
@@ -1195,7 +1046,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554320, // '2023-01-12T20:12:00.000Z',
     open: 15092,
     high: 15095.5,
     low: 15091.1,
@@ -1203,7 +1053,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554380, // '2023-01-12T20:13:00.000Z',
     open: 15094,
     high: 15096.5,
     low: 15093,
@@ -1211,7 +1060,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554440, // '2023-01-12T20:14:00.000Z',
     open: 15094,
     high: 15095.5,
     low: 15089.6,
@@ -1219,7 +1067,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554500, // '2023-01-12T20:15:00.000Z',
     open: 15092.1,
     high: 15094.5,
     low: 15092.1,
@@ -1227,7 +1074,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554560, // '2023-01-12T20:16:00.000Z',
     open: 15092.6,
     high: 15095.5,
     low: 15090.6,
@@ -1235,7 +1081,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554620, // '2023-01-12T20:17:00.000Z',
     open: 15091.6,
     high: 15095.5,
     low: 15091.6,
@@ -1243,7 +1088,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554680, // '2023-01-12T20:18:00.000Z',
     open: 15093.5,
     high: 15095.5,
     low: 15093,
@@ -1251,7 +1095,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554740, // '2023-01-12T20:19:00.000Z',
     open: 15094.5,
     high: 15095,
     low: 15087.6,
@@ -1259,7 +1102,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554800, // '2023-01-12T20:20:00.000Z',
     open: 15089.6,
     high: 15092.1,
     low: 15086.1,
@@ -1267,7 +1109,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554860, // '2023-01-12T20:21:00.000Z',
     open: 15090.6,
     high: 15095,
     low: 15090.6,
@@ -1275,7 +1116,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554920, // '2023-01-12T20:22:00.000Z',
     open: 15093.5,
     high: 15096.5,
     low: 15092.6,
@@ -1283,7 +1123,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673554980, // '2023-01-12T20:23:00.000Z',
     open: 15095,
     high: 15096,
     low: 15093.6,
@@ -1291,7 +1130,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555040, // '2023-01-12T20:24:00.000Z',
     open: 15094.5,
     high: 15096.5,
     low: 15093.6,
@@ -1299,7 +1137,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555100, // '2023-01-12T20:25:00.000Z',
     open: 15095.5,
     high: 15097,
     low: 15093.6,
@@ -1307,7 +1144,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555160, // '2023-01-12T20:26:00.000Z',
     open: 15095.5,
     high: 15097.5,
     low: 15092.6,
@@ -1315,7 +1151,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555220, // '2023-01-12T20:27:00.000Z',
     open: 15096.5,
     high: 15100,
     low: 15095.5,
@@ -1323,7 +1158,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555280, // '2023-01-12T20:28:00.000Z',
     open: 15098.5,
     high: 15099.5,
     low: 15094.6,
@@ -1331,7 +1165,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555340, // '2023-01-12T20:29:00.000Z',
     open: 15095,
     high: 15096,
     low: 15094.1,
@@ -1339,7 +1172,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555400, // '2023-01-12T20:30:00.000Z',
     open: 15094.1,
     high: 15097.5,
     low: 15094.1,
@@ -1347,7 +1179,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555460, // '2023-01-12T20:31:00.000Z',
     open: 15096,
     high: 15101.5,
     low: 15096,
@@ -1355,7 +1186,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555520, // '2023-01-12T20:32:00.000Z',
     open: 15101.5,
     high: 15102,
     low: 15096.5,
@@ -1363,7 +1193,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555580, // '2023-01-12T20:33:00.000Z',
     open: 15099,
     high: 15101.5,
     low: 15098,
@@ -1371,7 +1200,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555640, // '2023-01-12T20:34:00.000Z',
     open: 15101,
     high: 15101.5,
     low: 15097.5,
@@ -1379,7 +1207,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555700, // '2023-01-12T20:35:00.000Z',
     open: 15099,
     high: 15100,
     low: 15096,
@@ -1387,7 +1214,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555760, // '2023-01-12T20:36:00.000Z',
     open: 15098,
     high: 15098,
     low: 15095.1,
@@ -1395,7 +1221,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555820, // '2023-01-12T20:37:00.000Z',
     open: 15096,
     high: 15098.5,
     low: 15095.6,
@@ -1403,7 +1228,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555880, // '2023-01-12T20:38:00.000Z',
     open: 15095.6,
     high: 15095.6,
     low: 15088.6,
@@ -1411,7 +1235,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673555940, // '2023-01-12T20:39:00.000Z',
     open: 15094.1,
     high: 15095.1,
     low: 15090.6,
@@ -1419,7 +1242,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556000, // '2023-01-12T20:40:00.000Z',
     open: 15094.6,
     high: 15098,
     low: 15094.1,
@@ -1427,7 +1249,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556060, // '2023-01-12T20:41:00.000Z',
     open: 15097.5,
     high: 15100,
     low: 15095.6,
@@ -1435,7 +1256,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556120, // '2023-01-12T20:42:00.000Z',
     open: 15100,
     high: 15100,
     low: 15096.6,
@@ -1443,7 +1263,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556180, // '2023-01-12T20:43:00.000Z',
     open: 15096.6,
     high: 15097,
     low: 15090.1,
@@ -1451,7 +1270,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556240, // '2023-01-12T20:44:00.000Z',
     open: 15090.6,
     high: 15094.6,
     low: 15090.6,
@@ -1459,7 +1277,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556300, // '2023-01-12T20:45:00.000Z',
     open: 15092.6,
     high: 15094.1,
     low: 15081.6,
@@ -1467,7 +1284,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556360, // '2023-01-12T20:46:00.000Z',
     open: 15083.6,
     high: 15086.6,
     low: 15081.6,
@@ -1475,7 +1291,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556420, // '2023-01-12T20:47:00.000Z',
     open: 15087.1,
     high: 15087.6,
     low: 15080.1,
@@ -1483,7 +1298,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556480, // '2023-01-12T20:48:00.000Z',
     open: 15080.6,
     high: 15084.6,
     low: 15080.1,
@@ -1491,7 +1305,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556540, // '2023-01-12T20:49:00.000Z',
     open: 15083.1,
     high: 15084.1,
     low: 15079.6,
@@ -1499,7 +1312,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556600, // '2023-01-12T20:50:00.000Z',
     open: 15084.6,
     high: 15093.6,
     low: 15083.6,
@@ -1507,7 +1319,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556660, // '2023-01-12T20:51:00.000Z',
     open: 15091.1,
     high: 15092.1,
     low: 15088.1,
@@ -1515,7 +1326,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556720, // '2023-01-12T20:52:00.000Z',
     open: 15089.6,
     high: 15089.6,
     low: 15085.6,
@@ -1523,7 +1333,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556780, // '2023-01-12T20:53:00.000Z',
     open: 15088.6,
     high: 15089.6,
     low: 15086.6,
@@ -1531,7 +1340,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556840, // '2023-01-12T20:54:00.000Z',
     open: 15089.1,
     high: 15091.6,
     low: 15088.6,
@@ -1539,7 +1347,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556900, // '2023-01-12T20:55:00.000Z',
     open: 15090.1,
     high: 15091.6,
     low: 15087.6,
@@ -1547,7 +1354,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673556960, // '2023-01-12T20:56:00.000Z',
     open: 15091.6,
     high: 15093.6,
     low: 15090.1,
@@ -1555,7 +1361,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557020, // '2023-01-12T20:57:00.000Z',
     open: 15092.6,
     high: 15098.6,
     low: 15091.6,
@@ -1563,7 +1368,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557080, // '2023-01-12T20:58:00.000Z',
     open: 15096.1,
     high: 15097.6,
     low: 15095.6,
@@ -1571,7 +1375,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557140, // '2023-01-12T20:59:00.000Z',
     open: 15096.1,
     high: 15097.6,
     low: 15093.6,
@@ -1579,7 +1382,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557200, // '2023-01-12T21:00:00.000Z',
     open: 15096,
     high: 15100.7,
     low: 15091.3,
@@ -1587,7 +1389,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557260, // '2023-01-12T21:01:00.000Z',
     open: 15095.1,
     high: 15097.9,
     low: 15093.2,
@@ -1595,7 +1396,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557320, // '2023-01-12T21:02:00.000Z',
     open: 15096,
     high: 15097,
     low: 15089.4,
@@ -1603,7 +1403,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557380, // '2023-01-12T21:03:00.000Z',
     open: 15093.2,
     high: 15094.1,
     low: 15091.3,
@@ -1611,7 +1410,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557440, // '2023-01-12T21:04:00.000Z',
     open: 15093.2,
     high: 15093.2,
     low: 15088.5,
@@ -1619,7 +1417,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557500, // '2023-01-12T21:05:00.000Z',
     open: 15091.3,
     high: 15093.2,
     low: 15091.3,
@@ -1627,7 +1424,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557560, // '2023-01-12T21:06:00.000Z',
     open: 15092.2,
     high: 15099.8,
     low: 15092.2,
@@ -1635,7 +1431,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557620, // '2023-01-12T21:07:00.000Z',
     open: 15100.7,
     high: 15100.7,
     low: 15096,
@@ -1643,7 +1438,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557680, // '2023-01-12T21:08:00.000Z',
     open: 15099,
     high: 15103.7,
     low: 15098,
@@ -1651,7 +1445,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557740, // '2023-01-12T21:09:00.000Z',
     open: 15104.6,
     high: 15105.6,
     low: 15101.8,
@@ -1659,7 +1452,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557800, // '2023-01-12T21:10:00.000Z',
     open: 15102.7,
     high: 15103.7,
     low: 15099,
@@ -1667,7 +1459,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557860, // '2023-01-12T21:11:00.000Z',
     open: 15099.4,
     high: 15101.8,
     low: 15098,
@@ -1675,7 +1466,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557920, // '2023-01-12T21:12:00.000Z',
     open: 15099,
     high: 15102.7,
     low: 15097.1,
@@ -1683,7 +1473,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673557980, // '2023-01-12T21:13:00.000Z',
     open: 15103.7,
     high: 15104.6,
     low: 15101.8,
@@ -1691,7 +1480,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673558040, // '2023-01-12T21:14:00.000Z',
     open: 15102.3,
     high: 15103.7,
     low: 15101.8,
@@ -1699,7 +1487,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559000, // '2023-01-12T21:30:00.000Z',
     open: 15099.9,
     high: 15100.9,
     low: 15099.9,
@@ -1707,7 +1494,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559060, // '2023-01-12T21:31:00.000Z',
     open: 15099.9,
     high: 15099.9,
     low: 15099,
@@ -1715,7 +1501,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559120, // '2023-01-12T21:32:00.000Z',
     open: 15098,
     high: 15099,
     low: 15098,
@@ -1723,7 +1508,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559180, // '2023-01-12T21:33:00.000Z',
     open: 15099.9,
     high: 15100.4,
     low: 15099,
@@ -1731,7 +1515,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559240, // '2023-01-12T21:34:00.000Z',
     open: 15098,
     high: 15098,
     low: 15097.1,
@@ -1739,7 +1522,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559300, // '2023-01-12T21:35:00.000Z',
     open: 15099,
     high: 15099,
     low: 15098,
@@ -1747,7 +1529,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559360, // '2023-01-12T21:36:00.000Z',
     open: 15099,
     high: 15099,
     low: 15099,
@@ -1755,7 +1536,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559420, // '2023-01-12T21:37:00.000Z',
     open: 15098.5,
     high: 15099,
     low: 15098.5,
@@ -1763,7 +1543,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559480, // '2023-01-12T21:38:00.000Z',
     open: 15099.9,
     high: 15102.8,
     low: 15099.9,
@@ -1771,7 +1550,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559540, // '2023-01-12T21:39:00.000Z',
     open: 15101.8,
     high: 15101.8,
     low: 15099.9,
@@ -1779,7 +1557,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559660, // '2023-01-12T21:41:00.000Z',
     open: 15099.9,
     high: 15101.8,
     low: 15098,
@@ -1787,7 +1564,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559720, // '2023-01-12T21:42:00.000Z',
     open: 15099.9,
     high: 15101.8,
     low: 15099.9,
@@ -1795,7 +1571,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559780, // '2023-01-12T21:43:00.000Z',
     open: 15099.9,
     high: 15100.9,
     low: 15099,
@@ -1803,7 +1578,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559840, // '2023-01-12T21:44:00.000Z',
     open: 15098,
     high: 15098,
     low: 15098,
@@ -1811,7 +1585,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559900, // '2023-01-12T21:45:00.000Z',
     open: 15097.1,
     high: 15097.1,
     low: 15096.2,
@@ -1819,7 +1592,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673559960, // '2023-01-12T21:46:00.000Z',
     open: 15097.1,
     high: 15098,
     low: 15096.2,
@@ -1827,7 +1599,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560020, // '2023-01-12T21:47:00.000Z',
     open: 15096.2,
     high: 15097.1,
     low: 15096.2,
@@ -1835,7 +1606,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560080, // '2023-01-12T21:48:00.000Z',
     open: 15098,
     high: 15099,
     low: 15098,
@@ -1843,7 +1613,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560140, // '2023-01-12T21:49:00.000Z',
     open: 15097.1,
     high: 15098,
     low: 15097.1,
@@ -1851,7 +1620,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560200, // '2023-01-12T21:50:00.000Z',
     open: 15097.1,
     high: 15098,
     low: 15097.1,
@@ -1859,7 +1627,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560260, // '2023-01-12T21:51:00.000Z',
     open: 15098,
     high: 15098,
     low: 15097.1,
@@ -1867,7 +1634,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560320, // '2023-01-12T21:52:00.000Z',
     open: 15097.6,
     high: 15099,
     low: 15097.1,
@@ -1875,7 +1641,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560380, // '2023-01-12T21:53:00.000Z',
     open: 15098,
     high: 15098,
     low: 15097.1,
@@ -1883,7 +1648,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560440, // '2023-01-12T21:54:00.000Z',
     open: 15096.2,
     high: 15096.6,
     low: 15096.2,
@@ -1891,7 +1655,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560500, // '2023-01-12T21:55:00.000Z',
     open: 15096.6,
     high: 15097.1,
     low: 15096.2,
@@ -1899,7 +1662,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560560, // '2023-01-12T21:56:00.000Z',
     open: 15097.1,
     high: 15097.1,
     low: 15096.2,
@@ -1907,7 +1669,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560620, // '2023-01-12T21:57:00.000Z',
     open: 15097.1,
     high: 15098.1,
     low: 15097.1,
@@ -1915,7 +1676,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560680, // '2023-01-12T21:58:00.000Z',
     open: 15096.6,
     high: 15097.1,
     low: 15096.2,
@@ -1923,7 +1683,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673560740, // '2023-01-12T21:59:00.000Z',
     open: 15096.6,
     high: 15098.1,
     low: 15096.2,
@@ -1931,7 +1690,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673564400, // '2023-01-12T23:00:00.000Z',
     open: 15099.5,
     high: 15100.9,
     low: 15094.8,
@@ -1939,7 +1697,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673564460, // '2023-01-12T23:01:00.000Z',
     open: 15094.8,
     high: 15096.2,
     low: 15092.4,
@@ -1947,7 +1704,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673564520, // '2023-01-12T23:02:00.000Z',
     open: 15093.4,
     high: 15093.4,
     low: 15091.5,
@@ -1955,7 +1711,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673564580, // '2023-01-12T23:03:00.000Z',
     open: 15092.4,
     high: 15093.4,
     low: 15091.5,
@@ -1963,7 +1718,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673564640, // '2023-01-12T23:04:00.000Z',
     open: 15090.6,
     high: 15092.9,
     low: 15090.6,
@@ -1971,7 +1725,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673564700, // '2023-01-12T23:05:00.000Z',
     open: 15092,
     high: 15092.9,
     low: 15089.6,
@@ -1979,7 +1732,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673564760, // '2023-01-12T23:06:00.000Z',
     open: 15088.7,
     high: 15091.5,
     low: 15088.7,
@@ -1987,7 +1739,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673564820, // '2023-01-12T23:07:00.000Z',
     open: 15092,
     high: 15092.4,
     low: 15090.6,
@@ -1995,7 +1746,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673564880, // '2023-01-12T23:08:00.000Z',
     open: 15091.5,
     high: 15091.5,
     low: 15090.6,
@@ -2003,7 +1753,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673564940, // '2023-01-12T23:09:00.000Z',
     open: 15091.5,
     high: 15095.3,
     low: 15091.5,
@@ -2011,7 +1760,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565000, // '2023-01-12T23:10:00.000Z',
     open: 15094.8,
     high: 15096.2,
     low: 15094.3,
@@ -2019,7 +1767,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565060, // '2023-01-12T23:11:00.000Z',
     open: 15093.4,
     high: 15094.3,
     low: 15092.4,
@@ -2027,7 +1774,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565120, // '2023-01-12T23:12:00.000Z',
     open: 15093.9,
     high: 15094.3,
     low: 15092.4,
@@ -2035,7 +1781,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565180, // '2023-01-12T23:13:00.000Z',
     open: 15094.3,
     high: 15098.1,
     low: 15094.3,
@@ -2043,7 +1788,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565240, // '2023-01-12T23:14:00.000Z',
     open: 15097.2,
     high: 15099,
     low: 15097.2,
@@ -2051,7 +1795,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565300, // '2023-01-12T23:15:00.000Z',
     open: 15098.6,
     high: 15100,
     low: 15098.1,
@@ -2059,7 +1802,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565360, // '2023-01-12T23:16:00.000Z',
     open: 15099,
     high: 15100,
     low: 15098.1,
@@ -2067,7 +1809,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565420, // '2023-01-12T23:17:00.000Z',
     open: 15098.6,
     high: 15099,
     low: 15098.1,
@@ -2075,7 +1816,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565540, // '2023-01-12T23:19:00.000Z',
     open: 15099,
     high: 15100,
     low: 15098.1,
@@ -2083,7 +1823,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565600, // '2023-01-12T23:20:00.000Z',
     open: 15099.5,
     high: 15100.9,
     low: 15099.1,
@@ -2091,7 +1830,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565660, // '2023-01-12T23:21:00.000Z',
     open: 15100,
     high: 15101.9,
     low: 15100,
@@ -2099,7 +1837,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565720, // '2023-01-12T23:22:00.000Z',
     open: 15100.9,
     high: 15100.9,
     low: 15100,
@@ -2107,7 +1844,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565780, // '2023-01-12T23:23:00.000Z',
     open: 15101.9,
     high: 15101.9,
     low: 15098.1,
@@ -2115,7 +1851,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565840, // '2023-01-12T23:24:00.000Z',
     open: 15100,
     high: 15100.9,
     low: 15099.1,
@@ -2123,7 +1858,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565900, // '2023-01-12T23:25:00.000Z',
     open: 15101.9,
     high: 15102.8,
     low: 15100.9,
@@ -2131,7 +1865,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673565960, // '2023-01-12T23:26:00.000Z',
     open: 15100,
     high: 15100.9,
     low: 15099.1,
@@ -2139,7 +1872,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566020, // '2023-01-12T23:27:00.000Z',
     open: 15098.1,
     high: 15100,
     low: 15098.1,
@@ -2147,7 +1879,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566080, // '2023-01-12T23:28:00.000Z',
     open: 15099.5,
     high: 15101.9,
     low: 15099.5,
@@ -2155,7 +1886,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566140, // '2023-01-12T23:29:00.000Z',
     open: 15102.4,
     high: 15102.8,
     low: 15100.9,
@@ -2163,7 +1893,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566200, // '2023-01-12T23:30:00.000Z',
     open: 15102.4,
     high: 15103.8,
     low: 15101.9,
@@ -2171,7 +1900,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566260, // '2023-01-12T23:31:00.000Z',
     open: 15102.8,
     high: 15103.3,
     low: 15100,
@@ -2179,7 +1907,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566320, // '2023-01-12T23:32:00.000Z',
     open: 15100.9,
     high: 15101.4,
     low: 15100,
@@ -2187,7 +1914,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566380, // '2023-01-12T23:33:00.000Z',
     open: 15100.5,
     high: 15100.5,
     low: 15098.1,
@@ -2195,7 +1921,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566440, // '2023-01-12T23:34:00.000Z',
     open: 15100,
     high: 15101.9,
     low: 15099.1,
@@ -2203,7 +1928,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566500, // '2023-01-12T23:35:00.000Z',
     open: 15100.9,
     high: 15101.4,
     low: 15100.9,
@@ -2211,7 +1935,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566560, // '2023-01-12T23:36:00.000Z',
     open: 15100,
     high: 15100,
     low: 15100,
@@ -2219,7 +1942,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566620, // '2023-01-12T23:37:00.000Z',
     open: 15099.5,
     high: 15100,
     low: 15099.5,
@@ -2227,7 +1949,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566680, // '2023-01-12T23:38:00.000Z',
     open: 15100.5,
     high: 15100.9,
     low: 15099.1,
@@ -2235,7 +1956,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566740, // '2023-01-12T23:39:00.000Z',
     open: 15098.6,
     high: 15099.1,
     low: 15098.6,
@@ -2243,7 +1963,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566800, // '2023-01-12T23:40:00.000Z',
     open: 15100,
     high: 15100,
     low: 15098.1,
@@ -2251,7 +1970,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566860, // '2023-01-12T23:41:00.000Z',
     open: 15099.1,
     high: 15099.1,
     low: 15097.2,
@@ -2259,7 +1977,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566920, // '2023-01-12T23:42:00.000Z',
     open: 15096.2,
     high: 15098.1,
     low: 15096.2,
@@ -2267,7 +1984,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673566980, // '2023-01-12T23:43:00.000Z',
     open: 15097.2,
     high: 15098.1,
     low: 15097.2,
@@ -2275,7 +1991,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567040, // '2023-01-12T23:44:00.000Z',
     open: 15097.2,
     high: 15099.1,
     low: 15097.2,
@@ -2283,7 +1998,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567100, // '2023-01-12T23:45:00.000Z',
     open: 15100,
     high: 15102.8,
     low: 15099.1,
@@ -2291,7 +2005,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567160, // '2023-01-12T23:46:00.000Z',
     open: 15101.9,
     high: 15101.9,
     low: 15101,
@@ -2299,7 +2012,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567220, // '2023-01-12T23:47:00.000Z',
     open: 15102.8,
     high: 15102.8,
     low: 15101,
@@ -2307,7 +2019,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567280, // '2023-01-12T23:48:00.000Z',
     open: 15101,
     high: 15101.9,
     low: 15101,
@@ -2315,7 +2026,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567340, // '2023-01-12T23:49:00.000Z',
     open: 15101.4,
     high: 15101.4,
     low: 15099.1,
@@ -2323,7 +2033,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567400, // '2023-01-12T23:50:00.000Z',
     open: 15100,
     high: 15101,
     low: 15099.1,
@@ -2331,7 +2040,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567460, // '2023-01-12T23:51:00.000Z',
     open: 15100,
     high: 15101,
     low: 15099.1,
@@ -2339,7 +2047,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567520, // '2023-01-12T23:52:00.000Z',
     open: 15101,
     high: 15101,
     low: 15099.1,
@@ -2347,7 +2054,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567580, // '2023-01-12T23:53:00.000Z',
     open: 15099.5,
     high: 15100,
     low: 15099.1,
@@ -2355,7 +2061,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567640, // '2023-01-12T23:54:00.000Z',
     open: 15099.5,
     high: 15101,
     low: 15098.1,
@@ -2363,7 +2068,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567700, // '2023-01-12T23:55:00.000Z',
     open: 15100,
     high: 15100,
     low: 15099.1,
@@ -2371,7 +2075,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567760, // '2023-01-12T23:56:00.000Z',
     open: 15101,
     high: 15101.9,
     low: 15101,
@@ -2379,7 +2082,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567820, // '2023-01-12T23:57:00.000Z',
     open: 15102.8,
     high: 15105.7,
     low: 15102.8,
@@ -2387,7 +2089,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567880, // '2023-01-12T23:58:00.000Z',
     open: 15106.6,
     high: 15106.6,
     low: 15105.7,
@@ -2395,7 +2096,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673567940, // '2023-01-12T23:59:00.000Z',
     open: 15104.7,
     high: 15104.7,
     low: 15102.8,
@@ -2403,7 +2103,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568000, // '2023-01-13T00:00:00.000Z',
     open: 15104.3,
     high: 15104.3,
     low: 15104.3,
@@ -2411,7 +2110,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568180, // '2023-01-13T00:03:00.000Z',
     open: 15106.8,
     high: 15107.6,
     low: 15106,
@@ -2419,7 +2117,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568240, // '2023-01-13T00:04:00.000Z',
     open: 15105.2,
     high: 15107.6,
     low: 15104.4,
@@ -2427,7 +2124,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568300, // '2023-01-13T00:05:00.000Z',
     open: 15106.7,
     high: 15107.5,
     low: 15105.1,
@@ -2435,7 +2131,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568360, // '2023-01-13T00:06:00.000Z',
     open: 15104.3,
     high: 15105.1,
     low: 15103.5,
@@ -2443,7 +2138,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568420, // '2023-01-13T00:07:00.000Z',
     open: 15104.3,
     high: 15104.3,
     low: 15102.7,
@@ -2451,7 +2145,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568480, // '2023-01-13T00:08:00.000Z',
     open: 15103.5,
     high: 15105.9,
     low: 15102.7,
@@ -2459,7 +2152,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568540, // '2023-01-13T00:09:00.000Z',
     open: 15106.7,
     high: 15108.3,
     low: 15105.9,
@@ -2467,7 +2159,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568600, // '2023-01-13T00:10:00.000Z',
     open: 15105.8,
     high: 15107,
     low: 15104.2,
@@ -2475,7 +2166,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568660, // '2023-01-13T00:11:00.000Z',
     open: 15103.4,
     high: 15103.4,
     low: 15101.8,
@@ -2483,7 +2173,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568720, // '2023-01-13T00:12:00.000Z',
     open: 15101,
     high: 15105,
     low: 15100.2,
@@ -2491,7 +2180,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568780, // '2023-01-13T00:13:00.000Z',
     open: 15104.6,
     high: 15105.8,
     low: 15104.2,
@@ -2499,7 +2187,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568840, // '2023-01-13T00:14:00.000Z',
     open: 15105,
     high: 15106,
     low: 15104.2,
@@ -2507,7 +2194,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568900, // '2023-01-13T00:15:00.000Z',
     open: 15106.8,
     high: 15117.6,
     low: 15106.8,
@@ -2515,7 +2201,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673568960, // '2023-01-13T00:16:00.000Z',
     open: 15109.2,
     high: 15109.7,
     low: 15105.2,
@@ -2523,7 +2208,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569020, // '2023-01-13T00:17:00.000Z',
     open: 15105.7,
     high: 15109.2,
     low: 15105.7,
@@ -2531,7 +2215,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569080, // '2023-01-13T00:18:00.000Z',
     open: 15108.7,
     high: 15112.1,
     low: 15107.7,
@@ -2539,7 +2222,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569140, // '2023-01-13T00:19:00.000Z',
     open: 15109.7,
     high: 15110.2,
     low: 15109.7,
@@ -2547,7 +2229,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569200, // '2023-01-13T00:20:00.000Z',
     open: 15109.7,
     high: 15110.2,
     low: 15109.7,
@@ -2555,7 +2236,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569260, // '2023-01-13T00:21:00.000Z',
     open: 15110.7,
     high: 15112.6,
     low: 15110.7,
@@ -2563,7 +2243,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569320, // '2023-01-13T00:22:00.000Z',
     open: 15114.6,
     high: 15115.1,
     low: 15114.6,
@@ -2571,7 +2250,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569380, // '2023-01-13T00:23:00.000Z',
     open: 15115.6,
     high: 15115.6,
     low: 15115.6,
@@ -2579,7 +2257,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569500, // '2023-01-13T00:25:00.000Z',
     open: 15114.6,
     high: 15114.6,
     low: 15113.1,
@@ -2587,7 +2264,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569560, // '2023-01-13T00:26:00.000Z',
     open: 15112.1,
     high: 15112.1,
     low: 15112.1,
@@ -2595,7 +2271,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569620, // '2023-01-13T00:27:00.000Z',
     open: 15111.7,
     high: 15112.6,
     low: 15111.7,
@@ -2603,7 +2278,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569680, // '2023-01-13T00:28:00.000Z',
     open: 15111.7,
     high: 15111.7,
     low: 15111.2,
@@ -2611,7 +2285,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569740, // '2023-01-13T00:29:00.000Z',
     open: 15109.2,
     high: 15109.2,
     low: 15109.2,
@@ -2619,7 +2292,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569800, // '2023-01-13T00:30:00.000Z',
     open: 15109.7,
     high: 15113.6,
     low: 15109.7,
@@ -2627,7 +2299,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569860, // '2023-01-13T00:31:00.000Z',
     open: 15112.6,
     high: 15113.6,
     low: 15111.2,
@@ -2635,7 +2306,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569920, // '2023-01-13T00:32:00.000Z',
     open: 15110.7,
     high: 15110.7,
     low: 15109.7,
@@ -2643,7 +2313,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673569980, // '2023-01-13T00:33:00.000Z',
     open: 15110.2,
     high: 15110.2,
     low: 15109.7,
@@ -2651,7 +2320,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570040, // '2023-01-13T00:34:00.000Z',
     open: 15109.2,
     high: 15109.2,
     low: 15108.2,
@@ -2659,7 +2327,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570100, // '2023-01-13T00:35:00.000Z',
     open: 15108.7,
     high: 15108.7,
     low: 15108.7,
@@ -2667,7 +2334,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570160, // '2023-01-13T00:36:00.000Z',
     open: 15107.7,
     high: 15107.7,
     low: 15106.7,
@@ -2675,7 +2341,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570220, // '2023-01-13T00:37:00.000Z',
     open: 15107.2,
     high: 15107.2,
     low: 15106.7,
@@ -2683,7 +2348,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570280, // '2023-01-13T00:38:00.000Z',
     open: 15107.2,
     high: 15107.7,
     low: 15107.2,
@@ -2691,7 +2355,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570340, // '2023-01-13T00:39:00.000Z',
     open: 15106.2,
     high: 15106.2,
     low: 15105.2,
@@ -2699,7 +2362,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570400, // '2023-01-13T00:40:00.000Z',
     open: 15103.7,
     high: 15103.7,
     low: 15101.2,
@@ -2707,7 +2369,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570460, // '2023-01-13T00:41:00.000Z',
     open: 15101.7,
     high: 15102.2,
     low: 15101.7,
@@ -2715,7 +2376,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570580, // '2023-01-13T00:43:00.000Z',
     open: 15102.2,
     high: 15102.2,
     low: 15102.2,
@@ -2723,7 +2383,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570640, // '2023-01-13T00:44:00.000Z',
     open: 15101.7,
     high: 15101.7,
     low: 15100.2,
@@ -2731,7 +2390,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570700, // '2023-01-13T00:45:00.000Z',
     open: 15102.2,
     high: 15102.2,
     low: 15099.2,
@@ -2739,7 +2397,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570760, // '2023-01-13T00:46:00.000Z',
     open: 15100.2,
     high: 15100.7,
     low: 15100.2,
@@ -2747,7 +2404,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570820, // '2023-01-13T00:47:00.000Z',
     open: 15100.7,
     high: 15102.2,
     low: 15100.7,
@@ -2755,7 +2411,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570880, // '2023-01-13T00:48:00.000Z',
     open: 15101.2,
     high: 15101.2,
     low: 15100.2,
@@ -2763,7 +2418,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673570940, // '2023-01-13T00:49:00.000Z',
     open: 15100.7,
     high: 15102.7,
     low: 15100.7,
@@ -2771,7 +2425,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571000, // '2023-01-13T00:50:00.000Z',
     open: 15101.2,
     high: 15102.7,
     low: 15101.2,
@@ -2779,7 +2432,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571060, // '2023-01-13T00:51:00.000Z',
     open: 15100.7,
     high: 15100.7,
     low: 15099.7,
@@ -2787,7 +2439,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571120, // '2023-01-13T00:52:00.000Z',
     open: 15100.7,
     high: 15100.7,
     low: 15100.7,
@@ -2795,7 +2446,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571180, // '2023-01-13T00:53:00.000Z',
     open: 15100.2,
     high: 15100.2,
     low: 15099.7,
@@ -2803,7 +2453,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571240, // '2023-01-13T00:54:00.000Z',
     open: 15098.7,
     high: 15099.2,
     low: 15098.7,
@@ -2811,7 +2460,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571300, // '2023-01-13T00:55:00.000Z',
     open: 15099.2,
     high: 15099.7,
     low: 15098.2,
@@ -2819,7 +2467,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571360, // '2023-01-13T00:56:00.000Z',
     open: 15100.2,
     high: 15100.2,
     low: 15097.7,
@@ -2827,7 +2474,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571420, // '2023-01-13T00:57:00.000Z',
     open: 15099.2,
     high: 15100.7,
     low: 15098.7,
@@ -2835,7 +2481,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571480, // '2023-01-13T00:58:00.000Z',
     open: 15099.2,
     high: 15099.2,
     low: 15099.2,
@@ -2843,7 +2488,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571540, // '2023-01-13T00:59:00.000Z',
     open: 15099.7,
     high: 15099.7,
     low: 15099.2,
@@ -2851,7 +2495,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571600, // '2023-01-13T01:00:00.000Z',
     open: 15100.2,
     high: 15102.2,
     low: 15099.2,
@@ -2859,7 +2502,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571660, // '2023-01-13T01:01:00.000Z',
     open: 15104.2,
     high: 15104.7,
     low: 15102.7,
@@ -2867,7 +2509,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571720, // '2023-01-13T01:02:00.000Z',
     open: 15103.7,
     high: 15104.2,
     low: 15103.7,
@@ -2875,7 +2516,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571780, // '2023-01-13T01:03:00.000Z',
     open: 15103.7,
     high: 15103.7,
     low: 15101.7,
@@ -2883,7 +2523,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571840, // '2023-01-13T01:04:00.000Z',
     open: 15102.7,
     high: 15103.2,
     low: 15101.7,
@@ -2891,7 +2530,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571900, // '2023-01-13T01:05:00.000Z',
     open: 15102.2,
     high: 15103.2,
     low: 15102.2,
@@ -2899,7 +2537,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673571960, // '2023-01-13T01:06:00.000Z',
     open: 15103.2,
     high: 15105.2,
     low: 15102.2,
@@ -2907,7 +2544,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572020, // '2023-01-13T01:07:00.000Z',
     open: 15105.2,
     high: 15105.7,
     low: 15105.2,
@@ -2915,7 +2551,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572080, // '2023-01-13T01:08:00.000Z',
     open: 15104.2,
     high: 15105.2,
     low: 15104.2,
@@ -2923,7 +2558,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572140, // '2023-01-13T01:09:00.000Z',
     open: 15105.7,
     high: 15107.2,
     low: 15103.7,
@@ -2931,7 +2565,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572200, // '2023-01-13T01:10:00.000Z',
     open: 15104.7,
     high: 15105.7,
     low: 15103.7,
@@ -2939,7 +2572,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572260, // '2023-01-13T01:11:00.000Z',
     open: 15104.2,
     high: 15105.7,
     low: 15104.2,
@@ -2947,7 +2579,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572320, // '2023-01-13T01:12:00.000Z',
     open: 15104.7,
     high: 15106.2,
     low: 15104.7,
@@ -2955,7 +2586,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572380, // '2023-01-13T01:13:00.000Z',
     open: 15105.7,
     high: 15105.7,
     low: 15104.7,
@@ -2963,7 +2593,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572440, // '2023-01-13T01:14:00.000Z',
     open: 15105.7,
     high: 15105.7,
     low: 15104.7,
@@ -2971,7 +2600,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572500, // '2023-01-13T01:15:00.000Z',
     open: 15105.7,
     high: 15105.7,
     low: 15098.7,
@@ -2979,7 +2607,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572560, // '2023-01-13T01:16:00.000Z',
     open: 15100.2,
     high: 15100.7,
     low: 15092.3,
@@ -2987,7 +2614,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572620, // '2023-01-13T01:17:00.000Z',
     open: 15092.8,
     high: 15094.3,
     low: 15089.3,
@@ -2995,7 +2621,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572680, // '2023-01-13T01:18:00.000Z',
     open: 15090.8,
     high: 15090.8,
     low: 15086.3,
@@ -3003,7 +2628,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572740, // '2023-01-13T01:19:00.000Z',
     open: 15087.3,
     high: 15091.8,
     low: 15086.8,
@@ -3011,7 +2635,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572800, // '2023-01-13T01:20:00.000Z',
     open: 15091.3,
     high: 15097.7,
     low: 15091.3,
@@ -3019,7 +2642,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572860, // '2023-01-13T01:21:00.000Z',
     open: 15093.8,
     high: 15096.3,
     low: 15093.8,
@@ -3027,7 +2649,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572920, // '2023-01-13T01:22:00.000Z',
     open: 15094.3,
     high: 15095.3,
     low: 15091.3,
@@ -3035,7 +2656,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673572980, // '2023-01-13T01:23:00.000Z',
     open: 15093.3,
     high: 15093.8,
     low: 15091.3,
@@ -3043,7 +2663,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573040, // '2023-01-13T01:24:00.000Z',
     open: 15091.3,
     high: 15091.8,
     low: 15087.8,
@@ -3051,7 +2670,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573100, // '2023-01-13T01:25:00.000Z',
     open: 15089.8,
     high: 15092.8,
     low: 15088.3,
@@ -3059,7 +2677,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573160, // '2023-01-13T01:26:00.000Z',
     open: 15089.3,
     high: 15089.8,
     low: 15084.3,
@@ -3067,7 +2684,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573220, // '2023-01-13T01:27:00.000Z',
     open: 15083.8,
     high: 15086.8,
     low: 15081.8,
@@ -3075,7 +2691,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573280, // '2023-01-13T01:28:00.000Z',
     open: 15083.8,
     high: 15086.8,
     low: 15081.3,
@@ -3083,7 +2698,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573340, // '2023-01-13T01:29:00.000Z',
     open: 15083.3,
     high: 15085.8,
     low: 15083.3,
@@ -3091,7 +2705,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573400, // '2023-01-13T01:30:00.000Z',
     open: 15085.3,
     high: 15085.3,
     low: 15077.8,
@@ -3099,7 +2712,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573460, // '2023-01-13T01:31:00.000Z',
     open: 15081.8,
     high: 15085.8,
     low: 15081.3,
@@ -3107,7 +2719,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573520, // '2023-01-13T01:32:00.000Z',
     open: 15083.3,
     high: 15083.3,
     low: 15074.3,
@@ -3115,7 +2726,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573580, // '2023-01-13T01:33:00.000Z',
     open: 15076.3,
     high: 15077.3,
     low: 15071.4,
@@ -3123,7 +2733,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573640, // '2023-01-13T01:34:00.000Z',
     open: 15071.4,
     high: 15071.9,
     low: 15067.4,
@@ -3131,7 +2740,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573700, // '2023-01-13T01:35:00.000Z',
     open: 15068.9,
     high: 15069.4,
     low: 15066.4,
@@ -3139,7 +2747,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573760, // '2023-01-13T01:36:00.000Z',
     open: 15066.4,
     high: 15072.4,
     low: 15066.4,
@@ -3147,7 +2754,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573820, // '2023-01-13T01:37:00.000Z',
     open: 15071.4,
     high: 15074.8,
     low: 15070.4,
@@ -3155,7 +2761,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573880, // '2023-01-13T01:38:00.000Z',
     open: 15074.4,
     high: 15075.3,
     low: 15071.4,
@@ -3163,7 +2768,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673573940, // '2023-01-13T01:39:00.000Z',
     open: 15074.8,
     high: 15075.3,
     low: 15071.9,
@@ -3171,7 +2775,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574000, // '2023-01-13T01:40:00.000Z',
     open: 15074.9,
     high: 15075.8,
     low: 15074.4,
@@ -3179,7 +2782,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574060, // '2023-01-13T01:41:00.000Z',
     open: 15075.3,
     high: 15075.8,
     low: 15074.9,
@@ -3187,7 +2789,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574120, // '2023-01-13T01:42:00.000Z',
     open: 15075.8,
     high: 15076.8,
     low: 15074.4,
@@ -3195,7 +2796,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574180, // '2023-01-13T01:43:00.000Z',
     open: 15075.4,
     high: 15077.3,
     low: 15074.4,
@@ -3203,7 +2803,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574240, // '2023-01-13T01:44:00.000Z',
     open: 15076.8,
     high: 15082.3,
     low: 15076.8,
@@ -3211,7 +2810,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574300, // '2023-01-13T01:45:00.000Z',
     open: 15080.3,
     high: 15083.3,
     low: 15080.3,
@@ -3219,7 +2817,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574360, // '2023-01-13T01:46:00.000Z',
     open: 15081.3,
     high: 15083.3,
     low: 15080.3,
@@ -3227,7 +2824,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574420, // '2023-01-13T01:47:00.000Z',
     open: 15080.3,
     high: 15080.3,
     low: 15077.3,
@@ -3235,7 +2831,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574480, // '2023-01-13T01:48:00.000Z',
     open: 15078.8,
     high: 15078.8,
     low: 15074.4,
@@ -3243,7 +2838,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574540, // '2023-01-13T01:49:00.000Z',
     open: 15074.9,
     high: 15075.4,
     low: 15074.4,
@@ -3251,7 +2845,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574600, // '2023-01-13T01:50:00.000Z',
     open: 15074.4,
     high: 15076.8,
     low: 15074.4,
@@ -3259,7 +2852,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574660, // '2023-01-13T01:51:00.000Z',
     open: 15075.4,
     high: 15075.9,
     low: 15073.4,
@@ -3267,7 +2859,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574720, // '2023-01-13T01:52:00.000Z',
     open: 15073.4,
     high: 15075.4,
     low: 15073.4,
@@ -3275,7 +2866,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574780, // '2023-01-13T01:53:00.000Z',
     open: 15076.4,
     high: 15076.4,
     low: 15075.4,
@@ -3283,7 +2873,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574840, // '2023-01-13T01:54:00.000Z',
     open: 15075.4,
     high: 15076.9,
     low: 15073.4,
@@ -3291,7 +2880,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574900, // '2023-01-13T01:55:00.000Z',
     open: 15076.4,
     high: 15079.3,
     low: 15076.4,
@@ -3299,7 +2887,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673574960, // '2023-01-13T01:56:00.000Z',
     open: 15078.8,
     high: 15080.8,
     low: 15078.3,
@@ -3307,7 +2894,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575020, // '2023-01-13T01:57:00.000Z',
     open: 15078.8,
     high: 15078.8,
     low: 15075.9,
@@ -3315,7 +2901,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575080, // '2023-01-13T01:58:00.000Z',
     open: 15075.4,
     high: 15075.9,
     low: 15073.4,
@@ -3323,7 +2908,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575140, // '2023-01-13T01:59:00.000Z',
     open: 15075.9,
     high: 15077.4,
     low: 15075.9,
@@ -3331,7 +2915,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575200, // '2023-01-13T02:00:00.000Z',
     open: 15077.4,
     high: 15077.4,
     low: 15073.4,
@@ -3339,7 +2922,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575260, // '2023-01-13T02:01:00.000Z',
     open: 15075.9,
     high: 15076.9,
     low: 15074.4,
@@ -3347,7 +2929,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575320, // '2023-01-13T02:02:00.000Z',
     open: 15074.9,
     high: 15074.9,
     low: 15069.9,
@@ -3355,7 +2936,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575380, // '2023-01-13T02:03:00.000Z',
     open: 15072.4,
     high: 15076.4,
     low: 15071.4,
@@ -3363,7 +2943,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575440, // '2023-01-13T02:04:00.000Z',
     open: 15074.9,
     high: 15075.4,
     low: 15071.4,
@@ -3371,7 +2950,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575500, // '2023-01-13T02:05:00.000Z',
     open: 15072.9,
     high: 15072.9,
     low: 15069.9,
@@ -3379,7 +2957,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575560, // '2023-01-13T02:06:00.000Z',
     open: 15072.4,
     high: 15073.9,
     low: 15071.4,
@@ -3387,7 +2964,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575620, // '2023-01-13T02:07:00.000Z',
     open: 15073.9,
     high: 15073.9,
     low: 15071.4,
@@ -3395,7 +2971,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575680, // '2023-01-13T02:08:00.000Z',
     open: 15073.9,
     high: 15075.4,
     low: 15073.4,
@@ -3403,7 +2978,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575740, // '2023-01-13T02:09:00.000Z',
     open: 15075.9,
     high: 15075.9,
     low: 15069.9,
@@ -3411,7 +2985,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575800, // '2023-01-13T02:10:00.000Z',
     open: 15069.4,
     high: 15073.4,
     low: 15069.4,
@@ -3419,7 +2992,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575860, // '2023-01-13T02:11:00.000Z',
     open: 15070.9,
     high: 15071.9,
     low: 15069.4,
@@ -3427,7 +2999,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575920, // '2023-01-13T02:12:00.000Z',
     open: 15070.9,
     high: 15071.9,
     low: 15069.9,
@@ -3435,7 +3006,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673575980, // '2023-01-13T02:13:00.000Z',
     open: 15071.4,
     high: 15071.4,
     low: 15069.4,
@@ -3443,7 +3013,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576040, // '2023-01-13T02:14:00.000Z',
     open: 15069.9,
     high: 15071.9,
     low: 15069.4,
@@ -3451,7 +3020,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576100, // '2023-01-13T02:15:00.000Z',
     open: 15069.9,
     high: 15069.9,
     low: 15065.4,
@@ -3459,7 +3027,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576160, // '2023-01-13T02:16:00.000Z',
     open: 15068.9,
     high: 15068.9,
     low: 15066.4,
@@ -3467,7 +3034,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576220, // '2023-01-13T02:17:00.000Z',
     open: 15066.4,
     high: 15066.4,
     low: 15064.4,
@@ -3475,7 +3041,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576280, // '2023-01-13T02:18:00.000Z',
     open: 15064.4,
     high: 15065.9,
     low: 15064.4,
@@ -3483,7 +3048,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576340, // '2023-01-13T02:19:00.000Z',
     open: 15065.9,
     high: 15066.4,
     low: 15064.9,
@@ -3491,7 +3055,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576400, // '2023-01-13T02:20:00.000Z',
     open: 15065.9,
     high: 15069.9,
     low: 15065.9,
@@ -3499,7 +3062,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576460, // '2023-01-13T02:21:00.000Z',
     open: 15067.9,
     high: 15067.9,
     low: 15065.9,
@@ -3507,7 +3069,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576520, // '2023-01-13T02:22:00.000Z',
     open: 15066.9,
     high: 15067.4,
     low: 15066.4,
@@ -3515,7 +3076,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576580, // '2023-01-13T02:23:00.000Z',
     open: 15065.9,
     high: 15065.9,
     low: 15064.4,
@@ -3523,7 +3083,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576640, // '2023-01-13T02:24:00.000Z',
     open: 15063.9,
     high: 15064.4,
     low: 15059.9,
@@ -3531,7 +3090,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576700, // '2023-01-13T02:25:00.000Z',
     open: 15061.4,
     high: 15063.9,
     low: 15059.4,
@@ -3539,7 +3097,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576760, // '2023-01-13T02:26:00.000Z',
     open: 15062.9,
     high: 15063.4,
     low: 15059.4,
@@ -3547,7 +3104,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576820, // '2023-01-13T02:27:00.000Z',
     open: 15059.4,
     high: 15060.4,
     low: 15058.9,
@@ -3555,7 +3111,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576880, // '2023-01-13T02:28:00.000Z',
     open: 15058.9,
     high: 15060.4,
     low: 15058,
@@ -3563,7 +3118,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673576940, // '2023-01-13T02:29:00.000Z',
     open: 15059.9,
     high: 15060.4,
     low: 15057.5,
@@ -3571,7 +3125,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577000, // '2023-01-13T02:30:00.000Z',
     open: 15058.9,
     high: 15062.4,
     low: 15057,
@@ -3579,7 +3132,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577060, // '2023-01-13T02:31:00.000Z',
     open: 15060.9,
     high: 15064.9,
     low: 15060.4,
@@ -3587,7 +3139,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577120, // '2023-01-13T02:32:00.000Z',
     open: 15064.9,
     high: 15066.9,
     low: 15064.4,
@@ -3595,7 +3146,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577180, // '2023-01-13T02:33:00.000Z',
     open: 15067.4,
     high: 15067.4,
     low: 15066.4,
@@ -3603,7 +3153,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577240, // '2023-01-13T02:34:00.000Z',
     open: 15067.4,
     high: 15067.4,
     low: 15066.9,
@@ -3611,7 +3160,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577300, // '2023-01-13T02:35:00.000Z',
     open: 15066.9,
     high: 15066.9,
     low: 15065.4,
@@ -3619,7 +3167,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577360, // '2023-01-13T02:36:00.000Z',
     open: 15064.9,
     high: 15064.9,
     low: 15064.9,
@@ -3627,7 +3174,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577420, // '2023-01-13T02:37:00.000Z',
     open: 15064.4,
     high: 15066.4,
     low: 15063.9,
@@ -3635,7 +3181,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577480, // '2023-01-13T02:38:00.000Z',
     open: 15065.4,
     high: 15066.4,
     low: 15065.4,
@@ -3643,7 +3188,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577540, // '2023-01-13T02:39:00.000Z',
     open: 15067.4,
     high: 15068.4,
     low: 15066.4,
@@ -3651,7 +3195,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577600, // '2023-01-13T02:40:00.000Z',
     open: 15064.9,
     high: 15066.4,
     low: 15064.9,
@@ -3659,7 +3202,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577660, // '2023-01-13T02:41:00.000Z',
     open: 15065.4,
     high: 15066.4,
     low: 15065.4,
@@ -3667,7 +3209,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577720, // '2023-01-13T02:42:00.000Z',
     open: 15065.9,
     high: 15066.4,
     low: 15064.9,
@@ -3675,7 +3216,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577780, // '2023-01-13T02:43:00.000Z',
     open: 15065.9,
     high: 15065.9,
     low: 15065.4,
@@ -3683,7 +3223,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577840, // '2023-01-13T02:44:00.000Z',
     open: 15066.9,
     high: 15066.9,
     low: 15066.4,
@@ -3691,7 +3230,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577900, // '2023-01-13T02:45:00.000Z',
     open: 15065.9,
     high: 15067.4,
     low: 15065.9,
@@ -3699,7 +3237,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673577960, // '2023-01-13T02:46:00.000Z',
     open: 15067.4,
     high: 15067.4,
     low: 15064.9,
@@ -3707,7 +3244,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578020, // '2023-01-13T02:47:00.000Z',
     open: 15065.9,
     high: 15065.9,
     low: 15065.4,
@@ -3715,7 +3251,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578080, // '2023-01-13T02:48:00.000Z',
     open: 15064.9,
     high: 15064.9,
     low: 15062.4,
@@ -3723,7 +3258,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578140, // '2023-01-13T02:49:00.000Z',
     open: 15062.9,
     high: 15063.4,
     low: 15062.4,
@@ -3731,7 +3265,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578200, // '2023-01-13T02:50:00.000Z',
     open: 15062.9,
     high: 15063.4,
     low: 15057.5,
@@ -3739,7 +3272,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578260, // '2023-01-13T02:51:00.000Z',
     open: 15059,
     high: 15062.4,
     low: 15058.5,
@@ -3747,7 +3279,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578320, // '2023-01-13T02:52:00.000Z',
     open: 15062,
     high: 15063.4,
     low: 15062,
@@ -3755,7 +3286,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578380, // '2023-01-13T02:53:00.000Z',
     open: 15065.4,
     high: 15065.4,
     low: 15065.4,
@@ -3763,7 +3293,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578440, // '2023-01-13T02:54:00.000Z',
     open: 15065.9,
     high: 15065.9,
     low: 15062,
@@ -3771,7 +3300,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578500, // '2023-01-13T02:55:00.000Z',
     open: 15063.9,
     high: 15063.9,
     low: 15063.4,
@@ -3779,7 +3307,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578560, // '2023-01-13T02:56:00.000Z',
     open: 15064.9,
     high: 15065.4,
     low: 15062.5,
@@ -3787,7 +3314,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578620, // '2023-01-13T02:57:00.000Z',
     open: 15063,
     high: 15063.4,
     low: 15063,
@@ -3795,7 +3321,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578680, // '2023-01-13T02:58:00.000Z',
     open: 15063.4,
     high: 15063.4,
     low: 15060,
@@ -3803,7 +3328,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578740, // '2023-01-13T02:59:00.000Z',
     open: 15060,
     high: 15060,
     low: 15057.5,
@@ -3811,7 +3335,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578800, // '2023-01-13T03:00:00.000Z',
     open: 15059.5,
     high: 15060.5,
     low: 15059,
@@ -3819,7 +3342,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578860, // '2023-01-13T03:01:00.000Z',
     open: 15059,
     high: 15060.5,
     low: 15058,
@@ -3827,7 +3349,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578920, // '2023-01-13T03:02:00.000Z',
     open: 15057,
     high: 15061.5,
     low: 15057,
@@ -3835,7 +3356,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673578980, // '2023-01-13T03:03:00.000Z',
     open: 15057,
     high: 15057.5,
     low: 15055.5,
@@ -3843,7 +3363,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579040, // '2023-01-13T03:04:00.000Z',
     open: 15057,
     high: 15058,
     low: 15057,
@@ -3851,7 +3370,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579100, // '2023-01-13T03:05:00.000Z',
     open: 15057.5,
     high: 15058.5,
     low: 15057.5,
@@ -3859,7 +3377,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579160, // '2023-01-13T03:06:00.000Z',
     open: 15057.5,
     high: 15057.5,
     low: 15057.5,
@@ -3867,7 +3384,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579220, // '2023-01-13T03:07:00.000Z',
     open: 15058,
     high: 15058.5,
     low: 15057.5,
@@ -3875,7 +3391,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579280, // '2023-01-13T03:08:00.000Z',
     open: 15059.5,
     high: 15061.5,
     low: 15059.5,
@@ -3883,7 +3398,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579340, // '2023-01-13T03:09:00.000Z',
     open: 15062.5,
     high: 15062.5,
     low: 15058.5,
@@ -3891,7 +3405,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579400, // '2023-01-13T03:10:00.000Z',
     open: 15058,
     high: 15058.5,
     low: 15057.5,
@@ -3899,7 +3412,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579460, // '2023-01-13T03:11:00.000Z',
     open: 15058.5,
     high: 15060.5,
     low: 15058,
@@ -3907,7 +3419,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579520, // '2023-01-13T03:12:00.000Z',
     open: 15060.5,
     high: 15064.5,
     low: 15060.5,
@@ -3915,7 +3426,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579580, // '2023-01-13T03:13:00.000Z',
     open: 15064.5,
     high: 15064.5,
     low: 15061.5,
@@ -3923,7 +3433,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579640, // '2023-01-13T03:14:00.000Z',
     open: 15063.5,
     high: 15064,
     low: 15061.5,
@@ -3931,7 +3440,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579700, // '2023-01-13T03:15:00.000Z',
     open: 15063.5,
     high: 15064,
     low: 15063,
@@ -3939,7 +3447,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579760, // '2023-01-13T03:16:00.000Z',
     open: 15064,
     high: 15067.4,
     low: 15064,
@@ -3947,7 +3454,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579820, // '2023-01-13T03:17:00.000Z',
     open: 15066.4,
     high: 15066.5,
     low: 15066.4,
@@ -3955,7 +3461,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579880, // '2023-01-13T03:18:00.000Z',
     open: 15065.5,
     high: 15066,
     low: 15065,
@@ -3963,7 +3468,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673579940, // '2023-01-13T03:19:00.000Z',
     open: 15065.5,
     high: 15067.4,
     low: 15065.5,
@@ -3971,7 +3475,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580000, // '2023-01-13T03:20:00.000Z',
     open: 15066.9,
     high: 15067,
     low: 15065.5,
@@ -3979,7 +3482,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580060, // '2023-01-13T03:21:00.000Z',
     open: 15065.5,
     high: 15069.9,
     low: 15065.5,
@@ -3987,7 +3489,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580120, // '2023-01-13T03:22:00.000Z',
     open: 15068.9,
     high: 15068.9,
     low: 15066.5,
@@ -3995,7 +3496,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580180, // '2023-01-13T03:23:00.000Z',
     open: 15065.5,
     high: 15066.5,
     low: 15065.5,
@@ -4003,7 +3503,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580240, // '2023-01-13T03:24:00.000Z',
     open: 15065.5,
     high: 15065.5,
     low: 15065.5,
@@ -4011,7 +3510,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580300, // '2023-01-13T03:25:00.000Z',
     open: 15065,
     high: 15065.5,
     low: 15065,
@@ -4019,7 +3517,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580360, // '2023-01-13T03:26:00.000Z',
     open: 15066,
     high: 15068,
     low: 15066,
@@ -4027,7 +3524,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580420, // '2023-01-13T03:27:00.000Z',
     open: 15068,
     high: 15068,
     low: 15066,
@@ -4035,7 +3531,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580480, // '2023-01-13T03:28:00.000Z',
     open: 15066.5,
     high: 15067.5,
     low: 15066.5,
@@ -4043,7 +3538,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580600, // '2023-01-13T03:30:00.000Z',
     open: 15066,
     high: 15066.5,
     low: 15065,
@@ -4051,7 +3545,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580660, // '2023-01-13T03:31:00.000Z',
     open: 15064.5,
     high: 15065,
     low: 15063,
@@ -4059,7 +3552,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580720, // '2023-01-13T03:32:00.000Z',
     open: 15061.5,
     high: 15062.5,
     low: 15060.5,
@@ -4067,7 +3559,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580780, // '2023-01-13T03:33:00.000Z',
     open: 15062.5,
     high: 15064,
     low: 15062.5,
@@ -4075,7 +3566,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580840, // '2023-01-13T03:34:00.000Z',
     open: 15062.5,
     high: 15063,
     low: 15061,
@@ -4083,7 +3573,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580900, // '2023-01-13T03:35:00.000Z',
     open: 15062.5,
     high: 15063,
     low: 15062,
@@ -4091,7 +3580,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673580960, // '2023-01-13T03:36:00.000Z',
     open: 15062.5,
     high: 15063.5,
     low: 15062.5,
@@ -4099,7 +3587,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581020, // '2023-01-13T03:37:00.000Z',
     open: 15062.5,
     high: 15063,
     low: 15060.5,
@@ -4107,7 +3594,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581080, // '2023-01-13T03:38:00.000Z',
     open: 15062.5,
     high: 15063.5,
     low: 15062.5,
@@ -4115,7 +3601,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581140, // '2023-01-13T03:39:00.000Z',
     open: 15062.5,
     high: 15062.5,
     low: 15060.5,
@@ -4123,7 +3608,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581200, // '2023-01-13T03:40:00.000Z',
     open: 15060.5,
     high: 15063,
     low: 15060.5,
@@ -4131,7 +3615,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581260, // '2023-01-13T03:41:00.000Z',
     open: 15061.5,
     high: 15064.5,
     low: 15061.5,
@@ -4139,7 +3622,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581380, // '2023-01-13T03:43:00.000Z',
     open: 15064,
     high: 15064.5,
     low: 15063,
@@ -4147,7 +3629,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581440, // '2023-01-13T03:44:00.000Z',
     open: 15062.5,
     high: 15062.5,
     low: 15062.5,
@@ -4155,7 +3636,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581500, // '2023-01-13T03:45:00.000Z',
     open: 15063,
     high: 15063,
     low: 15063,
@@ -4163,7 +3643,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581560, // '2023-01-13T03:46:00.000Z',
     open: 15061,
     high: 15061.5,
     low: 15060.5,
@@ -4171,7 +3650,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581620, // '2023-01-13T03:47:00.000Z',
     open: 15061,
     high: 15062,
     low: 15057,
@@ -4179,7 +3657,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581680, // '2023-01-13T03:48:00.000Z',
     open: 15057.5,
     high: 15059,
     low: 15057.5,
@@ -4187,7 +3664,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581740, // '2023-01-13T03:49:00.000Z',
     open: 15059.5,
     high: 15059.5,
     low: 15056,
@@ -4195,7 +3671,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581800, // '2023-01-13T03:50:00.000Z',
     open: 15056,
     high: 15057.5,
     low: 15055.5,
@@ -4203,7 +3678,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581860, // '2023-01-13T03:51:00.000Z',
     open: 15057,
     high: 15057.5,
     low: 15055.5,
@@ -4211,7 +3685,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581920, // '2023-01-13T03:52:00.000Z',
     open: 15055,
     high: 15055,
     low: 15050,
@@ -4219,7 +3692,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673581980, // '2023-01-13T03:53:00.000Z',
     open: 15051.5,
     high: 15054.5,
     low: 15051.5,
@@ -4227,7 +3699,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582040, // '2023-01-13T03:54:00.000Z',
     open: 15054.5,
     high: 15056,
     low: 15054.5,
@@ -4235,7 +3706,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582100, // '2023-01-13T03:55:00.000Z',
     open: 15055,
     high: 15055,
     low: 15055,
@@ -4243,7 +3713,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582160, // '2023-01-13T03:56:00.000Z',
     open: 15055.5,
     high: 15056.5,
     low: 15055.5,
@@ -4251,7 +3720,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582220, // '2023-01-13T03:57:00.000Z',
     open: 15057.5,
     high: 15059.5,
     low: 15057.5,
@@ -4259,7 +3727,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582280, // '2023-01-13T03:58:00.000Z',
     open: 15059,
     high: 15059.5,
     low: 15057.5,
@@ -4267,7 +3734,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582340, // '2023-01-13T03:59:00.000Z',
     open: 15060.5,
     high: 15060.5,
     low: 15058.5,
@@ -4275,7 +3741,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582400, // '2023-01-13T04:00:00.000Z',
     open: 15059.5,
     high: 15061,
     low: 15057.5,
@@ -4283,7 +3748,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582460, // '2023-01-13T04:01:00.000Z',
     open: 15057,
     high: 15057.5,
     low: 15057,
@@ -4291,7 +3755,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582520, // '2023-01-13T04:02:00.000Z',
     open: 15057,
     high: 15058,
     low: 15057,
@@ -4299,7 +3762,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582580, // '2023-01-13T04:03:00.000Z',
     open: 15058,
     high: 15058.5,
     low: 15057.5,
@@ -4307,7 +3769,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582640, // '2023-01-13T04:04:00.000Z',
     open: 15056,
     high: 15058,
     low: 15055.5,
@@ -4315,7 +3776,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582700, // '2023-01-13T04:05:00.000Z',
     open: 15058.5,
     high: 15060.5,
     low: 15058.5,
@@ -4323,7 +3783,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582760, // '2023-01-13T04:06:00.000Z',
     open: 15060,
     high: 15060.5,
     low: 15059,
@@ -4331,7 +3790,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582820, // '2023-01-13T04:07:00.000Z',
     open: 15060,
     high: 15064.5,
     low: 15059,
@@ -4339,7 +3797,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582880, // '2023-01-13T04:08:00.000Z',
     open: 15063,
     high: 15064.5,
     low: 15063,
@@ -4347,7 +3804,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673582940, // '2023-01-13T04:09:00.000Z',
     open: 15063,
     high: 15063,
     low: 15063,
@@ -4355,7 +3811,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583000, // '2023-01-13T04:10:00.000Z',
     open: 15063.5,
     high: 15063.5,
     low: 15063,
@@ -4363,7 +3818,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583060, // '2023-01-13T04:11:00.000Z',
     open: 15063.5,
     high: 15064.5,
     low: 15063.5,
@@ -4371,7 +3825,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583120, // '2023-01-13T04:12:00.000Z',
     open: 15063.5,
     high: 15063.5,
     low: 15062.5,
@@ -4379,7 +3832,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583180, // '2023-01-13T04:13:00.000Z',
     open: 15063.5,
     high: 15063.5,
     low: 15062.5,
@@ -4387,7 +3839,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583240, // '2023-01-13T04:14:00.000Z',
     open: 15062.5,
     high: 15062.5,
     low: 15060.5,
@@ -4395,7 +3846,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583300, // '2023-01-13T04:15:00.000Z',
     open: 15063,
     high: 15064.5,
     low: 15063,
@@ -4403,7 +3853,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583360, // '2023-01-13T04:16:00.000Z',
     open: 15065,
     high: 15065.5,
     low: 15065,
@@ -4411,7 +3860,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583420, // '2023-01-13T04:17:00.000Z',
     open: 15065.5,
     high: 15065.5,
     low: 15065,
@@ -4419,7 +3867,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583480, // '2023-01-13T04:18:00.000Z',
     open: 15065.5,
     high: 15066,
     low: 15065.5,
@@ -4427,7 +3874,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583660, // '2023-01-13T04:21:00.000Z',
     open: 15066,
     high: 15067.5,
     low: 15065.5,
@@ -4435,7 +3881,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583720, // '2023-01-13T04:22:00.000Z',
     open: 15068,
     high: 15068.5,
     low: 15067.5,
@@ -4443,7 +3888,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583840, // '2023-01-13T04:24:00.000Z',
     open: 15068,
     high: 15071,
     low: 15068,
@@ -4451,7 +3895,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583900, // '2023-01-13T04:25:00.000Z',
     open: 15069,
     high: 15069.5,
     low: 15069,
@@ -4459,7 +3902,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673583960, // '2023-01-13T04:26:00.000Z',
     open: 15070,
     high: 15070,
     low: 15069,
@@ -4467,7 +3909,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584020, // '2023-01-13T04:27:00.000Z',
     open: 15069,
     high: 15069,
     low: 15068.5,
@@ -4475,7 +3916,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584080, // '2023-01-13T04:28:00.000Z',
     open: 15068.5,
     high: 15068.5,
     low: 15068.5,
@@ -4483,7 +3923,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584140, // '2023-01-13T04:29:00.000Z',
     open: 15068,
     high: 15068.5,
     low: 15066.5,
@@ -4491,7 +3930,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584200, // '2023-01-13T04:30:00.000Z',
     open: 15067.5,
     high: 15067.5,
     low: 15067.5,
@@ -4499,7 +3937,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584260, // '2023-01-13T04:31:00.000Z',
     open: 15067,
     high: 15068.5,
     low: 15066.5,
@@ -4507,7 +3944,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584320, // '2023-01-13T04:32:00.000Z',
     open: 15068,
     high: 15068,
     low: 15067,
@@ -4515,7 +3951,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584380, // '2023-01-13T04:33:00.000Z',
     open: 15067.5,
     high: 15067.5,
     low: 15067,
@@ -4523,7 +3958,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584440, // '2023-01-13T04:34:00.000Z',
     open: 15067,
     high: 15067.5,
     low: 15066.5,
@@ -4531,7 +3965,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584500, // '2023-01-13T04:35:00.000Z',
     open: 15065.5,
     high: 15066.5,
     low: 15065.5,
@@ -4539,7 +3972,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584560, // '2023-01-13T04:36:00.000Z',
     open: 15065,
     high: 15065,
     low: 15064.5,
@@ -4547,7 +3979,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584620, // '2023-01-13T04:37:00.000Z',
     open: 15065,
     high: 15066.5,
     low: 15065,
@@ -4555,7 +3986,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584680, // '2023-01-13T04:38:00.000Z',
     open: 15065,
     high: 15065,
     low: 15065,
@@ -4563,7 +3993,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584740, // '2023-01-13T04:39:00.000Z',
     open: 15065.5,
     high: 15065.5,
     low: 15065.5,
@@ -4571,7 +4000,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584800, // '2023-01-13T04:40:00.000Z',
     open: 15065.5,
     high: 15065.5,
     low: 15065,
@@ -4579,7 +4007,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673584860, // '2023-01-13T04:41:00.000Z',
     open: 15065,
     high: 15065.5,
     low: 15064.5,
@@ -4587,7 +4014,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673585280, // '2023-01-13T04:48:00.000Z',
     open: 15067.1,
     high: 15067.6,
     low: 15066.6,
@@ -4595,7 +4021,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673585400, // '2023-01-13T04:50:00.000Z',
     open: 15065,
     high: 15066,
     low: 15065,
@@ -4603,7 +4028,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673585460, // '2023-01-13T04:51:00.000Z',
     open: 15064,
     high: 15064,
     low: 15062,
@@ -4611,7 +4035,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673585520, // '2023-01-13T04:52:00.000Z',
     open: 15061.5,
     high: 15061.5,
     low: 15058.5,
@@ -4619,7 +4042,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673585580, // '2023-01-13T04:53:00.000Z',
     open: 15060,
     high: 15061.5,
     low: 15060,
@@ -4627,7 +4049,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673585640, // '2023-01-13T04:54:00.000Z',
     open: 15059.5,
     high: 15060.5,
     low: 15058.5,
@@ -4635,7 +4056,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673585700, // '2023-01-13T04:55:00.000Z',
     open: 15060.5,
     high: 15060.5,
     low: 15059,
@@ -4643,7 +4063,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673585760, // '2023-01-13T04:56:00.000Z',
     open: 15060.5,
     high: 15060.5,
     low: 15059.5,
@@ -4651,7 +4070,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673585820, // '2023-01-13T04:57:00.000Z',
     open: 15060,
     high: 15060.5,
     low: 15058.1,
@@ -4659,7 +4077,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673585880, // '2023-01-13T04:58:00.000Z',
     open: 15059.5,
     high: 15060.5,
     low: 15058.6,
@@ -4667,7 +4084,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673585940, // '2023-01-13T04:59:00.000Z',
     open: 15059.5,
     high: 15061.5,
     low: 15059,
@@ -4675,7 +4091,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586000, // '2023-01-13T05:00:00.000Z',
     open: 15060.5,
     high: 15062,
     low: 15059,
@@ -4683,7 +4098,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586060, // '2023-01-13T05:01:00.000Z',
     open: 15060.5,
     high: 15062.5,
     low: 15060.5,
@@ -4691,7 +4105,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586120, // '2023-01-13T05:02:00.000Z',
     open: 15062,
     high: 15062,
     low: 15059.5,
@@ -4699,7 +4112,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586180, // '2023-01-13T05:03:00.000Z',
     open: 15061.5,
     high: 15062.5,
     low: 15061.5,
@@ -4707,7 +4119,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586240, // '2023-01-13T05:04:00.000Z',
     open: 15063,
     high: 15064.5,
     low: 15063,
@@ -4715,7 +4126,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586300, // '2023-01-13T05:05:00.000Z',
     open: 15066.5,
     high: 15067,
     low: 15065,
@@ -4723,7 +4133,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586360, // '2023-01-13T05:06:00.000Z',
     open: 15065.5,
     high: 15065.5,
     low: 15063,
@@ -4731,7 +4140,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586420, // '2023-01-13T05:07:00.000Z',
     open: 15063,
     high: 15063,
     low: 15059.1,
@@ -4739,7 +4147,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586480, // '2023-01-13T05:08:00.000Z',
     open: 15061.5,
     high: 15063.5,
     low: 15060.1,
@@ -4747,7 +4154,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586540, // '2023-01-13T05:09:00.000Z',
     open: 15061,
     high: 15061.5,
     low: 15059.6,
@@ -4755,7 +4161,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586600, // '2023-01-13T05:10:00.000Z',
     open: 15061,
     high: 15061,
     low: 15058.6,
@@ -4763,7 +4168,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586660, // '2023-01-13T05:11:00.000Z',
     open: 15059.6,
     high: 15061,
     low: 15059.6,
@@ -4771,7 +4175,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586720, // '2023-01-13T05:12:00.000Z',
     open: 15060.6,
     high: 15061.1,
     low: 15059.1,
@@ -4779,7 +4182,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586780, // '2023-01-13T05:13:00.000Z',
     open: 15059.6,
     high: 15062,
     low: 15059.6,
@@ -4787,7 +4189,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586840, // '2023-01-13T05:14:00.000Z',
     open: 15060.6,
     high: 15060.6,
     low: 15058.1,
@@ -4795,7 +4196,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586900, // '2023-01-13T05:15:00.000Z',
     open: 15059.1,
     high: 15059.6,
     low: 15058.6,
@@ -4803,7 +4203,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673586960, // '2023-01-13T05:16:00.000Z',
     open: 15060.1,
     high: 15060.6,
     low: 15059.6,
@@ -4811,7 +4210,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587020, // '2023-01-13T05:17:00.000Z',
     open: 15060.1,
     high: 15061.1,
     low: 15058.6,
@@ -4819,7 +4217,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587080, // '2023-01-13T05:18:00.000Z',
     open: 15059.6,
     high: 15061.1,
     low: 15059.6,
@@ -4827,7 +4224,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587140, // '2023-01-13T05:19:00.000Z',
     open: 15060.6,
     high: 15061.6,
     low: 15058.6,
@@ -4835,7 +4231,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587200, // '2023-01-13T05:20:00.000Z',
     open: 15060.6,
     high: 15061.6,
     low: 15060.6,
@@ -4843,7 +4238,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587260, // '2023-01-13T05:21:00.000Z',
     open: 15060.1,
     high: 15060.1,
     low: 15058.6,
@@ -4851,7 +4245,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587320, // '2023-01-13T05:22:00.000Z',
     open: 15060.1,
     high: 15060.6,
     low: 15058.6,
@@ -4859,7 +4252,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587380, // '2023-01-13T05:23:00.000Z',
     open: 15058.1,
     high: 15063,
     low: 15058.1,
@@ -4867,7 +4259,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587440, // '2023-01-13T05:24:00.000Z',
     open: 15063.5,
     high: 15064.5,
     low: 15063.5,
@@ -4875,7 +4266,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587500, // '2023-01-13T05:25:00.000Z',
     open: 15064.5,
     high: 15064.5,
     low: 15064.5,
@@ -4883,7 +4273,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587560, // '2023-01-13T05:26:00.000Z',
     open: 15065.5,
     high: 15065.5,
     low: 15063.5,
@@ -4891,7 +4280,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587620, // '2023-01-13T05:27:00.000Z',
     open: 15062.6,
     high: 15062.6,
     low: 15060.1,
@@ -4899,7 +4287,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587680, // '2023-01-13T05:28:00.000Z',
     open: 15061.1,
     high: 15062.6,
     low: 15060.6,
@@ -4907,7 +4294,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587740, // '2023-01-13T05:29:00.000Z',
     open: 15062.6,
     high: 15063.6,
     low: 15061.1,
@@ -4915,7 +4301,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587800, // '2023-01-13T05:30:00.000Z',
     open: 15063.1,
     high: 15064.5,
     low: 15062.6,
@@ -4923,7 +4308,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587860, // '2023-01-13T05:31:00.000Z',
     open: 15063.6,
     high: 15064.1,
     low: 15061.6,
@@ -4931,7 +4315,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587920, // '2023-01-13T05:32:00.000Z',
     open: 15061.6,
     high: 15063.6,
     low: 15061.6,
@@ -4939,7 +4322,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673587980, // '2023-01-13T05:33:00.000Z',
     open: 15062.1,
     high: 15063.6,
     low: 15061.6,
@@ -4947,7 +4329,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588040, // '2023-01-13T05:34:00.000Z',
     open: 15064.1,
     high: 15064.6,
     low: 15062.6,
@@ -4955,7 +4336,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588100, // '2023-01-13T05:35:00.000Z',
     open: 15064.1,
     high: 15064.1,
     low: 15063.6,
@@ -4963,7 +4343,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588220, // '2023-01-13T05:37:00.000Z',
     open: 15064.1,
     high: 15064.1,
     low: 15063.1,
@@ -4971,7 +4350,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588280, // '2023-01-13T05:38:00.000Z',
     open: 15063.1,
     high: 15064.1,
     low: 15062.6,
@@ -4979,7 +4357,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588340, // '2023-01-13T05:39:00.000Z',
     open: 15063.1,
     high: 15063.1,
     low: 15061.6,
@@ -4987,7 +4364,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588400, // '2023-01-13T05:40:00.000Z',
     open: 15062.1,
     high: 15065.6,
     low: 15062.1,
@@ -4995,7 +4371,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588460, // '2023-01-13T05:41:00.000Z',
     open: 15067,
     high: 15067,
     low: 15065.6,
@@ -5003,7 +4378,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588580, // '2023-01-13T05:43:00.000Z',
     open: 15066.1,
     high: 15068.5,
     low: 15066.1,
@@ -5011,7 +4385,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588640, // '2023-01-13T05:44:00.000Z',
     open: 15070,
     high: 15070,
     low: 15068.5,
@@ -5019,7 +4392,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588700, // '2023-01-13T05:45:00.000Z',
     open: 15070.5,
     high: 15070.5,
     low: 15069.5,
@@ -5027,7 +4399,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588760, // '2023-01-13T05:46:00.000Z',
     open: 15071,
     high: 15072.5,
     low: 15071,
@@ -5035,7 +4406,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588820, // '2023-01-13T05:47:00.000Z',
     open: 15072,
     high: 15073,
     low: 15070,
@@ -5043,7 +4413,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588880, // '2023-01-13T05:48:00.000Z',
     open: 15071.5,
     high: 15072.5,
     low: 15070.5,
@@ -5051,7 +4420,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673588940, // '2023-01-13T05:49:00.000Z',
     open: 15071,
     high: 15071,
     low: 15069.5,
@@ -5059,7 +4427,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589000, // '2023-01-13T05:50:00.000Z',
     open: 15070,
     high: 15070,
     low: 15069.5,
@@ -5067,7 +4434,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589060, // '2023-01-13T05:51:00.000Z',
     open: 15070,
     high: 15072.5,
     low: 15069.5,
@@ -5075,7 +4441,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589120, // '2023-01-13T05:52:00.000Z',
     open: 15069,
     high: 15069.5,
     low: 15067.6,
@@ -5083,7 +4448,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589180, // '2023-01-13T05:53:00.000Z',
     open: 15069.5,
     high: 15070,
     low: 15068.5,
@@ -5091,7 +4455,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589240, // '2023-01-13T05:54:00.000Z',
     open: 15069.5,
     high: 15069.5,
     low: 15068,
@@ -5099,7 +4462,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589300, // '2023-01-13T05:55:00.000Z',
     open: 15070,
     high: 15071.5,
     low: 15069.5,
@@ -5107,7 +4469,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589360, // '2023-01-13T05:56:00.000Z',
     open: 15070,
     high: 15073,
     low: 15070,
@@ -5115,7 +4476,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589420, // '2023-01-13T05:57:00.000Z',
     open: 15072,
     high: 15073,
     low: 15071,
@@ -5123,7 +4483,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589480, // '2023-01-13T05:58:00.000Z',
     open: 15071.5,
     high: 15073,
     low: 15070.5,
@@ -5131,7 +4490,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589540, // '2023-01-13T05:59:00.000Z',
     open: 15069.5,
     high: 15071,
     low: 15069,
@@ -5139,7 +4497,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589600, // '2023-01-13T06:00:00.000Z',
     open: 15070,
     high: 15070,
     low: 15065.1,
@@ -5147,7 +4504,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589660, // '2023-01-13T06:01:00.000Z',
     open: 15065.6,
     high: 15068.6,
     low: 15065.6,
@@ -5155,7 +4511,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589720, // '2023-01-13T06:02:00.000Z',
     open: 15068.1,
     high: 15068.1,
     low: 15067.1,
@@ -5163,7 +4518,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589780, // '2023-01-13T06:03:00.000Z',
     open: 15067.6,
     high: 15068.1,
     low: 15066.6,
@@ -5171,7 +4525,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589840, // '2023-01-13T06:04:00.000Z',
     open: 15067.1,
     high: 15068.1,
     low: 15065.6,
@@ -5179,7 +4532,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589900, // '2023-01-13T06:05:00.000Z',
     open: 15065.6,
     high: 15066.1,
     low: 15064.1,
@@ -5187,7 +4539,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673589960, // '2023-01-13T06:06:00.000Z',
     open: 15065.1,
     high: 15066.1,
     low: 15065.1,
@@ -5195,7 +4546,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590020, // '2023-01-13T06:07:00.000Z',
     open: 15065.6,
     high: 15068.6,
     low: 15065.6,
@@ -5203,7 +4553,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590080, // '2023-01-13T06:08:00.000Z',
     open: 15068.6,
     high: 15069.1,
     low: 15067.1,
@@ -5211,7 +4560,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590140, // '2023-01-13T06:09:00.000Z',
     open: 15068.6,
     high: 15070.1,
     low: 15068.6,
@@ -5219,7 +4567,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590200, // '2023-01-13T06:10:00.000Z',
     open: 15070.1,
     high: 15070.1,
     low: 15070.1,
@@ -5227,7 +4574,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590260, // '2023-01-13T06:11:00.000Z',
     open: 15069.6,
     high: 15069.6,
     low: 15067.1,
@@ -5235,7 +4581,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590320, // '2023-01-13T06:12:00.000Z',
     open: 15067.6,
     high: 15067.6,
     low: 15066.6,
@@ -5243,7 +4588,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590380, // '2023-01-13T06:13:00.000Z',
     open: 15065.6,
     high: 15065.6,
     low: 15065.6,
@@ -5251,7 +4595,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590440, // '2023-01-13T06:14:00.000Z',
     open: 15066.1,
     high: 15066.6,
     low: 15065.6,
@@ -5259,7 +4602,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590500, // '2023-01-13T06:15:00.000Z',
     open: 15067.6,
     high: 15067.6,
     low: 15067.1,
@@ -5267,7 +4609,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590560, // '2023-01-13T06:16:00.000Z',
     open: 15068.6,
     high: 15068.6,
     low: 15068.1,
@@ -5275,7 +4616,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590620, // '2023-01-13T06:17:00.000Z',
     open: 15069.6,
     high: 15074,
     low: 15069.6,
@@ -5283,7 +4623,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590680, // '2023-01-13T06:18:00.000Z',
     open: 15072.5,
     high: 15074.5,
     low: 15072.1,
@@ -5291,7 +4630,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590740, // '2023-01-13T06:19:00.000Z',
     open: 15072.5,
     high: 15074.5,
     low: 15072.5,
@@ -5299,7 +4637,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590800, // '2023-01-13T06:20:00.000Z',
     open: 15074,
     high: 15075,
     low: 15074,
@@ -5307,7 +4644,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590860, // '2023-01-13T06:21:00.000Z',
     open: 15077.5,
     high: 15080.5,
     low: 15077.5,
@@ -5315,7 +4651,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590920, // '2023-01-13T06:22:00.000Z',
     open: 15079.5,
     high: 15080.5,
     low: 15079.5,
@@ -5323,7 +4658,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673590980, // '2023-01-13T06:23:00.000Z',
     open: 15079.5,
     high: 15079.5,
     low: 15078.5,
@@ -5331,7 +4665,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591040, // '2023-01-13T06:24:00.000Z',
     open: 15080,
     high: 15087,
     low: 15080,
@@ -5339,7 +4672,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591100, // '2023-01-13T06:25:00.000Z',
     open: 15085,
     high: 15085.5,
     low: 15082.5,
@@ -5347,7 +4679,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591160, // '2023-01-13T06:26:00.000Z',
     open: 15083.5,
     high: 15084.5,
     low: 15081.5,
@@ -5355,7 +4686,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591220, // '2023-01-13T06:27:00.000Z',
     open: 15083,
     high: 15086.5,
     low: 15082.5,
@@ -5363,7 +4693,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591340, // '2023-01-13T06:29:00.000Z',
     open: 15085,
     high: 15085,
     low: 15083.5,
@@ -5371,7 +4700,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591400, // '2023-01-13T06:30:00.000Z',
     open: 15084,
     high: 15085,
     low: 15082.5,
@@ -5379,7 +4707,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591460, // '2023-01-13T06:31:00.000Z',
     open: 15084.5,
     high: 15084.5,
     low: 15082.5,
@@ -5387,7 +4714,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591520, // '2023-01-13T06:32:00.000Z',
     open: 15082.5,
     high: 15084.5,
     low: 15082.5,
@@ -5395,7 +4721,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591580, // '2023-01-13T06:33:00.000Z',
     open: 15083.5,
     high: 15086,
     low: 15083.5,
@@ -5403,7 +4728,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591640, // '2023-01-13T06:34:00.000Z',
     open: 15085.5,
     high: 15086,
     low: 15085.5,
@@ -5411,7 +4735,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591700, // '2023-01-13T06:35:00.000Z',
     open: 15085.5,
     high: 15085.5,
     low: 15085.5,
@@ -5419,7 +4742,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591760, // '2023-01-13T06:36:00.000Z',
     open: 15086,
     high: 15086,
     low: 15085.5,
@@ -5427,7 +4749,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591820, // '2023-01-13T06:37:00.000Z',
     open: 15085,
     high: 15086.5,
     low: 15085,
@@ -5435,7 +4756,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591880, // '2023-01-13T06:38:00.000Z',
     open: 15086,
     high: 15086,
     low: 15084,
@@ -5443,7 +4763,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673591940, // '2023-01-13T06:39:00.000Z',
     open: 15086,
     high: 15092,
     low: 15086,
@@ -5451,7 +4770,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592000, // '2023-01-13T06:40:00.000Z',
     open: 15091,
     high: 15091.5,
     low: 15091,
@@ -5459,7 +4777,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592060, // '2023-01-13T06:41:00.000Z',
     open: 15090.5,
     high: 15091.5,
     low: 15090.5,
@@ -5467,7 +4784,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592120, // '2023-01-13T06:42:00.000Z',
     open: 15088,
     high: 15088.5,
     low: 15086,
@@ -5475,7 +4791,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592180, // '2023-01-13T06:43:00.000Z',
     open: 15086.5,
     high: 15086.5,
     low: 15082.5,
@@ -5483,7 +4798,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592240, // '2023-01-13T06:44:00.000Z',
     open: 15082.5,
     high: 15082.5,
     low: 15081,
@@ -5491,7 +4805,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592300, // '2023-01-13T06:45:00.000Z',
     open: 15082,
     high: 15083,
     low: 15078,
@@ -5499,7 +4812,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592360, // '2023-01-13T06:46:00.000Z',
     open: 15077.5,
     high: 15077.5,
     low: 15076.1,
@@ -5507,7 +4819,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592420, // '2023-01-13T06:47:00.000Z',
     open: 15076.1,
     high: 15076.1,
     low: 15071.6,
@@ -5515,7 +4826,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592480, // '2023-01-13T06:48:00.000Z',
     open: 15073.6,
     high: 15073.6,
     low: 15071.1,
@@ -5523,7 +4833,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592540, // '2023-01-13T06:49:00.000Z',
     open: 15073.6,
     high: 15073.6,
     low: 15072.6,
@@ -5531,7 +4840,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592600, // '2023-01-13T06:50:00.000Z',
     open: 15072.1,
     high: 15072.6,
     low: 15070.6,
@@ -5539,7 +4847,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592660, // '2023-01-13T06:51:00.000Z',
     open: 15072.1,
     high: 15076.1,
     low: 15072.1,
@@ -5547,7 +4854,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592720, // '2023-01-13T06:52:00.000Z',
     open: 15077.1,
     high: 15077.6,
     low: 15076.6,
@@ -5555,7 +4861,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592780, // '2023-01-13T06:53:00.000Z',
     open: 15079,
     high: 15079.5,
     low: 15079,
@@ -5563,7 +4868,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592840, // '2023-01-13T06:54:00.000Z',
     open: 15080.5,
     high: 15081,
     low: 15080.5,
@@ -5571,7 +4875,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592900, // '2023-01-13T06:55:00.000Z',
     open: 15080.5,
     high: 15081,
     low: 15080.5,
@@ -5579,7 +4882,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673592960, // '2023-01-13T06:56:00.000Z',
     open: 15081.5,
     high: 15083,
     low: 15081.5,
@@ -5587,7 +4889,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593020, // '2023-01-13T06:57:00.000Z',
     open: 15081,
     high: 15081,
     low: 15080.5,
@@ -5595,7 +4896,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593080, // '2023-01-13T06:58:00.000Z',
     open: 15081,
     high: 15082,
     low: 15081,
@@ -5603,7 +4903,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593140, // '2023-01-13T06:59:00.000Z',
     open: 15080.5,
     high: 15080.5,
     low: 15078.6,
@@ -5611,7 +4910,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593200, // '2023-01-13T07:00:00.000Z',
     open: 15080.5,
     high: 15081,
     low: 15077.1,
@@ -5619,7 +4917,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593260, // '2023-01-13T07:01:00.000Z',
     open: 15080.6,
     high: 15086.1,
     low: 15080.6,
@@ -5627,7 +4924,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593320, // '2023-01-13T07:02:00.000Z',
     open: 15086.1,
     high: 15086.1,
     low: 15081.1,
@@ -5635,7 +4931,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593380, // '2023-01-13T07:03:00.000Z',
     open: 15083.6,
     high: 15085.1,
     low: 15082.1,
@@ -5643,7 +4938,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593440, // '2023-01-13T07:04:00.000Z',
     open: 15082.6,
     high: 15086.1,
     low: 15080.6,
@@ -5651,7 +4945,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593500, // '2023-01-13T07:05:00.000Z',
     open: 15084.1,
     high: 15086.1,
     low: 15081.6,
@@ -5659,7 +4952,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593560, // '2023-01-13T07:06:00.000Z',
     open: 15086.1,
     high: 15090.1,
     low: 15085.6,
@@ -5667,7 +4959,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593620, // '2023-01-13T07:07:00.000Z',
     open: 15089.6,
     high: 15091.1,
     low: 15085.6,
@@ -5675,7 +4966,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593680, // '2023-01-13T07:08:00.000Z',
     open: 15089.6,
     high: 15090.6,
     low: 15089.6,
@@ -5683,7 +4973,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593740, // '2023-01-13T07:09:00.000Z',
     open: 15091.1,
     high: 15091.1,
     low: 15088.6,
@@ -5691,7 +4980,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593800, // '2023-01-13T07:10:00.000Z',
     open: 15091.6,
     high: 15099.5,
     low: 15091.6,
@@ -5699,7 +4987,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593860, // '2023-01-13T07:11:00.000Z',
     open: 15099.5,
     high: 15101,
     low: 15096.1,
@@ -5707,7 +4994,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593920, // '2023-01-13T07:12:00.000Z',
     open: 15096.1,
     high: 15096.1,
     low: 15093.1,
@@ -5715,7 +5001,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673593980, // '2023-01-13T07:13:00.000Z',
     open: 15092.6,
     high: 15093.6,
     low: 15086.6,
@@ -5723,7 +5008,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594040, // '2023-01-13T07:14:00.000Z',
     open: 15088.6,
     high: 15090.1,
     low: 15085.1,
@@ -5731,7 +5015,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594100, // '2023-01-13T07:15:00.000Z',
     open: 15089.6,
     high: 15092.1,
     low: 15086.6,
@@ -5739,7 +5022,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594160, // '2023-01-13T07:16:00.000Z',
     open: 15092.6,
     high: 15095.6,
     low: 15091.6,
@@ -5747,7 +5029,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594220, // '2023-01-13T07:17:00.000Z',
     open: 15095.1,
     high: 15095.1,
     low: 15092.6,
@@ -5755,7 +5036,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594280, // '2023-01-13T07:18:00.000Z',
     open: 15094.1,
     high: 15098.6,
     low: 15094.1,
@@ -5763,7 +5043,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594340, // '2023-01-13T07:19:00.000Z',
     open: 15097.1,
     high: 15101,
     low: 15096.6,
@@ -5771,7 +5050,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594400, // '2023-01-13T07:20:00.000Z',
     open: 15096.6,
     high: 15100,
     low: 15096.6,
@@ -5779,7 +5057,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594460, // '2023-01-13T07:21:00.000Z',
     open: 15099.5,
     high: 15100,
     low: 15096.6,
@@ -5787,7 +5064,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594520, // '2023-01-13T07:22:00.000Z',
     open: 15096.6,
     high: 15098.6,
     low: 15093.1,
@@ -5795,7 +5071,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594580, // '2023-01-13T07:23:00.000Z',
     open: 15094.1,
     high: 15094.1,
     low: 15090.1,
@@ -5803,7 +5078,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594640, // '2023-01-13T07:24:00.000Z',
     open: 15092.6,
     high: 15095.1,
     low: 15092.6,
@@ -5811,7 +5085,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594700, // '2023-01-13T07:25:00.000Z',
     open: 15093.6,
     high: 15094.6,
     low: 15090.1,
@@ -5819,7 +5092,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594760, // '2023-01-13T07:26:00.000Z',
     open: 15090.6,
     high: 15091.1,
     low: 15087.6,
@@ -5827,7 +5099,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594820, // '2023-01-13T07:27:00.000Z',
     open: 15091.1,
     high: 15091.1,
     low: 15083.1,
@@ -5835,7 +5106,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594880, // '2023-01-13T07:28:00.000Z',
     open: 15082.6,
     high: 15086.1,
     low: 15082.6,
@@ -5843,7 +5113,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673594940, // '2023-01-13T07:29:00.000Z',
     open: 15085.1,
     high: 15085.6,
     low: 15081.1,
@@ -5851,7 +5120,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595000, // '2023-01-13T07:30:00.000Z',
     open: 15082.1,
     high: 15087.1,
     low: 15081.1,
@@ -5859,7 +5127,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595060, // '2023-01-13T07:31:00.000Z',
     open: 15086.1,
     high: 15090.1,
     low: 15085.6,
@@ -5867,7 +5134,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595120, // '2023-01-13T07:32:00.000Z',
     open: 15089.6,
     high: 15092.7,
     low: 15088.6,
@@ -5875,7 +5141,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595180, // '2023-01-13T07:33:00.000Z',
     open: 15092.7,
     high: 15093.7,
     low: 15091.7,
@@ -5883,7 +5148,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595240, // '2023-01-13T07:34:00.000Z',
     open: 15091.2,
     high: 15093.7,
     low: 15089.7,
@@ -5891,7 +5155,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595300, // '2023-01-13T07:35:00.000Z',
     open: 15092.2,
     high: 15093.7,
     low: 15091.2,
@@ -5899,7 +5162,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595360, // '2023-01-13T07:36:00.000Z',
     open: 15092.2,
     high: 15093.7,
     low: 15090.2,
@@ -5907,7 +5169,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595420, // '2023-01-13T07:37:00.000Z',
     open: 15092.7,
     high: 15094.7,
     low: 15092.2,
@@ -5915,7 +5176,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595480, // '2023-01-13T07:38:00.000Z',
     open: 15092.7,
     high: 15093.2,
     low: 15091.2,
@@ -5923,7 +5183,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595540, // '2023-01-13T07:39:00.000Z',
     open: 15091.2,
     high: 15091.2,
     low: 15086.2,
@@ -5931,7 +5190,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595600, // '2023-01-13T07:40:00.000Z',
     open: 15087.2,
     high: 15088.2,
     low: 15085.2,
@@ -5939,7 +5197,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595660, // '2023-01-13T07:41:00.000Z',
     open: 15087.2,
     high: 15088.2,
     low: 15086.7,
@@ -5947,7 +5204,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595720, // '2023-01-13T07:42:00.000Z',
     open: 15087.2,
     high: 15090.3,
     low: 15086.7,
@@ -5955,7 +5211,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595780, // '2023-01-13T07:43:00.000Z',
     open: 15087.8,
     high: 15088.3,
     low: 15086.4,
@@ -5963,7 +5218,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595840, // '2023-01-13T07:44:00.000Z',
     open: 15086.9,
     high: 15087.9,
     low: 15084.4,
@@ -5971,7 +5225,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595900, // '2023-01-13T07:45:00.000Z',
     open: 15085.4,
     high: 15085.9,
     low: 15082.9,
@@ -5979,7 +5232,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673595960, // '2023-01-13T07:46:00.000Z',
     open: 15084.4,
     high: 15087.8,
     low: 15084.4,
@@ -5987,7 +5239,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596020, // '2023-01-13T07:47:00.000Z',
     open: 15086.9,
     high: 15087.8,
     low: 15084.4,
@@ -5995,7 +5246,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596080, // '2023-01-13T07:48:00.000Z',
     open: 15084.9,
     high: 15086.9,
     low: 15083.9,
@@ -6003,7 +5253,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596140, // '2023-01-13T07:49:00.000Z',
     open: 15085.9,
     high: 15085.9,
     low: 15084.4,
@@ -6011,7 +5260,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596200, // '2023-01-13T07:50:00.000Z',
     open: 15084.9,
     high: 15086.9,
     low: 15084.9,
@@ -6019,7 +5267,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596260, // '2023-01-13T07:51:00.000Z',
     open: 15085.9,
     high: 15087.9,
     low: 15084.4,
@@ -6027,7 +5274,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596320, // '2023-01-13T07:52:00.000Z',
     open: 15087.4,
     high: 15092.3,
     low: 15087.4,
@@ -6035,7 +5281,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596380, // '2023-01-13T07:53:00.000Z',
     open: 15089.8,
     high: 15090.3,
     low: 15085.4,
@@ -6043,7 +5288,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596440, // '2023-01-13T07:54:00.000Z',
     open: 15086.4,
     high: 15088.9,
     low: 15085.9,
@@ -6051,7 +5295,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596500, // '2023-01-13T07:55:00.000Z',
     open: 15087.4,
     high: 15087.4,
     low: 15084.4,
@@ -6059,7 +5302,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596560, // '2023-01-13T07:56:00.000Z',
     open: 15085.4,
     high: 15085.9,
     low: 15083.4,
@@ -6067,7 +5309,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596620, // '2023-01-13T07:57:00.000Z',
     open: 15084.4,
     high: 15087.4,
     low: 15082.9,
@@ -6075,7 +5316,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596680, // '2023-01-13T07:58:00.000Z',
     open: 15084.9,
     high: 15089.8,
     low: 15084.9,
@@ -6083,7 +5323,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596740, // '2023-01-13T07:59:00.000Z',
     open: 15086.4,
     high: 15087.4,
     low: 15082.9,
@@ -6091,7 +5330,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596800, // '2023-01-13T08:00:00.000Z',
     open: 15086.85,
     high: 15088.35,
     low: 15060.45,
@@ -6099,7 +5337,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596860, // '2023-01-13T08:01:00.000Z',
     open: 15061.45,
     high: 15067.45,
     low: 15054.95,
@@ -6107,7 +5344,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596920, // '2023-01-13T08:02:00.000Z',
     open: 15058.95,
     high: 15064.95,
     low: 15050.55,
@@ -6115,7 +5351,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673596980, // '2023-01-13T08:03:00.000Z',
     open: 15059.95,
     high: 15062.45,
     low: 15049.55,
@@ -6123,7 +5358,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597040, // '2023-01-13T08:04:00.000Z',
     open: 15057.45,
     high: 15061.95,
     low: 15052.05,
@@ -6131,7 +5365,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597100, // '2023-01-13T08:05:00.000Z',
     open: 15060.95,
     high: 15063.95,
     low: 15054.95,
@@ -6139,7 +5372,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597160, // '2023-01-13T08:06:00.000Z',
     open: 15061.95,
     high: 15064.95,
     low: 15053.05,
@@ -6147,7 +5379,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597220, // '2023-01-13T08:07:00.000Z',
     open: 15062.95,
     high: 15065.45,
     low: 15057.05,
@@ -6155,7 +5386,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597280, // '2023-01-13T08:08:00.000Z',
     open: 15060.45,
     high: 15067.05,
     low: 15058.05,
@@ -6163,7 +5393,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597340, // '2023-01-13T08:09:00.000Z',
     open: 15058.55,
     high: 15070.55,
     low: 15058.15,
@@ -6171,7 +5400,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597400, // '2023-01-13T08:10:00.000Z',
     open: 15070.05,
     high: 15075.05,
     low: 15061.55,
@@ -6179,7 +5407,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597460, // '2023-01-13T08:11:00.000Z',
     open: 15062.15,
     high: 15063.15,
     low: 15055.65,
@@ -6187,7 +5414,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597520, // '2023-01-13T08:12:00.000Z',
     open: 15061.15,
     high: 15070.05,
     low: 15057.65,
@@ -6195,7 +5421,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597580, // '2023-01-13T08:13:00.000Z',
     open: 15068.55,
     high: 15071.05,
     low: 15064.05,
@@ -6203,7 +5428,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597640, // '2023-01-13T08:14:00.000Z',
     open: 15065.55,
     high: 15067.15,
     low: 15058.25,
@@ -6211,7 +5435,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597700, // '2023-01-13T08:15:00.000Z',
     open: 15062.25,
     high: 15067.75,
     low: 15057.35,
@@ -6219,7 +5442,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597760, // '2023-01-13T08:16:00.000Z',
     open: 15066.75,
     high: 15070.65,
     low: 15063.25,
@@ -6227,7 +5449,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597820, // '2023-01-13T08:17:00.000Z',
     open: 15064.25,
     high: 15068.25,
     low: 15064.25,
@@ -6235,7 +5456,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597880, // '2023-01-13T08:18:00.000Z',
     open: 15064.85,
     high: 15069.85,
     low: 15063.35,
@@ -6243,7 +5463,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673597940, // '2023-01-13T08:19:00.000Z',
     open: 15065.95,
     high: 15069.95,
     low: 15061.45,
@@ -6251,7 +5470,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598000, // '2023-01-13T08:20:00.000Z',
     open: 15065.95,
     high: 15074.45,
     low: 15065.45,
@@ -6259,7 +5477,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598060, // '2023-01-13T08:21:00.000Z',
     open: 15073.45,
     high: 15082.75,
     low: 15072.45,
@@ -6267,7 +5484,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598120, // '2023-01-13T08:22:00.000Z',
     open: 15081.75,
     high: 15081.75,
     low: 15073.75,
@@ -6275,7 +5491,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598180, // '2023-01-13T08:23:00.000Z',
     open: 15077.15,
     high: 15083.65,
     low: 15075.15,
@@ -6283,7 +5498,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598240, // '2023-01-13T08:24:00.000Z',
     open: 15075.15,
     high: 15076.65,
     low: 15071.15,
@@ -6291,7 +5505,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598300, // '2023-01-13T08:25:00.000Z',
     open: 15074.75,
     high: 15074.75,
     low: 15062.25,
@@ -6299,7 +5512,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598360, // '2023-01-13T08:26:00.000Z',
     open: 15070.75,
     high: 15075.65,
     low: 15070.15,
@@ -6307,7 +5519,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598420, // '2023-01-13T08:27:00.000Z',
     open: 15072.15,
     high: 15075.65,
     low: 15067.65,
@@ -6315,7 +5526,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598480, // '2023-01-13T08:28:00.000Z',
     open: 15068.15,
     high: 15071.65,
     low: 15062.75,
@@ -6323,7 +5533,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598540, // '2023-01-13T08:29:00.000Z',
     open: 15072.15,
     high: 15075.15,
     low: 15068.65,
@@ -6331,7 +5540,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598600, // '2023-01-13T08:30:00.000Z',
     open: 15071.05,
     high: 15076.55,
     low: 15070.05,
@@ -6339,7 +5547,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598660, // '2023-01-13T08:31:00.000Z',
     open: 15071.65,
     high: 15073.65,
     low: 15068.65,
@@ -6347,7 +5554,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598720, // '2023-01-13T08:32:00.000Z',
     open: 15072.65,
     high: 15073.65,
     low: 15068.75,
@@ -6355,7 +5561,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598780, // '2023-01-13T08:33:00.000Z',
     open: 15073.15,
     high: 15073.15,
     low: 15062.25,
@@ -6363,7 +5568,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598840, // '2023-01-13T08:34:00.000Z',
     open: 15065.25,
     high: 15066.25,
     low: 15060.85,
@@ -6371,7 +5575,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598900, // '2023-01-13T08:35:00.000Z',
     open: 15064.35,
     high: 15069.25,
     low: 15063.85,
@@ -6379,7 +5582,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673598960, // '2023-01-13T08:36:00.000Z',
     open: 15066.15,
     high: 15070.15,
     low: 15066.15,
@@ -6387,7 +5589,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599020, // '2023-01-13T08:37:00.000Z',
     open: 15067.65,
     high: 15067.65,
     low: 15058.25,
@@ -6395,7 +5596,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599080, // '2023-01-13T08:38:00.000Z',
     open: 15059.85,
     high: 15064.75,
     low: 15059.35,
@@ -6403,7 +5603,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599140, // '2023-01-13T08:39:00.000Z',
     open: 15063.75,
     high: 15071.65,
     low: 15063.75,
@@ -6411,7 +5610,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599200, // '2023-01-13T08:40:00.000Z',
     open: 15071.15,
     high: 15076.05,
     low: 15068.65,
@@ -6419,7 +5617,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599260, // '2023-01-13T08:41:00.000Z',
     open: 15074.05,
     high: 15075.05,
     low: 15067.05,
@@ -6427,7 +5624,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599320, // '2023-01-13T08:42:00.000Z',
     open: 15067.05,
     high: 15069.05,
     low: 15064.05,
@@ -6435,7 +5631,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599380, // '2023-01-13T08:43:00.000Z',
     open: 15064.55,
     high: 15069.05,
     low: 15064.55,
@@ -6443,7 +5638,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599440, // '2023-01-13T08:44:00.000Z',
     open: 15065.55,
     high: 15065.55,
     low: 15058.65,
@@ -6451,7 +5645,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599500, // '2023-01-13T08:45:00.000Z',
     open: 15064.55,
     high: 15076.85,
     low: 15064.05,
@@ -6459,7 +5652,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599560, // '2023-01-13T08:46:00.000Z',
     open: 15073.85,
     high: 15079.85,
     low: 15072.35,
@@ -6467,7 +5659,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599620, // '2023-01-13T08:47:00.000Z',
     open: 15074.35,
     high: 15077.85,
     low: 15072.85,
@@ -6475,7 +5666,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599680, // '2023-01-13T08:48:00.000Z',
     open: 15074.85,
     high: 15074.85,
     low: 15066.95,
@@ -6483,7 +5673,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599740, // '2023-01-13T08:49:00.000Z',
     open: 15066.95,
     high: 15069.05,
     low: 15064.05,
@@ -6491,7 +5680,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599800, // '2023-01-13T08:50:00.000Z',
     open: 15065.55,
     high: 15067.15,
     low: 15058.25,
@@ -6499,7 +5687,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599860, // '2023-01-13T08:51:00.000Z',
     open: 15063.75,
     high: 15065.25,
     low: 15059.25,
@@ -6507,7 +5694,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599920, // '2023-01-13T08:52:00.000Z',
     open: 15061.35,
     high: 15063.85,
     low: 15058.35,
@@ -6515,7 +5701,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673599980, // '2023-01-13T08:53:00.000Z',
     open: 15058.35,
     high: 15062.75,
     low: 15055.35,
@@ -6523,7 +5708,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600040, // '2023-01-13T08:54:00.000Z',
     open: 15063.25,
     high: 15068.15,
     low: 15062.75,
@@ -6531,7 +5715,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600100, // '2023-01-13T08:55:00.000Z',
     open: 15068.05,
     high: 15072.05,
     low: 15067.15,
@@ -6539,7 +5722,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600160, // '2023-01-13T08:56:00.000Z',
     open: 15070.05,
     high: 15074.45,
     low: 15066.55,
@@ -6547,7 +5729,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600220, // '2023-01-13T08:57:00.000Z',
     open: 15072.95,
     high: 15073.45,
     low: 15068.95,
@@ -6555,7 +5736,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600280, // '2023-01-13T08:58:00.000Z',
     open: 15069.45,
     high: 15070.45,
     low: 15066.95,
@@ -6563,7 +5743,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600340, // '2023-01-13T08:59:00.000Z',
     open: 15070.45,
     high: 15076.85,
     low: 15070.45,
@@ -6571,7 +5750,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600400, // '2023-01-13T09:00:00.000Z',
     open: 15074.85,
     high: 15075.85,
     low: 15071.95,
@@ -6579,7 +5757,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600460, // '2023-01-13T09:01:00.000Z',
     open: 15073.95,
     high: 15074.95,
     low: 15068.95,
@@ -6587,7 +5764,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600520, // '2023-01-13T09:02:00.000Z',
     open: 15070.95,
     high: 15079.85,
     low: 15070.95,
@@ -6595,7 +5771,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600580, // '2023-01-13T09:03:00.000Z',
     open: 15079.85,
     high: 15082.75,
     low: 15078.85,
@@ -6603,7 +5778,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600640, // '2023-01-13T09:04:00.000Z',
     open: 15079.35,
     high: 15085.75,
     low: 15079.35,
@@ -6611,7 +5785,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600700, // '2023-01-13T09:05:00.000Z',
     open: 15085.75,
     high: 15088.75,
     low: 15083.25,
@@ -6619,7 +5792,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600760, // '2023-01-13T09:06:00.000Z',
     open: 15089.75,
     high: 15090.75,
     low: 15086.75,
@@ -6627,7 +5799,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600820, // '2023-01-13T09:07:00.000Z',
     open: 15090.15,
     high: 15091.65,
     low: 15087.65,
@@ -6635,7 +5806,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600880, // '2023-01-13T09:08:00.000Z',
     open: 15091.15,
     high: 15095.65,
     low: 15090.65,
@@ -6643,7 +5813,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673600940, // '2023-01-13T09:09:00.000Z',
     open: 15095.15,
     high: 15096.55,
     low: 15089.65,
@@ -6651,7 +5820,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601000, // '2023-01-13T09:10:00.000Z',
     open: 15091.15,
     high: 15092.65,
     low: 15090.65,
@@ -6659,7 +5827,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601060, // '2023-01-13T09:11:00.000Z',
     open: 15092.15,
     high: 15094.05,
     low: 15090.15,
@@ -6667,7 +5834,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601120, // '2023-01-13T09:12:00.000Z',
     open: 15094.05,
     high: 15094.55,
     low: 15088.65,
@@ -6675,7 +5841,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601180, // '2023-01-13T09:13:00.000Z',
     open: 15091.15,
     high: 15091.55,
     low: 15088.15,
@@ -6683,7 +5848,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601240, // '2023-01-13T09:14:00.000Z',
     open: 15090.65,
     high: 15095.55,
     low: 15089.65,
@@ -6691,7 +5855,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601300, // '2023-01-13T09:15:00.000Z',
     open: 15094.05,
     high: 15095.05,
     low: 15088.15,
@@ -6699,7 +5862,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601360, // '2023-01-13T09:16:00.000Z',
     open: 15088.15,
     high: 15088.65,
     low: 15083.15,
@@ -6707,7 +5869,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601420, // '2023-01-13T09:17:00.000Z',
     open: 15084.15,
     high: 15087.65,
     low: 15083.65,
@@ -6715,7 +5876,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601480, // '2023-01-13T09:18:00.000Z',
     open: 15083.65,
     high: 15084.25,
     low: 15077.85,
@@ -6723,7 +5883,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601540, // '2023-01-13T09:19:00.000Z',
     open: 15081.35,
     high: 15081.35,
     low: 15071.95,
@@ -6731,7 +5890,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601600, // '2023-01-13T09:20:00.000Z',
     open: 15077.35,
     high: 15083.85,
     low: 15077.35,
@@ -6739,7 +5897,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601660, // '2023-01-13T09:21:00.000Z',
     open: 15079.35,
     high: 15081.95,
     low: 15076.95,
@@ -6747,7 +5904,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601720, // '2023-01-13T09:22:00.000Z',
     open: 15081.85,
     high: 15084.85,
     low: 15076.95,
@@ -6755,7 +5911,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601780, // '2023-01-13T09:23:00.000Z',
     open: 15077.45,
     high: 15082.35,
     low: 15076.95,
@@ -6763,7 +5918,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601840, // '2023-01-13T09:24:00.000Z',
     open: 15080.35,
     high: 15086.25,
     low: 15080.35,
@@ -6771,7 +5925,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601900, // '2023-01-13T09:25:00.000Z',
     open: 15086.25,
     high: 15086.65,
     low: 15076.75,
@@ -6779,7 +5932,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673601960, // '2023-01-13T09:26:00.000Z',
     open: 15078.25,
     high: 15079.95,
     low: 15074.85,
@@ -6787,7 +5939,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602020, // '2023-01-13T09:27:00.000Z',
     open: 15078.95,
     high: 15080.35,
     low: 15073.35,
@@ -6795,7 +5946,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602080, // '2023-01-13T09:28:00.000Z',
     open: 15079.35,
     high: 15079.85,
     low: 15076.35,
@@ -6803,7 +5953,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602140, // '2023-01-13T09:29:00.000Z',
     open: 15077.85,
     high: 15079.85,
     low: 15073.95,
@@ -6811,7 +5960,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602200, // '2023-01-13T09:30:00.000Z',
     open: 15075.95,
     high: 15079.95,
     low: 15074.95,
@@ -6819,7 +5967,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602260, // '2023-01-13T09:31:00.000Z',
     open: 15078.45,
     high: 15080.95,
     low: 15075.55,
@@ -6827,7 +5974,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602320, // '2023-01-13T09:32:00.000Z',
     open: 15077.15,
     high: 15077.65,
     low: 15074.25,
@@ -6835,7 +5981,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602380, // '2023-01-13T09:33:00.000Z',
     open: 15075.75,
     high: 15079.25,
     low: 15074.25,
@@ -6843,7 +5988,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602440, // '2023-01-13T09:34:00.000Z',
     open: 15078.65,
     high: 15080.15,
     low: 15075.75,
@@ -6851,7 +5995,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602500, // '2023-01-13T09:35:00.000Z',
     open: 15078.65,
     high: 15080.15,
     low: 15076.65,
@@ -6859,7 +6002,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602560, // '2023-01-13T09:36:00.000Z',
     open: 15077.65,
     high: 15084.05,
     low: 15077.15,
@@ -6867,7 +6009,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602620, // '2023-01-13T09:37:00.000Z',
     open: 15081.65,
     high: 15082.65,
     low: 15077.15,
@@ -6875,7 +6016,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602680, // '2023-01-13T09:38:00.000Z',
     open: 15081.15,
     high: 15084.55,
     low: 15081.05,
@@ -6883,7 +6023,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602740, // '2023-01-13T09:39:00.000Z',
     open: 15083.55,
     high: 15083.55,
     low: 15077.15,
@@ -6891,7 +6030,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602800, // '2023-01-13T09:40:00.000Z',
     open: 15078.15,
     high: 15083.15,
     low: 15077.65,
@@ -6899,7 +6037,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602860, // '2023-01-13T09:41:00.000Z',
     open: 15080.65,
     high: 15090.05,
     low: 15080.65,
@@ -6907,7 +6044,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602920, // '2023-01-13T09:42:00.000Z',
     open: 15087.55,
     high: 15093.95,
     low: 15087.55,
@@ -6915,7 +6051,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673602980, // '2023-01-13T09:43:00.000Z',
     open: 15092.45,
     high: 15095.95,
     low: 15089.95,
@@ -6923,7 +6058,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603040, // '2023-01-13T09:44:00.000Z',
     open: 15090.45,
     high: 15093.45,
     low: 15087.45,
@@ -6931,7 +6065,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603100, // '2023-01-13T09:45:00.000Z',
     open: 15092.95,
     high: 15093.95,
     low: 15089.95,
@@ -6939,7 +6072,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603160, // '2023-01-13T09:46:00.000Z',
     open: 15092.45,
     high: 15095.85,
     low: 15092.45,
@@ -6947,7 +6079,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603220, // '2023-01-13T09:47:00.000Z',
     open: 15092.85,
     high: 15096.85,
     low: 15092.35,
@@ -6955,7 +6086,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603280, // '2023-01-13T09:48:00.000Z',
     open: 15094.85,
     high: 15096.35,
     low: 15091.95,
@@ -6963,7 +6093,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603340, // '2023-01-13T09:49:00.000Z',
     open: 15092.95,
     high: 15096.85,
     low: 15091.95,
@@ -6971,7 +6100,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603400, // '2023-01-13T09:50:00.000Z',
     open: 15095.35,
     high: 15095.85,
     low: 15091.85,
@@ -6979,7 +6107,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603460, // '2023-01-13T09:51:00.000Z',
     open: 15095.85,
     high: 15098.35,
     low: 15094.35,
@@ -6987,7 +6114,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603520, // '2023-01-13T09:52:00.000Z',
     open: 15098.25,
     high: 15101.75,
     low: 15096.25,
@@ -6995,7 +6121,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603580, // '2023-01-13T09:53:00.000Z',
     open: 15097.25,
     high: 15104.75,
     low: 15097.25,
@@ -7003,7 +6128,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603640, // '2023-01-13T09:54:00.000Z',
     open: 15103.75,
     high: 15112.55,
     low: 15103.65,
@@ -7011,7 +6135,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603700, // '2023-01-13T09:55:00.000Z',
     open: 15110.55,
     high: 15116.95,
     low: 15108.55,
@@ -7019,7 +6142,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603760, // '2023-01-13T09:56:00.000Z',
     open: 15116.95,
     high: 15120.45,
     low: 15113.95,
@@ -7027,7 +6149,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603820, // '2023-01-13T09:57:00.000Z',
     open: 15119.95,
     high: 15122.95,
     low: 15116.95,
@@ -7035,7 +6156,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603880, // '2023-01-13T09:58:00.000Z',
     open: 15121.95,
     high: 15122.45,
     low: 15116.45,
@@ -7043,7 +6163,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673603940, // '2023-01-13T09:59:00.000Z',
     open: 15117.05,
     high: 15118.05,
     low: 15109.75,
@@ -7051,7 +6170,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604000, // '2023-01-13T10:00:00.000Z',
     open: 15112.25,
     high: 15113.85,
     low: 15106.85,
@@ -7059,7 +6177,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604060, // '2023-01-13T10:01:00.000Z',
     open: 15112.85,
     high: 15113.85,
     low: 15108.85,
@@ -7067,7 +6184,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604120, // '2023-01-13T10:02:00.000Z',
     open: 15109.85,
     high: 15110.85,
     low: 15107.45,
@@ -7075,7 +6191,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604180, // '2023-01-13T10:03:00.000Z',
     open: 15110.35,
     high: 15113.35,
     low: 15107.95,
@@ -7083,7 +6198,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604240, // '2023-01-13T10:04:00.000Z',
     open: 15110.85,
     high: 15116.25,
     low: 15109.85,
@@ -7091,7 +6205,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604300, // '2023-01-13T10:05:00.000Z',
     open: 15115.65,
     high: 15118.65,
     low: 15112.25,
@@ -7099,7 +6212,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604360, // '2023-01-13T10:06:00.000Z',
     open: 15114.65,
     high: 15116.15,
     low: 15110.65,
@@ -7107,7 +6219,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604420, // '2023-01-13T10:07:00.000Z',
     open: 15115.15,
     high: 15116.65,
     low: 15112.15,
@@ -7115,7 +6226,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604480, // '2023-01-13T10:08:00.000Z',
     open: 15111.65,
     high: 15111.65,
     low: 15106.25,
@@ -7123,7 +6233,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604540, // '2023-01-13T10:09:00.000Z',
     open: 15110.65,
     high: 15111.65,
     low: 15105.75,
@@ -7131,7 +6240,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604600, // '2023-01-13T10:10:00.000Z',
     open: 15109.65,
     high: 15116.55,
     low: 15107.65,
@@ -7139,7 +6247,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604660, // '2023-01-13T10:11:00.000Z',
     open: 15114.45,
     high: 15119.55,
     low: 15114.05,
@@ -7147,7 +6254,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604720, // '2023-01-13T10:12:00.000Z',
     open: 15118.05,
     high: 15121.45,
     low: 15117.45,
@@ -7155,7 +6261,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604780, // '2023-01-13T10:13:00.000Z',
     open: 15119.45,
     high: 15119.95,
     low: 15117.45,
@@ -7163,7 +6268,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604840, // '2023-01-13T10:14:00.000Z',
     open: 15119.95,
     high: 15121.45,
     low: 15117.45,
@@ -7171,7 +6275,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604900, // '2023-01-13T10:15:00.000Z',
     open: 15116.95,
     high: 15119.45,
     low: 15115.05,
@@ -7179,7 +6282,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673604960, // '2023-01-13T10:16:00.000Z',
     open: 15119.05,
     high: 15123.45,
     low: 15114.95,
@@ -7187,7 +6289,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605020, // '2023-01-13T10:17:00.000Z',
     open: 15114.55,
     high: 15118.45,
     low: 15114.55,
@@ -7195,7 +6296,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605080, // '2023-01-13T10:18:00.000Z',
     open: 15116.65,
     high: 15116.65,
     low: 15114.15,
@@ -7203,7 +6303,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605140, // '2023-01-13T10:19:00.000Z',
     open: 15115.65,
     high: 15116.65,
     low: 15112.65,
@@ -7211,7 +6310,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605200, // '2023-01-13T10:20:00.000Z',
     open: 15113.15,
     high: 15117.65,
     low: 15113.15,
@@ -7219,7 +6317,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605260, // '2023-01-13T10:21:00.000Z',
     open: 15114.65,
     high: 15115.15,
     low: 15111.65,
@@ -7227,7 +6324,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605320, // '2023-01-13T10:22:00.000Z',
     open: 15114.25,
     high: 15116.65,
     low: 15113.25,
@@ -7235,7 +6331,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605380, // '2023-01-13T10:23:00.000Z',
     open: 15112.25,
     high: 15115.75,
     low: 15112.25,
@@ -7243,7 +6338,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605440, // '2023-01-13T10:24:00.000Z',
     open: 15115.25,
     high: 15117.75,
     low: 15114.75,
@@ -7251,7 +6345,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605500, // '2023-01-13T10:25:00.000Z',
     open: 15115.25,
     high: 15121.65,
     low: 15114.75,
@@ -7259,7 +6352,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605560, // '2023-01-13T10:26:00.000Z',
     open: 15120.65,
     high: 15121.25,
     low: 15118.75,
@@ -7267,7 +6359,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605620, // '2023-01-13T10:27:00.000Z',
     open: 15120.75,
     high: 15121.25,
     low: 15114.85,
@@ -7275,7 +6366,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605680, // '2023-01-13T10:28:00.000Z',
     open: 15120.35,
     high: 15126.75,
     low: 15120.35,
@@ -7283,7 +6373,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605740, // '2023-01-13T10:29:00.000Z',
     open: 15126.25,
     high: 15130.15,
     low: 15125.15,
@@ -7291,7 +6380,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605800, // '2023-01-13T10:30:00.000Z',
     open: 15125.65,
     high: 15127.15,
     low: 15117.75,
@@ -7299,7 +6387,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605860, // '2023-01-13T10:31:00.000Z',
     open: 15118.75,
     high: 15119.75,
     low: 15115.35,
@@ -7307,7 +6394,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605920, // '2023-01-13T10:32:00.000Z',
     open: 15116.45,
     high: 15119.45,
     low: 15115.95,
@@ -7315,7 +6401,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673605980, // '2023-01-13T10:33:00.000Z',
     open: 15118.95,
     high: 15123.45,
     low: 15116.95,
@@ -7323,7 +6408,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606040, // '2023-01-13T10:34:00.000Z',
     open: 15120.45,
     high: 15120.95,
     low: 15116.95,
@@ -7331,7 +6415,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606100, // '2023-01-13T10:35:00.000Z',
     open: 15120.45,
     high: 15121.95,
     low: 15115.55,
@@ -7339,7 +6422,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606160, // '2023-01-13T10:36:00.000Z',
     open: 15116.55,
     high: 15118.55,
     low: 15114.15,
@@ -7347,7 +6429,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606220, // '2023-01-13T10:37:00.000Z',
     open: 15118.05,
     high: 15118.05,
     low: 15113.75,
@@ -7355,7 +6436,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606280, // '2023-01-13T10:38:00.000Z',
     open: 15115.65,
     high: 15120.25,
     low: 15112.25,
@@ -7363,7 +6443,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606340, // '2023-01-13T10:39:00.000Z',
     open: 15118.75,
     high: 15122.65,
     low: 15118.65,
@@ -7371,7 +6450,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606400, // '2023-01-13T10:40:00.000Z',
     open: 15122.65,
     high: 15124.15,
     low: 15118.15,
@@ -7379,7 +6457,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606460, // '2023-01-13T10:41:00.000Z',
     open: 15119.65,
     high: 15122.65,
     low: 15117.65,
@@ -7387,7 +6464,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606520, // '2023-01-13T10:42:00.000Z',
     open: 15119.75,
     high: 15122.65,
     low: 15115.35,
@@ -7395,7 +6471,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606580, // '2023-01-13T10:43:00.000Z',
     open: 15115.85,
     high: 15120.85,
     low: 15114.35,
@@ -7403,7 +6478,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606640, // '2023-01-13T10:44:00.000Z',
     open: 15120.35,
     high: 15121.85,
     low: 15112.45,
@@ -7411,7 +6485,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606700, // '2023-01-13T10:45:00.000Z',
     open: 15113.45,
     high: 15117.45,
     low: 15111.05,
@@ -7419,7 +6492,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606760, // '2023-01-13T10:46:00.000Z',
     open: 15116.95,
     high: 15119.45,
     low: 15115.45,
@@ -7427,7 +6499,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606820, // '2023-01-13T10:47:00.000Z',
     open: 15115.45,
     high: 15116.95,
     low: 15109.95,
@@ -7435,7 +6506,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606880, // '2023-01-13T10:48:00.000Z',
     open: 15109.95,
     high: 15111.45,
     low: 15104.05,
@@ -7443,7 +6513,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673606940, // '2023-01-13T10:49:00.000Z',
     open: 15109.05,
     high: 15116.55,
     low: 15107.55,
@@ -7451,7 +6520,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607000, // '2023-01-13T10:50:00.000Z',
     open: 15115.55,
     high: 15127.15,
     low: 15114.55,
@@ -7459,7 +6527,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607060, // '2023-01-13T10:51:00.000Z',
     open: 15126.15,
     high: 15126.15,
     low: 15114.45,
@@ -7467,7 +6534,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607120, // '2023-01-13T10:52:00.000Z',
     open: 15115.95,
     high: 15119.05,
     low: 15110.55,
@@ -7475,7 +6541,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607180, // '2023-01-13T10:53:00.000Z',
     open: 15118.55,
     high: 15118.55,
     low: 15106.75,
@@ -7483,7 +6548,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607240, // '2023-01-13T10:54:00.000Z',
     open: 15107.75,
     high: 15109.85,
     low: 15105.75,
@@ -7491,7 +6555,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607300, // '2023-01-13T10:55:00.000Z',
     open: 15106.45,
     high: 15117.95,
     low: 15106.45,
@@ -7499,7 +6562,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607360, // '2023-01-13T10:56:00.000Z',
     open: 15111.95,
     high: 15113.95,
     low: 15107.05,
@@ -7507,7 +6569,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607420, // '2023-01-13T10:57:00.000Z',
     open: 15107.65,
     high: 15113.65,
     low: 15106.75,
@@ -7515,7 +6576,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607480, // '2023-01-13T10:58:00.000Z',
     open: 15108.25,
     high: 15111.75,
     low: 15104.25,
@@ -7523,7 +6583,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607540, // '2023-01-13T10:59:00.000Z',
     open: 15105.25,
     high: 15106.85,
     low: 15099.95,
@@ -7531,7 +6590,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607600, // '2023-01-13T11:00:00.000Z',
     open: 15100.95,
     high: 15100.95,
     low: 15087.55,
@@ -7539,7 +6597,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607660, // '2023-01-13T11:01:00.000Z',
     open: 15092.05,
     high: 15097.35,
     low: 15087.95,
@@ -7547,7 +6604,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607720, // '2023-01-13T11:02:00.000Z',
     open: 15097.35,
     high: 15097.75,
     low: 15093.25,
@@ -7555,7 +6611,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607780, // '2023-01-13T11:03:00.000Z',
     open: 15096.15,
     high: 15100.05,
     low: 15094.65,
@@ -7563,7 +6618,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607840, // '2023-01-13T11:04:00.000Z',
     open: 15096.45,
     high: 15098.45,
     low: 15088.45,
@@ -7571,7 +6625,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607900, // '2023-01-13T11:05:00.000Z',
     open: 15088.95,
     high: 15103.75,
     low: 15088.95,
@@ -7579,7 +6632,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673607960, // '2023-01-13T11:06:00.000Z',
     open: 15102.75,
     high: 15107.65,
     low: 15101.25,
@@ -7587,7 +6639,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608020, // '2023-01-13T11:07:00.000Z',
     open: 15106.05,
     high: 15107.05,
     low: 15101.55,
@@ -7595,7 +6646,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608080, // '2023-01-13T11:08:00.000Z',
     open: 15104.95,
     high: 15110.85,
     low: 15104.95,
@@ -7603,7 +6653,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608140, // '2023-01-13T11:09:00.000Z',
     open: 15108.85,
     high: 15110.45,
     low: 15106.35,
@@ -7611,7 +6660,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608200, // '2023-01-13T11:10:00.000Z',
     open: 15107.95,
     high: 15111.95,
     low: 15107.45,
@@ -7619,7 +6667,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608260, // '2023-01-13T11:11:00.000Z',
     open: 15109.45,
     high: 15111.55,
     low: 15106.45,
@@ -7627,7 +6674,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608320, // '2023-01-13T11:12:00.000Z',
     open: 15111.45,
     high: 15116.95,
     low: 15110.45,
@@ -7635,7 +6681,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608380, // '2023-01-13T11:13:00.000Z',
     open: 15115.95,
     high: 15117.45,
     low: 15115.45,
@@ -7643,7 +6688,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608440, // '2023-01-13T11:14:00.000Z',
     open: 15115.95,
     high: 15119.85,
     low: 15115.35,
@@ -7651,7 +6695,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608500, // '2023-01-13T11:15:00.000Z',
     open: 15117.35,
     high: 15119.35,
     low: 15116.35,
@@ -7659,7 +6702,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608560, // '2023-01-13T11:16:00.000Z',
     open: 15117.35,
     high: 15120.75,
     low: 15116.35,
@@ -7667,7 +6709,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608620, // '2023-01-13T11:17:00.000Z',
     open: 15115.75,
     high: 15118.85,
     low: 15115.75,
@@ -7675,7 +6716,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608680, // '2023-01-13T11:18:00.000Z',
     open: 15116.85,
     high: 15117.35,
     low: 15110.45,
@@ -7683,7 +6723,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608740, // '2023-01-13T11:19:00.000Z',
     open: 15111.45,
     high: 15111.45,
     low: 15108.55,
@@ -7691,7 +6730,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608800, // '2023-01-13T11:20:00.000Z',
     open: 15110.45,
     high: 15112.45,
     low: 15109.05,
@@ -7699,7 +6737,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608860, // '2023-01-13T11:21:00.000Z',
     open: 15110.55,
     high: 15112.55,
     low: 15110.05,
@@ -7707,7 +6744,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608920, // '2023-01-13T11:22:00.000Z',
     open: 15110.55,
     high: 15111.05,
     low: 15107.05,
@@ -7715,7 +6751,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673608980, // '2023-01-13T11:23:00.000Z',
     open: 15107.55,
     high: 15110.55,
     low: 15105.55,
@@ -7723,7 +6758,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609040, // '2023-01-13T11:24:00.000Z',
     open: 15109.55,
     high: 15112.05,
     low: 15108.55,
@@ -7731,7 +6765,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609100, // '2023-01-13T11:25:00.000Z',
     open: 15108.55,
     high: 15110.05,
     low: 15108.05,
@@ -7739,7 +6772,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609160, // '2023-01-13T11:26:00.000Z',
     open: 15108.55,
     high: 15110.55,
     low: 15101.15,
@@ -7747,7 +6779,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609220, // '2023-01-13T11:27:00.000Z',
     open: 15104.65,
     high: 15109.65,
     low: 15103.05,
@@ -7755,7 +6786,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609280, // '2023-01-13T11:28:00.000Z',
     open: 15102.55,
     high: 15108.55,
     low: 15102.55,
@@ -7763,7 +6793,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609340, // '2023-01-13T11:29:00.000Z',
     open: 15103.95,
     high: 15103.95,
     low: 15099.45,
@@ -7771,7 +6800,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609400, // '2023-01-13T11:30:00.000Z',
     open: 15099.55,
     high: 15101.45,
     low: 15097.55,
@@ -7779,7 +6807,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609460, // '2023-01-13T11:31:00.000Z',
     open: 15100.45,
     high: 15103.45,
     low: 15098.45,
@@ -7787,7 +6814,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609520, // '2023-01-13T11:32:00.000Z',
     open: 15101.95,
     high: 15103.95,
     low: 15099.95,
@@ -7795,7 +6821,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609580, // '2023-01-13T11:33:00.000Z',
     open: 15102.95,
     high: 15103.95,
     low: 15097.55,
@@ -7803,7 +6828,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609640, // '2023-01-13T11:34:00.000Z',
     open: 15099.55,
     high: 15101.05,
     low: 15097.05,
@@ -7811,7 +6835,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609700, // '2023-01-13T11:35:00.000Z',
     open: 15098.05,
     high: 15103.95,
     low: 15098.05,
@@ -7819,7 +6842,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609760, // '2023-01-13T11:36:00.000Z',
     open: 15102.45,
     high: 15102.95,
     low: 15098.45,
@@ -7827,7 +6849,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609820, // '2023-01-13T11:37:00.000Z',
     open: 15098.45,
     high: 15100.45,
     low: 15094.05,
@@ -7835,7 +6856,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609880, // '2023-01-13T11:38:00.000Z',
     open: 15098.05,
     high: 15098.55,
     low: 15087.75,
@@ -7843,7 +6863,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673609940, // '2023-01-13T11:39:00.000Z',
     open: 15091.25,
     high: 15091.75,
     low: 15083.35,
@@ -7851,7 +6870,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610000, // '2023-01-13T11:40:00.000Z',
     open: 15085.95,
     high: 15091.45,
     low: 15084.95,
@@ -7859,7 +6877,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610060, // '2023-01-13T11:41:00.000Z',
     open: 15090.95,
     high: 15093.45,
     low: 15089.45,
@@ -7867,7 +6884,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610120, // '2023-01-13T11:42:00.000Z',
     open: 15091.45,
     high: 15095.95,
     low: 15088.95,
@@ -7875,7 +6891,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610180, // '2023-01-13T11:43:00.000Z',
     open: 15093.45,
     high: 15096.95,
     low: 15092.95,
@@ -7883,7 +6898,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610240, // '2023-01-13T11:44:00.000Z',
     open: 15095.95,
     high: 15097.95,
     low: 15095.45,
@@ -7891,7 +6905,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610300, // '2023-01-13T11:45:00.000Z',
     open: 15096.95,
     high: 15098.85,
     low: 15095.45,
@@ -7899,7 +6912,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610360, // '2023-01-13T11:46:00.000Z',
     open: 15096.35,
     high: 15101.85,
     low: 15095.95,
@@ -7907,7 +6919,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610420, // '2023-01-13T11:47:00.000Z',
     open: 15099.85,
     high: 15100.85,
     low: 15092.95,
@@ -7915,7 +6926,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610480, // '2023-01-13T11:48:00.000Z',
     open: 15093.45,
     high: 15093.45,
     low: 15087.05,
@@ -7923,7 +6933,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610540, // '2023-01-13T11:49:00.000Z',
     open: 15090.15,
     high: 15092.55,
     low: 15089.15,
@@ -7931,7 +6940,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610600, // '2023-01-13T11:50:00.000Z',
     open: 15091.55,
     high: 15093.05,
     low: 15089.55,
@@ -7939,7 +6947,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610660, // '2023-01-13T11:51:00.000Z',
     open: 15091.95,
     high: 15092.95,
     low: 15086.45,
@@ -7947,7 +6954,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610720, // '2023-01-13T11:52:00.000Z',
     open: 15086.45,
     high: 15087.95,
     low: 15080.95,
@@ -7955,7 +6961,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610780, // '2023-01-13T11:53:00.000Z',
     open: 15083.45,
     high: 15086.85,
     low: 15079.85,
@@ -7963,7 +6968,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610840, // '2023-01-13T11:54:00.000Z',
     open: 15082.75,
     high: 15083.75,
     low: 15081.75,
@@ -7971,7 +6975,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610900, // '2023-01-13T11:55:00.000Z',
     open: 15083.75,
     high: 15089.55,
     low: 15081.25,
@@ -7979,7 +6982,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673610960, // '2023-01-13T11:56:00.000Z',
     open: 15087.05,
     high: 15087.05,
     low: 15080.05,
@@ -7987,7 +6989,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611020, // '2023-01-13T11:57:00.000Z',
     open: 15082.55,
     high: 15086.05,
     low: 15082.05,
@@ -7995,7 +6996,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611080, // '2023-01-13T11:58:00.000Z',
     open: 15084.95,
     high: 15086.45,
     low: 15081.45,
@@ -8003,7 +7003,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611140, // '2023-01-13T11:59:00.000Z',
     open: 15083.85,
     high: 15086.35,
     low: 15081.35,
@@ -8011,7 +7010,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611200, // '2023-01-13T12:00:00.000Z',
     open: 15083.75,
     high: 15094.25,
     low: 15083.75,
@@ -8019,7 +7017,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611260, // '2023-01-13T12:01:00.000Z',
     open: 15094.25,
     high: 15094.25,
     low: 15084.75,
@@ -8027,7 +7024,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611320, // '2023-01-13T12:02:00.000Z',
     open: 15086.25,
     high: 15092.25,
     low: 15083.25,
@@ -8035,7 +7031,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611380, // '2023-01-13T12:03:00.000Z',
     open: 15088.25,
     high: 15095.75,
     low: 15088.25,
@@ -8043,7 +7038,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611440, // '2023-01-13T12:04:00.000Z',
     open: 15094.75,
     high: 15099.25,
     low: 15094.25,
@@ -8051,7 +7045,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611500, // '2023-01-13T12:05:00.000Z',
     open: 15097.25,
     high: 15099.25,
     low: 15096.75,
@@ -8059,7 +7052,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611560, // '2023-01-13T12:06:00.000Z',
     open: 15098.25,
     high: 15098.75,
     low: 15094.25,
@@ -8067,7 +7059,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611620, // '2023-01-13T12:07:00.000Z',
     open: 15096.25,
     high: 15100.25,
     low: 15095.25,
@@ -8075,7 +7066,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611680, // '2023-01-13T12:08:00.000Z',
     open: 15096.25,
     high: 15096.75,
     low: 15092.25,
@@ -8083,7 +7073,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611740, // '2023-01-13T12:09:00.000Z',
     open: 15096.25,
     high: 15096.25,
     low: 15090.25,
@@ -8091,7 +7080,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611800, // '2023-01-13T12:10:00.000Z',
     open: 15095.75,
     high: 15096.65,
     low: 15092.25,
@@ -8099,7 +7087,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611860, // '2023-01-13T12:11:00.000Z',
     open: 15093.75,
     high: 15095.25,
     low: 15091.35,
@@ -8107,7 +7094,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611920, // '2023-01-13T12:12:00.000Z',
     open: 15091.35,
     high: 15092.95,
     low: 15088.85,
@@ -8115,7 +7101,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673611980, // '2023-01-13T12:13:00.000Z',
     open: 15090.45,
     high: 15095.45,
     low: 15088.05,
@@ -8123,7 +7108,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612040, // '2023-01-13T12:14:00.000Z',
     open: 15094.45,
     high: 15095.95,
     low: 15089.55,
@@ -8131,7 +7115,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612100, // '2023-01-13T12:15:00.000Z',
     open: 15092.05,
     high: 15092.05,
     low: 15086.05,
@@ -8139,7 +7122,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612160, // '2023-01-13T12:16:00.000Z',
     open: 15087.05,
     high: 15092.45,
     low: 15087.05,
@@ -8147,7 +7129,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612220, // '2023-01-13T12:17:00.000Z',
     open: 15091.95,
     high: 15092.45,
     low: 15086.05,
@@ -8155,7 +7136,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612280, // '2023-01-13T12:18:00.000Z',
     open: 15086.55,
     high: 15087.05,
     low: 15081.55,
@@ -8163,7 +7143,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612340, // '2023-01-13T12:19:00.000Z',
     open: 15084.55,
     high: 15085.55,
     low: 15079.15,
@@ -8171,7 +7150,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612400, // '2023-01-13T12:20:00.000Z',
     open: 15079.65,
     high: 15080.75,
     low: 15073.25,
@@ -8179,7 +7157,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612460, // '2023-01-13T12:21:00.000Z',
     open: 15073.25,
     high: 15074.35,
     low: 15062.55,
@@ -8187,7 +7164,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612520, // '2023-01-13T12:22:00.000Z',
     open: 15063.05,
     high: 15063.05,
     low: 15056.15,
@@ -8195,7 +7171,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612580, // '2023-01-13T12:23:00.000Z',
     open: 15059.25,
     high: 15068.15,
     low: 15059.25,
@@ -8203,7 +7178,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612640, // '2023-01-13T12:24:00.000Z',
     open: 15064.65,
     high: 15068.25,
     low: 15061.25,
@@ -8211,7 +7185,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612700, // '2023-01-13T12:25:00.000Z',
     open: 15061.25,
     high: 15062.25,
     low: 15048.45,
@@ -8219,7 +7192,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612760, // '2023-01-13T12:26:00.000Z',
     open: 15058.35,
     high: 15064.65,
     low: 15057.85,
@@ -8227,7 +7199,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612820, // '2023-01-13T12:27:00.000Z',
     open: 15059.15,
     high: 15059.65,
     low: 15052.65,
@@ -8235,7 +7206,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612880, // '2023-01-13T12:28:00.000Z',
     open: 15054.65,
     high: 15055.15,
     low: 15046.75,
@@ -8243,7 +7213,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673612940, // '2023-01-13T12:29:00.000Z',
     open: 15046.75,
     high: 15048.35,
     low: 15042.35,
@@ -8251,7 +7220,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613000, // '2023-01-13T12:30:00.000Z',
     open: 15046.35,
     high: 15048.85,
     low: 15039.45,
@@ -8259,7 +7227,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613060, // '2023-01-13T12:31:00.000Z',
     open: 15040.05,
     high: 15050.45,
     low: 15040.05,
@@ -8267,7 +7234,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613120, // '2023-01-13T12:32:00.000Z',
     open: 15049.95,
     high: 15053.85,
     low: 15048.45,
@@ -8275,7 +7241,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613180, // '2023-01-13T12:33:00.000Z',
     open: 15053.85,
     high: 15054.35,
     low: 15047.35,
@@ -8283,7 +7248,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613240, // '2023-01-13T12:34:00.000Z',
     open: 15047.35,
     high: 15051.85,
     low: 15047.35,
@@ -8291,7 +7255,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613300, // '2023-01-13T12:35:00.000Z',
     open: 15048.85,
     high: 15049.35,
     low: 15040.95,
@@ -8299,7 +7262,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613360, // '2023-01-13T12:36:00.000Z',
     open: 15041.95,
     high: 15052.25,
     low: 15041.95,
@@ -8307,7 +7269,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613420, // '2023-01-13T12:37:00.000Z',
     open: 15052.25,
     high: 15055.65,
     low: 15049.25,
@@ -8315,7 +7276,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613480, // '2023-01-13T12:38:00.000Z',
     open: 15054.65,
     high: 15055.65,
     low: 15046.65,
@@ -8323,7 +7283,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613540, // '2023-01-13T12:39:00.000Z',
     open: 15048.15,
     high: 15052.15,
     low: 15046.75,
@@ -8331,7 +7290,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613600, // '2023-01-13T12:40:00.000Z',
     open: 15051.65,
     high: 15054.15,
     low: 15051.65,
@@ -8339,7 +7297,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613660, // '2023-01-13T12:41:00.000Z',
     open: 15053.65,
     high: 15055.05,
     low: 15051.15,
@@ -8347,7 +7304,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613720, // '2023-01-13T12:42:00.000Z',
     open: 15054.55,
     high: 15055.05,
     low: 15052.05,
@@ -8355,7 +7311,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613780, // '2023-01-13T12:43:00.000Z',
     open: 15052.55,
     high: 15053.05,
     low: 15047.15,
@@ -8363,7 +7318,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613840, // '2023-01-13T12:44:00.000Z',
     open: 15048.15,
     high: 15050.15,
     low: 15046.65,
@@ -8371,7 +7325,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613900, // '2023-01-13T12:45:00.000Z',
     open: 15047.65,
     high: 15057.05,
     low: 15047.65,
@@ -8379,7 +7332,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673613960, // '2023-01-13T12:46:00.000Z',
     open: 15055.55,
     high: 15060.45,
     low: 15054.05,
@@ -8387,7 +7339,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614020, // '2023-01-13T12:47:00.000Z',
     open: 15057.95,
     high: 15059.95,
     low: 15054.95,
@@ -8395,7 +7346,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614080, // '2023-01-13T12:48:00.000Z',
     open: 15056.45,
     high: 15058.35,
     low: 15055.85,
@@ -8403,7 +7353,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614140, // '2023-01-13T12:49:00.000Z',
     open: 15055.85,
     high: 15056.35,
     low: 15048.45,
@@ -8411,7 +7360,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614200, // '2023-01-13T12:50:00.000Z',
     open: 15055.35,
     high: 15056.85,
     low: 15051.85,
@@ -8419,7 +7367,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614260, // '2023-01-13T12:51:00.000Z',
     open: 15054.35,
     high: 15055.25,
     low: 15049.35,
@@ -8427,7 +7374,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614320, // '2023-01-13T12:52:00.000Z',
     open: 15050.35,
     high: 15054.35,
     low: 15050.35,
@@ -8435,7 +7381,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614380, // '2023-01-13T12:53:00.000Z',
     open: 15051.75,
     high: 15052.85,
     low: 15046.85,
@@ -8443,7 +7388,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614440, // '2023-01-13T12:54:00.000Z',
     open: 15052.25,
     high: 15054.65,
     low: 15049.65,
@@ -8451,7 +7395,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614500, // '2023-01-13T12:55:00.000Z',
     open: 15051.65,
     high: 15052.15,
     low: 15046.15,
@@ -8459,7 +7402,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614560, // '2023-01-13T12:56:00.000Z',
     open: 15048.15,
     high: 15051.55,
     low: 15047.05,
@@ -8467,7 +7409,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614620, // '2023-01-13T12:57:00.000Z',
     open: 15050.05,
     high: 15050.55,
     low: 15046.95,
@@ -8475,7 +7416,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614680, // '2023-01-13T12:58:00.000Z',
     open: 15048.95,
     high: 15050.35,
     low: 15045.45,
@@ -8483,7 +7423,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614740, // '2023-01-13T12:59:00.000Z',
     open: 15045.45,
     high: 15049.95,
     low: 15043.45,
@@ -8491,7 +7430,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614800, // '2023-01-13T13:00:00.000Z',
     open: 15050.45,
     high: 15056.75,
     low: 15048.95,
@@ -8499,7 +7437,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614860, // '2023-01-13T13:01:00.000Z',
     open: 15055.75,
     high: 15058.75,
     low: 15052.75,
@@ -8507,7 +7444,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614920, // '2023-01-13T13:02:00.000Z',
     open: 15053.25,
     high: 15055.25,
     low: 15049.35,
@@ -8515,7 +7451,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673614980, // '2023-01-13T13:03:00.000Z',
     open: 15048.85,
     high: 15054.35,
     low: 15048.85,
@@ -8523,7 +7458,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615040, // '2023-01-13T13:04:00.000Z',
     open: 15054.35,
     high: 15054.85,
     low: 15048.35,
@@ -8531,7 +7465,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615100, // '2023-01-13T13:05:00.000Z',
     open: 15048.45,
     high: 15051.45,
     low: 15046.45,
@@ -8539,7 +7472,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615160, // '2023-01-13T13:06:00.000Z',
     open: 15046.95,
     high: 15052.45,
     low: 15046.95,
@@ -8547,7 +7479,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615220, // '2023-01-13T13:07:00.000Z',
     open: 15050.95,
     high: 15051.45,
     low: 15044.95,
@@ -8555,7 +7486,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615280, // '2023-01-13T13:08:00.000Z',
     open: 15045.55,
     high: 15053.05,
     low: 15043.05,
@@ -8563,7 +7493,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615340, // '2023-01-13T13:09:00.000Z',
     open: 15052.05,
     high: 15052.55,
     low: 15049.55,
@@ -8571,7 +7500,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615400, // '2023-01-13T13:10:00.000Z',
     open: 15050.55,
     high: 15054.55,
     low: 15049.55,
@@ -8579,7 +7507,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615460, // '2023-01-13T13:11:00.000Z',
     open: 15053.45,
     high: 15058.35,
     low: 15053.35,
@@ -8587,7 +7514,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615520, // '2023-01-13T13:12:00.000Z',
     open: 15057.35,
     high: 15057.75,
     low: 15055.25,
@@ -8595,7 +7521,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615580, // '2023-01-13T13:13:00.000Z',
     open: 15056.75,
     high: 15057.75,
     low: 15054.25,
@@ -8603,7 +7528,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615640, // '2023-01-13T13:14:00.000Z',
     open: 15056.75,
     high: 15062.25,
     low: 15056.75,
@@ -8611,7 +7535,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615700, // '2023-01-13T13:15:00.000Z',
     open: 15058.25,
     high: 15061.75,
     low: 15056.75,
@@ -8619,7 +7542,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615760, // '2023-01-13T13:16:00.000Z',
     open: 15056.85,
     high: 15063.25,
     low: 15056.85,
@@ -8627,7 +7549,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615820, // '2023-01-13T13:17:00.000Z',
     open: 15062.75,
     high: 15064.75,
     low: 15061.75,
@@ -8635,7 +7556,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615880, // '2023-01-13T13:18:00.000Z',
     open: 15063.25,
     high: 15066.15,
     low: 15062.15,
@@ -8643,7 +7563,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673615940, // '2023-01-13T13:19:00.000Z',
     open: 15064.65,
     high: 15067.15,
     low: 15063.15,
@@ -8651,7 +7570,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616000, // '2023-01-13T13:20:00.000Z',
     open: 15065.25,
     high: 15067.25,
     low: 15061.25,
@@ -8659,7 +7577,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616060, // '2023-01-13T13:21:00.000Z',
     open: 15063.85,
     high: 15065.35,
     low: 15060.85,
@@ -8667,7 +7584,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616120, // '2023-01-13T13:22:00.000Z',
     open: 15062.45,
     high: 15064.45,
     low: 15060.45,
@@ -8675,7 +7591,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616180, // '2023-01-13T13:23:00.000Z',
     open: 15063.45,
     high: 15064.95,
     low: 15061.45,
@@ -8683,7 +7598,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616240, // '2023-01-13T13:24:00.000Z',
     open: 15064.45,
     high: 15066.45,
     low: 15062.45,
@@ -8691,7 +7605,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616300, // '2023-01-13T13:25:00.000Z',
     open: 15065.45,
     high: 15065.95,
     low: 15061.95,
@@ -8699,7 +7612,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616360, // '2023-01-13T13:26:00.000Z',
     open: 15063.95,
     high: 15065.45,
     low: 15060.55,
@@ -8707,7 +7619,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616420, // '2023-01-13T13:27:00.000Z',
     open: 15061.55,
     high: 15061.55,
     low: 15057.15,
@@ -8715,7 +7626,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616480, // '2023-01-13T13:28:00.000Z',
     open: 15058.65,
     high: 15059.65,
     low: 15057.65,
@@ -8723,7 +7633,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616540, // '2023-01-13T13:29:00.000Z',
     open: 15057.65,
     high: 15057.65,
     low: 15051.75,
@@ -8731,7 +7640,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616600, // '2023-01-13T13:30:00.000Z',
     open: 15053.25,
     high: 15053.75,
     low: 15047.25,
@@ -8739,7 +7647,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616660, // '2023-01-13T13:31:00.000Z',
     open: 15050.25,
     high: 15050.25,
     low: 15041.95,
@@ -8747,7 +7654,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616720, // '2023-01-13T13:32:00.000Z',
     open: 15042.95,
     high: 15052.25,
     low: 15041.95,
@@ -8755,7 +7661,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616780, // '2023-01-13T13:33:00.000Z',
     open: 15049.25,
     high: 15051.65,
     low: 15046.75,
@@ -8763,7 +7668,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616840, // '2023-01-13T13:34:00.000Z',
     open: 15050.15,
     high: 15055.95,
     low: 15048.65,
@@ -8771,7 +7675,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616900, // '2023-01-13T13:35:00.000Z',
     open: 15053.95,
     high: 15053.95,
     low: 15051.45,
@@ -8779,7 +7682,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673616960, // '2023-01-13T13:36:00.000Z',
     open: 15052.45,
     high: 15057.95,
     low: 15052.45,
@@ -8787,7 +7689,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617020, // '2023-01-13T13:37:00.000Z',
     open: 15055.95,
     high: 15056.45,
     low: 15050.45,
@@ -8795,7 +7696,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617080, // '2023-01-13T13:38:00.000Z',
     open: 15053.95,
     high: 15060.95,
     low: 15053.95,
@@ -8803,7 +7703,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617140, // '2023-01-13T13:39:00.000Z',
     open: 15061.45,
     high: 15062.45,
     low: 15058.45,
@@ -8811,7 +7710,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617200, // '2023-01-13T13:40:00.000Z',
     open: 15059.95,
     high: 15059.95,
     low: 15055.05,
@@ -8819,7 +7717,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617260, // '2023-01-13T13:41:00.000Z',
     open: 15057.05,
     high: 15059.55,
     low: 15054.05,
@@ -8827,7 +7724,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617320, // '2023-01-13T13:42:00.000Z',
     open: 15057.05,
     high: 15060.55,
     low: 15057.05,
@@ -8835,7 +7731,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617380, // '2023-01-13T13:43:00.000Z',
     open: 15058.55,
     high: 15059.05,
     low: 15054.15,
@@ -8843,7 +7738,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617440, // '2023-01-13T13:44:00.000Z',
     open: 15056.15,
     high: 15058.75,
     low: 15054.25,
@@ -8851,7 +7745,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617500, // '2023-01-13T13:45:00.000Z',
     open: 15056.25,
     high: 15061.65,
     low: 15055.75,
@@ -8859,7 +7752,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617560, // '2023-01-13T13:46:00.000Z',
     open: 15058.15,
     high: 15058.15,
     low: 15051.35,
@@ -8867,7 +7759,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617620, // '2023-01-13T13:47:00.000Z',
     open: 15051.35,
     high: 15052.85,
     low: 15047.85,
@@ -8875,7 +7766,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617680, // '2023-01-13T13:48:00.000Z',
     open: 15049.35,
     high: 15054.85,
     low: 15049.35,
@@ -8883,7 +7773,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617740, // '2023-01-13T13:49:00.000Z',
     open: 15053.85,
     high: 15058.25,
     low: 15053.75,
@@ -8891,7 +7780,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617800, // '2023-01-13T13:50:00.000Z',
     open: 15057.75,
     high: 15060.65,
     low: 15056.75,
@@ -8899,7 +7787,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617860, // '2023-01-13T13:51:00.000Z',
     open: 15058.15,
     high: 15058.55,
     low: 15054.65,
@@ -8907,7 +7794,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617920, // '2023-01-13T13:52:00.000Z',
     open: 15059.05,
     high: 15059.55,
     low: 15056.55,
@@ -8915,7 +7801,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673617980, // '2023-01-13T13:53:00.000Z',
     open: 15056.55,
     high: 15057.55,
     low: 15054.55,
@@ -8923,7 +7808,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618040, // '2023-01-13T13:54:00.000Z',
     open: 15055.55,
     high: 15058.65,
     low: 15054.65,
@@ -8931,7 +7815,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618100, // '2023-01-13T13:55:00.000Z',
     open: 15056.65,
     high: 15060.65,
     low: 15053.65,
@@ -8939,7 +7822,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618160, // '2023-01-13T13:56:00.000Z',
     open: 15054.15,
     high: 15058.65,
     low: 15052.65,
@@ -8947,7 +7829,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618220, // '2023-01-13T13:57:00.000Z',
     open: 15052.75,
     high: 15056.25,
     low: 15052.75,
@@ -8955,7 +7836,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618280, // '2023-01-13T13:58:00.000Z',
     open: 15055.75,
     high: 15058.65,
     low: 15055.25,
@@ -8963,7 +7843,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618340, // '2023-01-13T13:59:00.000Z',
     open: 15058.15,
     high: 15062.55,
     low: 15057.65,
@@ -8971,7 +7850,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618400, // '2023-01-13T14:00:00.000Z',
     open: 15062.05,
     high: 15064.55,
     low: 15059.55,
@@ -8979,7 +7857,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618460, // '2023-01-13T14:01:00.000Z',
     open: 15060.05,
     high: 15060.55,
     low: 15056.15,
@@ -8987,7 +7864,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618520, // '2023-01-13T14:02:00.000Z',
     open: 15057.65,
     high: 15058.65,
     low: 15055.65,
@@ -8995,7 +7871,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618580, // '2023-01-13T14:03:00.000Z',
     open: 15056.65,
     high: 15059.15,
     low: 15055.15,
@@ -9003,7 +7878,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618640, // '2023-01-13T14:04:00.000Z',
     open: 15056.15,
     high: 15060.65,
     low: 15055.65,
@@ -9011,7 +7885,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618700, // '2023-01-13T14:05:00.000Z',
     open: 15058.65,
     high: 15060.65,
     low: 15056.15,
@@ -9019,7 +7892,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618760, // '2023-01-13T14:06:00.000Z',
     open: 15055.65,
     high: 15058.65,
     low: 15054.65,
@@ -9027,7 +7899,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618820, // '2023-01-13T14:07:00.000Z',
     open: 15055.15,
     high: 15055.65,
     low: 15050.25,
@@ -9035,7 +7906,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618880, // '2023-01-13T14:08:00.000Z',
     open: 15052.75,
     high: 15053.25,
     low: 15048.75,
@@ -9043,7 +7913,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673618940, // '2023-01-13T14:09:00.000Z',
     open: 15049.75,
     high: 15051.25,
     low: 15046.25,
@@ -9051,7 +7920,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619000, // '2023-01-13T14:10:00.000Z',
     open: 15047.25,
     high: 15049.25,
     low: 15045.75,
@@ -9059,7 +7927,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619060, // '2023-01-13T14:11:00.000Z',
     open: 15049.25,
     high: 15052.65,
     low: 15048.65,
@@ -9067,7 +7934,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619120, // '2023-01-13T14:12:00.000Z',
     open: 15051.15,
     high: 15054.55,
     low: 15050.65,
@@ -9075,7 +7941,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619180, // '2023-01-13T14:13:00.000Z',
     open: 15053.05,
     high: 15054.55,
     low: 15051.55,
@@ -9083,7 +7948,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619240, // '2023-01-13T14:14:00.000Z',
     open: 15053.05,
     high: 15058.45,
     low: 15051.55,
@@ -9091,7 +7955,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619300, // '2023-01-13T14:15:00.000Z',
     open: 15055.95,
     high: 15056.45,
     low: 15053.45,
@@ -9099,7 +7962,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619360, // '2023-01-13T14:16:00.000Z',
     open: 15055.45,
     high: 15055.45,
     low: 15051.05,
@@ -9107,7 +7969,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619420, // '2023-01-13T14:17:00.000Z',
     open: 15050.55,
     high: 15058.45,
     low: 15050.55,
@@ -9115,7 +7976,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619480, // '2023-01-13T14:18:00.000Z',
     open: 15057.95,
     high: 15057.95,
     low: 15054.45,
@@ -9123,7 +7983,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619540, // '2023-01-13T14:19:00.000Z',
     open: 15056.85,
     high: 15058.75,
     low: 15055.35,
@@ -9131,7 +7990,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619600, // '2023-01-13T14:20:00.000Z',
     open: 15058.25,
     high: 15060.25,
     low: 15055.65,
@@ -9139,7 +7997,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619660, // '2023-01-13T14:21:00.000Z',
     open: 15055.65,
     high: 15055.65,
     low: 15050.65,
@@ -9147,7 +8004,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619720, // '2023-01-13T14:22:00.000Z',
     open: 15050.65,
     high: 15054.65,
     low: 15050.25,
@@ -9155,7 +8011,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619780, // '2023-01-13T14:23:00.000Z',
     open: 15052.15,
     high: 15052.15,
     low: 15048.15,
@@ -9163,7 +8018,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619840, // '2023-01-13T14:24:00.000Z',
     open: 15048.15,
     high: 15048.15,
     low: 15044.15,
@@ -9171,7 +8025,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619900, // '2023-01-13T14:25:00.000Z',
     open: 15044.15,
     high: 15052.05,
     low: 15043.65,
@@ -9179,7 +8032,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673619960, // '2023-01-13T14:26:00.000Z',
     open: 15049.05,
     high: 15051.95,
     low: 15048.95,
@@ -9187,7 +8039,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620020, // '2023-01-13T14:27:00.000Z',
     open: 15049.45,
     high: 15053.95,
     low: 15049.45,
@@ -9195,7 +8046,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620080, // '2023-01-13T14:28:00.000Z',
     open: 15053.95,
     high: 15056.85,
     low: 15053.35,
@@ -9203,7 +8053,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620140, // '2023-01-13T14:29:00.000Z',
     open: 15055.35,
     high: 15056.95,
     low: 15052.35,
@@ -9211,7 +8060,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620200, // '2023-01-13T14:30:00.000Z',
     open: 15056.45,
     high: 15068.45,
     low: 15055.95,
@@ -9219,7 +8067,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620260, // '2023-01-13T14:31:00.000Z',
     open: 15068.45,
     high: 15074.35,
     low: 15067.95,
@@ -9227,7 +8074,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620320, // '2023-01-13T14:32:00.000Z',
     open: 15072.95,
     high: 15075.95,
     low: 15069.95,
@@ -9235,7 +8081,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620380, // '2023-01-13T14:33:00.000Z',
     open: 15070.05,
     high: 15073.55,
     low: 15066.05,
@@ -9243,7 +8088,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620440, // '2023-01-13T14:34:00.000Z',
     open: 15071.05,
     high: 15080.95,
     low: 15068.05,
@@ -9251,7 +8095,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620500, // '2023-01-13T14:35:00.000Z',
     open: 15078.45,
     high: 15082.95,
     low: 15072.45,
@@ -9259,7 +8102,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620560, // '2023-01-13T14:36:00.000Z',
     open: 15074.45,
     high: 15088.85,
     low: 15072.45,
@@ -9267,7 +8109,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620620, // '2023-01-13T14:37:00.000Z',
     open: 15087.35,
     high: 15090.25,
     low: 15081.85,
@@ -9275,7 +8116,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620680, // '2023-01-13T14:38:00.000Z',
     open: 15084.35,
     high: 15087.85,
     low: 15077.45,
@@ -9283,7 +8123,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620740, // '2023-01-13T14:39:00.000Z',
     open: 15077.95,
     high: 15085.95,
     low: 15076.95,
@@ -9291,7 +8130,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620800, // '2023-01-13T14:40:00.000Z',
     open: 15084.85,
     high: 15094.25,
     low: 15084.35,
@@ -9299,7 +8137,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620860, // '2023-01-13T14:41:00.000Z',
     open: 15089.75,
     high: 15091.75,
     low: 15081.35,
@@ -9307,7 +8144,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620920, // '2023-01-13T14:42:00.000Z',
     open: 15082.35,
     high: 15084.35,
     low: 15077.85,
@@ -9315,7 +8151,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673620980, // '2023-01-13T14:43:00.000Z',
     open: 15083.35,
     high: 15091.75,
     low: 15083.35,
@@ -9323,7 +8158,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621040, // '2023-01-13T14:44:00.000Z',
     open: 15088.75,
     high: 15091.25,
     low: 15085.75,
@@ -9331,7 +8165,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621100, // '2023-01-13T14:45:00.000Z',
     open: 15090.75,
     high: 15091.75,
     low: 15085.25,
@@ -9339,7 +8172,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621160, // '2023-01-13T14:46:00.000Z',
     open: 15091.25,
     high: 15097.15,
     low: 15088.25,
@@ -9347,7 +8179,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621220, // '2023-01-13T14:47:00.000Z',
     open: 15097.65,
     high: 15100.15,
     low: 15093.65,
@@ -9355,7 +8186,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621280, // '2023-01-13T14:48:00.000Z',
     open: 15096.65,
     high: 15101.65,
     low: 15096.15,
@@ -9363,7 +8193,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621340, // '2023-01-13T14:49:00.000Z',
     open: 15100.15,
     high: 15101.15,
     low: 15096.75,
@@ -9371,7 +8200,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621400, // '2023-01-13T14:50:00.000Z',
     open: 15098.25,
     high: 15107.65,
     low: 15096.25,
@@ -9379,7 +8207,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621460, // '2023-01-13T14:51:00.000Z',
     open: 15101.65,
     high: 15108.65,
     low: 15101.15,
@@ -9387,7 +8214,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621520, // '2023-01-13T14:52:00.000Z',
     open: 15105.75,
     high: 15106.75,
     low: 15101.75,
@@ -9395,7 +8221,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621580, // '2023-01-13T14:53:00.000Z',
     open: 15103.25,
     high: 15109.75,
     low: 15103.25,
@@ -9403,7 +8228,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621640, // '2023-01-13T14:54:00.000Z',
     open: 15107.25,
     high: 15108.75,
     low: 15105.75,
@@ -9411,7 +8235,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621700, // '2023-01-13T14:55:00.000Z',
     open: 15106.85,
     high: 15110.75,
     low: 15102.85,
@@ -9419,7 +8242,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621760, // '2023-01-13T14:56:00.000Z',
     open: 15109.25,
     high: 15110.75,
     low: 15104.85,
@@ -9427,7 +8249,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621820, // '2023-01-13T14:57:00.000Z',
     open: 15104.85,
     high: 15106.35,
     low: 15100.85,
@@ -9435,7 +8256,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621880, // '2023-01-13T14:58:00.000Z',
     open: 15105.35,
     high: 15107.75,
     low: 15104.85,
@@ -9443,7 +8263,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673621940, // '2023-01-13T14:59:00.000Z',
     open: 15104.75,
     high: 15106.25,
     low: 15100.85,
@@ -9451,7 +8270,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622000, // '2023-01-13T15:00:00.000Z',
     open: 15103.85,
     high: 15118.15,
     low: 15096.35,
@@ -9459,7 +8277,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622060, // '2023-01-13T15:01:00.000Z',
     open: 15105.25,
     high: 15110.75,
     low: 15101.75,
@@ -9467,7 +8284,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622120, // '2023-01-13T15:02:00.000Z',
     open: 15110.25,
     high: 15112.75,
     low: 15103.75,
@@ -9475,7 +8291,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622180, // '2023-01-13T15:03:00.000Z',
     open: 15108.25,
     high: 15109.85,
     low: 15101.35,
@@ -9483,7 +8298,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622240, // '2023-01-13T15:04:00.000Z',
     open: 15103.85,
     high: 15107.35,
     low: 15100.95,
@@ -9491,7 +8305,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622300, // '2023-01-13T15:05:00.000Z',
     open: 15102.45,
     high: 15110.95,
     low: 15101.95,
@@ -9499,7 +8312,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622360, // '2023-01-13T15:06:00.000Z',
     open: 15109.45,
     high: 15116.95,
     low: 15106.95,
@@ -9507,7 +8319,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622420, // '2023-01-13T15:07:00.000Z',
     open: 15106.95,
     high: 15106.95,
     low: 15100.05,
@@ -9515,7 +8326,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622480, // '2023-01-13T15:08:00.000Z',
     open: 15102.55,
     high: 15102.55,
     low: 15095.55,
@@ -9523,7 +8333,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622540, // '2023-01-13T15:09:00.000Z',
     open: 15100.05,
     high: 15103.45,
     low: 15097.05,
@@ -9531,7 +8340,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622600, // '2023-01-13T15:10:00.000Z',
     open: 15098.95,
     high: 15102.95,
     low: 15097.95,
@@ -9539,7 +8347,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622660, // '2023-01-13T15:11:00.000Z',
     open: 15101.45,
     high: 15104.85,
     low: 15100.45,
@@ -9547,7 +8354,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622720, // '2023-01-13T15:12:00.000Z',
     open: 15103.25,
     high: 15110.65,
     low: 15102.75,
@@ -9555,7 +8361,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622780, // '2023-01-13T15:13:00.000Z',
     open: 15110.65,
     high: 15116.55,
     low: 15109.55,
@@ -9563,7 +8368,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622840, // '2023-01-13T15:14:00.000Z',
     open: 15109.05,
     high: 15111.45,
     low: 15106.55,
@@ -9571,7 +8375,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622900, // '2023-01-13T15:15:00.000Z',
     open: 15108.95,
     high: 15114.45,
     low: 15108.45,
@@ -9579,7 +8382,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673622960, // '2023-01-13T15:16:00.000Z',
     open: 15111.95,
     high: 15111.95,
     low: 15103.55,
@@ -9587,7 +8389,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623020, // '2023-01-13T15:17:00.000Z',
     open: 15105.05,
     high: 15111.55,
     low: 15105.05,
@@ -9595,7 +8396,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623080, // '2023-01-13T15:18:00.000Z',
     open: 15110.45,
     high: 15112.45,
     low: 15107.55,
@@ -9603,7 +8403,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623140, // '2023-01-13T15:19:00.000Z',
     open: 15109.55,
     high: 15114.65,
     low: 15108.05,
@@ -9611,7 +8410,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623200, // '2023-01-13T15:20:00.000Z',
     open: 15114.55,
     high: 15120.05,
     low: 15114.15,
@@ -9619,7 +8417,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623260, // '2023-01-13T15:21:00.000Z',
     open: 15117.55,
     high: 15120.65,
     low: 15113.15,
@@ -9627,7 +8424,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623320, // '2023-01-13T15:22:00.000Z',
     open: 15120.55,
     high: 15131.55,
     low: 15118.15,
@@ -9635,7 +8431,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623380, // '2023-01-13T15:23:00.000Z',
     open: 15129.55,
     high: 15134.55,
     low: 15126.65,
@@ -9643,7 +8438,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623440, // '2023-01-13T15:24:00.000Z',
     open: 15126.65,
     high: 15126.65,
     low: 15121.75,
@@ -9651,7 +8445,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623500, // '2023-01-13T15:25:00.000Z',
     open: 15124.85,
     high: 15126.85,
     low: 15120.95,
@@ -9659,7 +8452,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623560, // '2023-01-13T15:26:00.000Z',
     open: 15121.95,
     high: 15125.55,
     low: 15121.95,
@@ -9667,7 +8459,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623620, // '2023-01-13T15:27:00.000Z',
     open: 15124.55,
     high: 15127.45,
     low: 15123.05,
@@ -9675,7 +8466,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623680, // '2023-01-13T15:28:00.000Z',
     open: 15124.95,
     high: 15125.45,
     low: 15119.05,
@@ -9683,7 +8473,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623740, // '2023-01-13T15:29:00.000Z',
     open: 15119.05,
     high: 15121.05,
     low: 15116.55,
@@ -9691,7 +8480,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623800, // '2023-01-13T15:30:00.000Z',
     open: 15120.05,
     high: 15122.05,
     low: 15117.05,
@@ -9699,7 +8487,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623860, // '2023-01-13T15:31:00.000Z',
     open: 15120.15,
     high: 15121.55,
     low: 15113.65,
@@ -9707,7 +8494,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623920, // '2023-01-13T15:32:00.000Z',
     open: 15114.15,
     high: 15115.15,
     low: 15111.25,
@@ -9715,7 +8501,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673623980, // '2023-01-13T15:33:00.000Z',
     open: 15112.75,
     high: 15113.25,
     low: 15110.25,
@@ -9723,7 +8508,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624040, // '2023-01-13T15:34:00.000Z',
     open: 15113.25,
     high: 15114.25,
     low: 15110.25,
@@ -9731,7 +8515,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624100, // '2023-01-13T15:35:00.000Z',
     open: 15109.75,
     high: 15115.15,
     low: 15109.25,
@@ -9739,7 +8522,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624160, // '2023-01-13T15:36:00.000Z',
     open: 15114.15,
     high: 15116.15,
     low: 15111.65,
@@ -9747,7 +8529,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624220, // '2023-01-13T15:37:00.000Z',
     open: 15113.15,
     high: 15117.15,
     low: 15112.65,
@@ -9755,7 +8536,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624280, // '2023-01-13T15:38:00.000Z',
     open: 15116.15,
     high: 15116.15,
     low: 15112.65,
@@ -9763,7 +8543,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624340, // '2023-01-13T15:39:00.000Z',
     open: 15114.05,
     high: 15116.05,
     low: 15111.65,
@@ -9771,7 +8550,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624400, // '2023-01-13T15:40:00.000Z',
     open: 15114.15,
     high: 15119.05,
     low: 15113.55,
@@ -9779,7 +8557,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624460, // '2023-01-13T15:41:00.000Z',
     open: 15117.05,
     high: 15120.05,
     low: 15115.15,
@@ -9787,7 +8564,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624520, // '2023-01-13T15:42:00.000Z',
     open: 15115.15,
     high: 15116.75,
     low: 15114.15,
@@ -9795,7 +8571,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624580, // '2023-01-13T15:43:00.000Z',
     open: 15115.85,
     high: 15119.35,
     low: 15115.35,
@@ -9803,7 +8578,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624640, // '2023-01-13T15:44:00.000Z',
     open: 15117.85,
     high: 15118.35,
     low: 15112.45,
@@ -9811,7 +8585,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624700, // '2023-01-13T15:45:00.000Z',
     open: 15112.95,
     high: 15117.05,
     low: 15110.55,
@@ -9819,7 +8592,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624760, // '2023-01-13T15:46:00.000Z',
     open: 15117.05,
     high: 15119.55,
     low: 15116.05,
@@ -9827,7 +8599,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624820, // '2023-01-13T15:47:00.000Z',
     open: 15116.55,
     high: 15119.65,
     low: 15115.65,
@@ -9835,7 +8606,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624880, // '2023-01-13T15:48:00.000Z',
     open: 15119.15,
     high: 15119.15,
     low: 15114.25,
@@ -9843,7 +8613,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673624940, // '2023-01-13T15:49:00.000Z',
     open: 15114.25,
     high: 15115.85,
     low: 15112.75,
@@ -9851,7 +8620,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625000, // '2023-01-13T15:50:00.000Z',
     open: 15115.85,
     high: 15118.85,
     low: 15113.95,
@@ -9859,7 +8627,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625060, // '2023-01-13T15:51:00.000Z',
     open: 15113.95,
     high: 15114.45,
     low: 15111.95,
@@ -9867,7 +8634,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625120, // '2023-01-13T15:52:00.000Z',
     open: 15112.05,
     high: 15115.05,
     low: 15112.05,
@@ -9875,7 +8641,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625180, // '2023-01-13T15:53:00.000Z',
     open: 15113.55,
     high: 15114.65,
     low: 15112.05,
@@ -9883,7 +8648,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625240, // '2023-01-13T15:54:00.000Z',
     open: 15113.65,
     high: 15115.15,
     low: 15112.15,
@@ -9891,7 +8655,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625300, // '2023-01-13T15:55:00.000Z',
     open: 15112.65,
     high: 15116.65,
     low: 15112.65,
@@ -9899,7 +8662,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625360, // '2023-01-13T15:56:00.000Z',
     open: 15116.65,
     high: 15116.65,
     low: 15112.15,
@@ -9907,7 +8669,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625420, // '2023-01-13T15:57:00.000Z',
     open: 15114.65,
     high: 15115.15,
     low: 15111.15,
@@ -9915,7 +8676,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625480, // '2023-01-13T15:58:00.000Z',
     open: 15111.15,
     high: 15112.15,
     low: 15107.25,
@@ -9923,7 +8683,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625540, // '2023-01-13T15:59:00.000Z',
     open: 15108.75,
     high: 15111.25,
     low: 15107.35,
@@ -9931,7 +8690,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625600, // '2023-01-13T16:00:00.000Z',
     open: 15110.25,
     high: 15114.25,
     low: 15101.75,
@@ -9939,7 +8697,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625660, // '2023-01-13T16:01:00.000Z',
     open: 15101.25,
     high: 15103.25,
     low: 15099.25,
@@ -9947,7 +8704,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625720, // '2023-01-13T16:02:00.000Z',
     open: 15100.25,
     high: 15103.25,
     low: 15100.25,
@@ -9955,7 +8711,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625780, // '2023-01-13T16:03:00.000Z',
     open: 15101.75,
     high: 15106.15,
     low: 15100.25,
@@ -9963,7 +8718,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625840, // '2023-01-13T16:04:00.000Z',
     open: 15104.15,
     high: 15108.15,
     low: 15103.65,
@@ -9971,7 +8725,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625900, // '2023-01-13T16:05:00.000Z',
     open: 15108.15,
     high: 15111.65,
     low: 15106.15,
@@ -9979,7 +8732,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673625960, // '2023-01-13T16:06:00.000Z',
     open: 15108.15,
     high: 15112.05,
     low: 15108.15,
@@ -9987,7 +8739,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626020, // '2023-01-13T16:07:00.000Z',
     open: 15109.05,
     high: 15111.05,
     low: 15108.05,
@@ -9995,7 +8746,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626080, // '2023-01-13T16:08:00.000Z',
     open: 15110.15,
     high: 15112.15,
     low: 15108.15,
@@ -10003,7 +8753,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626140, // '2023-01-13T16:09:00.000Z',
     open: 15108.65,
     high: 15108.65,
     low: 15105.75,
@@ -10011,7 +8760,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626200, // '2023-01-13T16:10:00.000Z',
     open: 15106.25,
     high: 15108.25,
     low: 15102.75,
@@ -10019,7 +8767,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626260, // '2023-01-13T16:11:00.000Z',
     open: 15105.25,
     high: 15106.25,
     low: 15098.35,
@@ -10027,7 +8774,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626320, // '2023-01-13T16:12:00.000Z',
     open: 15098.85,
     high: 15099.35,
     low: 15094.45,
@@ -10035,7 +8781,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626380, // '2023-01-13T16:13:00.000Z',
     open: 15095.95,
     high: 15099.35,
     low: 15092.35,
@@ -10043,7 +8788,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626440, // '2023-01-13T16:14:00.000Z',
     open: 15092.35,
     high: 15094.85,
     low: 15089.35,
@@ -10051,7 +8795,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626500, // '2023-01-13T16:15:00.000Z',
     open: 15091.35,
     high: 15093.35,
     low: 15086.85,
@@ -10059,7 +8802,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626560, // '2023-01-13T16:16:00.000Z',
     open: 15088.35,
     high: 15092.35,
     low: 15087.35,
@@ -10067,7 +8809,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626620, // '2023-01-13T16:17:00.000Z',
     open: 15089.75,
     high: 15089.75,
     low: 15084.25,
@@ -10075,7 +8816,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626680, // '2023-01-13T16:18:00.000Z',
     open: 15089.15,
     high: 15091.15,
     low: 15087.15,
@@ -10083,7 +8823,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626740, // '2023-01-13T16:19:00.000Z',
     open: 15088.15,
     high: 15091.15,
     low: 15086.25,
@@ -10091,7 +8830,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626800, // '2023-01-13T16:20:00.000Z',
     open: 15090.15,
     high: 15091.15,
     low: 15087.05,
@@ -10099,7 +8837,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626860, // '2023-01-13T16:21:00.000Z',
     open: 15087.55,
     high: 15088.05,
     low: 15083.15,
@@ -10107,7 +8844,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626920, // '2023-01-13T16:22:00.000Z',
     open: 15087.15,
     high: 15091.05,
     low: 15086.05,
@@ -10115,7 +8851,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673626980, // '2023-01-13T16:23:00.000Z',
     open: 15091.05,
     high: 15101.45,
     low: 15091.05,
@@ -10123,7 +8858,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627040, // '2023-01-13T16:24:00.000Z',
     open: 15101.45,
     high: 15102.95,
     low: 15098.95,
@@ -10131,7 +8865,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627100, // '2023-01-13T16:25:00.000Z',
     open: 15099.95,
     high: 15100.95,
     low: 15092.95,
@@ -10139,7 +8872,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627160, // '2023-01-13T16:26:00.000Z',
     open: 15093.45,
     high: 15099.45,
     low: 15093.45,
@@ -10147,7 +8879,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627220, // '2023-01-13T16:27:00.000Z',
     open: 15096.45,
     high: 15099.35,
     low: 15092.35,
@@ -10155,7 +8886,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627280, // '2023-01-13T16:28:00.000Z',
     open: 15093.85,
     high: 15095.35,
     low: 15089.85,
@@ -10163,7 +8893,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627340, // '2023-01-13T16:29:00.000Z',
     open: 15093.35,
     high: 15095.75,
     low: 15091.75,
@@ -10171,7 +8900,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627400, // '2023-01-13T16:30:00.000Z',
     open: 15094.7,
     high: 15097.7,
     low: 15088.8,
@@ -10179,7 +8907,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627460, // '2023-01-13T16:31:00.000Z',
     open: 15088.3,
     high: 15090.3,
     low: 15084.8,
@@ -10187,7 +8914,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627520, // '2023-01-13T16:32:00.000Z',
     open: 15087.3,
     high: 15088.8,
     low: 15085.8,
@@ -10195,7 +8921,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627580, // '2023-01-13T16:33:00.000Z',
     open: 15087.3,
     high: 15088.8,
     low: 15084.8,
@@ -10203,7 +8928,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627640, // '2023-01-13T16:34:00.000Z',
     open: 15087.3,
     high: 15090.8,
     low: 15084.8,
@@ -10211,7 +8935,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627700, // '2023-01-13T16:35:00.000Z',
     open: 15088.8,
     high: 15088.8,
     low: 15082.3,
@@ -10219,7 +8942,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627760, // '2023-01-13T16:36:00.000Z',
     open: 15086.3,
     high: 15091.8,
     low: 15086.3,
@@ -10227,7 +8949,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627820, // '2023-01-13T16:37:00.000Z',
     open: 15091.3,
     high: 15091.3,
     low: 15086.8,
@@ -10235,7 +8956,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627880, // '2023-01-13T16:38:00.000Z',
     open: 15088.8,
     high: 15090.3,
     low: 15087.8,
@@ -10243,7 +8963,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673627940, // '2023-01-13T16:39:00.000Z',
     open: 15088.3,
     high: 15090.3,
     low: 15085.8,
@@ -10251,7 +8970,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628000, // '2023-01-13T16:40:00.000Z',
     open: 15087.3,
     high: 15087.8,
     low: 15084.8,
@@ -10259,7 +8977,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628060, // '2023-01-13T16:41:00.000Z',
     open: 15087.8,
     high: 15088.8,
     low: 15086.3,
@@ -10267,7 +8984,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628120, // '2023-01-13T16:42:00.000Z',
     open: 15086.3,
     high: 15087.8,
     low: 15084.8,
@@ -10275,7 +8991,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628180, // '2023-01-13T16:43:00.000Z',
     open: 15085.8,
     high: 15089.8,
     low: 15085.8,
@@ -10283,7 +8998,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628240, // '2023-01-13T16:44:00.000Z',
     open: 15089.3,
     high: 15092.8,
     low: 15088.8,
@@ -10291,7 +9005,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628300, // '2023-01-13T16:45:00.000Z',
     open: 15092.3,
     high: 15092.8,
     low: 15084.8,
@@ -10299,7 +9012,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628360, // '2023-01-13T16:46:00.000Z',
     open: 15086.3,
     high: 15086.3,
     low: 15082.8,
@@ -10307,7 +9019,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628420, // '2023-01-13T16:47:00.000Z',
     open: 15084.3,
     high: 15086.8,
     low: 15082.8,
@@ -10315,7 +9026,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628480, // '2023-01-13T16:48:00.000Z',
     open: 15085.3,
     high: 15090.8,
     low: 15083.8,
@@ -10323,7 +9033,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628540, // '2023-01-13T16:49:00.000Z',
     open: 15090.3,
     high: 15091.8,
     low: 15088.8,
@@ -10331,7 +9040,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628600, // '2023-01-13T16:50:00.000Z',
     open: 15090.3,
     high: 15094.8,
     low: 15089.8,
@@ -10339,7 +9047,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628660, // '2023-01-13T16:51:00.000Z',
     open: 15090.3,
     high: 15094.3,
     low: 15088.8,
@@ -10347,7 +9054,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628720, // '2023-01-13T16:52:00.000Z',
     open: 15089.8,
     high: 15089.8,
     low: 15085.3,
@@ -10355,7 +9061,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628780, // '2023-01-13T16:53:00.000Z',
     open: 15089.8,
     high: 15093.8,
     low: 15088.8,
@@ -10363,7 +9068,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628840, // '2023-01-13T16:54:00.000Z',
     open: 15093.3,
     high: 15095.8,
     low: 15088.3,
@@ -10371,7 +9075,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628900, // '2023-01-13T16:55:00.000Z',
     open: 15092.3,
     high: 15094.8,
     low: 15088.8,
@@ -10379,7 +9082,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673628960, // '2023-01-13T16:56:00.000Z',
     open: 15089.8,
     high: 15089.8,
     low: 15083.8,
@@ -10387,7 +9089,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629020, // '2023-01-13T16:57:00.000Z',
     open: 15088.8,
     high: 15091.8,
     low: 15088.8,
@@ -10395,7 +9096,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629080, // '2023-01-13T16:58:00.000Z',
     open: 15090.8,
     high: 15092.8,
     low: 15087.8,
@@ -10403,7 +9103,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629140, // '2023-01-13T16:59:00.000Z',
     open: 15093.3,
     high: 15094.3,
     low: 15091.8,
@@ -10411,7 +9110,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629200, // '2023-01-13T17:00:00.000Z',
     open: 15092.8,
     high: 15093.3,
     low: 15090.3,
@@ -10419,7 +9117,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629260, // '2023-01-13T17:01:00.000Z',
     open: 15092.8,
     high: 15094.8,
     low: 15091.8,
@@ -10427,7 +9124,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629320, // '2023-01-13T17:02:00.000Z',
     open: 15094.3,
     high: 15098.7,
     low: 15092.8,
@@ -10435,7 +9131,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629380, // '2023-01-13T17:03:00.000Z',
     open: 15098.2,
     high: 15100.7,
     low: 15095.3,
@@ -10443,7 +9138,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629440, // '2023-01-13T17:04:00.000Z',
     open: 15099.3,
     high: 15099.3,
     low: 15094.8,
@@ -10451,7 +9145,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629500, // '2023-01-13T17:05:00.000Z',
     open: 15094.8,
     high: 15096.3,
     low: 15094.8,
@@ -10459,7 +9152,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629560, // '2023-01-13T17:06:00.000Z',
     open: 15095.8,
     high: 15097.3,
     low: 15094.3,
@@ -10467,7 +9159,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629620, // '2023-01-13T17:07:00.000Z',
     open: 15097.3,
     high: 15097.8,
     low: 15095.8,
@@ -10475,7 +9166,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629680, // '2023-01-13T17:08:00.000Z',
     open: 15095.8,
     high: 15098.8,
     low: 15095.8,
@@ -10483,7 +9173,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629740, // '2023-01-13T17:09:00.000Z',
     open: 15098.8,
     high: 15101.8,
     low: 15097.8,
@@ -10491,7 +9180,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629800, // '2023-01-13T17:10:00.000Z',
     open: 15100.2,
     high: 15101.7,
     low: 15098.8,
@@ -10499,7 +9187,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629860, // '2023-01-13T17:11:00.000Z',
     open: 15100.3,
     high: 15101.7,
     low: 15097.8,
@@ -10507,7 +9194,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629920, // '2023-01-13T17:12:00.000Z',
     open: 15099.7,
     high: 15102.3,
     low: 15098.3,
@@ -10515,7 +9201,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673629980, // '2023-01-13T17:13:00.000Z',
     open: 15100.7,
     high: 15104.7,
     low: 15099.7,
@@ -10523,7 +9208,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630040, // '2023-01-13T17:14:00.000Z',
     open: 15104.2,
     high: 15104.7,
     low: 15103.2,
@@ -10531,7 +9215,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630100, // '2023-01-13T17:15:00.000Z',
     open: 15103.7,
     high: 15104.2,
     low: 15101.8,
@@ -10539,7 +9222,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630160, // '2023-01-13T17:16:00.000Z',
     open: 15103.2,
     high: 15106.7,
     low: 15103.2,
@@ -10547,7 +9229,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630220, // '2023-01-13T17:17:00.000Z',
     open: 15104.7,
     high: 15104.7,
     low: 15101.7,
@@ -10555,7 +9236,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630280, // '2023-01-13T17:18:00.000Z',
     open: 15103.3,
     high: 15104.7,
     low: 15100.7,
@@ -10563,7 +9243,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630340, // '2023-01-13T17:19:00.000Z',
     open: 15103.2,
     high: 15106.7,
     low: 15103.2,
@@ -10571,7 +9250,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630400, // '2023-01-13T17:20:00.000Z',
     open: 15106.2,
     high: 15108.7,
     low: 15105.2,
@@ -10579,7 +9257,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630460, // '2023-01-13T17:21:00.000Z',
     open: 15105.7,
     high: 15106.7,
     low: 15104.7,
@@ -10587,7 +9264,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630520, // '2023-01-13T17:22:00.000Z',
     open: 15105.2,
     high: 15105.2,
     low: 15103.7,
@@ -10595,7 +9271,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630580, // '2023-01-13T17:23:00.000Z',
     open: 15103.2,
     high: 15104.2,
     low: 15102.8,
@@ -10603,7 +9278,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630640, // '2023-01-13T17:24:00.000Z',
     open: 15102.8,
     high: 15104.3,
     low: 15101.7,
@@ -10611,7 +9285,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630700, // '2023-01-13T17:25:00.000Z',
     open: 15104.7,
     high: 15106.7,
     low: 15103.7,
@@ -10619,7 +9292,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630760, // '2023-01-13T17:26:00.000Z',
     open: 15106.7,
     high: 15107.2,
     low: 15098.8,
@@ -10627,7 +9299,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630820, // '2023-01-13T17:27:00.000Z',
     open: 15100.3,
     high: 15101.3,
     low: 15099.8,
@@ -10635,7 +9306,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630880, // '2023-01-13T17:28:00.000Z',
     open: 15100.3,
     high: 15101.3,
     low: 15099.3,
@@ -10643,7 +9313,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673630940, // '2023-01-13T17:29:00.000Z',
     open: 15101.3,
     high: 15101.3,
     low: 15099.8,
@@ -10651,7 +9320,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631000, // '2023-01-13T17:30:00.000Z',
     open: 15101.3,
     high: 15101.3,
     low: 15097.3,
@@ -10659,7 +9327,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631060, // '2023-01-13T17:31:00.000Z',
     open: 15098.3,
     high: 15098.3,
     low: 15095.3,
@@ -10667,7 +9334,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631120, // '2023-01-13T17:32:00.000Z',
     open: 15097.3,
     high: 15097.8,
     low: 15095.8,
@@ -10675,7 +9341,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631180, // '2023-01-13T17:33:00.000Z',
     open: 15095.8,
     high: 15100.8,
     low: 15095.8,
@@ -10683,7 +9348,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631240, // '2023-01-13T17:34:00.000Z',
     open: 15098.8,
     high: 15099.8,
     low: 15096.8,
@@ -10691,7 +9355,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631300, // '2023-01-13T17:35:00.000Z',
     open: 15096.3,
     high: 15097.3,
     low: 15095.8,
@@ -10699,7 +9362,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631360, // '2023-01-13T17:36:00.000Z',
     open: 15096.3,
     high: 15096.3,
     low: 15092.3,
@@ -10707,7 +9369,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631420, // '2023-01-13T17:37:00.000Z',
     open: 15093.3,
     high: 15094.8,
     low: 15092.8,
@@ -10715,7 +9376,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631480, // '2023-01-13T17:38:00.000Z',
     open: 15094.8,
     high: 15095.3,
     low: 15093.8,
@@ -10723,7 +9383,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631540, // '2023-01-13T17:39:00.000Z',
     open: 15093.8,
     high: 15093.8,
     low: 15091.8,
@@ -10731,7 +9390,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631600, // '2023-01-13T17:40:00.000Z',
     open: 15094.3,
     high: 15095.8,
     low: 15093.3,
@@ -10739,7 +9397,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631660, // '2023-01-13T17:41:00.000Z',
     open: 15094.8,
     high: 15094.8,
     low: 15092.8,
@@ -10747,7 +9404,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631720, // '2023-01-13T17:42:00.000Z',
     open: 15092.3,
     high: 15094.8,
     low: 15091.8,
@@ -10755,7 +9411,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631780, // '2023-01-13T17:43:00.000Z',
     open: 15094.3,
     high: 15096.8,
     low: 15092.8,
@@ -10763,7 +9418,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631840, // '2023-01-13T17:44:00.000Z',
     open: 15096.3,
     high: 15100.8,
     low: 15096.3,
@@ -10771,7 +9425,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631900, // '2023-01-13T17:45:00.000Z',
     open: 15100.3,
     high: 15101.8,
     low: 15099.8,
@@ -10779,7 +9432,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673631960, // '2023-01-13T17:46:00.000Z',
     open: 15099.8,
     high: 15102.3,
     low: 15099.3,
@@ -10787,7 +9439,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632020, // '2023-01-13T17:47:00.000Z',
     open: 15100.8,
     high: 15102.3,
     low: 15099.3,
@@ -10795,7 +9446,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632080, // '2023-01-13T17:48:00.000Z',
     open: 15099.3,
     high: 15099.3,
     low: 15096.8,
@@ -10803,7 +9453,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632140, // '2023-01-13T17:49:00.000Z',
     open: 15097.8,
     high: 15099.8,
     low: 15096.8,
@@ -10811,7 +9460,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632200, // '2023-01-13T17:50:00.000Z',
     open: 15099.3,
     high: 15101.8,
     low: 15098.3,
@@ -10819,7 +9467,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632260, // '2023-01-13T17:51:00.000Z',
     open: 15098.8,
     high: 15099.8,
     low: 15097.3,
@@ -10827,7 +9474,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632320, // '2023-01-13T17:52:00.000Z',
     open: 15098.8,
     high: 15099.8,
     low: 15097.8,
@@ -10835,7 +9481,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632380, // '2023-01-13T17:53:00.000Z',
     open: 15099.8,
     high: 15100.3,
     low: 15098.8,
@@ -10843,7 +9488,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632440, // '2023-01-13T17:54:00.000Z',
     open: 15099.3,
     high: 15101.8,
     low: 15099.3,
@@ -10851,7 +9495,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632500, // '2023-01-13T17:55:00.000Z',
     open: 15100.3,
     high: 15102.8,
     low: 15099.8,
@@ -10859,7 +9502,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632560, // '2023-01-13T17:56:00.000Z',
     open: 15103.3,
     high: 15107.7,
     low: 15102.8,
@@ -10867,7 +9509,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632620, // '2023-01-13T17:57:00.000Z',
     open: 15104.8,
     high: 15105.8,
     low: 15103.8,
@@ -10875,7 +9516,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632680, // '2023-01-13T17:58:00.000Z',
     open: 15104.3,
     high: 15104.8,
     low: 15101.8,
@@ -10883,7 +9523,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632740, // '2023-01-13T17:59:00.000Z',
     open: 15103.8,
     high: 15104.8,
     low: 15103.3,
@@ -10891,7 +9530,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632800, // '2023-01-13T18:00:00.000Z',
     open: 15103.8,
     high: 15103.8,
     low: 15101.8,
@@ -10899,7 +9537,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632860, // '2023-01-13T18:01:00.000Z',
     open: 15103.3,
     high: 15105.8,
     low: 15102.8,
@@ -10907,7 +9544,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632920, // '2023-01-13T18:02:00.000Z',
     open: 15104.8,
     high: 15105.8,
     low: 15104.8,
@@ -10915,7 +9551,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673632980, // '2023-01-13T18:03:00.000Z',
     open: 15106.3,
     high: 15107.8,
     low: 15105.8,
@@ -10923,7 +9558,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633040, // '2023-01-13T18:04:00.000Z',
     open: 15106.3,
     high: 15106.3,
     low: 15101.8,
@@ -10931,7 +9565,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633100, // '2023-01-13T18:05:00.000Z',
     open: 15101.8,
     high: 15102.3,
     low: 15099.8,
@@ -10939,7 +9572,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633160, // '2023-01-13T18:06:00.000Z',
     open: 15102.8,
     high: 15102.8,
     low: 15098.8,
@@ -10947,7 +9579,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633220, // '2023-01-13T18:07:00.000Z',
     open: 15100.3,
     high: 15100.8,
     low: 15099.8,
@@ -10955,7 +9586,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633280, // '2023-01-13T18:08:00.000Z',
     open: 15099.3,
     high: 15102.3,
     low: 15098.8,
@@ -10963,7 +9593,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633340, // '2023-01-13T18:09:00.000Z',
     open: 15102.8,
     high: 15103.8,
     low: 15101.8,
@@ -10971,7 +9600,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633400, // '2023-01-13T18:10:00.000Z',
     open: 15102.8,
     high: 15104.8,
     low: 15102.3,
@@ -10979,7 +9607,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633460, // '2023-01-13T18:11:00.000Z',
     open: 15102.8,
     high: 15105.8,
     low: 15101.8,
@@ -10987,7 +9614,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633520, // '2023-01-13T18:12:00.000Z',
     open: 15104.8,
     high: 15105.8,
     low: 15103.8,
@@ -10995,7 +9621,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633580, // '2023-01-13T18:13:00.000Z',
     open: 15103.8,
     high: 15104.8,
     low: 15102.8,
@@ -11003,7 +9628,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633640, // '2023-01-13T18:14:00.000Z',
     open: 15103.3,
     high: 15104.8,
     low: 15102.3,
@@ -11011,7 +9635,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633700, // '2023-01-13T18:15:00.000Z',
     open: 15102.8,
     high: 15103.8,
     low: 15099.8,
@@ -11019,7 +9642,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633760, // '2023-01-13T18:16:00.000Z',
     open: 15100.3,
     high: 15101.8,
     low: 15097.8,
@@ -11027,7 +9649,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633820, // '2023-01-13T18:17:00.000Z',
     open: 15099.8,
     high: 15100.8,
     low: 15096.8,
@@ -11035,7 +9656,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633880, // '2023-01-13T18:18:00.000Z',
     open: 15100.3,
     high: 15102.8,
     low: 15100.3,
@@ -11043,7 +9663,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673633940, // '2023-01-13T18:19:00.000Z',
     open: 15102.3,
     high: 15103.3,
     low: 15100.3,
@@ -11051,7 +9670,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634000, // '2023-01-13T18:20:00.000Z',
     open: 15101.3,
     high: 15101.3,
     low: 15098.8,
@@ -11059,7 +9677,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634060, // '2023-01-13T18:21:00.000Z',
     open: 15099.8,
     high: 15103.3,
     low: 15099.8,
@@ -11067,7 +9684,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634120, // '2023-01-13T18:22:00.000Z',
     open: 15102.8,
     high: 15103.3,
     low: 15099.8,
@@ -11075,7 +9691,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634180, // '2023-01-13T18:23:00.000Z',
     open: 15100.3,
     high: 15100.8,
     low: 15099.8,
@@ -11083,7 +9698,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634240, // '2023-01-13T18:24:00.000Z',
     open: 15100.8,
     high: 15101.8,
     low: 15099.8,
@@ -11091,7 +9705,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634300, // '2023-01-13T18:25:00.000Z',
     open: 15100.3,
     high: 15102.3,
     low: 15099.8,
@@ -11099,7 +9712,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634360, // '2023-01-13T18:26:00.000Z',
     open: 15101.8,
     high: 15103.8,
     low: 15100.3,
@@ -11107,7 +9719,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634420, // '2023-01-13T18:27:00.000Z',
     open: 15101.3,
     high: 15103.8,
     low: 15101.3,
@@ -11115,7 +9726,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634480, // '2023-01-13T18:28:00.000Z',
     open: 15103.3,
     high: 15103.8,
     low: 15102.8,
@@ -11123,7 +9733,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634540, // '2023-01-13T18:29:00.000Z',
     open: 15103.3,
     high: 15104.8,
     low: 15101.8,
@@ -11131,7 +9740,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634600, // '2023-01-13T18:30:00.000Z',
     open: 15104.3,
     high: 15107.8,
     low: 15102.8,
@@ -11139,7 +9747,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634660, // '2023-01-13T18:31:00.000Z',
     open: 15106.8,
     high: 15106.8,
     low: 15104.8,
@@ -11147,7 +9754,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634720, // '2023-01-13T18:32:00.000Z',
     open: 15106.8,
     high: 15107.8,
     low: 15105.8,
@@ -11155,7 +9761,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634780, // '2023-01-13T18:33:00.000Z',
     open: 15107.3,
     high: 15107.3,
     low: 15105.3,
@@ -11163,7 +9768,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634840, // '2023-01-13T18:34:00.000Z',
     open: 15106.3,
     high: 15109.8,
     low: 15106.3,
@@ -11171,7 +9775,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634900, // '2023-01-13T18:35:00.000Z',
     open: 15108.8,
     high: 15108.8,
     low: 15105.8,
@@ -11179,7 +9782,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673634960, // '2023-01-13T18:36:00.000Z',
     open: 15105.3,
     high: 15105.8,
     low: 15103.8,
@@ -11187,7 +9789,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635020, // '2023-01-13T18:37:00.000Z',
     open: 15104.8,
     high: 15105.8,
     low: 15104.3,
@@ -11195,7 +9796,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635080, // '2023-01-13T18:38:00.000Z',
     open: 15105.3,
     high: 15106.8,
     low: 15104.8,
@@ -11203,7 +9803,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635140, // '2023-01-13T18:39:00.000Z',
     open: 15106.8,
     high: 15111.8,
     low: 15105.8,
@@ -11211,7 +9810,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635200, // '2023-01-13T18:40:00.000Z',
     open: 15111.3,
     high: 15115.8,
     low: 15110.8,
@@ -11219,7 +9817,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635260, // '2023-01-13T18:41:00.000Z',
     open: 15114.3,
     high: 15115.8,
     low: 15113.8,
@@ -11227,7 +9824,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635320, // '2023-01-13T18:42:00.000Z',
     open: 15115.8,
     high: 15119.7,
     low: 15115.8,
@@ -11235,7 +9831,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635380, // '2023-01-13T18:43:00.000Z',
     open: 15118.7,
     high: 15122.7,
     low: 15118.7,
@@ -11243,7 +9838,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635440, // '2023-01-13T18:44:00.000Z',
     open: 15119.7,
     high: 15121.7,
     low: 15119.7,
@@ -11251,7 +9845,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635500, // '2023-01-13T18:45:00.000Z',
     open: 15119.2,
     high: 15120.2,
     low: 15116.8,
@@ -11259,7 +9852,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635560, // '2023-01-13T18:46:00.000Z',
     open: 15117.8,
     high: 15120.7,
     low: 15116.8,
@@ -11267,7 +9859,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635620, // '2023-01-13T18:47:00.000Z',
     open: 15120.2,
     high: 15121.7,
     low: 15119.7,
@@ -11275,7 +9866,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635680, // '2023-01-13T18:48:00.000Z',
     open: 15120.2,
     high: 15124.7,
     low: 15120.2,
@@ -11283,7 +9873,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635740, // '2023-01-13T18:49:00.000Z',
     open: 15124.7,
     high: 15126.7,
     low: 15124.2,
@@ -11291,7 +9880,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635800, // '2023-01-13T18:50:00.000Z',
     open: 15125.7,
     high: 15126.2,
     low: 15123.7,
@@ -11299,7 +9887,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635860, // '2023-01-13T18:51:00.000Z',
     open: 15126.2,
     high: 15127.7,
     low: 15122.7,
@@ -11307,7 +9894,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635920, // '2023-01-13T18:52:00.000Z',
     open: 15122.2,
     high: 15122.7,
     low: 15118.8,
@@ -11315,7 +9901,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673635980, // '2023-01-13T18:53:00.000Z',
     open: 15120.7,
     high: 15122.7,
     low: 15120.7,
@@ -11323,7 +9908,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636040, // '2023-01-13T18:54:00.000Z',
     open: 15121.2,
     high: 15121.7,
     low: 15118.8,
@@ -11331,7 +9915,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636100, // '2023-01-13T18:55:00.000Z',
     open: 15118.8,
     high: 15120.7,
     low: 15118.8,
@@ -11339,7 +9922,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636160, // '2023-01-13T18:56:00.000Z',
     open: 15119.3,
     high: 15119.8,
     low: 15118.3,
@@ -11347,7 +9929,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636220, // '2023-01-13T18:57:00.000Z',
     open: 15118.8,
     high: 15122.7,
     low: 15118.3,
@@ -11355,7 +9936,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636280, // '2023-01-13T18:58:00.000Z',
     open: 15121.2,
     high: 15124.2,
     low: 15121.2,
@@ -11363,7 +9943,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636340, // '2023-01-13T18:59:00.000Z',
     open: 15123.7,
     high: 15124.7,
     low: 15122.7,
@@ -11371,7 +9950,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636400, // '2023-01-13T19:00:00.000Z',
     open: 15125.2,
     high: 15128.2,
     low: 15124.7,
@@ -11379,7 +9957,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636460, // '2023-01-13T19:01:00.000Z',
     open: 15125.7,
     high: 15128.7,
     low: 15125.7,
@@ -11387,7 +9964,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636520, // '2023-01-13T19:02:00.000Z',
     open: 15128.7,
     high: 15128.7,
     low: 15126.2,
@@ -11395,7 +9971,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636580, // '2023-01-13T19:03:00.000Z',
     open: 15126.7,
     high: 15126.7,
     low: 15120.8,
@@ -11403,7 +9978,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636640, // '2023-01-13T19:04:00.000Z',
     open: 15121.2,
     high: 15121.3,
     low: 15118.8,
@@ -11411,7 +9985,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636700, // '2023-01-13T19:05:00.000Z',
     open: 15120.8,
     high: 15123.2,
     low: 15119.8,
@@ -11419,7 +9992,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636760, // '2023-01-13T19:06:00.000Z',
     open: 15121.7,
     high: 15121.7,
     low: 15117.8,
@@ -11427,7 +9999,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636820, // '2023-01-13T19:07:00.000Z',
     open: 15118.8,
     high: 15119.3,
     low: 15116.8,
@@ -11435,7 +10006,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636880, // '2023-01-13T19:08:00.000Z',
     open: 15117.8,
     high: 15118.3,
     low: 15115.8,
@@ -11443,7 +10013,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673636940, // '2023-01-13T19:09:00.000Z',
     open: 15115.3,
     high: 15115.8,
     low: 15114.3,
@@ -11451,7 +10020,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637000, // '2023-01-13T19:10:00.000Z',
     open: 15115.8,
     high: 15117.8,
     low: 15115.8,
@@ -11459,7 +10027,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637060, // '2023-01-13T19:11:00.000Z',
     open: 15117.8,
     high: 15121.3,
     low: 15117.8,
@@ -11467,7 +10034,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637120, // '2023-01-13T19:12:00.000Z',
     open: 15121.8,
     high: 15121.8,
     low: 15120.3,
@@ -11475,7 +10041,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637180, // '2023-01-13T19:13:00.000Z',
     open: 15120.8,
     high: 15121.3,
     low: 15118.3,
@@ -11483,7 +10048,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637240, // '2023-01-13T19:14:00.000Z',
     open: 15118.8,
     high: 15119.8,
     low: 15118.3,
@@ -11491,7 +10055,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637300, // '2023-01-13T19:15:00.000Z',
     open: 15118.8,
     high: 15121.3,
     low: 15118.8,
@@ -11499,7 +10062,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637360, // '2023-01-13T19:16:00.000Z',
     open: 15119.8,
     high: 15121.3,
     low: 15116.8,
@@ -11507,7 +10069,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637420, // '2023-01-13T19:17:00.000Z',
     open: 15119.3,
     high: 15119.8,
     low: 15116.3,
@@ -11515,7 +10076,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637480, // '2023-01-13T19:18:00.000Z',
     open: 15120.3,
     high: 15121.3,
     low: 15119.3,
@@ -11523,7 +10083,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637540, // '2023-01-13T19:19:00.000Z',
     open: 15118.8,
     high: 15120.3,
     low: 15115.8,
@@ -11531,7 +10090,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637600, // '2023-01-13T19:20:00.000Z',
     open: 15115.8,
     high: 15116.8,
     low: 15114.8,
@@ -11539,7 +10097,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637660, // '2023-01-13T19:21:00.000Z',
     open: 15115.3,
     high: 15115.8,
     low: 15112.8,
@@ -11547,7 +10104,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637720, // '2023-01-13T19:22:00.000Z',
     open: 15113.3,
     high: 15115.3,
     low: 15111.8,
@@ -11555,7 +10111,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637780, // '2023-01-13T19:23:00.000Z',
     open: 15114.8,
     high: 15115.3,
     low: 15113.3,
@@ -11563,7 +10118,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637840, // '2023-01-13T19:24:00.000Z',
     open: 15114.3,
     high: 15116.3,
     low: 15113.8,
@@ -11571,7 +10125,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637900, // '2023-01-13T19:25:00.000Z',
     open: 15115.8,
     high: 15115.8,
     low: 15113.3,
@@ -11579,7 +10132,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673637960, // '2023-01-13T19:26:00.000Z',
     open: 15113.3,
     high: 15116.3,
     low: 15113.3,
@@ -11587,7 +10139,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638020, // '2023-01-13T19:27:00.000Z',
     open: 15115.3,
     high: 15116.8,
     low: 15115.3,
@@ -11595,7 +10146,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638080, // '2023-01-13T19:28:00.000Z',
     open: 15116.3,
     high: 15117.3,
     low: 15115.8,
@@ -11603,7 +10153,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638140, // '2023-01-13T19:29:00.000Z',
     open: 15117.3,
     high: 15117.3,
     low: 15115.8,
@@ -11611,7 +10160,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638200, // '2023-01-13T19:30:00.000Z',
     open: 15117.3,
     high: 15121.8,
     low: 15117.3,
@@ -11619,7 +10167,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638260, // '2023-01-13T19:31:00.000Z',
     open: 15119.8,
     high: 15121.8,
     low: 15119.3,
@@ -11627,7 +10174,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638320, // '2023-01-13T19:32:00.000Z',
     open: 15119.8,
     high: 15121.3,
     low: 15118.8,
@@ -11635,7 +10181,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638380, // '2023-01-13T19:33:00.000Z',
     open: 15118.8,
     high: 15119.8,
     low: 15115.8,
@@ -11643,7 +10188,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638440, // '2023-01-13T19:34:00.000Z',
     open: 15117.8,
     high: 15118.3,
     low: 15117.3,
@@ -11651,7 +10195,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638500, // '2023-01-13T19:35:00.000Z',
     open: 15118.8,
     high: 15119.8,
     low: 15116.3,
@@ -11659,7 +10202,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638560, // '2023-01-13T19:36:00.000Z',
     open: 15117.3,
     high: 15117.3,
     low: 15115.3,
@@ -11667,7 +10209,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638620, // '2023-01-13T19:37:00.000Z',
     open: 15114.8,
     high: 15117.3,
     low: 15114.8,
@@ -11675,7 +10216,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638680, // '2023-01-13T19:38:00.000Z',
     open: 15116.8,
     high: 15119.8,
     low: 15115.8,
@@ -11683,7 +10223,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638740, // '2023-01-13T19:39:00.000Z',
     open: 15119.8,
     high: 15121.3,
     low: 15117.8,
@@ -11691,7 +10230,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638800, // '2023-01-13T19:40:00.000Z',
     open: 15119.8,
     high: 15120.3,
     low: 15118.3,
@@ -11699,7 +10237,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638860, // '2023-01-13T19:41:00.000Z',
     open: 15119.8,
     high: 15120.8,
     low: 15117.8,
@@ -11707,7 +10244,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638920, // '2023-01-13T19:42:00.000Z',
     open: 15117.8,
     high: 15118.8,
     low: 15116.8,
@@ -11715,7 +10251,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673638980, // '2023-01-13T19:43:00.000Z',
     open: 15117.3,
     high: 15119.8,
     low: 15117.3,
@@ -11723,7 +10258,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639040, // '2023-01-13T19:44:00.000Z',
     open: 15118.8,
     high: 15119.8,
     low: 15117.8,
@@ -11731,7 +10265,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639100, // '2023-01-13T19:45:00.000Z',
     open: 15120.3,
     high: 15120.8,
     low: 15117.3,
@@ -11739,7 +10272,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639160, // '2023-01-13T19:46:00.000Z',
     open: 15117.8,
     high: 15118.8,
     low: 15115.8,
@@ -11747,7 +10279,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639220, // '2023-01-13T19:47:00.000Z',
     open: 15118.8,
     high: 15123.3,
     low: 15118.8,
@@ -11755,7 +10286,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639280, // '2023-01-13T19:48:00.000Z',
     open: 15122.3,
     high: 15123.8,
     low: 15122.3,
@@ -11763,7 +10293,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639340, // '2023-01-13T19:49:00.000Z',
     open: 15123.3,
     high: 15123.3,
     low: 15120.8,
@@ -11771,7 +10300,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639400, // '2023-01-13T19:50:00.000Z',
     open: 15120.8,
     high: 15121.8,
     low: 15117.8,
@@ -11779,7 +10307,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639460, // '2023-01-13T19:51:00.000Z',
     open: 15117.8,
     high: 15120.3,
     low: 15117.8,
@@ -11787,7 +10314,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639520, // '2023-01-13T19:52:00.000Z',
     open: 15118.8,
     high: 15119.8,
     low: 15117.3,
@@ -11795,7 +10321,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639580, // '2023-01-13T19:53:00.000Z',
     open: 15118.8,
     high: 15119.8,
     low: 15116.3,
@@ -11803,7 +10328,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639640, // '2023-01-13T19:54:00.000Z',
     open: 15116.8,
     high: 15118.3,
     low: 15113.3,
@@ -11811,7 +10335,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639700, // '2023-01-13T19:55:00.000Z',
     open: 15113.3,
     high: 15117.3,
     low: 15113.3,
@@ -11819,7 +10342,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639760, // '2023-01-13T19:56:00.000Z',
     open: 15117.3,
     high: 15119.3,
     low: 15116.3,
@@ -11827,7 +10349,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639820, // '2023-01-13T19:57:00.000Z',
     open: 15118.8,
     high: 15120.3,
     low: 15118.3,
@@ -11835,7 +10356,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639880, // '2023-01-13T19:58:00.000Z',
     open: 15120.3,
     high: 15120.3,
     low: 15118.3,
@@ -11843,7 +10363,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673639940, // '2023-01-13T19:59:00.000Z',
     open: 15120.3,
     high: 15122.8,
     low: 15120.3,
@@ -11851,7 +10370,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640000, // '2023-01-13T20:00:00.000Z',
     open: 15121.3,
     high: 15123.3,
     low: 15119.3,
@@ -11859,7 +10377,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640060, // '2023-01-13T20:01:00.000Z',
     open: 15119.8,
     high: 15123.8,
     low: 15119.8,
@@ -11867,7 +10384,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640120, // '2023-01-13T20:02:00.000Z',
     open: 15123.8,
     high: 15124.8,
     low: 15122.8,
@@ -11875,7 +10391,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640180, // '2023-01-13T20:03:00.000Z',
     open: 15124.3,
     high: 15125.3,
     low: 15122.3,
@@ -11883,7 +10398,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640240, // '2023-01-13T20:04:00.000Z',
     open: 15124.8,
     high: 15126.8,
     low: 15123.8,
@@ -11891,7 +10405,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640300, // '2023-01-13T20:05:00.000Z',
     open: 15126.3,
     high: 15126.3,
     low: 15123.3,
@@ -11899,7 +10412,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640360, // '2023-01-13T20:06:00.000Z',
     open: 15123.8,
     high: 15124.8,
     low: 15121.8,
@@ -11907,7 +10419,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640420, // '2023-01-13T20:07:00.000Z',
     open: 15123.8,
     high: 15124.3,
     low: 15122.3,
@@ -11915,7 +10426,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640480, // '2023-01-13T20:08:00.000Z',
     open: 15122.8,
     high: 15125.8,
     low: 15122.8,
@@ -11923,7 +10433,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640540, // '2023-01-13T20:09:00.000Z',
     open: 15124.8,
     high: 15125.8,
     low: 15123.3,
@@ -11931,7 +10440,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640600, // '2023-01-13T20:10:00.000Z',
     open: 15125.3,
     high: 15127.8,
     low: 15125.3,
@@ -11939,7 +10447,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640660, // '2023-01-13T20:11:00.000Z',
     open: 15126.8,
     high: 15127.8,
     low: 15123.8,
@@ -11947,7 +10454,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640720, // '2023-01-13T20:12:00.000Z',
     open: 15124.3,
     high: 15126.3,
     low: 15124.3,
@@ -11955,7 +10461,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640780, // '2023-01-13T20:13:00.000Z',
     open: 15125.3,
     high: 15127.3,
     low: 15124.8,
@@ -11963,7 +10468,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640840, // '2023-01-13T20:14:00.000Z',
     open: 15125.8,
     high: 15127.3,
     low: 15124.8,
@@ -11971,7 +10475,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640900, // '2023-01-13T20:15:00.000Z',
     open: 15124.8,
     high: 15125.8,
     low: 15123.8,
@@ -11979,7 +10482,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673640960, // '2023-01-13T20:16:00.000Z',
     open: 15124.8,
     high: 15125.8,
     low: 15124.3,
@@ -11987,7 +10489,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641020, // '2023-01-13T20:17:00.000Z',
     open: 15126.3,
     high: 15126.8,
     low: 15124.8,
@@ -11995,7 +10496,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641080, // '2023-01-13T20:18:00.000Z',
     open: 15125.8,
     high: 15128.3,
     low: 15125.3,
@@ -12003,7 +10503,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641140, // '2023-01-13T20:19:00.000Z',
     open: 15126.8,
     high: 15127.3,
     low: 15125.8,
@@ -12011,7 +10510,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641200, // '2023-01-13T20:20:00.000Z',
     open: 15126.8,
     high: 15128.8,
     low: 15126.8,
@@ -12019,7 +10517,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641260, // '2023-01-13T20:21:00.000Z',
     open: 15128.3,
     high: 15130.8,
     low: 15127.8,
@@ -12027,7 +10524,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641320, // '2023-01-13T20:22:00.000Z',
     open: 15128.8,
     high: 15131.8,
     low: 15127.8,
@@ -12035,7 +10531,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641380, // '2023-01-13T20:23:00.000Z',
     open: 15130.8,
     high: 15132.8,
     low: 15129.3,
@@ -12043,7 +10538,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641440, // '2023-01-13T20:24:00.000Z',
     open: 15130.3,
     high: 15136.2,
     low: 15130.3,
@@ -12051,7 +10545,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641500, // '2023-01-13T20:25:00.000Z',
     open: 15135.2,
     high: 15135.7,
     low: 15131.8,
@@ -12059,7 +10552,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641560, // '2023-01-13T20:26:00.000Z',
     open: 15133.8,
     high: 15135.2,
     low: 15131.8,
@@ -12067,7 +10559,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641620, // '2023-01-13T20:27:00.000Z',
     open: 15135.7,
     high: 15137.2,
     low: 15134.8,
@@ -12075,7 +10566,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641680, // '2023-01-13T20:28:00.000Z',
     open: 15135.3,
     high: 15138.7,
     low: 15135.3,
@@ -12083,7 +10573,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641740, // '2023-01-13T20:29:00.000Z',
     open: 15136.7,
     high: 15143.2,
     low: 15136.7,
@@ -12091,7 +10580,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641800, // '2023-01-13T20:30:00.000Z',
     open: 15142.7,
     high: 15142.7,
     low: 15140.2,
@@ -12099,7 +10587,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641860, // '2023-01-13T20:31:00.000Z',
     open: 15141.2,
     high: 15141.2,
     low: 15138.2,
@@ -12107,7 +10594,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641920, // '2023-01-13T20:32:00.000Z',
     open: 15138.2,
     high: 15140.2,
     low: 15136.7,
@@ -12115,7 +10601,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673641980, // '2023-01-13T20:33:00.000Z',
     open: 15138.7,
     high: 15140.7,
     low: 15137.7,
@@ -12123,7 +10608,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642040, // '2023-01-13T20:34:00.000Z',
     open: 15137.7,
     high: 15138.7,
     low: 15137.2,
@@ -12131,7 +10615,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642100, // '2023-01-13T20:35:00.000Z',
     open: 15138.7,
     high: 15141.7,
     low: 15138.7,
@@ -12139,7 +10622,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642160, // '2023-01-13T20:36:00.000Z',
     open: 15142.2,
     high: 15144.7,
     low: 15140.2,
@@ -12147,7 +10629,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642220, // '2023-01-13T20:37:00.000Z',
     open: 15143.7,
     high: 15146.7,
     low: 15143.2,
@@ -12155,7 +10636,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642280, // '2023-01-13T20:38:00.000Z',
     open: 15146.2,
     high: 15147.7,
     low: 15142.2,
@@ -12163,7 +10643,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642340, // '2023-01-13T20:39:00.000Z',
     open: 15142.7,
     high: 15147.7,
     low: 15142.7,
@@ -12171,7 +10650,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642400, // '2023-01-13T20:40:00.000Z',
     open: 15148.7,
     high: 15148.7,
     low: 15139.7,
@@ -12179,7 +10657,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642460, // '2023-01-13T20:41:00.000Z',
     open: 15141.2,
     high: 15141.2,
     low: 15138.2,
@@ -12187,7 +10664,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642520, // '2023-01-13T20:42:00.000Z',
     open: 15140.2,
     high: 15142.2,
     low: 15138.7,
@@ -12195,7 +10671,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642580, // '2023-01-13T20:43:00.000Z',
     open: 15139.2,
     high: 15142.7,
     low: 15139.2,
@@ -12203,7 +10678,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642640, // '2023-01-13T20:44:00.000Z',
     open: 15140.7,
     high: 15148.7,
     low: 15140.7,
@@ -12211,7 +10685,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642700, // '2023-01-13T20:45:00.000Z',
     open: 15146.7,
     high: 15147.2,
     low: 15143.2,
@@ -12219,7 +10692,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642760, // '2023-01-13T20:46:00.000Z',
     open: 15143.7,
     high: 15144.2,
     low: 15140.2,
@@ -12227,7 +10699,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642820, // '2023-01-13T20:47:00.000Z',
     open: 15140.7,
     high: 15140.7,
     low: 15137.8,
@@ -12235,7 +10706,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642880, // '2023-01-13T20:48:00.000Z',
     open: 15140.2,
     high: 15141.7,
     low: 15139.7,
@@ -12243,7 +10713,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673642940, // '2023-01-13T20:49:00.000Z',
     open: 15141.7,
     high: 15144.7,
     low: 15141.2,
@@ -12251,7 +10720,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673643000, // '2023-01-13T20:50:00.000Z',
     open: 15144.2,
     high: 15146.7,
     low: 15140.7,
@@ -12259,7 +10727,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673643060, // '2023-01-13T20:51:00.000Z',
     open: 15145.2,
     high: 15147.2,
     low: 15143.7,
@@ -12267,7 +10734,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673643120, // '2023-01-13T20:52:00.000Z',
     open: 15145.7,
     high: 15147.2,
     low: 15143.7,
@@ -12275,7 +10741,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673643180, // '2023-01-13T20:53:00.000Z',
     open: 15144.2,
     high: 15144.7,
     low: 15142.7,
@@ -12283,7 +10748,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673643240, // '2023-01-13T20:54:00.000Z',
     open: 15143.7,
     high: 15149.2,
     low: 15143.7,
@@ -12291,7 +10755,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673643300, // '2023-01-13T20:55:00.000Z',
     open: 15145.7,
     high: 15151.2,
     low: 15145.7,
@@ -12299,7 +10762,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673643360, // '2023-01-13T20:56:00.000Z',
     open: 15150.2,
     high: 15151.7,
     low: 15149.7,
@@ -12307,7 +10769,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673643420, // '2023-01-13T20:57:00.000Z',
     open: 15149.2,
     high: 15150.7,
     low: 15142.7,
@@ -12315,7 +10776,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673643480, // '2023-01-13T20:58:00.000Z',
     open: 15148.2,
     high: 15153.2,
     low: 15148.2,
@@ -12323,7 +10783,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673643540, // '2023-01-13T20:59:00.000Z',
     open: 15152.2,
     high: 15153.7,
     low: 15147.7,
@@ -12331,7 +10790,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673823900, // '2023-01-15T23:05:00.000Z',
     open: 15150.3,
     high: 15152.2,
     low: 15150.3,
@@ -12339,7 +10797,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673823960, // '2023-01-15T23:06:00.000Z',
     open: 15151.3,
     high: 15151.3,
     low: 15146.6,
@@ -12347,7 +10804,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824020, // '2023-01-15T23:07:00.000Z',
     open: 15147.5,
     high: 15148.4,
     low: 15145.6,
@@ -12355,7 +10811,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824080, // '2023-01-15T23:08:00.000Z',
     open: 15146.1,
     high: 15150.3,
     low: 15145.6,
@@ -12363,7 +10818,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824140, // '2023-01-15T23:09:00.000Z',
     open: 15144.7,
     high: 15147.5,
     low: 15144.7,
@@ -12371,7 +10825,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824200, // '2023-01-15T23:10:00.000Z',
     open: 15146.6,
     high: 15147,
     low: 15143.7,
@@ -12379,7 +10832,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824260, // '2023-01-15T23:11:00.000Z',
     open: 15145.6,
     high: 15146.6,
     low: 15143.7,
@@ -12387,7 +10839,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824320, // '2023-01-15T23:12:00.000Z',
     open: 15145.1,
     high: 15147.5,
     low: 15144.2,
@@ -12395,7 +10846,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824380, // '2023-01-15T23:13:00.000Z',
     open: 15146.6,
     high: 15146.6,
     low: 15142.8,
@@ -12403,7 +10853,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824440, // '2023-01-15T23:14:00.000Z',
     open: 15143.7,
     high: 15144.7,
     low: 15137.1,
@@ -12411,7 +10860,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824500, // '2023-01-15T23:15:00.000Z',
     open: 15140.9,
     high: 15145.6,
     low: 15139.5,
@@ -12419,7 +10867,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824560, // '2023-01-15T23:16:00.000Z',
     open: 15142.3,
     high: 15142.8,
     low: 15140,
@@ -12427,7 +10874,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824620, // '2023-01-15T23:17:00.000Z',
     open: 15142.8,
     high: 15142.8,
     low: 15140,
@@ -12435,7 +10881,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824680, // '2023-01-15T23:18:00.000Z',
     open: 15140,
     high: 15143.7,
     low: 15140,
@@ -12443,7 +10888,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824740, // '2023-01-15T23:19:00.000Z',
     open: 15143.3,
     high: 15143.7,
     low: 15140.9,
@@ -12451,7 +10895,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824800, // '2023-01-15T23:20:00.000Z',
     open: 15141.9,
     high: 15143.7,
     low: 15141.9,
@@ -12459,7 +10902,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824860, // '2023-01-15T23:21:00.000Z',
     open: 15144.7,
     high: 15145.6,
     low: 15140.9,
@@ -12467,7 +10909,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824920, // '2023-01-15T23:22:00.000Z',
     open: 15140.9,
     high: 15142.8,
     low: 15139,
@@ -12475,7 +10916,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673824980, // '2023-01-15T23:23:00.000Z',
     open: 15140.9,
     high: 15140.9,
     low: 15136.2,
@@ -12483,7 +10923,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825040, // '2023-01-15T23:24:00.000Z',
     open: 15138.6,
     high: 15139,
     low: 15137.1,
@@ -12491,7 +10930,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825100, // '2023-01-15T23:25:00.000Z',
     open: 15139,
     high: 15139,
     low: 15137.1,
@@ -12499,7 +10937,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825160, // '2023-01-15T23:26:00.000Z',
     open: 15138.1,
     high: 15138.1,
     low: 15136.2,
@@ -12507,7 +10944,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825220, // '2023-01-15T23:27:00.000Z',
     open: 15138.1,
     high: 15138.1,
     low: 15137.1,
@@ -12515,7 +10951,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825280, // '2023-01-15T23:28:00.000Z',
     open: 15137.6,
     high: 15138.1,
     low: 15137.1,
@@ -12523,7 +10958,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825340, // '2023-01-15T23:29:00.000Z',
     open: 15138.1,
     high: 15139,
     low: 15135.3,
@@ -12531,7 +10965,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825400, // '2023-01-15T23:30:00.000Z',
     open: 15136.7,
     high: 15142.8,
     low: 15136.7,
@@ -12539,7 +10972,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825460, // '2023-01-15T23:31:00.000Z',
     open: 15140.9,
     high: 15140.9,
     low: 15138.1,
@@ -12547,7 +10979,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825520, // '2023-01-15T23:32:00.000Z',
     open: 15141.9,
     high: 15142.8,
     low: 15141.4,
@@ -12555,7 +10986,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825580, // '2023-01-15T23:33:00.000Z',
     open: 15143.7,
     high: 15143.7,
     low: 15141.4,
@@ -12563,7 +10993,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825640, // '2023-01-15T23:34:00.000Z',
     open: 15143.7,
     high: 15144.7,
     low: 15141.9,
@@ -12571,7 +11000,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825700, // '2023-01-15T23:35:00.000Z',
     open: 15142.8,
     high: 15143.7,
     low: 15141.9,
@@ -12579,7 +11007,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825760, // '2023-01-15T23:36:00.000Z',
     open: 15142.3,
     high: 15143.8,
     low: 15141.9,
@@ -12587,7 +11014,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825820, // '2023-01-15T23:37:00.000Z',
     open: 15140.9,
     high: 15142.8,
     low: 15140.9,
@@ -12595,7 +11021,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825880, // '2023-01-15T23:38:00.000Z',
     open: 15141.9,
     high: 15141.9,
     low: 15140,
@@ -12603,7 +11028,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673825940, // '2023-01-15T23:39:00.000Z',
     open: 15140,
     high: 15140.9,
     low: 15140,
@@ -12611,7 +11035,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826000, // '2023-01-15T23:40:00.000Z',
     open: 15140,
     high: 15141.9,
     low: 15140,
@@ -12619,7 +11042,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826060, // '2023-01-15T23:41:00.000Z',
     open: 15140.9,
     high: 15141.9,
     low: 15140,
@@ -12627,7 +11049,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826120, // '2023-01-15T23:42:00.000Z',
     open: 15140.9,
     high: 15142.3,
     low: 15140.9,
@@ -12635,7 +11056,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826180, // '2023-01-15T23:43:00.000Z',
     open: 15142.3,
     high: 15142.8,
     low: 15137.2,
@@ -12643,7 +11063,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826240, // '2023-01-15T23:44:00.000Z',
     open: 15137.6,
     high: 15139.9,
     low: 15137.1,
@@ -12651,7 +11070,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826300, // '2023-01-15T23:45:00.000Z',
     open: 15138,
     high: 15139.5,
     low: 15137.1,
@@ -12659,7 +11077,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826360, // '2023-01-15T23:46:00.000Z',
     open: 15137.6,
     high: 15138,
     low: 15135.7,
@@ -12667,7 +11084,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826420, // '2023-01-15T23:47:00.000Z',
     open: 15136.6,
     high: 15138,
     low: 15136.6,
@@ -12675,7 +11091,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826480, // '2023-01-15T23:48:00.000Z',
     open: 15136.2,
     high: 15137.1,
     low: 15134.3,
@@ -12683,7 +11098,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826540, // '2023-01-15T23:49:00.000Z',
     open: 15135.2,
     high: 15135.2,
     low: 15132.4,
@@ -12691,7 +11105,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826600, // '2023-01-15T23:50:00.000Z',
     open: 15131.4,
     high: 15135.2,
     low: 15131.4,
@@ -12699,7 +11112,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826660, // '2023-01-15T23:51:00.000Z',
     open: 15133.3,
     high: 15134.3,
     low: 15132.4,
@@ -12707,7 +11119,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826720, // '2023-01-15T23:52:00.000Z',
     open: 15132.9,
     high: 15134.3,
     low: 15132.4,
@@ -12715,7 +11126,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826780, // '2023-01-15T23:53:00.000Z',
     open: 15132.4,
     high: 15134.3,
     low: 15132.4,
@@ -12723,7 +11133,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826840, // '2023-01-15T23:54:00.000Z',
     open: 15135.2,
     high: 15135.2,
     low: 15132.4,
@@ -12731,7 +11140,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826900, // '2023-01-15T23:55:00.000Z',
     open: 15132.4,
     high: 15132.4,
     low: 15128.6,
@@ -12739,7 +11147,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673826960, // '2023-01-15T23:56:00.000Z',
     open: 15131.4,
     high: 15133.3,
     low: 15130.5,
@@ -12747,7 +11154,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827020, // '2023-01-15T23:57:00.000Z',
     open: 15134.3,
     high: 15134.3,
     low: 15132.9,
@@ -12755,7 +11161,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827080, // '2023-01-15T23:58:00.000Z',
     open: 15133.8,
     high: 15135.2,
     low: 15133.3,
@@ -12763,7 +11168,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827140, // '2023-01-15T23:59:00.000Z',
     open: 15134.3,
     high: 15135.2,
     low: 15133.3,
@@ -12771,7 +11175,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827380, // '2023-01-16T00:03:00.000Z',
     open: 15145.4,
     high: 15147,
     low: 15143,
@@ -12779,7 +11182,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827440, // '2023-01-16T00:04:00.000Z',
     open: 15143.4,
     high: 15144.7,
     low: 15142.2,
@@ -12787,7 +11189,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827500, // '2023-01-16T00:05:00.000Z',
     open: 15143,
     high: 15144.6,
     low: 15142.2,
@@ -12795,7 +11196,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827560, // '2023-01-16T00:06:00.000Z',
     open: 15145,
     high: 15146.3,
     low: 15144.6,
@@ -12803,7 +11203,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827620, // '2023-01-16T00:07:00.000Z',
     open: 15145.5,
     high: 15146.3,
     low: 15143.9,
@@ -12811,7 +11210,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827680, // '2023-01-16T00:08:00.000Z',
     open: 15143.9,
     high: 15147.9,
     low: 15143.9,
@@ -12819,7 +11217,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827740, // '2023-01-16T00:09:00.000Z',
     open: 15146.3,
     high: 15149.9,
     low: 15146.3,
@@ -12827,7 +11224,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827800, // '2023-01-16T00:10:00.000Z',
     open: 15149.9,
     high: 15150.7,
     low: 15149.1,
@@ -12835,7 +11231,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827860, // '2023-01-16T00:11:00.000Z',
     open: 15148.6,
     high: 15149.1,
     low: 15148.3,
@@ -12843,7 +11238,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827920, // '2023-01-16T00:12:00.000Z',
     open: 15149.1,
     high: 15151.5,
     low: 15149.1,
@@ -12851,7 +11245,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673827980, // '2023-01-16T00:13:00.000Z',
     open: 15151.9,
     high: 15152.3,
     low: 15146.1,
@@ -12859,7 +11252,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828040, // '2023-01-16T00:14:00.000Z',
     open: 15146.9,
     high: 15146.9,
     low: 15143.3,
@@ -12867,7 +11259,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828100, // '2023-01-16T00:15:00.000Z',
     open: 15145.7,
     high: 15145.7,
     low: 15132.9,
@@ -12875,7 +11266,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828160, // '2023-01-16T00:16:00.000Z',
     open: 15136.3,
     high: 15139.8,
     low: 15135.8,
@@ -12883,7 +11273,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828220, // '2023-01-16T00:17:00.000Z',
     open: 15138.8,
     high: 15138.8,
     low: 15133.8,
@@ -12891,7 +11280,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828280, // '2023-01-16T00:18:00.000Z',
     open: 15135.8,
     high: 15139.8,
     low: 15135.8,
@@ -12899,7 +11287,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828340, // '2023-01-16T00:19:00.000Z',
     open: 15138.3,
     high: 15139.8,
     low: 15137.8,
@@ -12907,7 +11294,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828400, // '2023-01-16T00:20:00.000Z',
     open: 15139.3,
     high: 15139.8,
     low: 15137.8,
@@ -12915,7 +11301,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828460, // '2023-01-16T00:21:00.000Z',
     open: 15138.8,
     high: 15139.3,
     low: 15138.3,
@@ -12923,7 +11308,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828520, // '2023-01-16T00:22:00.000Z',
     open: 15135.8,
     high: 15139.3,
     low: 15135.8,
@@ -12931,7 +11315,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828580, // '2023-01-16T00:23:00.000Z',
     open: 15139.3,
     high: 15142.8,
     low: 15138.8,
@@ -12939,7 +11322,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828640, // '2023-01-16T00:24:00.000Z',
     open: 15142.8,
     high: 15146.3,
     low: 15142.8,
@@ -12947,7 +11329,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828700, // '2023-01-16T00:25:00.000Z',
     open: 15146.3,
     high: 15146.3,
     low: 15145.8,
@@ -12955,7 +11336,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828760, // '2023-01-16T00:26:00.000Z',
     open: 15146.3,
     high: 15146.8,
     low: 15144.8,
@@ -12963,7 +11343,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828820, // '2023-01-16T00:27:00.000Z',
     open: 15146.3,
     high: 15146.3,
     low: 15144.8,
@@ -12971,7 +11350,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828880, // '2023-01-16T00:28:00.000Z',
     open: 15145.3,
     high: 15145.8,
     low: 15145.3,
@@ -12979,7 +11357,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673828940, // '2023-01-16T00:29:00.000Z',
     open: 15144.3,
     high: 15145.3,
     low: 15144.3,
@@ -12987,7 +11364,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673829000, // '2023-01-16T00:30:00.000Z',
     open: 15144.8,
     high: 15151.8,
     low: 15144.8,
@@ -12995,7 +11371,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673829060, // '2023-01-16T00:31:00.000Z',
     open: 15152.3,
     high: 15153.3,
     low: 15150.8,
@@ -13003,7 +11378,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673829120, // '2023-01-16T00:32:00.000Z',
     open: 15153.8,
     high: 15153.8,
     low: 15152.8,
@@ -13011,7 +11385,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673829180, // '2023-01-16T00:33:00.000Z',
     open: 15153.8,
     high: 15153.8,
     low: 15153.3,
@@ -13019,7 +11392,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673829240, // '2023-01-16T00:34:00.000Z',
     open: 15155.8,
     high: 15155.8,
     low: 15155.3,
@@ -13027,7 +11399,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673829300, // '2023-01-16T00:35:00.000Z',
     open: 15157.8,
     high: 15157.8,
     low: 15157.8,
@@ -13035,7 +11406,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673829360, // '2023-01-16T00:36:00.000Z',
     open: 15158.3,
     high: 15162.2,
     low: 15158.3,
@@ -13043,7 +11413,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673829420, // '2023-01-16T00:37:00.000Z',
     open: 15159.3,
     high: 15159.3,
     low: 15158.8,
@@ -13051,7 +11420,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673829480, // '2023-01-16T00:38:00.000Z',
     open: 15158.3,
     high: 15158.3,
     low: 15157.3,
@@ -13059,7 +11427,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673829540, // '2023-01-16T00:39:00.000Z',
     open: 15158.8,
     high: 15161.2,
     low: 15158.3,
@@ -13067,7 +11434,6 @@ export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
     volume: 0,
   },
   {
-    time: 1673829600, // '2023-01-16T00:40:00.000Z',
     open: 15162.2,
     high: 15162.2,
     low: 15160.2,

@@ -1,4 +1,4 @@
-export const LIST_OF_INTERVAL_TIME_UNITS = [
+export const LIST_OF_INTERVAL_OLD_TIME_UNITS = [
   's',
   'm',
   'h',
@@ -8,10 +8,10 @@ export const LIST_OF_INTERVAL_TIME_UNITS = [
   'Y',
 ] as const;
 
-export type IntervalTimeUnit = (typeof LIST_OF_INTERVAL_TIME_UNITS)[number];
+export type IntervalTimeOldUnit = (typeof LIST_OF_INTERVAL_OLD_TIME_UNITS)[number];
 
 export interface IntervalBase {
-  readonly unit: IntervalTimeUnit;
+  readonly unit: IntervalTimeOldUnit;
   readonly value: number;
 }
 

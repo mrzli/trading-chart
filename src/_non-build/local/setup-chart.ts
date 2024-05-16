@@ -1,9 +1,10 @@
 import {
   CanvasChartData,
   CanvasChartInput,
+  Interval,
   createCanvasChart,
 } from '../../chart';
-import { TEST_OHLC_MINUTE } from '../test-data';
+import { TEST_RAW_OHLC_DATA, convertRawOhlcDataToInterval } from '../test-data';
 
 export function setupChart(
   wrapperElement: HTMLDivElement,
@@ -13,7 +14,11 @@ export function setupChart(
   const chart = createCanvasChart(input);
   chart.initialize();
 
-  const data: CanvasChartData = { items: TEST_OHLC_MINUTE };
+  const interval: Interval = { unit: 'D', value: 1 };
+
+  const items = convertRawOhlcDataToInterval(TEST_RAW_OHLC_DATA, interval);
+
+  const data: CanvasChartData = { items, interval };
 
   chart.setData(data);
 

@@ -63,6 +63,8 @@ export function updateCanvasChart(
     })),
     toArray(),
   );
+
+  console.log(xAxisData);
   // end x-axis
 
   // y-axis
@@ -84,6 +86,7 @@ export function updateCanvasChart(
     })),
     toArray(),
   );
+  // end y-axis
 
   const gridData: GridData = {
     xOffsets: xAxisData.map(({ offset }) => offset),
