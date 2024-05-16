@@ -1,4 +1,4 @@
-import { clamp, round } from '@gmjs/number-util';
+import { round } from '@gmjs/number-util';
 import {
   CanvasChartInput,
   CanvasChartOptions,
@@ -32,12 +32,7 @@ export function createHandlerWheel(
         const currItemSpan = seriesPosition.itemSpan;
         const rawNewItemSpan =
           currItemSpan * getMultiplier(event, ITEM_SPAN_MULTIPLIER);
-        const newItemSpan = clamp(
-          round(rawNewItemSpan, ITEM_SPAN_PRECISION),
-          MIN_ITEM_SPAN,
-          MAX_ITEM_SPAN,
-        );
-
+        const newItemSpan = round(rawNewItemSpan, ITEM_SPAN_PRECISION);
         stateWrapper.state = {
           ...stateWrapper.state,
           seriesPosition: {
@@ -76,8 +71,5 @@ function getMultiplier(event: WheelEvent, baseMultiplier: number): number {
 
 const ITEM_SPAN_MULTIPLIER = 1.03;
 const ITEM_SPAN_PRECISION = 2;
-
-const MIN_ITEM_SPAN = 20;
-const MAX_ITEM_SPAN = 500;
 
 const PRICE_RANGE_MULTIPLIER = 1.03;

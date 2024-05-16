@@ -5,7 +5,7 @@ import {
   CanvasChartOptions,
   CanvasChartStateWrapper,
 } from '../../../types';
-import { processDragMain, processDragYAxis } from './shared';
+import { processDragMain, processDragXAxis, processDragYAxis } from './shared';
 import { CanvasChartEventStateWrapper } from './types';
 
 export function createHandlerMouseUp(
@@ -26,6 +26,10 @@ export function createHandlerMouseUp(
     switch (drag.kind) {
       case 'main': {
         processDragMain(input, options, stateWrapper, drag, pixelDiff);
+        break;
+      }
+      case 'x-axis': {
+        processDragXAxis(input, options, stateWrapper, drag, pixelDiff);
         break;
       }
       case 'y-axis': {

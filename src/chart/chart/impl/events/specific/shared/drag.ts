@@ -1,4 +1,7 @@
-import { multiplyPriceSpan } from '../../../../../helpers';
+import {
+  multiplyPriceSpan,
+  multiplySeriesPosition,
+} from '../../../../../helpers';
 import { Point } from '../../../../../types';
 import {
   CanvasChartInput,
@@ -6,7 +9,11 @@ import {
   CanvasChartStateWrapper,
 } from '../../../../types';
 import { updateCanvasChart } from '../../../update';
-import { EventMouseDragStateMain, EventMouseDragStateYAxis } from '../types';
+import {
+  EventMouseDragStateMain,
+  EventMouseDragStateXAxis,
+  EventMouseDragStateYAxis,
+} from '../types';
 import { pixelDiffToPriceAndItemSpanDiff } from './converter';
 
 export function processDragMain(
@@ -37,6 +44,30 @@ export function processDragMain(
 
   updateCanvasChart(input, options, stateWrapper);
 }
+
+export function processDragXAxis(
+  input: CanvasChartInput,
+  options: CanvasChartOptions,
+  stateWrapper: CanvasChartStateWrapper,
+  drag: EventMouseDragStateXAxis,
+  pixelDiff: Point,
+): void {
+  const { state } = stateWrapper;
+
+  const newPosition = multiplySeriesPosition(
+    drag.positionStart,
+    TIME_ZOOM_PER_PIXEL_MULTIPLIER ** pixelDiff.x,
+  );
+
+  stateWrapper.state = {
+    ...state,
+    seriesPosition: newPosition,
+  };
+
+  updateCanvasChart(input, options, stateWrapper);
+}
+
+const TIME_ZOOM_PER_PIXEL_MULTIPLIER = 1.001;
 
 export function processDragYAxis(
   input: CanvasChartInput,

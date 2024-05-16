@@ -29,12 +29,15 @@ import {
 import { map, toArray } from '@gmjs/value-transformers';
 import { PriceAxisOutputItem } from '../../axis/price/types/price-axis-output-item';
 import { TimeAxisInput } from '../../axis/time/types/time-axis-input';
+import { clamp } from '@gmjs/number-util';
 
 export function updateCanvasChart(
   input: CanvasChartInput,
   _options: CanvasChartOptions,
   stateWrapper: CanvasChartStateWrapper,
 ): void {
+  processState(stateWrapper);
+
   const { canvas } = input;
 
   const { layout, data, seriesPosition, priceRange } = stateWrapper.state;
@@ -132,3 +135,18 @@ export function updateCanvasChart(
   renderingPipeline.render();
   console.timeEnd('render');
 }
+
+function processState(stateWrapper: CanvasChartStateWrapper): void {
+  const { state } = stateWrapper;
+
+  stateWrapper.state = {
+    ...state,
+    seriesPosition: {
+      ...state.seriesPosition,
+      itemSpan: clamp(state.seriesPosition.itemSpan, MIN_ITEM_SPAN, MAX_ITEM_SPAN),
+    },
+  };
+}
+
+const MIN_ITEM_SPAN = 20;
+const MAX_ITEM_SPAN = 500;

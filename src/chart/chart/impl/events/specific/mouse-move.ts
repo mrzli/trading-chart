@@ -6,7 +6,12 @@ import {
   CanvasChartState,
   CanvasChartStateWrapper,
 } from '../../../types';
-import { getEventArea, processDragMain, processDragYAxis } from './shared';
+import {
+  getEventArea,
+  processDragMain,
+  processDragXAxis,
+  processDragYAxis,
+} from './shared';
 import { CanvasChartEventStateWrapper } from './types';
 
 export function createHandlerMouseMove(
@@ -30,6 +35,10 @@ export function createHandlerMouseMove(
     switch (drag.kind) {
       case 'main': {
         processDragMain(input, options, stateWrapper, drag, pixelDiff);
+        break;
+      }
+      case 'x-axis': {
+        processDragXAxis(input, options, stateWrapper, drag, pixelDiff);
         break;
       }
       case 'y-axis': {
