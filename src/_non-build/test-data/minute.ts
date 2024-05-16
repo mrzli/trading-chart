@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/numeric-separators-style */
-import { Ohlc } from '../types';
+import { Ohlc } from '../../chart/types';
 
 export const TEST_OHLC_MINUTE: readonly Ohlc[] = [
   {

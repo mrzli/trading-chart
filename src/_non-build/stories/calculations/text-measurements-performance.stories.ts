@@ -4,7 +4,7 @@ import {
   measurePeformanceTime,
   measureTextHeight,
   measureTextWidth,
-} from '../../canvas-chart';
+} from '../../../chart';
 
 interface Props {
   readonly fontSize: number;

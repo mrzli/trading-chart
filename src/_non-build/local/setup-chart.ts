@@ -2,8 +2,8 @@ import {
   CanvasChartData,
   CanvasChartInput,
   createCanvasChart,
-} from './canvas-chart';
-import { TEST_OHLC_MINUTE } from './canvas-chart/test-data';
+} from '../../chart';
+import { TEST_OHLC_MINUTE } from '../test-data';
 
 export function setupChart(
   wrapperElement: HTMLDivElement,
