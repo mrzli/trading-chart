@@ -1,4 +1,7 @@
-import { MIN_X_AXIS_TICK_DISTANCE } from '../../../helpers';
+import {
+  MIN_X_AXIS_TICK_DISTANCE,
+  getSignificantDigitIndex,
+} from '../../../helpers';
 import {
   TimeAxisExtendedDataItem,
   TimeAxisInput,
@@ -9,28 +12,87 @@ export function getTimeAxisOutputYear(
   input: TimeAxisInput,
   items: readonly TimeAxisExtendedDataItem[],
 ): readonly TimeAxisOutputItem[] {
-  const { position, axisLength } = input;
+  if (items.length === 0) {
+    return [];
+  }
+
+  const { position, axisLength, interval } = input;
 
   const { itemSpan } = position;
 
+  const yearsPerItem = Math.ceil(interval.value);
+
   const itemsPerPixel = itemSpan / axisLength;
-  const minItemsPerTick = itemsPerPixel * MIN_X_AXIS_TICK_DISTANCE;
-  const finalMinItemsPerTick = Math.max(Math.ceil(minItemsPerTick), 1);
+  const yearsPerPixel = itemsPerPixel * yearsPerItem;
+  const minYearsPerTick = yearsPerPixel * MIN_X_AXIS_TICK_DISTANCE;
+  const referentMinYearsPerTick = Math.max(
+    Math.ceil(minYearsPerTick),
+    yearsPerItem,
+    1,
+  );
+
+  const finalYearsPerTick = getNextHigherYearsPerTick(referentMinYearsPerTick);
+  const firstItemYear = items[0].dateObject.year;
+  const firstTickYear =
+    Math.ceil(firstItemYear / finalYearsPerTick) * finalYearsPerTick;
 
   const result: TimeAxisOutputItem[] = [];
 
-  for (let i = 0; i < items.length; i += finalMinItemsPerTick) {
-    const item = items[i];
+  let nextTickYear = firstTickYear;
+  let lastTickOffset = Number.MIN_SAFE_INTEGER;
 
-    const outputItem: TimeAxisOutputItem = {
-      offset: item.offset,
-      value: item.value,
-      dateObject: item.dateObject,
-      label: item.dateObject.year.toString(),
-    };
+  for (const item of items) {
+    const itemYear = item.dateObject.year;
+    if (itemYear < nextTickYear) {
+      continue;
+    }
 
-    result.push(outputItem);
+    if (item.offset - lastTickOffset >= MIN_X_AXIS_TICK_DISTANCE) {
+      const outputItem: TimeAxisOutputItem = {
+        offset: item.offset,
+        value: item.value,
+        dateObject: item.dateObject,
+        label: item.dateObject.year.toString(),
+      };
+
+      result.push(outputItem);
+
+      lastTickOffset = item.offset;
+    }
+
+    nextTickYear += finalYearsPerTick;
   }
 
   return result;
+}
+
+function getNextHigherYearsPerTick(referentMinYearsPerTick: number): number {
+  const significantDigitIndex = getSignificantDigitIndex(
+    referentMinYearsPerTick,
+  );
+
+  const orderOfMagnitude = Math.pow(10, significantDigitIndex);
+
+  const normalizedYears = referentMinYearsPerTick / orderOfMagnitude;
+
+  const result = getFinaYearsPerTick(normalizedYears, orderOfMagnitude);
+
+  return result;
+}
+
+function getFinaYearsPerTick(
+  normalizedYears: number,
+  orderOfMagnitude: number,
+): number {
+  if (normalizedYears > 5) {
+    return 10 * orderOfMagnitude;
+  } else if (normalizedYears > 4) {
+    return 5 * orderOfMagnitude;
+  } else if (normalizedYears > 2) {
+    return 4 * orderOfMagnitude;
+  } else if (normalizedYears > 1) {
+    return 2 * orderOfMagnitude;
+  } else {
+    return orderOfMagnitude;
+  }
 }
