@@ -14,11 +14,20 @@ export function drawCandle(
   c: CanvasRenderingContext2D,
   parameters: CandleParameters,
 ): void {
-  const { x, y1, y2: unadjustedY2, y3, y4, width, color } = parameters;
+  const {
+    x,
+    y1,
+    y2,
+    y3: unadjustedY3,
+    y4: unadjustedY4,
+    width,
+    color,
+  } = parameters;
 
   const wickThickness = WICK_THICKNESS;
 
-  const y2 = y3 - unadjustedY2 < 1 ? unadjustedY2 + 1 : unadjustedY2;
+  const y3 = unadjustedY3 - y2 < 1 ? unadjustedY3 + 1 : unadjustedY3;
+  const y4 = Math.max(unadjustedY4, y3);
 
   const adjustedCandleWidth = getAdjustedWidth(width, wickThickness);
   const xWick = x - Math.floor(wickThickness / 2);
