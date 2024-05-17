@@ -40,7 +40,8 @@ export function updateCanvasChart(
 
   const { canvas } = input;
 
-  const { layout, data, seriesPosition, priceRange } = stateWrapper.state;
+  const { layout, data, timezone, seriesPosition, priceRange } =
+    stateWrapper.state;
 
   const { main: mainAreaRect, xAxis: xAxisRect, yAxis: yAxisRect } = layout;
 
@@ -51,6 +52,8 @@ export function updateCanvasChart(
     position: seriesPosition,
     axisLength: xAxisRect.width,
     data: data.items,
+    interval: data.interval,
+    timezone,
   };
 
   const xAxisData = applyFn(
@@ -146,7 +149,11 @@ function processState(stateWrapper: CanvasChartStateWrapper): void {
     ...state,
     seriesPosition: {
       ...state.seriesPosition,
-      itemSpan: clamp(state.seriesPosition.itemSpan, MIN_ITEM_SPAN, MAX_ITEM_SPAN),
+      itemSpan: clamp(
+        state.seriesPosition.itemSpan,
+        MIN_ITEM_SPAN,
+        MAX_ITEM_SPAN,
+      ),
     },
   };
 }

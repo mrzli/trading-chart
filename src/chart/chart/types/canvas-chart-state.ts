@@ -6,6 +6,7 @@ export interface CanvasChartState {
   readonly size: Size;
   readonly layout: ChartAreas;
   readonly data: CanvasChartData;
+  readonly timezone: string;
   readonly seriesPosition: SeriesPosition;
   readonly priceRange: Range;
 }

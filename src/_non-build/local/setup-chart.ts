@@ -21,6 +21,7 @@ export function setupChart(
   const data: CanvasChartData = { items, interval };
 
   chart.setData(data);
+  chart.setTimezone('UTC');
 
   const resizeObserver = new ResizeObserver((entries) => {
     const chartWrapperEntry = entries.find(

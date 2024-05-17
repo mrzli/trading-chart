@@ -6,4 +6,5 @@ export interface CanvasChart {
   readonly destroy: () => void;
   readonly resize: (size: Size) => void;
   readonly setData: (data: CanvasChartData) => void;
+  readonly setTimezone: (timezone: string) => void;
 }

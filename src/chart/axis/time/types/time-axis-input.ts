@@ -1,7 +1,9 @@
-import { Ohlc, SeriesPosition } from '../../../types';
+import { Interval, Ohlc, SeriesPosition } from '../../../types';
 
 export interface TimeAxisInput {
   readonly position: SeriesPosition;
   readonly axisLength: number;
   readonly data: readonly Ohlc[];
+  readonly interval: Interval;
+  readonly timezone: string;
 }

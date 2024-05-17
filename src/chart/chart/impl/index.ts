@@ -5,4 +5,5 @@ export * from './initialize';
 export * from './layout';
 export * from './resize';
 export * from './set-data';
+export * from './set-timezone';
 export * from './update';

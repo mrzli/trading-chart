@@ -1,5 +1,5 @@
 import { getChartAreas } from '../../helpers';
-import { Margin, Size } from '../../types';
+import { Size } from '../../types';
 import { CanvasChartOptions, CanvasChartState } from '../types';
 
 export function getCanvasChartOptions(): CanvasChartOptions {
@@ -18,7 +18,9 @@ export function getInitialCanvasChartState(): CanvasChartState {
     layout,
     data: {
       items: [],
+      interval: { unit: 'D', value: 1 },
     },
+    timezone: 'UTC',
     seriesPosition: { rightItemOffset: 505.55, itemSpan: 152.2 },
     priceRange: { from: 15_050, to: 15_130 },
   };

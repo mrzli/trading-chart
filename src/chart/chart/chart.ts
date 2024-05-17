@@ -1,4 +1,4 @@
-import { Ohlc, Size } from '../types';
+import { Size } from '../types';
 import {
   createCanvasChartEventHandlers,
   destroyCanvasChart,
@@ -7,6 +7,7 @@ import {
   initializeCanvasChart,
   resizeCanvasChart,
   setCanvasChartData,
+  setCanvasChartTimezone,
 } from './impl';
 import {
   CanvasChart,
@@ -41,6 +42,9 @@ export function createCanvasChart(input: CanvasChartInput): CanvasChart {
     },
     setData: (data: CanvasChartData): void => {
       setCanvasChartData(input, options, stateWrapper, data);
+    },
+    setTimezone: (timezone: string): void => {
+      setCanvasChartTimezone(input, options, stateWrapper, timezone);
     },
   };
 }
