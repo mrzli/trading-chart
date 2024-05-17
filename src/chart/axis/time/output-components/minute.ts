@@ -1,15 +1,22 @@
-import { SeriesPosition, Interval, Ohlc } from '../../../types';
-import { MIN_X_AXIS_TICK_DISTANCE } from '../../../helpers/constants';
-import { getTimePerTick } from './shared';
-import { TickValue } from '../../types';
+import {
+  TimeAxisExtendedDataItem,
+  TimeAxisInput,
+  TimeAxisOutputItem,
+} from '../types';
 
-export function getTimeAxisTickValuesMinute(
-  position: SeriesPosition,
-  axisLength: number,
-  data: readonly Ohlc[],
-  interval: Interval,
-  timezone: string,
-): readonly TickValue[] {
+export function getTimeAxisOutputMinute(
+  input: TimeAxisInput,
+  items: readonly TimeAxisExtendedDataItem[],
+): readonly TimeAxisOutputItem[] {
+  const result = items.map((v, i) => ({
+    offset: v.offset,
+    value: v.value,
+    dateObject: v.dateObject,
+    label: (i % 10).toString(),
+  }));
+
+  return result;
+
   // const { itemSpan } = position;
 
   // const timePerTick = getTimePerTick(itemSpan, axisLength, interval);
@@ -39,6 +46,4 @@ export function getTimeAxisTickValuesMinute(
   // - increment first time by timePerTick
   // - repeat the above
   // - only add the tick if the index of next data point is greater than or equal to the current index + itemTickStride
-
-  return [];
 }

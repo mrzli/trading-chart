@@ -4,4 +4,5 @@ export interface TimeAxisExtendedDataItem {
   readonly offset: number;
   readonly value: number;
   readonly dateObject: DateObjectTz;
+  readonly previousDateObject: DateObjectTz | undefined;
 }
