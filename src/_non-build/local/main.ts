@@ -2,7 +2,7 @@ import './index.css';
 import { setupChart } from './setup-chart';
 
 const HTML = `
-<div id="chart-container" class="p-2 w-screen h-screen">
+<div id="chart-container" class="w-screen h-screen">
   <div id="chart-wrapper" class="p-[10px] w-full h-full" style="background-color: #161A25;">
     <canvas
       id="chart"
