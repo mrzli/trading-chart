@@ -17,12 +17,20 @@ export function getTimeAxisOutputYear(
   const minItemsPerTick = itemsPerPixel * MIN_X_AXIS_TICK_DISTANCE;
   const finalMinItemsPerTick = Math.max(Math.ceil(minItemsPerTick), 1);
 
-  const result = items.map((v, i) => ({
-    offset: v.offset,
-    value: v.value,
-    dateObject: v.dateObject,
-    label: (i % 10).toString(),
-  }));
+  const result: TimeAxisOutputItem[] = [];
+
+  for (let i = 0; i < items.length; i += finalMinItemsPerTick) {
+    const item = items[i];
+
+    const outputItem: TimeAxisOutputItem = {
+      offset: item.offset,
+      value: item.value,
+      dateObject: item.dateObject,
+      label: item.dateObject.year.toString(),
+    };
+
+    result.push(outputItem);
+  }
 
   return result;
 }

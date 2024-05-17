@@ -7,7 +7,7 @@ import {
   getTimeAxisOutputSecond,
   getTimeAxisOutputWeek,
   getTimeAxisOutputYear,
-} from './output-components';
+} from './output-intervals';
 import {
   TimeAxisExtendedDataItem,
   TimeAxisInput,

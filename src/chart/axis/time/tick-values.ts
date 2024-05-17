@@ -24,9 +24,9 @@ export function getTimeAxisTickValues(
   for (let i = firstItemIndex; i <= lastItemIndex; i++) {
     const { time } = data[i];
     const offset = indexToTickOffset(i, leftItemOffset, axisLength, itemSpan);
-    ticks.push({ value: time, offset });
+    const item: TickValue = { value: time, offset };
+    ticks.push(item);
   }
-
   return ticks;
 }
 
