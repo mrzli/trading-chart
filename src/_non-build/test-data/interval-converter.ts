@@ -13,15 +13,13 @@ export function convertRawOhlcDataToInterval(
 ): readonly Ohlc[] {
   const result: Ohlc[] = [];
 
-  const currentDate = START_DATE;
-
-  for (let i = 0; i < data.length; i += interval.value) {
+  for (const [i, rawItem] of data.entries()) {
     const duration = intervalToDuration(interval, i);
-    const time = unixSecondsAdd(currentDate, 'UTC', duration);
+    const time = unixSecondsAdd(START_DATE, 'UTC', duration);
 
     const item: Ohlc = {
       time,
-      ...data[i],
+      ...rawItem,
     };
 
     result.push(item);

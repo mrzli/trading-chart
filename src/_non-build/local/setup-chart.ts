@@ -14,7 +14,7 @@ export function setupChart(
   const chart = createCanvasChart(input);
   chart.initialize();
 
-  const interval: Interval = { unit: 'D', value: 1 };
+  const interval: Interval = { unit: 'Y', value: 1 };
 
   const items = convertRawOhlcDataToInterval(TEST_RAW_OHLC_DATA, interval);
 
