@@ -8,7 +8,8 @@ export const LIST_OF_INTERVAL_OLD_TIME_UNITS = [
   'Y',
 ] as const;
 
-export type IntervalTimeOldUnit = (typeof LIST_OF_INTERVAL_OLD_TIME_UNITS)[number];
+export type IntervalTimeOldUnit =
+  (typeof LIST_OF_INTERVAL_OLD_TIME_UNITS)[number];
 
 export interface IntervalBase {
   readonly unit: IntervalTimeOldUnit;
@@ -50,7 +51,7 @@ export interface IntervalYear extends IntervalBase {
   readonly value: 1;
 }
 
-export type Old =
+export type IntervalOld =
   | IntervalSecond
   | IntervalMinute
   | IntervalHour

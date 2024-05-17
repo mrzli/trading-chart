@@ -1,11 +1,11 @@
 import { ensureNever, invariant } from '@gmjs/assert';
-import { Old, NormalInterval, TickInterval } from '../../../types';
+import { IntervalOld, NormalInterval, TickInterval } from '../../../types';
 import { MIN_X_AXIS_TICK_DISTANCE } from '../../../helpers/constants';
 
 export function getTimePerTick(
   itemSpan: number,
   axisLength: number,
-  interval: Old,
+  interval: IntervalOld,
 ): TickInterval {
   const normalizedInterval = normalizeInterval(interval);
 
@@ -18,7 +18,7 @@ export function getTimePerTick(
   return getNextHigherIntervalPerTick(minIntervalPerTick);
 }
 
-function normalizeInterval(interval: Old): NormalInterval {
+function normalizeInterval(interval: IntervalOld): NormalInterval {
   const { unit, value } = interval;
 
   switch (unit) {

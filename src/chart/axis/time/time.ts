@@ -1,5 +1,5 @@
 import { invariant } from '@gmjs/assert';
-import { DataInterval, Old, Ohlc, SeriesPosition } from '../../types';
+import { Interval, Ohlc, SeriesPosition } from '../../types';
 import {
   getTimeAxisTickValuesYear,
   getTimeAxisTickValuesMonth,
@@ -15,55 +15,29 @@ export function getTimeAxisTickValues(
   position: SeriesPosition,
   axisLength: number,
   data: readonly Ohlc[],
-  dataInterval: DataInterval,
-  interval: Old,
+  interval: Interval,
   timezone: string,
 ): readonly TickValue[] {
   const { unit } = interval;
 
   switch (unit) {
     case 'Y': {
-      return getTimeAxisTickValuesYear(
-        position,
-        axisLength,
-        data,
-        dataInterval,
-        interval,
-      );
+      return getTimeAxisTickValuesYear(position, axisLength, data, interval);
     }
     case 'M': {
-      return getTimeAxisTickValuesMonth(
-        position,
-        axisLength,
-        data,
-        dataInterval,
-        interval,
-      );
+      return getTimeAxisTickValuesMonth(position, axisLength, data, interval);
     }
     case 'W': {
-      return getTimeAxisTickValuesWeek(
-        position,
-        axisLength,
-        data,
-        dataInterval,
-        interval,
-      );
+      return getTimeAxisTickValuesWeek(position, axisLength, data, interval);
     }
     case 'D': {
-      return getTimeAxisTickValuesDay(
-        position,
-        axisLength,
-        data,
-        dataInterval,
-        interval,
-      );
+      return getTimeAxisTickValuesDay(position, axisLength, data, interval);
     }
     case 'h': {
       return getTimeAxisTickValuesHour(
         position,
         axisLength,
         data,
-        dataInterval,
         interval,
         timezone,
       );
@@ -73,7 +47,6 @@ export function getTimeAxisTickValues(
         position,
         axisLength,
         data,
-        dataInterval,
         interval,
         timezone,
       );
@@ -83,7 +56,6 @@ export function getTimeAxisTickValues(
         position,
         axisLength,
         data,
-        dataInterval,
         interval,
         timezone,
       );

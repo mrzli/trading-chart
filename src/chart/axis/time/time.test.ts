@@ -1,6 +1,6 @@
 import { expect, describe, it } from 'vitest';
 import { range } from '@gmjs/array-create';
-import { SeriesPosition, Ohlc, DataInterval, Old } from '../../types';
+import { SeriesPosition, Ohlc, Interval } from '../../types';
 import { getTimeAxisTickValues } from './time';
 import { TickValue } from '../types';
 
@@ -12,8 +12,7 @@ describe.skip('time', () => {
         readonly position: SeriesPosition;
         readonly axisLength: number;
         readonly data: readonly Ohlc[];
-        readonly dataInterval: DataInterval;
-        readonly interval: Old;
+        readonly interval: Interval;
         readonly timezone: string;
       };
       readonly expected: readonly TickValue[];
@@ -34,10 +33,6 @@ describe.skip('time', () => {
           },
           axisLength: 1000,
           data: DATA,
-          dataInterval: {
-            unit: 'm',
-            value: 5,
-          },
           interval: {
             unit: 'm',
             value: 5,
@@ -58,14 +53,13 @@ describe.skip('time', () => {
 
     for (const example of EXAMPLES) {
       it(example.description, () => {
-        const { position, axisLength, data, dataInterval, interval, timezone } =
+        const { position, axisLength, data, interval, timezone } =
           example.input;
 
         const actual = getTimeAxisTickValues(
           position,
           axisLength,
           data,
-          dataInterval,
           interval,
           timezone,
         );
