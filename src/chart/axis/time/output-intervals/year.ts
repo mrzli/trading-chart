@@ -1,5 +1,6 @@
 import {
   MIN_X_AXIS_TICK_DISTANCE,
+  formatAsYear,
   getSignificantDigitIndex,
 } from '../../../helpers';
 import {
@@ -52,7 +53,7 @@ export function getTimeAxisOutputYear(
         offset: item.offset,
         value: item.value,
         dateObject: item.dateObject,
-        label: item.dateObject.year.toString(),
+        label: formatAsYear(item.dateObject),
       };
 
       result.push(outputItem);
@@ -77,7 +78,7 @@ function getNextHigherYearsPerTick(referentMinYearsPerTick: number): number {
 
   const result = getFinaYearsPerTick(normalizedYears, orderOfMagnitude);
 
-  return result;
+  return Math.max(result, 1);
 }
 
 function getFinaYearsPerTick(
