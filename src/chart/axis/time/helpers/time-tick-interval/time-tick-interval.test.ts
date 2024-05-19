@@ -20,6 +20,186 @@ describe('time-tick-interval', () => {
     const axisLength = minTickSpan * minTickDistance; // 4800
 
     const EXAMPLES: readonly Example[] = [
+      // seconds
+      {
+        description: 's 1, 1 second ticks (1)',
+        input: {
+          itemSpan: minTickSpan / 6,
+          axisLength,
+          interval: {
+            unit: 's',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 's',
+          value: 1,
+        },
+      },
+      {
+        // ticks for seconds interval are tried at each second
+        //   if the min tick span is smaller or equal to 30 seconds
+        description: 's 1, 1 second ticks (2)',
+        input: {
+          itemSpan: minTickSpan * 20,
+          axisLength,
+          interval: {
+            unit: 's',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 's',
+          value: 1,
+        },
+      },
+      {
+        description: 's 1, 1 minute ticks',
+        input: {
+          itemSpan: minTickSpan * 40,
+          axisLength,
+          interval: {
+            unit: 's',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 'm',
+          value: 1,
+        },
+      },
+      // minutes
+      {
+        description: 'm 1, 1 minute ticks',
+        input: {
+          itemSpan: minTickSpan / 6,
+          axisLength,
+          interval: {
+            unit: 'm',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 'm',
+          value: 1,
+        },
+      },
+      {
+        description: 'm 1, 2 minute ticks',
+        input: {
+          itemSpan: minTickSpan * 1.5,
+          axisLength,
+          interval: {
+            unit: 'm',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 'm',
+          value: 2,
+        },
+      },
+      {
+        description: 'm 1, 3 minute ticks',
+        input: {
+          itemSpan: minTickSpan * 2.5,
+          axisLength,
+          interval: {
+            unit: 'm',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 'm',
+          value: 3,
+        },
+      },
+      {
+        description: 'm 1, 5 minute ticks',
+        input: {
+          itemSpan: minTickSpan * 4,
+          axisLength,
+          interval: {
+            unit: 'm',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 'm',
+          value: 5,
+        },
+      },
+      {
+        description: 'm 1, 10 minute ticks',
+        input: {
+          itemSpan: minTickSpan * 7,
+          axisLength,
+          interval: {
+            unit: 'm',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 'm',
+          value: 10,
+        },
+      },
+      {
+        description: 'm 1, 15 minute ticks',
+        input: {
+          itemSpan: minTickSpan * 12,
+          axisLength,
+          interval: {
+            unit: 'm',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 'm',
+          value: 15,
+        },
+      },
+      {
+        description: 'm 1, 30 minute ticks',
+        input: {
+          itemSpan: minTickSpan * 20,
+          axisLength,
+          interval: {
+            unit: 'm',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 'm',
+          value: 30,
+        },
+      },
+      {
+        description: 'm 1, 1 hour ticks',
+        input: {
+          itemSpan: minTickSpan * 40,
+          axisLength,
+          interval: {
+            unit: 'm',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 'h',
+          value: 1,
+        },
+      },
       // hours
       {
         description: 'h 1, 1 hour ticks',

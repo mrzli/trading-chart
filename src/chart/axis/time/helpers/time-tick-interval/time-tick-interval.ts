@@ -2,11 +2,13 @@ import { ensureNever } from '@gmjs/assert';
 import { Interval } from '../../../../types';
 import { getMinValuePerTick } from './shared';
 import {
+  getNextHigherIntervalFromDays,
+  getNextHigherIntervalFromHours,
+  getNextHigherIntervalFromMinutes,
   getNextHigherIntervalFromMonths,
+  getNextHigherIntervalFromSeconds,
   getNextHigherIntervalFromYears,
 } from './time-components';
-import { getNextHigherIntervalFromDays } from './time-components/day';
-import { getNextHigherIntervalFromHours } from './time-components/hour';
 
 export function getMinTimeTickInterval(
   itemSpan: number,
@@ -27,16 +29,10 @@ export function getMinTimeTickInterval(
 
   switch (unit) {
     case 's': {
-      return {
-        unit: 'Y',
-        value: 1,
-      };
+      return getNextHigherIntervalFromSeconds(minValuePerTick);
     }
     case 'm': {
-      return {
-        unit: 'Y',
-        value: 1,
-      };
+      return getNextHigherIntervalFromMinutes(minValuePerTick);
     }
     case 'h': {
       return getNextHigherIntervalFromHours(minValuePerTick);
