@@ -1,5 +1,5 @@
 import { expect, describe, it } from 'vitest';
-import { getNumIntegerDigits } from './math';
+import { getNextHigherMultiple, getNumIntegerDigits } from './math';
 
 describe('math', () => {
   describe('getNumIntegerDigits()', () => {
@@ -66,6 +66,63 @@ describe('math', () => {
     for (const example of EXAMPLES) {
       it(JSON.stringify(example), () => {
         const actual = getNumIntegerDigits(example.input);
+        expect(actual).toEqual(example.expected);
+      });
+    }
+  });
+
+  describe('getNextHigherMultiple()', () => {
+    interface Example {
+      readonly input: {
+        readonly value: number;
+        readonly multiple: number;
+      };
+      readonly expected: number;
+    }
+
+    const EXAMPLES: readonly Example[] = [
+      {
+        input: {
+          value: 0,
+          multiple: 1,
+        },
+        expected: 0,
+      },
+      {
+        input: {
+          value: 0.5,
+          multiple: 1,
+        },
+        expected: 1,
+      },
+      {
+        input: {
+          value: 1,
+          multiple: 1,
+        },
+        expected: 1,
+      },
+      {
+        input: {
+          value: 1,
+          multiple: 2,
+        },
+        expected: 2,
+      },
+      {
+        input: {
+          value: 7,
+          multiple: 3,
+        },
+        expected: 9,
+      },
+    ];
+
+    for (const example of EXAMPLES) {
+      it(JSON.stringify(example), () => {
+        const { value, multiple } = example.input;
+
+        const actual = getNextHigherMultiple(value, multiple);
         expect(actual).toEqual(example.expected);
       });
     }

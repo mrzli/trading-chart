@@ -9,7 +9,7 @@ import {
   getNextHigherIntervalFromSeconds,
   getNextHigherIntervalFromYears,
 } from './time-components';
-import { TimeTickInterval } from './types';
+import { TimeTickInterval } from '../types';
 
 export function getMinTimeTickInterval(
   itemSpan: number,

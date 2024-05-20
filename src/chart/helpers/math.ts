@@ -7,3 +7,7 @@ export function getSignificantDigitIndex(value: number): number {
   const v = Math.abs(value);
   return Math.floor(Math.log10(v));
 }
+
+export function getNextHigherMultiple(value: number, multiple: number): number {
+  return Math.ceil(value / multiple) * multiple;
+}

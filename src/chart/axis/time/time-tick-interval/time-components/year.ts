@@ -2,7 +2,7 @@ import {
   getNextHigherValueWithOrderOfMagnitude,
   getOrderOfMagnitude,
 } from '../shared';
-import { TimeTickInterval } from '../types';
+import { TimeTickInterval } from '../../types';
 
 export function getNextHigherIntervalFromYears(
   input: number,

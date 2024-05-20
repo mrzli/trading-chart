@@ -1,5 +1,5 @@
 import { getNextHigherValue } from '../shared';
-import { TimeTickInterval } from '../types';
+import { TimeTickInterval } from '../../types';
 import { getNextHigherIntervalFromMonths } from './month';
 
 export function getNextHigherIntervalFromDays(input: number): TimeTickInterval {

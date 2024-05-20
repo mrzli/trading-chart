@@ -1,4 +1,4 @@
-import { TimeTickInterval } from '../types';
+import { TimeTickInterval } from '../../types';
 import { getNextHigherIntervalFromMinutes } from './minute';
 
 export function getNextHigherIntervalFromSeconds(

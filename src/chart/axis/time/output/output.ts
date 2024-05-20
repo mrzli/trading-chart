@@ -77,3 +77,8 @@ export function getTimeAxisOutput(
     }
   }
 }
+
+// you also need to be able to find the referent starting point based on tick interval
+// this is for last step, after you have dealt with time component changes
+// when calculating these last ticks, take into account the result of time component changes processing output,
+//   meaning the tick item positions that are still available based on position
