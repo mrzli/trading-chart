@@ -1,10 +1,6 @@
 import { getChartAreas } from '../../helpers';
 import { Size } from '../../types';
-import { CanvasChartOptions, CanvasChartState } from '../types';
-
-export function getCanvasChartOptions(): CanvasChartOptions {
-  return {};
-}
+import { CanvasChartState } from '../types';
 
 export function getInitialCanvasChartState(): CanvasChartState {
   const size: Size = { width: 100, height: 100 };

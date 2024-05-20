@@ -22,7 +22,7 @@ export interface TickIntervalSecond extends TickIntervalBase {
 
 export interface TickIntervalMinute extends TickIntervalBase {
   readonly unit: 'm';
-  readonly value: 1 | 2 | 5 | 10 | 15 | 30;
+  readonly value: 1 | 2 | 3 | 5 | 10 | 15 | 30;
 }
 
 export interface TickIntervalHour extends TickIntervalBase {
@@ -32,7 +32,7 @@ export interface TickIntervalHour extends TickIntervalBase {
 
 export interface TickIntervalDay extends TickIntervalBase {
   readonly unit: 'D';
-  readonly value: number;
+  readonly value: 1 | 2 | 3 | 7 | 14;
 }
 
 export interface TickIntervalMonth extends TickIntervalBase {

@@ -1,21 +1,16 @@
-import {
-  Duration,
-  isoDateTimeToUnixSeconds,
-  unixSecondsAdd,
-} from '@gmjs/date-util';
+import { Duration, unixSecondsAdd } from '@gmjs/date-util';
 import { Interval, Ohlc } from '../../chart';
-
-const START_DATE = isoDateTimeToUnixSeconds('2020-01-01T00:00:00Z');
 
 export function convertRawOhlcDataToInterval(
   data: readonly Omit<Ohlc, 'time'>[],
+  startDate: number,
   interval: Interval,
 ): readonly Ohlc[] {
   const result: Ohlc[] = [];
 
   for (const [i, rawItem] of data.entries()) {
     const duration = intervalToDuration(interval, i);
-    const time = unixSecondsAdd(START_DATE, 'UTC', duration);
+    const time = unixSecondsAdd(startDate, 'UTC', duration);
 
     const item: Ohlc = {
       time,

@@ -2,7 +2,6 @@ import { Size } from '../types';
 import {
   createCanvasChartEventHandlers,
   destroyCanvasChart,
-  getCanvasChartOptions,
   getInitialCanvasChartState,
   initializeCanvasChart,
   resizeCanvasChart,
@@ -17,9 +16,10 @@ import {
   CanvasChartStateWrapper,
 } from './types';
 
-export function createCanvasChart(input: CanvasChartInput): CanvasChart {
-  const options: CanvasChartOptions = getCanvasChartOptions();
-
+export function createCanvasChart(
+  input: CanvasChartInput,
+  options: CanvasChartOptions,
+): CanvasChart {
   const stateWrapper: CanvasChartStateWrapper = {
     state: getInitialCanvasChartState(),
   };
