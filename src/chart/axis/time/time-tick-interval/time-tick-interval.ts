@@ -1,5 +1,5 @@
 import { ensureNever } from '@gmjs/assert';
-import { Interval } from '../../../../types';
+import { Interval } from '../../../types';
 import { getMinValuePerTick } from './shared';
 import {
   getNextHigherIntervalFromDays,
@@ -9,13 +9,14 @@ import {
   getNextHigherIntervalFromSeconds,
   getNextHigherIntervalFromYears,
 } from './time-components';
+import { TimeTickInterval } from './types';
 
 export function getMinTimeTickInterval(
   itemSpan: number,
   axisLength: number,
   interval: Interval,
   minTickDistance: number,
-): Interval {
+): TimeTickInterval {
   const { unit, value } = interval;
   const valuePerItem = Math.max(Math.ceil(value), 1);
 

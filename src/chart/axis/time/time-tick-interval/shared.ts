@@ -1,4 +1,4 @@
-import { getSignificantDigitIndex } from '../../../../helpers';
+import { getSignificantDigitIndex } from '../../../helpers';
 
 export function getMinValuePerTick(
   valuePerPixel: number,
@@ -18,11 +18,14 @@ export function getOrderOfMagnitude(value: number): number {
   return Math.pow(10, significantDigitIndex);
 }
 
-export function getNextHigherValue(
+export function getNextHigherValue<
+  TValues extends readonly number[],
+  TMaxValue extends number,
+>(
   value: number,
-  cutoffs: readonly number[],
-  maxValue: number,
-): number {
+  cutoffs: TValues,
+  maxValue: TMaxValue,
+): TValues[number] | TMaxValue {
   for (const [i, cutoff] of cutoffs.entries()) {
     if (value > cutoff) {
       return i === 0 ? maxValue : cutoffs[i - 1];

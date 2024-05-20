@@ -1,5 +1,5 @@
 import { MIN_X_AXIS_TICK_DISTANCE, formatAsYear } from '../../../helpers';
-import { getNextHigherIntervalFromYears } from '../helpers/time-tick-interval/time-components';
+import { getNextHigherIntervalFromYears } from '../time-tick-interval/time-components';
 import {
   TimeAxisExtendedDataItem,
   TimeAxisInput,

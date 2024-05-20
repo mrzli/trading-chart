@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { Interval } from '../../../../types';
+import { Interval } from '../../../types';
 import { getMinTimeTickInterval } from './time-tick-interval';
 
 describe('time-tick-interval', () => {

@@ -1,20 +1,20 @@
-import { Interval } from '../../../../../types';
 import { getNextHigherValue } from '../shared';
+import { TimeTickInterval } from '../types';
 import { getNextHigherIntervalFromDays } from './day';
 
-export function getNextHigherIntervalFromHours(input: number): Interval {
+export function getNextHigherIntervalFromHours(
+  input: number,
+): TimeTickInterval {
   if (input > 12) {
     return getNextHigherIntervalFromDays(input / 24);
   }
 
   const result = getNextHigherValue(input, CUTOFFS, 12);
 
-  const value = Math.max(result, 1);
-
   return {
     unit: 'h',
-    value,
+    value: result,
   };
 }
 
-const CUTOFFS: readonly number[] = [12, 8, 6, 4, 3, 2, 1];
+const CUTOFFS = [12, 8, 6, 4, 3, 2, 1] as const;

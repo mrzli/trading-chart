@@ -1,20 +1,18 @@
-import { Interval } from '../../../../../types';
 import { getNextHigherValue } from '../shared';
+import { TimeTickInterval } from '../types';
 import { getNextHigherIntervalFromMonths } from './month';
 
-export function getNextHigherIntervalFromDays(input: number): Interval {
+export function getNextHigherIntervalFromDays(input: number): TimeTickInterval {
   if (input > 14) {
     return getNextHigherIntervalFromMonths(input / 28);
   }
 
   const result = getNextHigherValue(input, CUTOFFS, 14);
 
-  const value = Math.max(result, 1);
-
   return {
     unit: 'D',
-    value,
+    value: result,
   };
 }
 
-const CUTOFFS: readonly number[] = [14, 7, 3, 2, 1];
+const CUTOFFS = [14, 7, 3, 2, 1] as const;
