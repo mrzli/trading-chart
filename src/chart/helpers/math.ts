@@ -8,6 +8,12 @@ export function getSignificantDigitIndex(value: number): number {
   return Math.floor(Math.log10(v));
 }
 
-export function getNextHigherMultiple(value: number, multiple: number): number {
+export function getMultipleGt(value: number, multiple: number): number {
+  const division = value / multiple;
+  const isInteger = Math.floor(division) === division;
+  return (isInteger ? division + 1 : Math.ceil(division)) * multiple;
+}
+
+export function getMultipleGte(value: number, multiple: number): number {
   return Math.ceil(value / multiple) * multiple;
 }

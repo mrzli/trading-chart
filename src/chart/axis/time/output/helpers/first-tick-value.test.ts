@@ -57,29 +57,6 @@ describe('first-tick-value', () => {
         },
         expected: 0,
       },
-      // second
-      {
-        description: 's 1, 0',
-        input: {
-          extendedItems: getItems({ second: 0 }),
-          interval: {
-            unit: 's',
-            value: 1,
-          },
-        },
-        expected: 0,
-      },
-      {
-        description: 's 1, 5',
-        input: {
-          extendedItems: getItems({ second: 5 }),
-          interval: {
-            unit: 's',
-            value: 1,
-          },
-        },
-        expected: 5,
-      },
       // minute
       {
         description: 'm 1, 7',

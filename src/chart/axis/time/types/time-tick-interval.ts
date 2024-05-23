@@ -1,5 +1,4 @@
 export const LIST_OF_TIME_TICK_INTERVAL_TIME_UNITS = [
-  's',
   'm',
   'h',
   'D',
@@ -13,11 +12,6 @@ export type TimeTickIntervalTimeUnit =
 export interface TimeTickIntervalBase {
   readonly unit: TimeTickIntervalTimeUnit;
   readonly value: number;
-}
-
-export interface TimeTickIntervalSecond extends TimeTickIntervalBase {
-  readonly unit: 's';
-  readonly value: 1;
 }
 
 export interface TimeTickIntervalMinute extends TimeTickIntervalBase {
@@ -46,7 +40,6 @@ export interface TimeTickIntervalYear extends TimeTickIntervalBase {
 }
 
 export type TimeTickInterval =
-  | TimeTickIntervalSecond
   | TimeTickIntervalMinute
   | TimeTickIntervalHour
   | TimeTickIntervalDay

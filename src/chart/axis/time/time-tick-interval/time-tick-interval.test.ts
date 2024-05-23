@@ -22,7 +22,7 @@ describe('time-tick-interval', () => {
     const EXAMPLES: readonly Example[] = [
       // seconds
       {
-        description: 's 1, 1 second ticks (1)',
+        description: 's 1, 1 minute ticks (1)',
         input: {
           itemSpan: minTickSpan / 6,
           axisLength,
@@ -33,14 +33,12 @@ describe('time-tick-interval', () => {
           minTickDistance,
         },
         expected: {
-          unit: 's',
+          unit: 'm',
           value: 1,
         },
       },
       {
-        // ticks for seconds interval are tried at each second
-        //   if the min tick span is smaller or equal to 30 seconds
-        description: 's 1, 1 second ticks (2)',
+        description: 's 1, 1 minute ticks (2)',
         input: {
           itemSpan: minTickSpan * 20,
           axisLength,
@@ -51,12 +49,12 @@ describe('time-tick-interval', () => {
           minTickDistance,
         },
         expected: {
-          unit: 's',
+          unit: 'm',
           value: 1,
         },
       },
       {
-        description: 's 1, 1 minute ticks',
+        description: 's 1, 1 minute ticks (3)',
         input: {
           itemSpan: minTickSpan * 40,
           axisLength,
@@ -69,6 +67,22 @@ describe('time-tick-interval', () => {
         expected: {
           unit: 'm',
           value: 1,
+        },
+      },
+      {
+        description: 's 1, 2 minute ticks',
+        input: {
+          itemSpan: minTickSpan * 80,
+          axisLength,
+          interval: {
+            unit: 's',
+            value: 1,
+          },
+          minTickDistance,
+        },
+        expected: {
+          unit: 'm',
+          value: 2,
         },
       },
       // minutes

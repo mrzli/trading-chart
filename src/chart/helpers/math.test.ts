@@ -1,5 +1,5 @@
 import { expect, describe, it } from 'vitest';
-import { getNextHigherMultiple, getNumIntegerDigits } from './math';
+import { getMultipleGt, getMultipleGte, getNumIntegerDigits } from './math';
 
 describe('math', () => {
   describe('getNumIntegerDigits()', () => {
@@ -71,7 +71,64 @@ describe('math', () => {
     }
   });
 
-  describe('getNextHigherMultiple()', () => {
+  describe('getMultipleGt()', () => {
+    interface Example {
+      readonly input: {
+        readonly value: number;
+        readonly multiple: number;
+      };
+      readonly expected: number;
+    }
+
+    const EXAMPLES: readonly Example[] = [
+      {
+        input: {
+          value: 0,
+          multiple: 1,
+        },
+        expected: 1,
+      },
+      {
+        input: {
+          value: 0.5,
+          multiple: 1,
+        },
+        expected: 1,
+      },
+      {
+        input: {
+          value: 1,
+          multiple: 1,
+        },
+        expected: 2,
+      },
+      {
+        input: {
+          value: 1,
+          multiple: 2,
+        },
+        expected: 2,
+      },
+      {
+        input: {
+          value: 7,
+          multiple: 3,
+        },
+        expected: 9,
+      },
+    ];
+
+    for (const example of EXAMPLES) {
+      it(JSON.stringify(example), () => {
+        const { value, multiple } = example.input;
+
+        const actual = getMultipleGt(value, multiple);
+        expect(actual).toEqual(example.expected);
+      });
+    }
+  });
+
+  describe('getMultipleGte()', () => {
     interface Example {
       readonly input: {
         readonly value: number;
@@ -122,7 +179,7 @@ describe('math', () => {
       it(JSON.stringify(example), () => {
         const { value, multiple } = example.input;
 
-        const actual = getNextHigherMultiple(value, multiple);
+        const actual = getMultipleGte(value, multiple);
         expect(actual).toEqual(example.expected);
       });
     }
