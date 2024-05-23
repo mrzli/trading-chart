@@ -24,7 +24,7 @@ export function setupChart(
   chart.initialize();
 
   const startDate = isoDateTimeToUnixSeconds('2020-01-01T00:00:00Z');
-  const interval: Interval = { unit: 'Y', value: 1 };
+  const interval: Interval = { unit: 'm', value: 1 };
 
   const items = convertRawOhlcDataToInterval(
     TEST_RAW_OHLC_DATA,

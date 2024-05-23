@@ -18,7 +18,6 @@ import {
   formatAsYear,
 } from '../../../helpers';
 import { TimeComponentChange } from './types';
-import { Interval } from '../../../types';
 
 export function getTimeAxisOutput(
   input: TimeAxisInput,
@@ -45,7 +44,7 @@ export function getTimeAxisOutput(
   );
 
   const timeComponentChanges = breakpointIndices.map((index) =>
-    getTimeComponentChange(extendedItems[index], inputInterval),
+    getTimeComponentChange(extendedItems[index], interval),
   );
 
   const outputItems = breakpointIndices.map((index, i) =>
@@ -110,21 +109,19 @@ function getBreakpointIndices(
 
 function getTimeComponentChange(
   item: TimeAxisExtendedDataItem,
-  inputInterval: Interval,
+  interval: TimeTickInterval,
 ): TimeComponentChange {
   const { dateObject, previousDateObject } = item;
 
   if (previousDateObject === undefined) {
-    const { unit } = inputInterval;
+    const { unit } = interval;
 
     switch (unit) {
-      case 's':
       case 'm':
       case 'h': {
         return 'minute';
       }
-      case 'D':
-      case 'W': {
+      case 'D': {
         return 'day';
       }
       case 'M': {
