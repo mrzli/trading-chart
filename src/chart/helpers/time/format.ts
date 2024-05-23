@@ -6,6 +6,14 @@ export function formatAsYear(dateObject: DateObjectTz): string {
   return padNonNegativeIntWithZeroes(dateObject.year, 4);
 }
 
+export function formatAsMonth(dateObject: DateObjectTz): string {
+  return formatAsMonthString(dateObject.month);
+}
+
+export function formatAsDay(dateObject: DateObjectTz): string {
+  return dateObject.day.toString();
+}
+
 export function formatAsDate(dateObject: DateObjectTz): string {
   const yearString = padNonNegativeIntWithZeroes(dateObject.year, 4);
   const monthString = padNonNegativeIntWithZeroes(dateObject.month, 2);

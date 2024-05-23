@@ -1,1 +1,1 @@
-export type TimeComponentChange = 'year' | 'month' | 'day' | 'minute' | 'none';
+export type TimeComponentChange = 'year' | 'month' | 'day' | 'minute';

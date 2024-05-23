@@ -1,84 +1,190 @@
-import { invariant } from '@gmjs/assert';
-import {
-  getTimeAxisOutputDay,
-  getTimeAxisOutputHour,
-  getTimeAxisOutputMinute,
-  getTimeAxisOutputMonth,
-  getTimeAxisOutputSecond,
-  getTimeAxisOutputWeek,
-  getTimeAxisOutputYear,
-} from '../output-intervals';
+import { ensureNever } from '@gmjs/assert';
 import {
   TimeAxisExtendedDataItem,
   TimeAxisInput,
   TimeAxisOutputItem,
+  TimeTickInterval,
 } from '../types';
+import {
+  getTimeTickPositionFirst,
+  getTimeTickPositionNext,
+} from '../time-tick-position';
+import { getMinTimeTickInterval } from '../time-tick-interval';
+import {
+  MIN_X_AXIS_TICK_DISTANCE,
+  formatAsDay,
+  formatAsHourMinute,
+  formatAsMonth,
+  formatAsYear,
+} from '../../../helpers';
+import { TimeComponentChange } from './types';
+import { Interval } from '../../../types';
 
 export function getTimeAxisOutput(
   input: TimeAxisInput,
   extendedItems: readonly TimeAxisExtendedDataItem[],
 ): readonly TimeAxisOutputItem[] {
-  const { interval } = input;
+  if (extendedItems.length === 0) {
+    return [];
+  }
 
-  // take first and last item
-  // - find max time component change (year, month, day, minute, none)
+  const { position, axisLength, interval: inputInterval } = input;
+  const { itemSpan } = position;
 
-  // find tick intervals
+  const interval = getMinTimeTickInterval(
+    itemSpan,
+    axisLength,
+    inputInterval,
+    MIN_X_AXIS_TICK_DISTANCE,
+  );
 
-  // for tick intervals of:
-  // - year
-  //   - no need to find component changes
-  // - month
-  //   - find year component change
-  // - week, day
-  //   - find year, month component change
-  // - hour, minute
-  //   - find year, month, day component change
-  // - second
-  //   - find year, month, day, minute component change
+  const timeBreakpoints = getTimeBreakpoints(extendedItems, interval);
+  const breakpointIndices = getBreakpointIndices(
+    extendedItems,
+    timeBreakpoints,
+  );
 
-  // component change searches are the intersection of the above:
-  // - max time component change
-  // - relevant time component change based on the input interval
+  const timeComponentChanges = breakpointIndices.map((index) =>
+    getTimeComponentChange(extendedItems[index], inputInterval),
+  );
 
-  // go over each item, and mark the max time component change
+  const outputItems = breakpointIndices.map((index, i) =>
+    toOutputItem(extendedItems[index], timeComponentChanges[i]),
+  );
 
-  // have a set per time component
-  // - starting with year, and going down, exclude items around that are too close
-  //   and remove if overwriting any time component change
-  // - finally do a pass for tick intervals
+  return outputItems;
+}
 
-  const { unit } = interval;
+function getTimeBreakpoints(
+  items: readonly TimeAxisExtendedDataItem[],
+  interval: TimeTickInterval,
+): readonly number[] {
+  const firstItem = items[0];
+  const timezone = firstItem.dateObject.timezone;
 
-  switch (unit) {
-    case 's': {
-      return getTimeAxisOutputSecond(input, extendedItems);
+  const lastItem = items.at(-1)!;
+  const lastTime = lastItem.value;
+
+  const firstBreakpoint = getTimeTickPositionFirst(firstItem, interval);
+
+  let currBreakpoint = firstBreakpoint;
+
+  const breakpoints: number[] = [];
+
+  while (currBreakpoint <= lastTime) {
+    breakpoints.push(currBreakpoint);
+    currBreakpoint = getTimeTickPositionNext(
+      currBreakpoint,
+      timezone,
+      interval,
+    );
+  }
+
+  return breakpoints;
+}
+
+function getBreakpointIndices(
+  items: readonly TimeAxisExtendedDataItem[],
+  breakpoints: readonly number[],
+): readonly number[] {
+  const indices: number[] = [];
+
+  let i = 0;
+  let j = 0;
+
+  while (i < items.length && j < breakpoints.length) {
+    const item = items[i];
+    const breakpoint = breakpoints[j];
+
+    if (item.value >= breakpoint) {
+      indices.push(i);
+      i++;
+      j++;
+    } else {
+      i++;
     }
-    case 'm': {
-      return getTimeAxisOutputMinute(input, extendedItems);
+  }
+
+  return indices;
+}
+
+function getTimeComponentChange(
+  item: TimeAxisExtendedDataItem,
+  inputInterval: Interval,
+): TimeComponentChange {
+  const { dateObject, previousDateObject } = item;
+
+  if (previousDateObject === undefined) {
+    const { unit } = inputInterval;
+
+    switch (unit) {
+      case 's':
+      case 'm':
+      case 'h': {
+        return 'minute';
+      }
+      case 'D':
+      case 'W': {
+        return 'day';
+      }
+      case 'M': {
+        return 'month';
+      }
+      case 'Y': {
+        return 'year';
+      }
+      default: {
+        return ensureNever(unit);
+      }
     }
-    case 'h': {
-      return getTimeAxisOutputHour(input, extendedItems);
-    }
-    case 'D': {
-      return getTimeAxisOutputDay(input, extendedItems);
-    }
-    case 'W': {
-      return getTimeAxisOutputWeek(input, extendedItems);
-    }
-    case 'M': {
-      return getTimeAxisOutputMonth(input, extendedItems);
-    }
-    case 'Y': {
-      return getTimeAxisOutputYear(input, extendedItems);
-    }
-    default: {
-      invariant(false, `Invalid interval unit: '${unit}'.`);
-    }
+  }
+
+  if (dateObject.year !== previousDateObject.year) {
+    return 'year';
+  } else if (dateObject.month !== previousDateObject.month) {
+    return 'month';
+  }
+  // eslint-disable-next-line unicorn/no-negated-condition
+  else if (dateObject.day !== previousDateObject.day) {
+    return 'day';
+  } else {
+    return 'minute';
   }
 }
 
-// you also need to be able to find the referent starting point based on tick interval
-// this is for last step, after you have dealt with time component changes
-// when calculating these last ticks, take into account the result of time component changes processing output,
-//   meaning the tick item positions that are still available based on position
+function toOutputItem(
+  item: TimeAxisExtendedDataItem,
+  timeComponentChange: TimeComponentChange,
+): TimeAxisOutputItem {
+  const label = formatTime(item, timeComponentChange);
+
+  return {
+    offset: item.offset,
+    value: item.value,
+    dateObject: item.dateObject,
+    label,
+  };
+}
+
+function formatTime(
+  item: TimeAxisExtendedDataItem,
+  timeComponentChange: TimeComponentChange,
+): string {
+  switch (timeComponentChange) {
+    case 'year': {
+      return formatAsYear(item.dateObject);
+    }
+    case 'month': {
+      return formatAsMonth(item.dateObject);
+    }
+    case 'day': {
+      return formatAsDay(item.dateObject);
+    }
+    case 'minute': {
+      return formatAsHourMinute(item.dateObject);
+    }
+    default: {
+      return ensureNever(timeComponentChange);
+    }
+  }
+}

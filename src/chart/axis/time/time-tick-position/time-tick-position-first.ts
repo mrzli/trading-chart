@@ -231,39 +231,3 @@ function getDayIncrement(dateObject: DateObjectTz, value: number): number {
 
   return nextDay - dateObject.day;
 }
-
-/**
- * 1m - 30m
- * - needs to start at the minute 0 of the hour
- * - just increment by period of seconds
- * - make sure hour transition is not skipped (impossible)
- * 1h
- * - needs to start at 00:00
- * - just increment by period of seconds
- * - make sure day transition is not skipped (impossible)
- * 2h - 12h
- * - needs to start at 00:00
- * - increment by period of seconds
- *   and make sure that the hour division is correct
- *   because of the daylight saving time
- * - when making correction, skip to the next interval
- * - make sure day transition is not skipped
- *   - (I think this is impossible, even with daylight saving time)
- * 1d
- * - needs to start at the first day of the month
- * - increment by day
- * 2d - 14d
- * - needs to start at the first day of the month
- * - increment by number of days
- * - make sure month transition is not skipped
- *   - on each increment, check if the month has changed
- *   - if it has
- *     - if day is 1, you are good
- *     - if day greater than 1, set to 1, and remove the previous entry
- * 1m - 6m
- * - needs to start at the first month of the year
- * - increment by number of months
- * x Y
- * - needs to start at the year divisible by x
- * - increment by number of years
- */
