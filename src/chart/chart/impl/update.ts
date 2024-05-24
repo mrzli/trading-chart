@@ -42,6 +42,7 @@ export function updateCanvasChart(
   console.time('createExampleChart');
 
   // x-axis
+  console.time('processTimeAxisData');
   const timeAxisInput: TimeAxisInput = {
     position: seriesPosition,
     axisLength: xAxisRect.width,
@@ -51,6 +52,7 @@ export function updateCanvasChart(
   };
 
   const xAxisData = processTimeAxisData(timeAxisInput);
+  console.timeEnd('processTimeAxisData');
   // end x-axis
 
   // y-axis
