@@ -24,9 +24,6 @@ export function createHandlerWheel(
     const pos = getRelativeToElementPos(event);
     const eventArea = getEventArea(pos, layout);
 
-    const isWheelUp = event.deltaY < 0;
-    const isWheelDown = event.deltaY > 0;
-
     switch (eventArea) {
       case 'main': {
         const currItemSpan = seriesPosition.itemSpan;
