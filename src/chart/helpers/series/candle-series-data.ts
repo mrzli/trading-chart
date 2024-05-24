@@ -1,6 +1,6 @@
 import { CandleSeriesData, CandleSeriesItem } from '../../draw';
 import { Ohlc, Range, SeriesPosition } from '../../types';
-import { getFirstVisibleIndex, getLastVisibleIndex } from './item-range';
+import { getFirstVisibleIndex, getLastVisibleIndex } from './visible-index';
 
 export function getOhlcSeriesValues(
   data: readonly Ohlc[],

@@ -1,5 +1,5 @@
 import { Size } from '../../types';
-import { CanvasChartData } from './canvas-chart-data';
+import { CanvasChartData } from './state/canvas-chart-data';
 
 export interface CanvasChart {
   readonly initialize: () => void;

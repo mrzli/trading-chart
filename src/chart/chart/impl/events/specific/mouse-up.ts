@@ -5,6 +5,7 @@ import {
   CanvasChartOptions,
   CanvasChartStateWrapper,
 } from '../../../types';
+import { updateCanvasChart } from '../../update';
 import { processDragMain, processDragXAxis, processDragYAxis } from './shared';
 import { CanvasChartEventStateWrapper } from './types';
 
@@ -44,5 +45,7 @@ export function createHandlerMouseUp(
         kind: 'none',
       },
     };
+
+    updateCanvasChart(input, options, stateWrapper);
   };
 }

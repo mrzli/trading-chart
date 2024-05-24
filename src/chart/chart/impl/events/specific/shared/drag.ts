@@ -8,7 +8,6 @@ import {
   CanvasChartOptions,
   CanvasChartStateWrapper,
 } from '../../../../types';
-import { updateCanvasChart } from '../../../update';
 import {
   EventMouseDragStateMain,
   EventMouseDragStateXAxis,
@@ -41,8 +40,6 @@ export function processDragMain(
       to: drag.priceRangeStart.to - priceDiff,
     },
   };
-
-  updateCanvasChart(input, options, stateWrapper);
 }
 
 export function processDragXAxis(
@@ -63,8 +60,6 @@ export function processDragXAxis(
     ...state,
     seriesPosition: newPosition,
   };
-
-  updateCanvasChart(input, options, stateWrapper);
 }
 
 const TIME_ZOOM_PER_PIXEL_MULTIPLIER = 1.001;
@@ -87,8 +82,6 @@ export function processDragYAxis(
     ...state,
     priceRange: newPriceRange,
   };
-
-  updateCanvasChart(input, options, stateWrapper);
 }
 
 const PRICE_ZOOM_PER_PIXEL_MULTIPLIER = 1.002;

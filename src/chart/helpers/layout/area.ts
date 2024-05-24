@@ -52,3 +52,7 @@ export function getChartAreas(
     corner: cornerRect,
   };
 }
+
+export function getDefaultChartAreas(): ChartAreas {
+  return getChartAreas({ width: 100, height: 100 }, 20, 20);
+}

@@ -1,5 +1,6 @@
-import { ChartAreas } from '../../helpers';
-import { Range, SeriesPosition, Size } from '../../types';
+import { ChartAreas } from '../../../helpers';
+import { Range, SeriesPosition, Size } from '../../../types';
+import { CanvasChartCursorState } from './canvas-chart-cursor-state';
 import { CanvasChartData } from './canvas-chart-data';
 
 export interface CanvasChartState {
@@ -9,4 +10,5 @@ export interface CanvasChartState {
   readonly timezone: string;
   readonly seriesPosition: SeriesPosition;
   readonly priceRange: Range;
+  readonly cursorState: CanvasChartCursorState | undefined;
 }

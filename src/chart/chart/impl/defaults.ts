@@ -1,13 +1,10 @@
-import { getChartAreas } from '../../helpers';
+import { getDefaultChartAreas } from '../../helpers';
 import { Size } from '../../types';
 import { CanvasChartState } from '../types';
 
 export function getInitialCanvasChartState(): CanvasChartState {
   const size: Size = { width: 100, height: 100 };
-  const xAxisHeight = 20;
-  const yAxisWidth = 20;
-
-  const layout = getChartAreas(size, xAxisHeight, yAxisWidth);
+  const layout = getDefaultChartAreas();
 
   return {
     size,
@@ -19,5 +16,6 @@ export function getInitialCanvasChartState(): CanvasChartState {
     timezone: 'UTC',
     seriesPosition: { rightItemOffset: 100, itemSpan: 120 },
     priceRange: { from: 0, to: 10_000 },
+    cursorState: undefined,
   };
 }

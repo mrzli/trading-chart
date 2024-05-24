@@ -1,1 +1,2 @@
-export * from './price-range';
+export * from './change-price-range';
+export * from './pixel-price-converter';
