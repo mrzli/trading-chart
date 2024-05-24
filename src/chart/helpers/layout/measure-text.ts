@@ -1,21 +1,16 @@
-export function estimateTextHeight(fontSize: number): number {
-  return Math.ceil(fontSize);
-}
+import { Size } from '../../types';
 
-export function estimateTextWidth(fontSize: number, text: string): number {
-  const separatorWidth = Math.ceil(fontSize / 4);
-  const digitWidth = Math.ceil(fontSize / 2 + 1);
+export function measureTextSize(
+  c: CanvasRenderingContext2D,
+  text: string,
+): Size {
+  const metrics = c.measureText(text);
 
-  let width = 0;
-  for (const char of text) {
-    width += char === '.' || char === ' ' ? separatorWidth : digitWidth;
-  }
+  const width = metrics.width;
+  const height = metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent;
 
-  // add for buffering
-  width += digitWidth;
-
-  // round to the nearest larger 5
-  width = Math.ceil(width / 5) * 5;
-
-  return width;
+  return {
+    width,
+    height,
+  };
 }
