@@ -1,26 +1,19 @@
 import { TimeAxisOutputItem } from '../../axis';
 import { CanvasRenderer, createCanvasRenderer } from '../../canvas-renderer';
 import { TextParameters, drawText } from '../../draw';
-import { Rect, Size } from '../../types';
+import { Rect } from '../../types';
 
 export function createHorizontalAxisRenderer(
   area: Rect,
 ): CanvasRenderer<readonly TimeAxisOutputItem[]> {
   const renderer = (
     c: CanvasRenderingContext2D,
-    _canvasSize: Size,
     area: Rect | undefined,
     data: readonly TimeAxisOutputItem[],
   ): void => {
     if (area === undefined) {
       return;
     }
-
-    // c.fillStyle = '#bbbbbb';
-
-    // c.beginPath();
-    // c.fillRect(area.x, area.y, area.width, area.height);
-    // c.stroke();
 
     const { x, y, width } = area;
 

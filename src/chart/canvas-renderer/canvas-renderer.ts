@@ -1,4 +1,4 @@
-import { Rect, Size } from '../types';
+import { Rect } from '../types';
 
 export interface CanvasRenderer<T> {
   readonly getData: () => T;
@@ -6,15 +6,16 @@ export interface CanvasRenderer<T> {
   readonly render: (c: CanvasRenderingContext2D) => void;
 }
 
+export type CanvasRenderFn<T> = (
+  c: CanvasRenderingContext2D,
+  area: Rect | undefined,
+  data: T,
+) => void;
+
 export function createCanvasRenderer<T>(
   area: Rect | undefined,
   initialData: T,
-  doWork: (
-    c: CanvasRenderingContext2D,
-    canvasSize: Size,
-    area: Rect | undefined,
-    data: T,
-  ) => void,
+  renderFn: CanvasRenderFn<T>,
 ): CanvasRenderer<T> {
   let data: T = initialData;
 
@@ -32,15 +33,9 @@ export function createCanvasRenderer<T>(
       c.beginPath();
       c.rect(area.x, area.y, area.width, area.height);
       c.clip();
-      // c.translate(area.x, area.y);
     }
 
-    const canvasSize: Size = {
-      width: c.canvas.width,
-      height: c.canvas.height,
-    };
-
-    doWork(c, canvasSize, area, data);
+    renderFn(c, area, data);
 
     c.restore();
   };

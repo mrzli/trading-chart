@@ -1,26 +1,19 @@
 import { PriceAxisOutputItem } from '../../axis/price/types/price-axis-output-item';
 import { CanvasRenderer, createCanvasRenderer } from '../../canvas-renderer';
 import { TextParameters, drawText } from '../../draw';
-import { Rect, Size } from '../../types';
+import { Rect } from '../../types';
 
 export function createVerticalAxisRenderer(
   area: Rect,
 ): CanvasRenderer<readonly PriceAxisOutputItem[]> {
   const renderer = (
     c: CanvasRenderingContext2D,
-    _canvasSize: Size,
     area: Rect | undefined,
     data: readonly PriceAxisOutputItem[],
   ): void => {
     if (area === undefined) {
       return;
     }
-
-    // c.fillStyle = '#bbbbbb';
-
-    // c.beginPath();
-    // c.fillRect(area.x, area.y, area.width, area.height);
-    // c.stroke();
 
     const { x, y, height } = area;
 

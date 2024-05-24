@@ -1,6 +1,6 @@
 import { CanvasRenderer, createCanvasRenderer } from '../../canvas-renderer';
 import { LineGridParameters, drawLineGrid } from '../../draw';
-import { Rect, Size } from '../../types';
+import { Rect } from '../../types';
 
 export interface GridData {
   readonly xOffsets: readonly number[];
@@ -10,7 +10,6 @@ export interface GridData {
 export function createGridRenderer(area: Rect): CanvasRenderer<GridData> {
   const renderer = (
     c: CanvasRenderingContext2D,
-    _canvasSize: Size,
     area: Rect | undefined,
     data: GridData,
   ): void => {

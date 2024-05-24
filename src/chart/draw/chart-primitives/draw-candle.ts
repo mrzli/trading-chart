@@ -52,27 +52,6 @@ export function drawCandle(
   c.fill();
 }
 
-// export function drawCandle2(
-//   c: CanvasRenderingContext2D,
-//   parameters: CandleParameters,
-// ): void {
-//   const { y1, y2, y3, y4, x, width, color } = parameters;
-
-//   const wickThickness = WICK_THICKNESS;
-
-//   const adjustedCandleWidth = getAdjustedWidth(width, wickThickness);
-//   const xWick = x - Math.floor(wickThickness / 2);
-//   const xBar = x - Math.floor(adjustedCandleWidth / 2);
-
-//   c.fillStyle = color;
-
-//   c.beginPath();
-//   c.rect(xWick, y1, wickThickness, y2 - y1);
-//   c.rect(xBar, y2, adjustedCandleWidth, y3 - y2);
-//   c.rect(xWick, y3, wickThickness, y4 - y3);
-//   c.fill();
-// }
-
 function getAdjustedWidth(width: number, wickThickness: number): number {
   const floorWickTickness = Math.floor(wickThickness);
   const isWickThicknessOdd = floorWickTickness % 2 === 1;

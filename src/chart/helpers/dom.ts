@@ -15,3 +15,10 @@ export function getPointDiff(from: Point, to: Point): Point {
     y: to.y - from.y,
   };
 }
+
+export function getCanvasSize(c: CanvasRenderingContext2D): Point {
+  return {
+    x: c.canvas.width,
+    y: c.canvas.height,
+  };
+}
