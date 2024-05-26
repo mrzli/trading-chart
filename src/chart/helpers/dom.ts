@@ -1,5 +1,22 @@
 import { Point } from '../types';
 
+export const LIST_OF_CANVAS_TEXT_BASELINES: readonly CanvasTextBaseline[] = [
+  'alphabetic',
+  'bottom',
+  'hanging',
+  'ideographic',
+  'middle',
+  'top',
+];
+
+export const LIST_OF_CANVAS_TEXT_ALIGNS: readonly CanvasTextAlign[] = [
+  'center',
+  'end',
+  'left',
+  'right',
+  'start',
+];
+
 export function getRelativeToElementPos(event: MouseEvent): Point {
   const el = event.currentTarget as HTMLElement;
 
