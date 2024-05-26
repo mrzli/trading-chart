@@ -40,7 +40,7 @@ export function createHorizontalAxisRenderer(
 
   return createCanvasRenderer<readonly TimeAxisOutputItem[]>(
     area,
-    [],
+    undefined,
     renderer,
   );
 }

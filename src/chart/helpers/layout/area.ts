@@ -1,6 +1,7 @@
 import { Rect, Size } from '../../types';
 
 export interface ChartAreas {
+  readonly full: Rect;
   readonly main: Rect;
   readonly xAxis: Rect;
   readonly yAxis: Rect;
@@ -16,6 +17,13 @@ export function getChartAreas(
 
   const mainAreaWidth = width - yAxisWidth;
   const mainAreaHeight = height - xAxisHeight;
+
+  const fullRect: Rect = {
+    x: 0,
+    y: 0,
+    width,
+    height,
+  };
 
   const mainAreaRect: Rect = {
     x: 0,
@@ -46,6 +54,7 @@ export function getChartAreas(
   };
 
   return {
+    full: fullRect,
     main: mainAreaRect,
     xAxis: xAxisRect,
     yAxis: yAxisRect,

@@ -1,3 +1,7 @@
+import {
+  CursorRendererDataItem,
+  createCursorRenderer,
+} from './../../specific-renderers/cursor/cursor-renderer';
 import { clamp } from '@gmjs/number-util';
 import {
   PriceAxisInput,
@@ -12,6 +16,7 @@ import {
 import { CandleSeriesData } from '../../draw';
 import { getOhlcSeriesValues } from '../../helpers';
 import {
+  CursorRendererData,
   GridData,
   createCandleSeriesRenderer,
   createGridRenderer,
@@ -37,7 +42,12 @@ export function updateCanvasChart(
   const { layout, data, timezone, seriesPosition, priceRange } =
     stateWrapper.state;
 
-  const { main: mainAreaRect, xAxis: xAxisRect, yAxis: yAxisRect } = layout;
+  const {
+    full: fullRect,
+    main: mainAreaRect,
+    xAxis: xAxisRect,
+    yAxis: yAxisRect,
+  } = layout;
 
   console.time('createExampleChart');
 
@@ -80,6 +90,18 @@ export function updateCanvasChart(
     mainAreaRect.height,
   );
 
+  // cursor
+  const cursorItems: readonly CursorRendererDataItem[] = [];
+
+  const cursorData: CursorRendererData = {
+    areas: layout,
+    items: cursorItems,
+    priceRange,
+    seriesPosition,
+    cursorState: stateWrapper.state.cursorState,
+  };
+  // end cursor
+
   const gridRenderer = createGridRenderer(mainAreaRect);
 
   const candleSeriesRenderer = createCandleSeriesRenderer(mainAreaRect);
@@ -88,18 +110,22 @@ export function updateCanvasChart(
 
   const yAxisRenderer = createVerticalAxisRenderer(yAxisRect);
 
+  const cursorRenderer = createCursorRenderer(fullRect);
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const renderers: readonly CanvasRenderer<any>[] = [
     gridRenderer,
     candleSeriesRenderer,
     xAxisRenderer,
     yAxisRenderer,
+    cursorRenderer,
   ];
 
   gridRenderer.setData(gridData);
   candleSeriesRenderer.setData(candleSeriesData);
   xAxisRenderer.setData(xAxisData);
   yAxisRenderer.setData(yAxisData);
+  cursorRenderer.setData(cursorData);
 
   const canvasRenderingPipelineOptions: CanvasRenderingPipelineOptions = {
     backgroundColor: '#161A25',

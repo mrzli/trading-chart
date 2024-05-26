@@ -1,8 +1,8 @@
 import { Rect } from '../types';
 
 export interface CanvasRenderer<T> {
-  readonly getData: () => T;
-  readonly setData: (data: T) => void;
+  readonly getData: () => T | undefined;
+  readonly setData: (data: T | undefined) => void;
   readonly render: (c: CanvasRenderingContext2D) => void;
 }
 
@@ -14,20 +14,24 @@ export type CanvasRenderFn<T> = (
 
 export function createCanvasRenderer<T>(
   area: Rect | undefined,
-  initialData: T,
+  initialData: T | undefined,
   renderFn: CanvasRenderFn<T>,
 ): CanvasRenderer<T> {
-  let data: T = initialData;
+  let data: T | undefined = initialData;
 
-  const getData = (): T => {
+  const getData = (): T | undefined => {
     return data;
   };
 
-  const setData = (newData: T): void => {
+  const setData = (newData: T | undefined): void => {
     data = newData;
   };
 
   const render = (c: CanvasRenderingContext2D): void => {
+    if (data === undefined) {
+      return;
+    }
+
     c.save();
     if (area) {
       c.beginPath();

@@ -33,10 +33,5 @@ export function createGridRenderer(area: Rect): CanvasRenderer<GridData> {
     drawLineGrid(c, lineGridParams);
   };
 
-  const initialData: GridData = {
-    xOffsets: [],
-    yOffsets: [],
-  };
-
-  return createCanvasRenderer<GridData>(area, initialData, renderer);
+  return createCanvasRenderer<GridData>(area, undefined, renderer);
 }

@@ -41,7 +41,7 @@ export function createVerticalAxisRenderer(
 
   return createCanvasRenderer<readonly PriceAxisOutputItem[]>(
     area,
-    [],
+    undefined,
     renderer,
   );
 }

@@ -17,10 +17,5 @@ export function createCandleSeriesRenderer(
     drawCandleSeries(c, area, data);
   };
 
-  const initialData: CandleSeriesData = {
-    itemWidth: 10,
-    items: [],
-  };
-
-  return createCanvasRenderer<CandleSeriesData>(area, initialData, renderer);
+  return createCanvasRenderer<CandleSeriesData>(area, undefined, renderer);
 }
