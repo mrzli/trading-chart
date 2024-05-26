@@ -31,7 +31,8 @@ export function createHorizontalAxisRenderer(
         textAlign: 'center',
         textBaseline: 'top',
         color: 'white',
-        font: '12px sans-serif',
+        fontSize: 12,
+        fontFamily: 'sans-serif',
       };
 
       drawText(c, params);

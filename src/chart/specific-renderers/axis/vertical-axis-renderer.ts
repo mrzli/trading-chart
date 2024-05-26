@@ -31,8 +31,8 @@ export function createVerticalAxisRenderer(
         textAlign: 'start',
         textBaseline: 'middle',
         color: 'white',
-        font: '12px sans-serif',
-        // font: '12px Courier New',
+        fontSize: 12,
+        fontFamily: 'sans-serif',
       };
 
       drawText(c, params);
