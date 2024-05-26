@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/html';
 import { decoratorPadding } from '../../storybook-utils';
 import {
+  TextParametersStyle,
   measurePeformanceTime,
-  measureTextHeight,
-  measureTextWidth,
+  measureText,
+  measureTextCurrentStyle,
 } from '../../../chart';
 
 interface Props {
@@ -35,52 +36,38 @@ const STORY_META: Meta<Props> = {
 };
 export default STORY_META;
 
-export const Width: StoryObj<Props> = {
+export const Measure: StoryObj<Props> = {
   render: (args: Props): HTMLElement => {
-    let result = 0;
     return renderPerformanceComparer(
       args,
       (c) => {
         for (let i = 0; i < args.iterations; i++) {
-          result = c.measureText(args.text).width;
+          c.measureText(args.text);
         }
       },
-      () => {
+      (c) => {
+        const style: TextParametersStyle = {
+          font: `${args.fontSize}px ${args.fontFamily}`,
+        };
         for (let i = 0; i < args.iterations; i++) {
-          result = measureTextWidth(args.fontFamily, args.fontSize, args.text);
+          measureText(c, style, args.text);
+        }
+      },
+      (c) => {
+        for (let i = 0; i < args.iterations; i++) {
+          measureTextCurrentStyle(c, args.text);
         }
       },
     );
   },
 };
 
-export const Height: StoryObj<Props> = {
-  render: (args: Props): HTMLElement => {
-    let result = 0;
-    return renderPerformanceComparer(
-      args,
-      (c) => {
-        for (let i = 0; i < args.iterations; i++) {
-          const tm = c.measureText(args.text);
-          result = tm.actualBoundingBoxAscent + tm.actualBoundingBoxDescent;
-        }
-      },
-      () => {
-        for (let i = 0; i < args.iterations; i++) {
-          result = measureTextHeight(args.fontFamily, args.fontSize);
-        }
-      },
-    );
-  },
-};
+type InputFunction = (c: CanvasRenderingContext2D) => void;
 
 function renderPerformanceComparer(
   args: Props,
-  defaultFunction: (c: CanvasRenderingContext2D) => void,
-  customFunction: () => void,
+  ...functions: readonly InputFunction[]
 ): HTMLElement {
-  const { fontFamily, fontSize, text, iterations } = args;
-
   const container = document.createElement('div');
   const canvas = createCanvas(document);
   container.append(canvas);
@@ -89,18 +76,18 @@ function renderPerformanceComparer(
   const c = canvas.getContext('2d')!;
   setCanvasStyles(c, args);
 
-  const defaultMeasurementsResult = measurePeformanceTime(() =>
-    defaultFunction(c),
+  const results: readonly number[] = functions.map((f) =>
+    measurePeformanceTime(() => f(c)),
   );
 
-  const customMeasurementsResult = measurePeformanceTime(() =>
-    customFunction(),
+  const displays: readonly string[] = results.map(
+    (result, index) => `Performance ${index + 1}: ${result}ms`,
   );
 
-  const displays: readonly string[] = [
-    `Default performance: ${defaultMeasurementsResult}ms`,
-    `Custom performance: ${customMeasurementsResult}ms`,
-  ];
+  // [
+  //   `Default performance: ${defaultMeasurementsResult}ms`,
+  //   `Custom performance: ${customMeasurementsResult}ms`,
+  // ];
 
   for (const display of displays) {
     const div = createTextDiv(document);
