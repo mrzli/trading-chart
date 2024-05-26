@@ -36,9 +36,9 @@ export function drawBoxedText(
   const tm = c.measureText(text);
 
   const nonPaddedX1 = x - tm.actualBoundingBoxLeft;
-  const nonPaddedY1 = y - tm.actualBoundingBoxAscent;
+  const nonPaddedY1 = y - tm.fontBoundingBoxAscent;
   const nonPaddedX2 = x + tm.actualBoundingBoxRight;
-  const nonPaddedY2 = y + tm.actualBoundingBoxDescent;
+  const nonPaddedY2 = y + tm.fontBoundingBoxDescent;
 
   const padding: Margin = unadjustedPadding ?? ZERO_PADDING;
 

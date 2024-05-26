@@ -1,5 +1,4 @@
 import {
-  CursorRendererDataItem,
   createCursorRenderer,
 } from './../../specific-renderers/cursor/cursor-renderer';
 import {
@@ -102,11 +101,10 @@ export function updateCanvasChart(
   );
 
   // cursor
-  const cursorItems: readonly CursorRendererDataItem[] = [];
 
   const cursorData: CursorRendererData = {
     areas: layout,
-    items: cursorItems,
+    chartData: data,
     seriesPosition,
     timezone,
     priceRange,

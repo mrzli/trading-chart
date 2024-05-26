@@ -14,6 +14,9 @@ importers:
       '@gmjs/array-create':
         specifier: ^0.0.1
         version: 0.0.1
+      '@gmjs/array-transformers':
+        specifier: ^0.0.3
+        version: 0.0.3
       '@gmjs/assert':
         specifier: ^0.0.6
         version: 0.0.6
@@ -938,6 +941,10 @@ packages:
   '@gmjs/array-create@0.0.1':
     resolution: {integrity: sha512-sgahvPdokMh0+rpeaMXNalWVWigsckVVmD++kXCAEdx34nnxj+Xv5xsfkIffNbiu7PJe+RBb1Aj6W8hH7KbkIQ==}
     engines: {node: '>=16.0.0'}
+
+  '@gmjs/array-transformers@0.0.3':
+    resolution: {integrity: sha512-8tZJ4QURa127TWyBNOU90W/Jy1xi10ztwHOD6cV2A1+mWw+WjiypLukXYPPgTs2n/Eh2POBGU5Vh5DugdKSJTg==}
+    engines: {node: '>=20.10.0'}
 
   '@gmjs/assert@0.0.6':
     resolution: {integrity: sha512-eVzr9x1a/6Zk/nYGjWFfpdOysiEbcNAc9CosMVXak/jS4wi1dTwCwR4EQAz7Cx7wAu6rL18KkUvw/6cKcb+MgQ==}
@@ -5683,6 +5690,10 @@ snapshots:
       tslib: 2.6.2
 
   '@gmjs/array-create@0.0.1':
+    dependencies:
+      tslib: 2.6.2
+
+  '@gmjs/array-transformers@0.0.3':
     dependencies:
       tslib: 2.6.2
 

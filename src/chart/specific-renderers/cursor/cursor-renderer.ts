@@ -1,8 +1,8 @@
+import { unixSecondsToDateObjectTz } from '@gmjs/date-util';
 import { CanvasRenderer, createCanvasRenderer } from '../../canvas-renderer';
-import { CanvasChartCursorState } from '../../chart';
+import { CanvasChartCursorState, CanvasChartData } from '../../chart';
 import {
   BoxedTextParameters,
-  CandleSeriesItem,
   HorizontalLineParameters,
   VerticalLineParameters,
   drawBoxedText,
@@ -11,19 +11,19 @@ import {
 } from '../../draw';
 import {
   ChartAreas,
+  dateObjectToWeekday,
+  formatAsDate,
+  formatAsHourMinute,
+  formatAsWeekdayString,
   priceToPixel,
   seriesIndexFractionalToPixel,
 } from '../../helpers';
-import { Ohlc, Range, Rect, SeriesPosition } from '../../types';
-
-export interface CursorRendererDataItem {
-  readonly ohlc: Ohlc;
-  readonly candle: CandleSeriesItem;
-}
+import { Interval, Range, Rect, SeriesPosition } from '../../types';
+import { filterOutNullish } from '@gmjs/array-transformers';
 
 export interface CursorRendererData {
-  readonly items: readonly CursorRendererDataItem[];
   readonly areas: ChartAreas;
+  readonly chartData: CanvasChartData;
   readonly seriesPosition: SeriesPosition;
   readonly timezone: string;
   readonly priceRange: Range;
@@ -41,6 +41,7 @@ export function createCursorRenderer(
   ): void => {
     const {
       areas,
+      chartData,
       seriesPosition,
       timezone,
       priceRange,
@@ -81,9 +82,9 @@ export function createCursorRenderer(
       color: COLOR,
       fontSize: 12,
       fontFamily: 'sans-serif',
-      text: price.toFixed(pricePrecision),
+      text: formatPrice(price, pricePrecision),
       textBaseline: 'middle',
-      padding: { top: 5, right: 5, bottom: 5, left: 5 },
+      padding: { top: 2, right: 5, bottom: 2, left: 5 },
       boxDrawType: 'fill',
       boxFillColor: 'orange',
     };
@@ -101,16 +102,22 @@ export function createCursorRenderer(
 
     drawVerticalLine(c, seriesLineParams);
 
+    const seriesIntegerIndex = Math.floor(seriesItemIndex);
+    const item = chartData.items[seriesIntegerIndex];
+
     const seriesTextParams: BoxedTextParameters = {
       x: x + xCoord,
       y: y + height + 6,
       color: COLOR,
       fontSize: 12,
       fontFamily: 'sans-serif',
-      text: 'series',
+      text:
+        item === undefined
+          ? '-'
+          : formatTime(item.time, timezone, chartData.interval),
       textAlign: 'center',
       textBaseline: 'top',
-      padding: { top: 5, right: 5, bottom: 5, left: 6 },
+      padding: { top: 2, right: 5, bottom: 2, left: 5 },
       boxDrawType: 'fill',
       boxFillColor: 'orange',
     };
@@ -119,6 +126,34 @@ export function createCursorRenderer(
   };
 
   return createCanvasRenderer<CursorRendererData>(area, undefined, renderer);
+}
+
+function formatPrice(price: number, pricePrecision: number): string {
+  return price.toFixed(pricePrecision);
+}
+
+function formatTime(
+  time: number,
+  timezone: string,
+  interval: Interval,
+): string {
+  const { unit } = interval;
+
+  const showTime = unit === 'h' || unit === 'm' || unit === 's';
+
+  const dateObject = unixSecondsToDateObjectTz(time, timezone);
+
+  const weekday = dateObjectToWeekday(dateObject);
+
+  const timeStringComponents: readonly string[] = filterOutNullish([
+    formatAsWeekdayString(weekday),
+    formatAsDate(dateObject),
+    showTime ? formatAsHourMinute(dateObject) : undefined,
+  ]);
+
+  const timeString = timeStringComponents.join(' ');
+
+  return timeString;
 }
 
 const COLOR = 'rgba(255, 255, 255, 1.0)';
