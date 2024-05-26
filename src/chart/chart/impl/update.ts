@@ -2,7 +2,6 @@ import {
   CursorRendererDataItem,
   createCursorRenderer,
 } from './../../specific-renderers/cursor/cursor-renderer';
-import { clamp } from '@gmjs/number-util';
 import {
   PriceAxisInput,
   processPriceAxisData,
@@ -29,6 +28,7 @@ import {
   CanvasChartStateWrapper,
 } from '../types';
 import { TimeAxisInput } from '../../axis/time/types/time-axis-input';
+import { processState } from './internal';
 
 export function updateCanvasChart(
   input: CanvasChartInput,
@@ -143,22 +143,3 @@ export function updateCanvasChart(
   renderingPipeline.render();
   console.timeEnd('render');
 }
-
-function processState(stateWrapper: CanvasChartStateWrapper): void {
-  const { state } = stateWrapper;
-
-  stateWrapper.state = {
-    ...state,
-    seriesPosition: {
-      ...state.seriesPosition,
-      itemSpan: clamp(
-        state.seriesPosition.itemSpan,
-        MIN_ITEM_SPAN,
-        MAX_ITEM_SPAN,
-      ),
-    },
-  };
-}
-
-const MIN_ITEM_SPAN = 20;
-const MAX_ITEM_SPAN = 500;
