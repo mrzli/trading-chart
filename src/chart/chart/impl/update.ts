@@ -28,7 +28,7 @@ import {
   CanvasChartStateWrapper,
 } from '../types';
 import { TimeAxisInput } from '../../axis/time/types/time-axis-input';
-import { processState } from './internal';
+import { processState, updateStateLayout } from './internal';
 
 export function updateCanvasChart(
   input: CanvasChartInput,
@@ -36,6 +36,7 @@ export function updateCanvasChart(
   stateWrapper: CanvasChartStateWrapper,
 ): void {
   processState(stateWrapper);
+  updateStateLayout(input, options, stateWrapper);
 
   const { canvas } = input;
 
