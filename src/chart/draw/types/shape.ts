@@ -1,4 +1,10 @@
-export type ShapeDrawType = 'fill' | 'stroke' | 'fill-and-stroke';
+export const LIST_OF_SHAPE_DRAW_TYPES = [
+  'fill',
+  'stroke',
+  'fill-and-stroke',
+] as const;
+
+export type ShapeDrawType = (typeof LIST_OF_SHAPE_DRAW_TYPES)[number];
 
 export interface ShapeParametersBase {
   readonly drawType: ShapeDrawType;

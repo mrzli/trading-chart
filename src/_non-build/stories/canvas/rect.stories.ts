@@ -4,13 +4,21 @@ import {
   createCanvas,
   decoratorPadding,
 } from '../../storybook-utils';
-import { RectParameters, drawRect } from '../../../chart';
+import {
+  LIST_OF_SHAPE_DRAW_TYPES,
+  RectParameters,
+  drawRect,
+} from '../../../chart';
 
 const STORY_META: Meta<RectParameters> = {
   title: 'Canvas/Rect',
   tags: [],
   decorators: [decoratorPadding(document, '16px')],
   argTypes: {
+    drawType: {
+      control: 'inline-radio',
+      options: LIST_OF_SHAPE_DRAW_TYPES,
+    },
     strokeColor: {
       control: 'color',
     },
@@ -34,7 +42,6 @@ export const Primary: StoryObj<RectParameters> = {
 
     const canvas = createCanvas(document, canvasInput);
     container.append(canvas);
-    container.append(document.createElement('br'));
 
     const c = canvas.getContext('2d')!;
 
