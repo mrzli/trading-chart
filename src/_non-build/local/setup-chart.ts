@@ -18,6 +18,7 @@ export function setupChart(
   const options: CanvasChartOptions = {
     minXAxisTickDistance: MIN_X_AXIS_TICK_DISTANCE,
     minYAxisTickDistance: MIN_Y_AXIS_TICK_DISTANCE,
+    fontSize: 12,
   };
 
   const chart = createCanvasChart(input, options);

@@ -11,7 +11,6 @@ import {
 } from '../time-tick-position';
 import { getMinTimeTickInterval } from '../time-tick-interval';
 import {
-  MIN_X_AXIS_TICK_DISTANCE,
   formatAsDay,
   formatAsHourMinute,
   formatAsMonth,
@@ -27,14 +26,14 @@ export function getTimeAxisOutput(
     return [];
   }
 
-  const { position, axisLength, interval: inputInterval } = input;
+  const { minTickDistance, position, axisLength, interval: inputInterval } = input;
   const { itemSpan } = position;
 
   const interval = getMinTimeTickInterval(
     itemSpan,
     axisLength,
     inputInterval,
-    MIN_X_AXIS_TICK_DISTANCE,
+    minTickDistance,
   );
 
   const timeBreakpoints = getTimeBreakpoints(extendedItems, interval);

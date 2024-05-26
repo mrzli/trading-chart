@@ -32,12 +32,14 @@ import { processState } from './internal';
 
 export function updateCanvasChart(
   input: CanvasChartInput,
-  _options: CanvasChartOptions,
+  options: CanvasChartOptions,
   stateWrapper: CanvasChartStateWrapper,
 ): void {
   processState(stateWrapper);
 
   const { canvas } = input;
+
+  const { minXAxisTickDistance, minYAxisTickDistance } = options;
 
   const { layout, data, timezone, seriesPosition, priceRange, cursorState } =
     stateWrapper.state;
@@ -58,6 +60,7 @@ export function updateCanvasChart(
     console.time('processTimeAxisData');
   }
   const timeAxisInput: TimeAxisInput = {
+    minTickDistance: minXAxisTickDistance,
     position: seriesPosition,
     axisLength: xAxisRect.width,
     data: data.items,
@@ -75,6 +78,7 @@ export function updateCanvasChart(
   const pricePrecision = 1;
 
   const priceAxisInput: PriceAxisInput = {
+    minTickDistance: minYAxisTickDistance,
     range: priceRange,
     axisLength: yAxisRect.height,
     pricePrecision,

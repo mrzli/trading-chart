@@ -1,8 +1,5 @@
 import { round } from '@gmjs/number-util';
-import {
-  MIN_Y_AXIS_TICK_DISTANCE,
-  getSignificantDigitIndex,
-} from '../../helpers';
+import { getSignificantDigitIndex } from '../../helpers';
 import { PriceAxisInput } from './types';
 import { TickValue } from '../types';
 
@@ -11,13 +8,13 @@ const MAX_PRECISION = 10;
 export function getPriceAxisTickValues(
   input: PriceAxisInput,
 ): readonly TickValue[] {
-  const { range, axisLength, pricePrecision } = input;
+  const { minTickDistance, range, axisLength, pricePrecision } = input;
 
   const { from, to } = range;
   const priceDiff = to - from;
   const pricePerPixel = priceDiff / axisLength;
 
-  const minPriceDiffPerTick = pricePerPixel * MIN_Y_AXIS_TICK_DISTANCE;
+  const minPriceDiffPerTick = pricePerPixel * minTickDistance;
   const pricePerTick = getNextHigherPricePerTick(
     minPriceDiffPerTick,
     pricePrecision,

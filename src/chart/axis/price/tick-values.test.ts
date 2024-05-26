@@ -11,10 +11,13 @@ describe('tick-values', () => {
       readonly expected: readonly TickValue[];
     }
 
+    const MIN_TICK_DISTANCE = 30;
+
     const EXAMPLES: readonly Example[] = [
       {
         description: 'simple',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 100 },
           axisLength: 200,
           pricePrecision: 0,
@@ -31,6 +34,7 @@ describe('tick-values', () => {
       {
         description: 'inexact division',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 205, to: 299 },
           axisLength: 200,
           pricePrecision: 0,
@@ -45,6 +49,7 @@ describe('tick-values', () => {
       {
         description: 'fractional precision',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 1.050_12, to: 1.062_18 },
           axisLength: 200,
           pricePrecision: 5,
@@ -61,6 +66,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 0.01',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 0.02 },
           axisLength: 100,
           pricePrecision: 5,
@@ -74,6 +80,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 0.02',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 0.04 },
           axisLength: 100,
           pricePrecision: 5,
@@ -87,6 +94,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 0.04',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 0.08 },
           axisLength: 100,
           pricePrecision: 5,
@@ -100,6 +108,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 0.05',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 0.15 },
           axisLength: 100,
           pricePrecision: 5,
@@ -114,6 +123,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 0.05',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 0.15 },
           axisLength: 100,
           pricePrecision: 5,
@@ -128,6 +138,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 1',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 2 },
           axisLength: 100,
           pricePrecision: 5,
@@ -141,6 +152,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 2',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 4 },
           axisLength: 100,
           pricePrecision: 5,
@@ -154,6 +166,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 4',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 8 },
           axisLength: 100,
           pricePrecision: 5,
@@ -167,6 +180,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 5',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 15 },
           axisLength: 100,
           pricePrecision: 5,
@@ -181,6 +195,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 10',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 20 },
           axisLength: 100,
           pricePrecision: 5,
@@ -194,6 +209,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 20',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 40 },
           axisLength: 100,
           pricePrecision: 5,
@@ -207,6 +223,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 25',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 80 },
           axisLength: 100,
           pricePrecision: 5,
@@ -221,6 +238,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 40',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 100 },
           axisLength: 100,
           pricePrecision: 5,
@@ -234,6 +252,7 @@ describe('tick-values', () => {
       {
         description: 'tick size 50',
         input: {
+          minTickDistance: MIN_TICK_DISTANCE,
           range: { from: 0, to: 150 },
           axisLength: 100,
           pricePrecision: 5,
