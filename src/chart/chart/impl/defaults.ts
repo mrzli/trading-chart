@@ -16,6 +16,7 @@ export function getInitialCanvasChartState(): CanvasChartState {
     timezone: 'UTC',
     seriesPosition: { rightItemOffset: 100, itemSpan: 120 },
     priceRange: { from: 0, to: 10_000 },
+    pricePrecision: 1,
     cursorState: undefined,
   };
 }

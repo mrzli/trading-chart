@@ -10,5 +10,6 @@ export interface CanvasChartState {
   readonly timezone: string;
   readonly seriesPosition: SeriesPosition;
   readonly priceRange: Range;
+  readonly pricePrecision: number;
   readonly cursorState: CanvasChartCursorState | undefined;
 }

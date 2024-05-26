@@ -1,8 +1,9 @@
+import { TextParametersStyle } from '../../draw';
 import {
   ChartAreas,
   getChartAreas,
   getNumIntegerDigits,
-  measureTextSize,
+  measureText,
 } from '../../helpers';
 import { Range, Size } from '../../types';
 
@@ -26,13 +27,13 @@ export function getChartLayout(
   );
 
   const c = canvas.getContext('2d')!;
-  c.save();
 
-  c.font = `${fontSize}px sans-serif`;
-  const textSizeFrom = measureTextSize(c, textForMeasurementFrom);
-  const textSizeTo = measureTextSize(c, textForMeasurementTo);
-
-  c.restore();
+  const textStyle: TextParametersStyle = {
+    fontSize,
+    fontFamily: 'sans-serif',
+  };
+  const textSizeFrom = measureText(c, textStyle, textForMeasurementFrom);
+  const textSizeTo = measureText(c, textStyle, textForMeasurementTo);
 
   const xAxisHeight = textSizeFrom.height + SIZE_BUFFER;
   const yAxisWidth =

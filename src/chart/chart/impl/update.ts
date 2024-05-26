@@ -39,7 +39,7 @@ export function updateCanvasChart(
 
   const { canvas } = input;
 
-  const { layout, data, timezone, seriesPosition, priceRange } =
+  const { layout, data, timezone, seriesPosition, priceRange, cursorState } =
     stateWrapper.state;
 
   const {
@@ -49,10 +49,14 @@ export function updateCanvasChart(
     yAxis: yAxisRect,
   } = layout;
 
-  console.time('createExampleChart');
+  if (SHOW_PERFORMANCE) {
+    console.time('createExampleChart');
+  }
 
   // x-axis
-  console.time('processTimeAxisData');
+  if (SHOW_PERFORMANCE) {
+    console.time('processTimeAxisData');
+  }
   const timeAxisInput: TimeAxisInput = {
     position: seriesPosition,
     axisLength: xAxisRect.width,
@@ -62,7 +66,9 @@ export function updateCanvasChart(
   };
 
   const xAxisData = processTimeAxisData(timeAxisInput);
-  console.timeEnd('processTimeAxisData');
+  if (SHOW_PERFORMANCE) {
+    console.timeEnd('processTimeAxisData');
+  }
   // end x-axis
 
   // y-axis
@@ -96,9 +102,11 @@ export function updateCanvasChart(
   const cursorData: CursorRendererData = {
     areas: layout,
     items: cursorItems,
-    priceRange,
     seriesPosition,
-    cursorState: stateWrapper.state.cursorState,
+    timezone,
+    priceRange,
+    pricePrecision,
+    cursorState,
   };
   // end cursor
 
@@ -137,9 +145,17 @@ export function updateCanvasChart(
     canvasRenderingPipelineOptions,
   );
 
-  console.timeEnd('createExampleChart');
+  if (SHOW_PERFORMANCE) {
+    console.timeEnd('createExampleChart');
+  }
 
-  console.time('render');
+  if (SHOW_PERFORMANCE) {
+    console.time('render');
+  }
   renderingPipeline.render();
-  console.timeEnd('render');
+  if (SHOW_PERFORMANCE) {
+    console.timeEnd('render');
+  }
 }
+
+const SHOW_PERFORMANCE = false;

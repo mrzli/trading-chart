@@ -3,7 +3,7 @@ import { RectParameters, drawRect } from '../shape';
 import { TextParameters, drawText, setTextStyle } from '../text';
 import { ShapeDrawType } from '../types';
 
-export interface BoxedTextBoxParameters {
+export interface BoxedTextParametersBox {
   readonly padding?: Margin;
   readonly boxDrawType: ShapeDrawType;
   readonly boxStrokeColor?: string;
@@ -13,7 +13,7 @@ export interface BoxedTextBoxParameters {
   readonly boxFillColor?: string;
 }
 
-export type BoxedTextParameters = TextParameters & BoxedTextBoxParameters;
+export type BoxedTextParameters = TextParameters & BoxedTextParametersBox;
 
 export function drawBoxedText(
   c: CanvasRenderingContext2D,
