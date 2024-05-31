@@ -86,7 +86,7 @@ export function createCursorRenderer(
       textBaseline: 'middle',
       padding: { top: 2, right: 5, bottom: 2, left: 5 },
       boxDrawType: 'fill',
-      boxFillColor: 'orange',
+      boxFillColor: BOX_COLOR,
     };
 
     // time
@@ -119,7 +119,7 @@ export function createCursorRenderer(
       textBaseline: 'top',
       padding: { top: 2, right: 5, bottom: 2, left: 5 },
       boxDrawType: 'fill',
-      boxFillColor: 'orange',
+      boxFillColor: BOX_COLOR,
     };
 
     drawBoxedText(c, seriesTextParams);
@@ -157,4 +157,5 @@ function formatTime(
 }
 
 const COLOR = 'rgba(255, 255, 255, 1.0)';
+const BOX_COLOR = '#005F25';
 const DASH_PATTERN: readonly number[] = [5, 5];
