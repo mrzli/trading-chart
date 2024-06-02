@@ -14,8 +14,8 @@ export function getInitialCanvasChartState(): CanvasChartState {
       interval: { unit: 'D', value: 1 },
     },
     timezone: 'UTC',
-    seriesPosition: { rightItemOffset: 100, itemSpan: 120 },
-    priceRange: { from: 0, to: 10_000 },
+    seriesPosition: { rightItemOffset: 950, itemSpan: 120 },
+    priceRange: { from: 181.6, to: 184.2 },
     pricePrecision: 1,
     cursorState: undefined,
   };
