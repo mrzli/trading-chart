@@ -5,7 +5,8 @@ import {
   MIN_Y_AXIS_TICK_DISTANCE,
   createCanvasChart,
 } from '../../../chart';
-import { getChartData } from './chart-data';
+// import { getChartData } from './built-in-chart-data';
+import { getChartData } from './server-chart-data';
 
 export async function setupChart(
   wrapperElement: HTMLDivElement,
