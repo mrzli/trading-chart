@@ -1,19 +1,16 @@
-import { isoDateTimeToUnixSeconds } from '@gmjs/date-util';
 import {
-  CanvasChartData,
   CanvasChartInput,
   CanvasChartOptions,
-  Interval,
   MIN_X_AXIS_TICK_DISTANCE,
   MIN_Y_AXIS_TICK_DISTANCE,
   createCanvasChart,
-} from '../../chart';
-import { TEST_RAW_OHLC_DATA, convertRawOhlcDataToInterval } from '../test-data';
+} from '../../../chart';
+import { getChartData } from './chart-data';
 
-export function setupChart(
+export async function setupChart(
   wrapperElement: HTMLDivElement,
   chartElement: HTMLCanvasElement,
-): void {
+): Promise<void> {
   const input: CanvasChartInput = { canvas: chartElement };
   const options: CanvasChartOptions = {
     minXAxisTickDistance: MIN_X_AXIS_TICK_DISTANCE,
@@ -24,16 +21,7 @@ export function setupChart(
   const chart = createCanvasChart(input, options);
   chart.initialize();
 
-  const startDate = isoDateTimeToUnixSeconds('2020-01-01T00:00:00Z');
-  const interval: Interval = { unit: 'm', value: 1 };
-
-  const items = convertRawOhlcDataToInterval(
-    TEST_RAW_OHLC_DATA,
-    startDate,
-    interval,
-  );
-
-  const data: CanvasChartData = { items, interval };
+  const data = await getChartData();
 
   chart.setData(data);
   chart.setTimezone('UTC');

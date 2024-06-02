@@ -1,5 +1,5 @@
-import './index.css';
-import { setupChart } from './setup-chart';
+import './styles/index.css';
+import { setupChart } from './src/setup-chart';
 
 const HTML = `
 <div id="chart-container" class="w-screen h-screen">
@@ -15,7 +15,7 @@ const HTML = `
 </div>
 `;
 
-function execute(): void {
+async function execute(): Promise<void> {
   const rootElement = selectOrThrow<HTMLDivElement>(document, '#root');
   rootElement.innerHTML = HTML;
 
@@ -25,7 +25,7 @@ function execute(): void {
   );
   const chartElement = selectOrThrow<HTMLCanvasElement>(document, '#chart');
 
-  setupChart(chartWrapperElement, chartElement);
+  await setupChart(chartWrapperElement, chartElement);
 }
 
 function selectOrThrow<T extends HTMLElement>(
@@ -40,4 +40,4 @@ function selectOrThrow<T extends HTMLElement>(
   return element;
 }
 
-execute();
+execute().finally(() => {});
