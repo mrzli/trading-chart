@@ -16,12 +16,28 @@ describe('tick-values', () => {
     const START_TIMESTAMP = 1_704_067_200; // 2024-01-01T00:00:00Z
     const INTERVAL = 300;
 
+    const DEFAULT_INPUT: TimeAxisInput = {
+      minTickDistance: 50,
+      position: {
+        rightItemOffset: 100,
+        itemSpan: 100,
+      },
+      axisLength: 1000,
+      data: [],
+      interval: {
+        unit: 'm',
+        value: 1,
+      },
+      timezone: 'UTC',
+    };
+
     const DATA = getTestData(START_TIMESTAMP, INTERVAL);
 
     const EXAMPLES: readonly Example[] = [
       {
         description: 'empty data',
         input: {
+          ...DEFAULT_INPUT,
           position: {
             rightItemOffset: 111.5,
             itemSpan: 32.2,
@@ -34,6 +50,7 @@ describe('tick-values', () => {
       {
         description: 'simple',
         input: {
+          ...DEFAULT_INPUT,
           position: {
             rightItemOffset: 111.5,
             itemSpan: 32.2,
