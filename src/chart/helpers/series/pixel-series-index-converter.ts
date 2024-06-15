@@ -1,9 +1,9 @@
-import { SeriesPosition } from "../../types";
+import { SeriesPosition } from '../../types';
 
 export function pixelToSeriesIndexFractional(
   pixelPosition: number,
   axisLength: number,
-  seriesPosition: SeriesPosition
+  seriesPosition: SeriesPosition,
 ): number {
   const { rightItemOffset, itemSpan } = seriesPosition;
   const leftItemOffset = rightItemOffset - itemSpan;
@@ -14,7 +14,7 @@ export function pixelToSeriesIndexFractional(
 export function seriesIndexFractionalToPixel(
   seriesIndexFractional: number,
   axisLength: number,
-  seriesPosition: SeriesPosition
+  seriesPosition: SeriesPosition,
 ): number {
   const { rightItemOffset, itemSpan } = seriesPosition;
   const leftItemOffset = rightItemOffset - itemSpan;

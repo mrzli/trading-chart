@@ -26,7 +26,12 @@ export function getTimeAxisOutput(
     return [];
   }
 
-  const { minTickDistance, position, axisLength, interval: inputInterval } = input;
+  const {
+    minTickDistance,
+    position,
+    axisLength,
+    interval: inputInterval,
+  } = input;
   const { itemSpan } = position;
 
   const interval = getMinTimeTickInterval(

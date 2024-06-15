@@ -1,6 +1,9 @@
 import { describe, it, expect } from 'vitest';
 import { SeriesPosition } from '../../types';
-import { pixelToSeriesIndexFractional, seriesIndexFractionalToPixel } from './pixel-series-index-converter';
+import {
+  pixelToSeriesIndexFractional,
+  seriesIndexFractionalToPixel,
+} from './pixel-series-index-converter';
 
 describe('pixel-series-index-converter', () => {
   const AXIS_LENGTH = 1000;
@@ -83,7 +86,7 @@ describe('pixel-series-index-converter', () => {
       };
       readonly expected: number;
     }
-  
+
     const EXAMPLES: readonly Example[] = [
       {
         description: 'leftmost position',
@@ -122,10 +125,11 @@ describe('pixel-series-index-converter', () => {
         expected: 505,
       },
     ];
-  
+
     for (const example of EXAMPLES) {
       it(JSON.stringify(example), () => {
-        const { seriesIndexFractional, axisLength, seriesPosition } = example.input;
+        const { seriesIndexFractional, axisLength, seriesPosition } =
+          example.input;
 
         const actual = seriesIndexFractionalToPixel(
           seriesIndexFractional,

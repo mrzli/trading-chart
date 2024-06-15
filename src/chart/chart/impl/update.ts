@@ -1,6 +1,4 @@
-import {
-  createCursorRenderer,
-} from './../../specific-renderers/cursor/cursor-renderer';
+import { createCursorRenderer } from './../../specific-renderers/cursor/cursor-renderer';
 import {
   PriceAxisInput,
   processPriceAxisData,
