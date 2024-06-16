@@ -16,7 +16,7 @@ import {
   formatAsMonth,
   formatAsYear,
 } from '../../../helpers';
-import { TimeComponentChange } from './types';
+import { LIST_OF_TIME_COMPONENT_CHANGES, TimeComponentChange } from './types';
 
 export function getTimeAxisOutput(
   input: TimeAxisInput,
@@ -51,9 +51,20 @@ export function getTimeAxisOutput(
     getTimeComponentChange(extendedItems[index], interval),
   );
 
-  const outputItems = breakpointIndices.map((index, i) =>
-    toOutputItem(extendedItems[index], timeComponentChanges[i]),
+  const minTickItemDistance = Math.ceil(
+    (minTickDistance * itemSpan) / axisLength,
   );
+
+  const remainingIndexes = filterItems(
+    timeComponentChanges,
+    minTickItemDistance,
+  );
+
+  const outputItems = breakpointIndices
+    .map((index, i) =>
+      toOutputItem(extendedItems[index], timeComponentChanges[i]),
+    )
+    .filter((_item, i) => remainingIndexes.has(i));
 
   return outputItems;
 }
@@ -151,6 +162,41 @@ function getTimeComponentChange(
   } else {
     return 'minute';
   }
+}
+
+function filterItems(
+  timeComponentChanges: readonly TimeComponentChange[],
+  minTickItemDistance: number,
+): ReadonlySet<number> {
+  const result = new Set<number>();
+
+  const orderedIndexes = getIndexesOrderedForFiltering(timeComponentChanges);
+
+  for (const index of orderedIndexes) {
+    // get first smaller and first larger index already added
+    // - do a binary search on an ordered array
+    // if the difference is gte minTickItemDistance
+    // - add the current index to result
+    // - also add the current index to ordered array
+  }
+
+  return result;
+}
+
+function getIndexesOrderedForFiltering(
+  timeComponentChanges: readonly TimeComponentChange[],
+): readonly number[] {
+  const result: number[] = [];
+
+  for (const changeUnit of LIST_OF_TIME_COMPONENT_CHANGES) {
+    for (const [i, timeComponentChange] of timeComponentChanges.entries()) {
+      if (timeComponentChange === changeUnit) {
+        result.push(i);
+      }
+    }
+  }
+
+  return result;
 }
 
 function toOutputItem(
