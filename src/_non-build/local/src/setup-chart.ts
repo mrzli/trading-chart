@@ -6,8 +6,8 @@ import {
   createCanvasChart,
 } from '../../../chart';
 // import { getChartData } from './built-in-chart-data';
-// import { getChartData } from './server-chart-data';
-import { getChartData } from './server-chart-data-databento';
+import { getChartData } from './server-chart-data';
+// import { getChartData } from './server-chart-data-databento';
 
 export async function setupChart(
   wrapperElement: HTMLDivElement,

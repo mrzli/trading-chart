@@ -1,9 +1,9 @@
 import { expect, describe, it } from 'vitest';
-import { Ohlc } from '../../types';
+import { Ohlc } from '../../../types';
 import { getTimeAxisTickValues } from './tick-values';
 import { range } from '@gmjs/array-create';
-import { TickValue } from '../types';
-import { TimeAxisInput } from './types';
+import { TickValue } from '../../types';
+import { TimeAxisInput } from '../types';
 
 describe('tick-values', () => {
   describe('getTimeAxisTickValues()', () => {

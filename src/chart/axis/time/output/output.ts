@@ -17,6 +17,8 @@ import {
   formatAsYear,
 } from '../../../helpers';
 import { LIST_OF_TIME_COMPONENT_CHANGES, TimeComponentChange } from './types';
+import { binarySearchIndexLte } from '@gmjs/binary-search';
+import { getTimeComponentChange } from './impl';
 
 export function getTimeAxisOutput(
   input: TimeAxisInput,
@@ -121,64 +123,52 @@ function getBreakpointIndices(
 
   return indices;
 }
-
-function getTimeComponentChange(
-  item: TimeAxisExtendedDataItem,
-  interval: TimeTickInterval,
-): TimeComponentChange {
-  const { dateObject, previousDateObject } = item;
-
-  if (previousDateObject === undefined) {
-    const { unit } = interval;
-
-    switch (unit) {
-      case 'm':
-      case 'h': {
-        return 'minute';
-      }
-      case 'D': {
-        return 'day';
-      }
-      case 'M': {
-        return 'month';
-      }
-      case 'Y': {
-        return 'year';
-      }
-      default: {
-        return ensureNever(unit);
-      }
-    }
-  }
-
-  if (dateObject.year !== previousDateObject.year) {
-    return 'year';
-  } else if (dateObject.month !== previousDateObject.month) {
-    return 'month';
-  }
-  // eslint-disable-next-line unicorn/no-negated-condition
-  else if (dateObject.day !== previousDateObject.day) {
-    return 'day';
-  } else {
-    return 'minute';
-  }
-}
-
 function filterItems(
   timeComponentChanges: readonly TimeComponentChange[],
   minTickItemDistance: number,
 ): ReadonlySet<number> {
-  const result = new Set<number>();
+  const addedTimeIndexes: number[] = [];
 
-  const orderedIndexes = getIndexesOrderedForFiltering(timeComponentChanges);
+  const orderedTimeIndexes =
+    getIndexesOrderedForFiltering(timeComponentChanges);
 
-  for (const index of orderedIndexes) {
-    // get first smaller and first larger index already added
-    // - do a binary search on an ordered array
-    // if the difference is gte minTickItemDistance
-    // - add the current index to result
-    // - also add the current index to ordered array
+  // console.log(orderedTimeIndexes);
+
+  for (const timeIndex of orderedTimeIndexes) {
+    const timeIndexBeforeIndex = binarySearchIndexLte(
+      timeIndex,
+      addedTimeIndexes,
+    );
+    const timeIndexAfterIndex =
+      timeIndexBeforeIndex + 1 < addedTimeIndexes.length
+        ? timeIndexBeforeIndex + 1
+        : -1;
+
+    const timeIndexBefore =
+      timeIndexBeforeIndex >= 0
+        ? addedTimeIndexes[timeIndexBeforeIndex]
+        : undefined;
+    const timeIndexAfter =
+      timeIndexAfterIndex >= 0
+        ? addedTimeIndexes[timeIndexAfterIndex]
+        : undefined;
+
+    const canAddDueToBefore =
+      timeIndexBefore === undefined ||
+      timeIndex - minTickItemDistance >= timeIndexBefore;
+    const canAddDueToAfter =
+      timeIndexAfter === undefined ||
+      timeIndex + minTickItemDistance <= timeIndexAfter;
+    const canAdd = canAddDueToBefore && canAddDueToAfter;
+
+    if (canAdd) {
+      const addPosition = timeIndexBeforeIndex + 1;
+      addedTimeIndexes.splice(addPosition, 0, timeIndex);
+    }
   }
+
+  // const result = new Set<number>(orderedTimeIndexes);
+  const result = new Set<number>(addedTimeIndexes);
 
   return result;
 }

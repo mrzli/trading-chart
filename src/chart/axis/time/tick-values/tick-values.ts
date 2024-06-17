@@ -1,5 +1,5 @@
-import { TickValue } from '../types';
-import { TimeAxisInput } from './types/time-axis-input';
+import { TickValue } from '../../types';
+import { TimeAxisInput } from '../types';
 
 export function getTimeAxisTickValues(
   input: TimeAxisInput,
