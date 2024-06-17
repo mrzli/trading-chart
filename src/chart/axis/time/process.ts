@@ -9,6 +9,10 @@ export function processTimeAxisData(
   const { timezone } = input;
 
   const tickValues = getTimeAxisTickValues(input);
+  if (tickValues.length === 0) {
+    return [];
+  }
+
   const extendedItems = getTimeAxisExtendedItems(tickValues, timezone);
   const result = getTimeAxisOutput(input, extendedItems);
 
