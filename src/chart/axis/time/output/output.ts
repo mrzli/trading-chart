@@ -9,7 +9,6 @@ import {
   getTimeTickPositionFirst,
   getTimeTickPositionNext,
 } from '../time-tick-position';
-import { getMinTimeTickInterval } from '../time-tick-interval';
 import {
   formatAsDay,
   formatAsHourMinute,
@@ -23,25 +22,10 @@ import { getTimeComponentChange } from './impl';
 export function getTimeAxisOutput(
   input: TimeAxisInput,
   extendedItems: readonly TimeAxisExtendedDataItem[],
+  interval: TimeTickInterval,
 ): readonly TimeAxisOutputItem[] {
-  if (extendedItems.length === 0) {
-    return [];
-  }
-
-  const {
-    minTickDistance,
-    position,
-    axisLength,
-    interval: inputInterval,
-  } = input;
+  const { minTickDistance, position, axisLength } = input;
   const { itemSpan } = position;
-
-  const interval = getMinTimeTickInterval(
-    itemSpan,
-    axisLength,
-    inputInterval,
-    minTickDistance,
-  );
 
   const timeBreakpoints = getTimeBreakpoints(extendedItems, interval);
   const breakpointIndices = getBreakpointIndices(
