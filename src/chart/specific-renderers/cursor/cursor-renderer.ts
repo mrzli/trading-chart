@@ -89,9 +89,9 @@ export function createCursorRenderer(
       boxFillColor: BOX_COLOR,
     };
 
-    // time
     drawBoxedText(c, priceTextParams);
 
+    // time
     const seriesLineParams: VerticalLineParameters = {
       x: x + xCoord,
       y1: y,
@@ -114,7 +114,9 @@ export function createCursorRenderer(
       text:
         item === undefined
           ? '-'
-          : formatTime(item.time, timezone, chartData.interval),
+          : formatTime(item.time, timezone, chartData.interval) +
+            ' ' +
+            seriesIntegerIndex,
       textAlign: 'center',
       textBaseline: 'top',
       padding: { top: 2, right: 5, bottom: 2, left: 5 },
