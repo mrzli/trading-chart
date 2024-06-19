@@ -11,7 +11,7 @@ export function createHandlerClick(
   _stateWrapper: CanvasChartStateWrapper,
   _eventStateWrapper: CanvasChartEventStateWrapper,
 ): (event: MouseEvent) => void {
-  return (event: MouseEvent): void => {
-    console.log('click', event);
+  return (_event: MouseEvent): void => {
+    // console.log('click', event);
   };
 }

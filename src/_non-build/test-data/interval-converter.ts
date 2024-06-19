@@ -5,11 +5,14 @@ export function convertRawOhlcDataToInterval(
   data: readonly Omit<Ohlc, 'time'>[],
   startDate: number,
   interval: Interval,
+  gapPattern: readonly number[],
 ): readonly Ohlc[] {
   const result: Ohlc[] = [];
 
+  let offset = 0;
+
   for (const [i, rawItem] of data.entries()) {
-    const duration = intervalToDuration(interval, i);
+    const duration = intervalToDuration(interval, offset);
     const time = unixSecondsAdd(startDate, 'UTC', duration);
 
     const item: Ohlc = {
@@ -18,6 +21,10 @@ export function convertRawOhlcDataToInterval(
     };
 
     result.push(item);
+
+    const currentGap =
+      gapPattern.length > 0 ? gapPattern[i % gapPattern.length] : 0;
+    offset += 1 + currentGap;
   }
 
   return result;

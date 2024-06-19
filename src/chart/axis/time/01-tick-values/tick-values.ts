@@ -1,15 +1,18 @@
 import { TickValue } from '../../types';
-import { TimeAxisInput } from '../types';
+import { TimeAxisInput, TimeAxisTickValueData } from '../types';
 
-export function getTimeAxisTickValues(
+export function getTimeAxisTickValueData(
   input: TimeAxisInput,
-): readonly TickValue[] {
+): TimeAxisTickValueData {
   const { position, axisLength, data } = input;
 
   const { rightItemOffset, itemSpan } = position;
 
   if (data.length === 0) {
-    return [];
+    return {
+      beforeFirstTime: undefined,
+      tickValues: [],
+    };
   }
 
   const leftItemOffset = rightItemOffset - itemSpan;
@@ -20,14 +23,22 @@ export function getTimeAxisTickValues(
   const firstItemIndex = Math.max(0, rawFirstItemIndex);
   const lastItemIndex = Math.min(rawLastItemIndex, data.length - 1);
 
+  const beforeFirstTime =
+    firstItemIndex > 0 ? data[firstItemIndex - 1].time : undefined;
+
   const ticks: TickValue[] = [];
+
   for (let i = firstItemIndex; i <= lastItemIndex; i++) {
     const { time } = data[i];
     const offset = indexToTickOffset(i, leftItemOffset, axisLength, itemSpan);
     const item: TickValue = { value: time, offset };
     ticks.push(item);
   }
-  return ticks;
+
+  return {
+    beforeFirstTime,
+    tickValues: ticks,
+  };
 }
 
 function indexToTickOffset(

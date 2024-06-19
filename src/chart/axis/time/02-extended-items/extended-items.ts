@@ -1,11 +1,17 @@
 import { unixSecondsToDateObjectTz } from '@gmjs/date-util';
-import { TickValue } from '../../types';
-import { TimeAxisExtendedDataItem } from '../types';
+import { TimeAxisExtendedDataItem, TimeAxisTickValueData } from '../types';
 
 export function getTimeAxisExtendedItems(
-  tickValues: readonly TickValue[],
+  tickValueData: TimeAxisTickValueData,
   timezone: string,
 ): readonly TimeAxisExtendedDataItem[] {
+  const { beforeFirstTime, tickValues } = tickValueData;
+
+  const beforeFirstDateObject =
+    beforeFirstTime === undefined
+      ? undefined
+      : unixSecondsToDateObjectTz(beforeFirstTime, timezone);
+
   const dateObjects = tickValues.map((v) =>
     unixSecondsToDateObjectTz(v.value, timezone),
   );
@@ -13,7 +19,8 @@ export function getTimeAxisExtendedItems(
   const extendedData: TimeAxisExtendedDataItem[] = [];
 
   for (const [i, tickValue] of tickValues.entries()) {
-    const previousDateObject = i > 0 ? dateObjects[i - 1] : undefined;
+    const previousDateObject =
+      i > 0 ? dateObjects[i - 1] : beforeFirstDateObject;
 
     const item: TimeAxisExtendedDataItem = {
       offset: tickValue.offset,

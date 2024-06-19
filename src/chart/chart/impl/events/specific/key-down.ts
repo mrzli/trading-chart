@@ -11,7 +11,7 @@ export function createHandlerKeyDown(
   _stateWrapper: CanvasChartStateWrapper,
   _eventStateWrapper: CanvasChartEventStateWrapper,
 ): (event: KeyboardEvent) => void {
-  return (event: KeyboardEvent): void => {
-    console.log('key-down', event);
+  return (_event: KeyboardEvent): void => {
+    // console.log('key-down', event);
   };
 }

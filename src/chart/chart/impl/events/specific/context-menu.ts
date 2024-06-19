@@ -11,7 +11,7 @@ export function createHandlerContextMenu(
   _stateWrapper: CanvasChartStateWrapper,
   _eventStateWrapper: CanvasChartEventStateWrapper,
 ): (event: MouseEvent) => void {
-  return (event: MouseEvent): void => {
-    console.log('context-menu', event);
+  return (_event: MouseEvent): void => {
+    // console.log('context-menu', event);
   };
 }
