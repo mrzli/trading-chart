@@ -1,4 +1,8 @@
-import { TimeAxisInput, TimeAxisOutputItem } from './types';
+import {
+  TimeAxisInput,
+  TimeAxisOutputItem,
+  TimeAxisProcessInput,
+} from './types';
 import { getTimeAxisTickValueData } from './01-tick-values';
 import { getTimeAxisExtendedItems } from './02-extended-items';
 import { getMinTimeTickInterval } from './03-time-tick-interval';
@@ -18,14 +22,35 @@ export function processTimeAxisData(
   // get additional date data, for easier further processing
   const extendedItems = getTimeAxisExtendedItems(tickValueData, timezone);
 
-  // get minimal distance between ticks, in terms of time
+  // get minimum distance between ticks, in terms of time
   const timeTickInterval = getMinTimeTickInterval(input);
 
-  const output = getTimeTickOutputItems(input, extendedItems, timeTickInterval);
+  // get minimum distance between ticks, in terms of items
+  const minTickItemDistance = getMinTickDistance(input);
+
+  const processInput: TimeAxisProcessInput = {
+    timeAxisInput: input,
+    extendedItems,
+    timeTickInterval,
+    minTickItemDistance,
+  };
+
+  const output = getTimeTickOutputItems(processInput);
 
   return output;
 
   // const result = getTimeAxisOutput(input, extendedItems, timeTickInterval);
 
   // return result;
+}
+
+function getMinTickDistance(input: TimeAxisInput): number {
+  const { position, axisLength, minTickDistance } = input;
+  const { itemSpan } = position;
+
+  const minTickItemDistance = Math.ceil(
+    (minTickDistance * itemSpan) / axisLength,
+  );
+
+  return minTickItemDistance;
 }
