@@ -585,9 +585,9 @@ describe('time-tick-interval', () => {
         },
       },
       {
-        description: 'Y 1 - exactly 4 y ticks',
+        description: 'Y 1 - 2 y ticks',
         input: createInput({
-          itemSpan: minTickSpan * 4,
+          itemSpan: minTickSpan * 1.5,
           interval: {
             unit: 'Y',
             value: 1,
@@ -595,7 +595,7 @@ describe('time-tick-interval', () => {
         }),
         expected: {
           unit: 'Y',
-          value: 4,
+          value: 2,
         },
       },
       {

@@ -26,7 +26,7 @@ export interface TimeTickIntervalHour extends TimeTickIntervalBase {
 
 export interface TimeTickIntervalDay extends TimeTickIntervalBase {
   readonly unit: 'D';
-  readonly value: 1 | 2 | 3 | 7 | 14;
+  readonly value: 1 | 7 | 14;
 }
 
 export interface TimeTickIntervalMonth extends TimeTickIntervalBase {
@@ -45,3 +45,13 @@ export type TimeTickInterval =
   | TimeTickIntervalDay
   | TimeTickIntervalMonth
   | TimeTickIntervalYear;
+
+export type TimeTickIntervalFromTimeUnit<
+  TUnit extends TimeTickIntervalTimeUnit,
+> = Extract<TimeTickInterval, { readonly unit: TUnit }>;
+
+export type TimeTickIntervalUnit<TUnit extends TimeTickIntervalTimeUnit> =
+  TimeTickIntervalFromTimeUnit<TUnit>['unit'];
+
+export type TimeTickIntervalValue<TUnit extends TimeTickIntervalTimeUnit> =
+  TimeTickIntervalFromTimeUnit<TUnit>['value'];

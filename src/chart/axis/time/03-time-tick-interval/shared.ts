@@ -1,5 +1,3 @@
-import { getSignificantDigitIndex } from '../../../helpers';
-
 export function getMinValuePerTick(
   valuePerPixel: number,
   valuePerItem: number,
@@ -11,11 +9,6 @@ export function getMinValuePerTick(
   const minValuePerTick = Math.max(integerValuePerTick, valuePerItem, 1);
 
   return minValuePerTick;
-}
-
-export function getOrderOfMagnitude(value: number): number {
-  const significantDigitIndex = getSignificantDigitIndex(value);
-  return Math.pow(10, significantDigitIndex);
 }
 
 export function getNextHigherValue<

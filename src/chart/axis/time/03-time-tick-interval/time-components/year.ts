@@ -1,8 +1,6 @@
-import {
-  getNextHigherValueWithOrderOfMagnitude,
-  getOrderOfMagnitude,
-} from '../shared';
+import { getNextHigherValueWithOrderOfMagnitude } from '../shared';
 import { TimeTickInterval } from '../../types';
+import { getOrderOfMagnitude } from '../../../../helpers';
 
 export function getNextHigherIntervalFromYears(
   input: number,
@@ -23,4 +21,4 @@ export function getNextHigherIntervalFromYears(
   };
 }
 
-const CUTOFFS = [5, 4, 2, 1] as const;
+const CUTOFFS = [5, 2, 1] as const;
