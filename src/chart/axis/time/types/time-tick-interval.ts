@@ -14,24 +14,52 @@ export interface TimeTickIntervalBase {
   readonly value: number;
 }
 
+export const LIST_OF_TIME_TICK_INTERVAL_MINUTE_VALUES = [
+  1, 2, 3, 5, 10, 15, 30,
+] as const;
+
+export type TimeTickIntervalMinuteValue =
+  (typeof LIST_OF_TIME_TICK_INTERVAL_MINUTE_VALUES)[number];
+
 export interface TimeTickIntervalMinute extends TimeTickIntervalBase {
   readonly unit: 'm';
-  readonly value: 1 | 2 | 3 | 5 | 10 | 15 | 30;
+  readonly value: TimeTickIntervalMinuteValue;
 }
+
+export const LIST_OF_TIME_TICK_INTERVAL_HOUR_VALUES = [
+  1, 2, 3, 4, 6, 8, 12,
+] as const;
+
+export type TimeTickIntervalHourValue =
+  (typeof LIST_OF_TIME_TICK_INTERVAL_HOUR_VALUES)[number];
 
 export interface TimeTickIntervalHour extends TimeTickIntervalBase {
   readonly unit: 'h';
-  readonly value: 1 | 2 | 3 | 4 | 6 | 8 | 12;
+  readonly value: TimeTickIntervalHourValue;
 }
+
+export const LIST_OF_TIME_TICK_INTERVAL_DAY_VALUES = [
+  1, 7, 14,
+] as const;
+
+export type TimeTickIntervalDayValue =
+  (typeof LIST_OF_TIME_TICK_INTERVAL_DAY_VALUES)[number];
 
 export interface TimeTickIntervalDay extends TimeTickIntervalBase {
   readonly unit: 'D';
-  readonly value: 1 | 7 | 14;
+  readonly value: TimeTickIntervalDayValue;
 }
+
+export const LIST_OF_TIME_TICK_INTERVAL_MONTH_VALUES = [
+  1, 3, 6,
+] as const;
+
+export type TimeTickIntervalMonthValue =
+  (typeof LIST_OF_TIME_TICK_INTERVAL_MONTH_VALUES)[number];
 
 export interface TimeTickIntervalMonth extends TimeTickIntervalBase {
   readonly unit: 'M';
-  readonly value: 1 | 3 | 6;
+  readonly value: TimeTickIntervalMonthValue;
 }
 
 export interface TimeTickIntervalYear extends TimeTickIntervalBase {

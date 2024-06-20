@@ -1,4 +1,8 @@
 import {
+  LIST_OF_TIME_TICK_INTERVAL_DAY_VALUES,
+  LIST_OF_TIME_TICK_INTERVAL_HOUR_VALUES,
+  LIST_OF_TIME_TICK_INTERVAL_MINUTE_VALUES,
+  LIST_OF_TIME_TICK_INTERVAL_MONTH_VALUES,
   LIST_OF_TIME_TICK_INTERVAL_TIME_UNITS,
   TimeTickIntervalValue,
 } from './../../../types';
@@ -62,25 +66,25 @@ function minValueOfTimeUnit<TUnit extends TimeTickIntervalTimeUnit>(
     case 'm': {
       return {
         unit,
-        value: 1,
+        value: LIST_OF_TIME_TICK_INTERVAL_MINUTE_VALUES[0],
       };
     }
     case 'h': {
       return {
         unit,
-        value: 1,
+        value: LIST_OF_TIME_TICK_INTERVAL_HOUR_VALUES[0],
       };
     }
     case 'D': {
       return {
         unit,
-        value: 1,
+        value: LIST_OF_TIME_TICK_INTERVAL_DAY_VALUES[0],
       };
     }
     case 'M': {
       return {
         unit,
-        value: 1,
+        value: LIST_OF_TIME_TICK_INTERVAL_MONTH_VALUES[0],
       };
     }
     case 'Y': {
@@ -100,25 +104,25 @@ function maxValueOfTimeUnit(unit: TimeTickIntervalTimeUnit): TimeTickInterval {
     case 'm': {
       return {
         unit,
-        value: 30,
+        value: LIST_OF_TIME_TICK_INTERVAL_MINUTE_VALUES.at(-1)!,
       };
     }
     case 'h': {
       return {
         unit,
-        value: 12,
+        value: LIST_OF_TIME_TICK_INTERVAL_HOUR_VALUES.at(-1)!,
       };
     }
     case 'D': {
       return {
         unit,
-        value: 14,
+        value: LIST_OF_TIME_TICK_INTERVAL_DAY_VALUES.at(-1)!,
       };
     }
     case 'M': {
       return {
         unit,
-        value: 6,
+        value: LIST_OF_TIME_TICK_INTERVAL_MONTH_VALUES.at(-1)!,
       };
     }
     case 'Y': {
