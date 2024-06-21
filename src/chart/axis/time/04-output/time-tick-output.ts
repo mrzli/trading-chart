@@ -5,7 +5,10 @@ import {
   TimeTickInterval,
 } from '../types';
 import { TimeDisplayType } from './types';
-import { processTimeTickOutputYear } from './intervals';
+import {
+  processTimeTickOutputMonth,
+  processTimeTickOutputYear,
+} from './intervals';
 import { arrayOfConstant } from '@gmjs/array-create';
 import {
   getTimeAxisProcessingIntervalRange,
@@ -31,6 +34,8 @@ export function getTimeTickOutputItems(
     extendedItems.at(-1)!.dateObject,
   );
 
+  console.log('processingTickIntervals', processingTickIntervals);
+
   for (const currentTimeTickInterval of processingTickIntervals) {
     ticks = processTimeTickOutput(input, ticks, currentTimeTickInterval);
   }
@@ -51,16 +56,20 @@ function processTimeTickOutput(
 
   switch (unit) {
     case 'm': {
-      return [];
+      return existingTicks
     }
     case 'h': {
-      return [];
+      return existingTicks;
     }
     case 'D': {
-      return [];
+      return existingTicks;
     }
     case 'M': {
-      return [];
+      return processTimeTickOutputMonth(
+        input,
+        existingTicks,
+        currentTimeTickInterval,
+      );
     }
     case 'Y': {
       return processTimeTickOutputYear(

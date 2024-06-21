@@ -1,9 +1,11 @@
-import { applyFn } from '@gmjs/apply-function';
 import { getMultipleGte } from '../../../../helpers';
-import { TimeAxisProcessInput, TimeTickIntervalYear } from '../../types';
+import {
+  TimeAxisExtendedDataItem,
+  TimeAxisProcessInput,
+  TimeTickIntervalYear,
+} from '../../types';
 import { TimeDisplayType } from '../types';
-import { filterOutNullish, map } from '@gmjs/value-transformers';
-import { binarySearchIndexLte } from '@gmjs/binary-search';
+import { getTakenTicks, canAddTick, addTakenTick } from './shared';
 
 export function processTimeTickOutputYear(
   input: TimeAxisProcessInput,
@@ -18,16 +20,10 @@ export function processTimeTickOutputYear(
 
   const takenTicks = getTakenTicks(updatedTicks);
 
-  const firstItem = extendedItems[0];
-  const beforeFirstItemYear = firstItem.previousDateObject?.year;
-  const firstItemYear = firstItem.dateObject.year;
-  const firstYear = beforeFirstItemYear
-    ? beforeFirstItemYear + 1
-    : firstItemYear;
+  const firstYear = getFirstVisibleYearStart(extendedItems);
+  const fistTickYear = getMultipleGte(firstYear, tickIntervalValue);
 
-  const firstDivisibleYear = getMultipleGte(firstYear, tickIntervalValue);
-
-  let nextYear = firstDivisibleYear;
+  let nextTickYear = fistTickYear;
 
   const numItems = extendedItems.length;
 
@@ -41,29 +37,29 @@ export function processTimeTickOutputYear(
 
   while (i < numItems) {
     const item = extendedItems[i];
-    const { dateObject } = item;
-    const currentItemYear = dateObject.year;
+    const currentItemYear = item.dateObject.year;
 
     let increment = 1;
 
-    if (
-      currentItemYear === nextYear &&
-      canAddTick(takenTicks, i, minTickItemDistance)
-    ) {
+    const isTickYearItem =
+      currentItemYear === nextTickYear && isYearChange(item);
+
+    if (isTickYearItem && canAddTick(takenTicks, i, minTickItemDistance)) {
       updatedTicks[i] = 'year';
       addTakenTick(takenTicks, i);
       increment = minTickItemDistance;
+      nextTickYear += tickIntervalValue;
     }
 
-    if (currentItemYear >= nextYear) {
-      nextYear = getMultipleGte(currentItemYear, tickIntervalValue);
+    if (currentItemYear >= nextTickYear) {
+      nextTickYear = getMultipleGte(currentItemYear, tickIntervalValue);
     }
 
     debugData.iterations.push({
       i,
       takenTicks: [...takenTicks],
       currentItemYear,
-      nextYear,
+      nextYear: nextTickYear,
     });
 
     i += increment;
@@ -74,36 +70,24 @@ export function processTimeTickOutputYear(
   return updatedTicks;
 }
 
-function getTakenTicks(existingTicks: readonly TimeDisplayType[]): number[] {
-  const takenTicks = applyFn(
-    existingTicks,
-    map((v, i) => (v === 'none' ? undefined : i)),
-    filterOutNullish(),
-  );
+function getFirstVisibleYearStart(
+  extendedItems: readonly TimeAxisExtendedDataItem[],
+): number {
+  const firstItem = extendedItems[0];
+  const beforeFirstItemYear = firstItem.previousDateObject?.year;
+  const firstItemYear = firstItem.dateObject.year;
+  const firstYear = beforeFirstItemYear
+    ? beforeFirstItemYear + 1
+    : firstItemYear;
 
-  return [...takenTicks];
+  return firstYear;
 }
 
-function addTakenTick(takenTicks: number[], tick: number): void {
-  const prevIndex = binarySearchIndexLte(tick, takenTicks);
-  takenTicks.splice(prevIndex + 1, 0, tick);
-}
+function isYearChange(extendedItem: TimeAxisExtendedDataItem): boolean {
+  const { previousDateObject, dateObject } = extendedItem;
+  if (previousDateObject === undefined) {
+    return true;
+  }
 
-function canAddTick(
-  takenTicks: number[],
-  tick: number,
-  minTickItemDistance: number,
-): boolean {
-  const prevIndex = binarySearchIndexLte(tick, takenTicks);
-  const nextIndex = prevIndex + 1;
-  const prevTick = prevIndex >= 0 ? takenTicks[prevIndex] : undefined;
-  const nextTick =
-    nextIndex < takenTicks.length ? takenTicks[nextIndex] : undefined;
-
-  const canAddDueToPrev =
-    prevTick === undefined || tick - minTickItemDistance >= prevTick;
-  const canAddDueToNext =
-    nextTick === undefined || tick + minTickItemDistance <= nextTick;
-
-  return canAddDueToPrev && canAddDueToNext;
+  return dateObject.year !== previousDateObject.year;
 }
