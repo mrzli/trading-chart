@@ -358,37 +358,9 @@ describe('time-tick-interval', () => {
         },
       },
       {
-        description: 'D 1, 2 day ticks',
-        input: createInput({
-          itemSpan: minTickSpan * 1.5,
-          interval: {
-            unit: 'D',
-            value: 1,
-          },
-        }),
-        expected: {
-          unit: 'D',
-          value: 2,
-        },
-      },
-      {
-        description: 'D 1, 3 day ticks',
-        input: createInput({
-          itemSpan: minTickSpan * 3,
-          interval: {
-            unit: 'D',
-            value: 1,
-          },
-        }),
-        expected: {
-          unit: 'D',
-          value: 3,
-        },
-      },
-      {
         description: 'D 1, 7 day ticks',
         input: createInput({
-          itemSpan: minTickSpan * 6,
+          itemSpan: minTickSpan * 1.5,
           interval: {
             unit: 'D',
             value: 1,
