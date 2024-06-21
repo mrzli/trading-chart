@@ -9,7 +9,10 @@ import {
   LIST_OF_TIME_TICK_INTERVAL_MONTH_VALUES,
 } from '../../../types';
 import { Interval } from '../../../../../types';
-import { maxTimeTickInterval } from '../../../util';
+import {
+  compareTimeTickIntervalTimeUnit,
+  maxTimeTickInterval,
+} from '../../../util';
 
 export function getTimeAxisProcessingIntervalRangeInternal(
   timeTickInterval: TimeTickInterval,
@@ -17,14 +20,18 @@ export function getTimeAxisProcessingIntervalRangeInternal(
   dateBeforeFirst: DateObjectTz | undefined,
   dateLast: DateObjectTz,
 ): readonly [TimeTickInterval, TimeTickInterval] {
-  const to = getNextLowerTimeTickInterval(dataInterval);
-
   const dateRangeTimeTickInterval = getDateRangeTimeTickInterval(
     dateBeforeFirst,
     dateLast,
   );
 
   const from = maxTimeTickInterval(timeTickInterval, dateRangeTimeTickInterval);
+
+  const isMinuteOrSmallerTimeTickInterval =
+    compareTimeTickIntervalTimeUnit(timeTickInterval.unit, 'm') <= 0;
+  const to = isMinuteOrSmallerTimeTickInterval
+    ? timeTickInterval
+    : getNextLowerTimeTickInterval(dataInterval);
 
   return [from, to];
 }
@@ -134,7 +141,7 @@ function getDateRangeTimeTickInterval(
   }
 
   return {
-    unit: 'm',
-    value: LIST_OF_TIME_TICK_INTERVAL_MINUTE_VALUES[0],
+    unit: 'D',
+    value: LIST_OF_TIME_TICK_INTERVAL_DAY_VALUES[0],
   };
 }

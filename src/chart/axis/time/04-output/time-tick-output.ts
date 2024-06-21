@@ -8,6 +8,7 @@ import { TimeDisplayType } from './types';
 import {
   processTimeTickOutputDay,
   processTimeTickOutputHour,
+  processTimeTickOutputMinute,
   processTimeTickOutputMonth,
   processTimeTickOutputYear,
 } from './intervals';
@@ -56,7 +57,11 @@ function processTimeTickOutput(
 
   switch (unit) {
     case 'm': {
-      return existingTicks;
+      return processTimeTickOutputMinute(
+        input,
+        existingTicks,
+        currentTimeTickInterval,
+      );
     }
     case 'h': {
       return processTimeTickOutputHour(

@@ -159,4 +159,4 @@ export function updateCanvasChart(
   }
 }
 
-const SHOW_PERFORMANCE = true;
+const SHOW_PERFORMANCE = false;
