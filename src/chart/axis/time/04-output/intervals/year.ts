@@ -65,7 +65,7 @@ export function processTimeTickOutputYear(
     i += increment;
   }
 
-  console.log(debugData);
+  // console.log(debugData);
 
   return updatedTicks;
 }

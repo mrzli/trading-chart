@@ -2,27 +2,24 @@ import { mapGetOrThrow } from '@gmjs/data-container-util';
 import {
   TimeAxisExtendedDataItem,
   TimeAxisProcessInput,
-  TimeTickIntervalMonth,
+  TimeTickIntervalDay,
   TimeTickIntervalValue,
 } from '../../types';
 import { TimeDisplayType } from '../types';
 import { getTakenTicks, canAddTick, addTakenTick } from './shared';
 import { range } from '@gmjs/array-create';
 
-export function processTimeTickOutputMonth(
+export function processTimeTickOutputDay(
   input: TimeAxisProcessInput,
   existingTicks: readonly TimeDisplayType[],
-  currentTimeTickInterval: TimeTickIntervalMonth,
+  currentTimeTickInterval: TimeTickIntervalDay,
 ): readonly TimeDisplayType[] {
   const { extendedItems, minTickItemDistance } = input;
 
   const { value: tickIntervalValue } = currentTimeTickInterval;
 
-  const transitionMonths = mapGetOrThrow(
-    TRANSITION_MONTHS_MAP,
-    tickIntervalValue,
-  );
-  const transitionMonthsSet: ReadonlySet<number> = new Set(transitionMonths);
+  const transitionDay = mapGetOrThrow(TRANSITION_DAY_MAP, tickIntervalValue);
+  const transitionDaysSet: ReadonlySet<number> = new Set(transitionDay);
 
   const updatedTicks: TimeDisplayType[] = [...existingTicks];
 
@@ -35,13 +32,13 @@ export function processTimeTickOutputMonth(
   while (i < numItems) {
     const item = extendedItems[i];
 
-    const isTransitionMonth =
-      isMonthChange(item) && transitionMonthsSet.has(item.dateObject.month);
+    const isTransitionDay =
+      isDayChange(item) && transitionDaysSet.has(item.dateObject.month);
 
     let increment = 1;
 
-    if (isTransitionMonth && canAddTick(takenTicks, i, minTickItemDistance)) {
-      updatedTicks[i] = 'month';
+    if (isTransitionDay && canAddTick(takenTicks, i, minTickItemDistance)) {
+      updatedTicks[i] = 'day';
       addTakenTick(takenTicks, i);
       increment = minTickItemDistance;
     }
@@ -52,16 +49,16 @@ export function processTimeTickOutputMonth(
   return updatedTicks;
 }
 
-const TRANSITION_MONTHS_MAP: ReadonlyMap<
-  TimeTickIntervalValue<'M'>,
+const TRANSITION_DAY_MAP: ReadonlyMap<
+  TimeTickIntervalValue<'D'>,
   readonly number[]
 > = new Map([
-  [6, [7]],
-  [3, [1, 4, 7, 10]],
-  [1, range(1, 13)],
+  [14, [15]],
+  [7, [1, 8, 15, 22]],
+  [1, range(1, 32)],
 ]);
 
-function isMonthChange(extendedItem: TimeAxisExtendedDataItem): boolean {
+function isDayChange(extendedItem: TimeAxisExtendedDataItem): boolean {
   const { previousDateObject, dateObject } = extendedItem;
   if (previousDateObject === undefined) {
     return true;
@@ -69,6 +66,7 @@ function isMonthChange(extendedItem: TimeAxisExtendedDataItem): boolean {
 
   return (
     dateObject.year !== previousDateObject.year ||
-    dateObject.month !== previousDateObject.month
+    dateObject.month !== previousDateObject.month ||
+    dateObject.day !== previousDateObject.day
   );
 }
