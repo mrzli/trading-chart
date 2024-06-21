@@ -38,9 +38,7 @@ export interface TimeTickIntervalHour extends TimeTickIntervalBase {
   readonly value: TimeTickIntervalHourValue;
 }
 
-export const LIST_OF_TIME_TICK_INTERVAL_DAY_VALUES = [
-  1, 7, 14,
-] as const;
+export const LIST_OF_TIME_TICK_INTERVAL_DAY_VALUES = [1, 7, 14] as const;
 
 export type TimeTickIntervalDayValue =
   (typeof LIST_OF_TIME_TICK_INTERVAL_DAY_VALUES)[number];
@@ -50,9 +48,7 @@ export interface TimeTickIntervalDay extends TimeTickIntervalBase {
   readonly value: TimeTickIntervalDayValue;
 }
 
-export const LIST_OF_TIME_TICK_INTERVAL_MONTH_VALUES = [
-  1, 3, 6,
-] as const;
+export const LIST_OF_TIME_TICK_INTERVAL_MONTH_VALUES = [1, 3, 6] as const;
 
 export type TimeTickIntervalMonthValue =
   (typeof LIST_OF_TIME_TICK_INTERVAL_MONTH_VALUES)[number];
