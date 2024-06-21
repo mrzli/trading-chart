@@ -1,29 +1,53 @@
 import './styles/index.css';
 import { setupChart } from './src/setup-chart';
-
-const HTML = `
-<div id="chart-container" class="w-screen h-screen">
-  <div id="chart-wrapper" class="p-[10px] w-full h-full" style="background-color: #161A25;">
-    <canvas
-      id="chart"
-      tabIndex="0"
-      style="background-color: #DDDDDD;"
-      width="2000"
-      height="1000"
-    />
-  </div>
-</div>
-`;
+import {
+  HTMLCanvasElementProps,
+  HTMLDivElementProps,
+  createHtmlElement,
+} from './dom';
 
 async function execute(): Promise<void> {
   const rootElement = selectOrThrow<HTMLDivElement>(document, '#root');
-  rootElement.innerHTML = HTML;
 
-  const chartWrapperElement = selectOrThrow<HTMLDivElement>(
+  const chartProps: HTMLCanvasElementProps = {
+    id: 'chart',
+    tabIndex: 0,
+    style: {
+      backgroundColor: '#DDDDDD',
+    },
+    width: 2000,
+    height: 1000,
+  };
+  const chartElement = createHtmlElement(document, 'canvas', chartProps);
+
+  const chartWrapperProps: HTMLDivElementProps = {
+    id: 'chart-wrapper',
+    className: 'p-[10px] w-full h-full bg-orange-500',
+    style: {
+      backgroundColor: '#161A25',
+    },
+  };
+
+  const chartWrapperElement = createHtmlElement(
     document,
-    '#chart-wrapper',
+    'div',
+    chartWrapperProps,
   );
-  const chartElement = selectOrThrow<HTMLCanvasElement>(document, '#chart');
+  chartWrapperElement.append(chartElement);
+
+  const chartContainerProps: HTMLDivElementProps = {
+    id: 'chart-container',
+    className: 'w-screen h-screen',
+  };
+  const chartContainerElement = createHtmlElement(
+    document,
+    'div',
+    chartContainerProps,
+  );
+
+  chartWrapperElement.append(chartElement);
+  chartContainerElement.append(chartWrapperElement);
+  rootElement.append(chartContainerElement);
 
   await setupChart(chartWrapperElement, chartElement);
 }
