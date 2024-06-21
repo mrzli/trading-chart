@@ -7,6 +7,7 @@ import {
 import { TimeDisplayType } from './types';
 import {
   processTimeTickOutputDay,
+  processTimeTickOutputHour,
   processTimeTickOutputMonth,
   processTimeTickOutputYear,
 } from './intervals';
@@ -35,8 +36,6 @@ export function getTimeTickOutputItems(
     extendedItems.at(-1)!.dateObject,
   );
 
-  console.log('processingTickIntervals', processingTickIntervals);
-
   for (const currentTimeTickInterval of processingTickIntervals) {
     ticks = processTimeTickOutput(input, ticks, currentTimeTickInterval);
   }
@@ -60,7 +59,11 @@ function processTimeTickOutput(
       return existingTicks;
     }
     case 'h': {
-      return existingTicks;
+      return processTimeTickOutputHour(
+        input,
+        existingTicks,
+        currentTimeTickInterval,
+      );
     }
     case 'D': {
       return processTimeTickOutputDay(
