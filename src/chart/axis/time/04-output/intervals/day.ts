@@ -33,7 +33,7 @@ export function processTimeTickOutputDay(
     const item = extendedItems[i];
 
     let increment = 1;
-  
+
     if (isDayChange(item)) {
       if (isMonthChange(item)) {
         transitionBreakpointsTaken = 0;
