@@ -38,10 +38,6 @@ export function processTimeAxisData(
   const output = getTimeTickOutputItems(processInput);
 
   return output;
-
-  // const result = getTimeAxisOutput(input, extendedItems, timeTickInterval);
-
-  // return result;
 }
 
 function getMinTickDistance(input: TimeAxisInput): number {
