@@ -1,5 +1,8 @@
 import { getNextHigherValue } from '../shared';
-import { TimeTickInterval } from '../../types';
+import {
+  LIST_OF_TIME_TICK_INTERVAL_MINUTE_VALUES,
+  TimeTickInterval,
+} from '../../types';
 import { getNextHigherIntervalFromHours } from './hour';
 
 export function getNextHigherIntervalFromMinutes(
@@ -17,4 +20,4 @@ export function getNextHigherIntervalFromMinutes(
   };
 }
 
-const CUTOFFS = [30, 15, 10, 5, 3, 2, 1] as const;
+const CUTOFFS = LIST_OF_TIME_TICK_INTERVAL_MINUTE_VALUES.toReversed();

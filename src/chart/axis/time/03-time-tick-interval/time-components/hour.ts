@@ -1,3 +1,4 @@
+import { LIST_OF_TIME_TICK_INTERVAL_HOUR_VALUES } from './../../types/time-tick-interval';
 import { getNextHigherValue } from '../shared';
 import { TimeTickInterval } from '../../types';
 import { getNextHigherIntervalFromDays } from './day';
@@ -17,4 +18,4 @@ export function getNextHigherIntervalFromHours(
   };
 }
 
-const CUTOFFS = [12, 8, 6, 4, 3, 2, 1] as const;
+const CUTOFFS = LIST_OF_TIME_TICK_INTERVAL_HOUR_VALUES.toReversed();
