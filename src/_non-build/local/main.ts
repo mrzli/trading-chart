@@ -3,11 +3,13 @@ import { setupChart } from './src/setup-chart';
 import {
   HTMLCanvasElementProps,
   HTMLDivElementProps,
-  createHtmlElement,
+  createHtmlElementFactory,
 } from './dom';
 
 async function execute(): Promise<void> {
   const rootElement = selectOrThrow<HTMLDivElement>(document, '#root');
+
+  const h = createHtmlElementFactory(document);
 
   const chartProps: HTMLCanvasElementProps = {
     id: 'chart',
@@ -18,7 +20,7 @@ async function execute(): Promise<void> {
     width: 2000,
     height: 1000,
   };
-  const chartElement = createHtmlElement(document, 'canvas', chartProps);
+  const chartElement = h('canvas', chartProps);
 
   const chartWrapperProps: HTMLDivElementProps = {
     id: 'chart-wrapper',
@@ -28,22 +30,14 @@ async function execute(): Promise<void> {
     },
   };
 
-  const chartWrapperElement = createHtmlElement(
-    document,
-    'div',
-    chartWrapperProps,
-  );
+  const chartWrapperElement = h('div', chartWrapperProps);
   chartWrapperElement.append(chartElement);
 
   const chartContainerProps: HTMLDivElementProps = {
     id: 'chart-container',
     className: 'w-screen h-screen',
   };
-  const chartContainerElement = createHtmlElement(
-    document,
-    'div',
-    chartContainerProps,
-  );
+  const chartContainerElement = h('div', chartContainerProps);
 
   chartWrapperElement.append(chartElement);
   chartContainerElement.append(chartWrapperElement);
