@@ -1,2 +1,39 @@
-- create a simple trading chart
+TRADING CHART:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - create ruby tool to fetch stock data
