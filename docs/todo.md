@@ -1,0 +1,2 @@
+- create a simple trading chart
+- create ruby tool to fetch stock data
