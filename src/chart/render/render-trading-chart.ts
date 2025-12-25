@@ -1,4 +1,4 @@
-import { RenderTradingChartInput, RenderTradingChartResult } from './types';
+import { RenderTradingChartInput, RenderTradingChartResult } from '../types';
 
 export function renderTradingChart(
   input?: RenderTradingChartInput,
