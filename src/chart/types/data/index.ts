@@ -1,3 +1,3 @@
-export * from './chart-timeframe-unit';
-export * from './chart-timeframe';
 export * from './ohlc';
+export * from './trading-chart-timeframe-unit';
+export * from './trading-chart-timeframe';
