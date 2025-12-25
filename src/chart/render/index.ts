@@ -1,1 +1,1 @@
-export * from './render-trading-chart-exact';
+export * from './render-trading-chart-explicit';

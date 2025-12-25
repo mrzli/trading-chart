@@ -1,15 +1,15 @@
 import { describe, it, expect } from 'bun:test';
 import {
-  RenderTradingChartInputExact,
+  RenderTradingChartInputExplicit,
   RenderTradingChartResult,
 } from '../types';
-import { renderTradingChartExact } from './render-trading-chart-exact';
+import { renderTradingChartExplicit } from './render-trading-chart-explicit';
 
-describe('render-trading-chart-exact', () => {
-  describe('renderTradingChartExact()', () => {
+describe('render-trading-chart-explicit', () => {
+  describe('renderTradingChartExplicit()', () => {
     interface Example {
       readonly description: string;
-      readonly input: RenderTradingChartInputExact;
+      readonly input: RenderTradingChartInputExplicit;
       readonly expected: RenderTradingChartResult;
     }
 
@@ -25,7 +25,7 @@ describe('render-trading-chart-exact', () => {
 
     for (const example of EXAMPLES) {
       it(example.description, () => {
-        const actual = renderTradingChartExact(example.input);
+        const actual = renderTradingChartExplicit(example.input);
         expect(actual).toEqual(example.expected);
       });
     }

@@ -1,10 +1,10 @@
 import {
-  RenderTradingChartInputExact,
+  RenderTradingChartInputExplicit,
   RenderTradingChartResult,
 } from '../types';
 
-export function renderTradingChartExact(
-  input: RenderTradingChartInputExact,
+export function renderTradingChartExplicit(
+  input: RenderTradingChartInputExplicit,
 ): RenderTradingChartResult {
   return {
     batch: { kind: 'batch', items: [] },
