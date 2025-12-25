@@ -1,43 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 import type { DrawItemBatch } from '../types';
 import { drawToCanvas } from '../html-canvas-draw';
+import { createExampleCanvas } from './util';
 
-type DrawToCanvasStoryArgs = {
-  width: number;
-  height: number;
-  padding: number;
-  showLabel: boolean;
-};
+interface DrawToCanvasStoryArgs {
+  readonly width: number;
+  readonly height: number;
+  readonly padding: number;
+  readonly showLabel: boolean;
+}
 
 const meta = {
   title: 'Drawing/drawToCanvas',
   tags: ['autodocs'],
   render: (args) => {
-    const root = document.createElement('div');
+    const { width, height } = args;
 
-    const canvas = document.createElement('canvas');
-    canvas.style.display = 'block';
-    canvas.style.width = `${args.width}px`;
-    canvas.style.height = `${args.height}px`;
-    canvas.style.border = '1px solid #e5e7eb';
-
-    // Ensure crisp rendering on HiDPI displays while keeping API coordinates
-    // in CSS pixels.
-    const dpr = globalThis.devicePixelRatio ?? 1;
-    canvas.width = Math.max(1, Math.floor(args.width * dpr));
-    canvas.height = Math.max(1, Math.floor(args.height * dpr));
-
-    root.appendChild(canvas);
-
-    const c = canvas.getContext('2d');
-    if (c === null) {
-      const msg = document.createElement('div');
-      msg.textContent = 'Canvas 2D context not available.';
-      return msg;
-    }
-
-    c.setTransform(dpr, 0, 0, dpr, 0, 0);
-
+    const { root, canvas } = createExampleCanvas(width, height);
     drawToCanvas(canvas, createDemoBatch(args));
 
     return root;
