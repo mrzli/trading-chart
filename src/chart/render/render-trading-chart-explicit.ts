@@ -1,11 +1,8 @@
-import {
-  RenderTradingChartInputExplicit,
-  RenderTradingChartResult,
-} from '../types';
+import { TradingChartInputExplicit, TradingChartResult } from '../types';
 
 export function renderTradingChartExplicit(
-  input: RenderTradingChartInputExplicit,
-): RenderTradingChartResult {
+  input: TradingChartInputExplicit,
+): TradingChartResult {
   const { size, layout } = input;
 
   return {

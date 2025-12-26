@@ -1,5 +1,5 @@
 import { DrawItemBatch } from '../../types';
 
-export interface RenderTradingChartResult {
+export interface TradingChartResult {
   readonly batch: DrawItemBatch;
 }

@@ -1,16 +1,13 @@
 import { describe, it, expect } from 'bun:test';
-import {
-  RenderTradingChartInputExplicit,
-  RenderTradingChartResult,
-} from '../types';
+import { TradingChartInputExplicit, TradingChartResult } from '../types';
 import { renderTradingChartExplicit } from './render-trading-chart-explicit';
 
 describe('render-trading-chart-explicit', () => {
   describe('renderTradingChartExplicit()', () => {
     interface Example {
       readonly description: string;
-      readonly input: RenderTradingChartInputExplicit;
-      readonly expected: RenderTradingChartResult;
+      readonly input: TradingChartInputExplicit;
+      readonly expected: TradingChartResult;
     }
 
     const EXAMPLES: readonly Example[] = [
