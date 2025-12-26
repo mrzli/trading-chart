@@ -2,25 +2,35 @@ import type { Meta, StoryObj } from '@storybook/html-vite';
 import { drawToCanvas } from '../html-canvas-draw';
 import { createExampleCanvas } from './util';
 import {
+  pluginClear,
   renderTradingChartExplicit,
   TradingChartInputExplicit,
+  TradingChartPlugin,
 } from '../chart';
 import { DrawItemBatch } from '../types';
+import { pluginExample } from '../chart/plugins/example';
 
 interface TradingChartStoryArgs {
   readonly input: TradingChartInputExplicit;
 }
 
 const meta = {
-  title: 'Chart/tradingChart',
+  title: 'Chart/Trading Chart',
   tags: ['autodocs'],
   render: (args) => {
     const input = args.input;
     const { width, height } = input.size;
 
     const { root, canvas } = createExampleCanvas(width, height);
-    const { batch } = renderTradingChartExplicit(input, []);
+
+    const plugins: readonly TradingChartPlugin[] = [
+      pluginClear('clear', 0),
+      pluginExample('example', 1),
+    ];
+
+    const { batch } = renderTradingChartExplicit(input, plugins);
     const batchObject: DrawItemBatch = { kind: 'batch', items: batch };
+
     drawToCanvas(canvas, batchObject);
 
     return root;
