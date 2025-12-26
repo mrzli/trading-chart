@@ -1,5 +1,5 @@
-import { DrawItem, DrawPathCommand } from '../../types';
 import { TradingChartPlugin } from '../types';
+import { renderBackground } from './renderers';
 
 export interface PluginBackgroundOptions {
   readonly name: string;
@@ -16,36 +16,15 @@ export function pluginBackground(
     name,
     priority,
     execute: ({ chartInput, batch, context }) => {
-      const { width, height } = chartInput.size;
+      const { size } = chartInput;
 
-      const rectCommand: DrawPathCommand = {
-        kind: 'rect',
-        x: 0,
-        y: 0,
-        width,
-        height,
-      };
-
-      const newBatch: readonly DrawItem[] = [
-        ...batch,
-        {
-          kind: 'batch',
-          clipPath: [rectCommand],
-          style: {
-            fillStrokeStyle: { fillStyle: color },
-          },
-          items: [
-            {
-              kind: 'path',
-              fillStrokeType: 'fill',
-              commands: [rectCommand],
-            },
-          ],
-        },
-      ];
+      const newBatch = renderBackground({ size, color });
 
       return {
-        batch: newBatch,
+        batch: [
+          ...batch,
+          ...newBatch,
+        ],
         context: context,
       };
     },
