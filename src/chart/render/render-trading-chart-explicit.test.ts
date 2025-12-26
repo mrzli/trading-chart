@@ -23,19 +23,17 @@ describe('render-trading-chart-explicit', () => {
           },
         },
         expected: {
-          batch: {
-            kind: 'batch',
-            items: [
-              { kind: 'clear', area: { x: 0, y: 0, width: 800, height: 600 } },
-            ],
-          },
+          batch: [
+            { kind: 'clear', area: { x: 0, y: 0, width: 800, height: 600 } },
+          ],
+          context: {},
         },
       },
     ];
 
     for (const example of EXAMPLES) {
       it(example.description, () => {
-        const actual = renderTradingChartExplicit(example.input);
+        const actual = renderTradingChartExplicit(example.input, []);
         expect(actual).toEqual(example.expected);
       });
     }

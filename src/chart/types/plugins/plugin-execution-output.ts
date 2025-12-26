@@ -1,6 +1,6 @@
-import { DrawItem } from '../../types';
+import { DrawItem } from '../../../types';
 
-export interface TradingChartResult {
+export interface PluginExecutionOutput {
   readonly batch: readonly DrawItem[];
   readonly context: Readonly<Record<string, any>>;
 }

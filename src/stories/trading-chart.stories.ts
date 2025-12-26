@@ -3,11 +3,12 @@ import { drawToCanvas } from '../html-canvas-draw';
 import { createExampleCanvas } from './util';
 import {
   renderTradingChartExplicit,
-  RenderTradingChartInputExplicit,
+  TradingChartInputExplicit,
 } from '../chart';
+import { DrawItemBatch } from '../types';
 
 interface TradingChartStoryArgs {
-  readonly input: RenderTradingChartInputExplicit;
+  readonly input: TradingChartInputExplicit;
 }
 
 const meta = {
@@ -18,8 +19,9 @@ const meta = {
     const { width, height } = input.size;
 
     const { root, canvas } = createExampleCanvas(width, height);
-    const { batch } = renderTradingChartExplicit(input);
-    drawToCanvas(canvas, batch);
+    const { batch } = renderTradingChartExplicit(input, []);
+    const batchObject: DrawItemBatch = { kind: 'batch', items: batch };
+    drawToCanvas(canvas, batchObject);
 
     return root;
   },

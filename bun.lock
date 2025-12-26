@@ -5,8 +5,10 @@
     "": {
       "name": "@gmjs/trading-chart",
       "dependencies": {
+        "@gmjs/apply-function": "^0.0.3",
         "@gmjs/array-transformers": "^0.0.3",
         "@gmjs/assert": "^0.0.6",
+        "@gmjs/value-transformers": "^0.0.16",
       },
       "devDependencies": {
         "@eslint/css": "^0.14.1",
@@ -109,9 +111,19 @@
 
     "@eslint/plugin-kit": ["@eslint/plugin-kit@0.4.1", "", { "dependencies": { "@eslint/core": "^0.17.0", "levn": "^0.4.1" } }, "sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA=="],
 
+    "@gmjs/apply-function": ["@gmjs/apply-function@0.0.3", "", { "dependencies": { "@gmjs/compose-function": "^0.0.2", "@gmjs/generic-types": "^0.0.1", "tslib": "^2.6.2" } }, "sha512-J+GYW5yTBEjryQsqm7rQn4KXr9aoDExyXhzxa6LwOy0UDKSceYVmLAex6ut1hN4RYi8FsXZIJGeAdI1w5qaRfg=="],
+
     "@gmjs/array-transformers": ["@gmjs/array-transformers@0.0.3", "", { "dependencies": { "tslib": "^2.6.2" } }, "sha512-8tZJ4QURa127TWyBNOU90W/Jy1xi10ztwHOD6cV2A1+mWw+WjiypLukXYPPgTs2n/Eh2POBGU5Vh5DugdKSJTg=="],
 
     "@gmjs/assert": ["@gmjs/assert@0.0.6", "", { "dependencies": { "tslib": "^2.6.2" } }, "sha512-eVzr9x1a/6Zk/nYGjWFfpdOysiEbcNAc9CosMVXak/jS4wi1dTwCwR4EQAz7Cx7wAu6rL18KkUvw/6cKcb+MgQ=="],
+
+    "@gmjs/compose-function": ["@gmjs/compose-function@0.0.2", "", { "dependencies": { "@gmjs/generic-functions": "^0.0.1", "@gmjs/generic-types": "^0.0.1", "tslib": "^2.6.2" } }, "sha512-QuG9lFPiRzcmjIiHA5EdC8EjvWxGpjGa17WZcunHCUPmca8F7E6dU5WPLoHGrv7r91mjzB+ZMJRunGwXY6XAJQ=="],
+
+    "@gmjs/generic-functions": ["@gmjs/generic-functions@0.0.1", "", { "dependencies": { "tslib": "^2.6.0" } }, "sha512-EysFNLu8R6VR1AivcnY9RKK8SwDRnoQmcWZ/viQqnuroGjobWW+F/z3DCbb1mC3hCISGWO+E0aIy/85nT96veg=="],
+
+    "@gmjs/generic-types": ["@gmjs/generic-types@0.0.1", "", { "dependencies": { "tslib": "^2.6.0" } }, "sha512-qsC2OGxamsN3oJ9z1R9TyZh3DouXTA4UDPJMMimIy1m6rbbBmBumFY5w8Bh9/7i4yltVmcx6Ccyt3lGuusVM2Q=="],
+
+    "@gmjs/value-transformers": ["@gmjs/value-transformers@0.0.16", "", { "dependencies": { "@gmjs/compose-function": "^0.0.2", "tslib": "^2.6.3" } }, "sha512-jk0Y5RAsgBWJUviwjbcboNqTaGxYgV7hFbowfG2FE8kvBu7q8NXrp/5RcsG9InrrExefBjgAxADUxDHZTkSKMQ=="],
 
     "@humanfs/core": ["@humanfs/core@0.19.1", "", {}, "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA=="],
 
