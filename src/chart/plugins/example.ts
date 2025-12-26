@@ -1,10 +1,16 @@
 import { DrawItem } from '../../types';
 import { TradingChartPlugin } from '../types';
 
+export interface PluginExampleOptions {
+  readonly name: string;
+  readonly priority: number;
+}
+
 export function pluginExample(
-  name: string,
-  priority: number,
+  options: PluginExampleOptions,
 ): TradingChartPlugin {
+  const { name, priority } = options;
+
   return {
     name,
     priority,

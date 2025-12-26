@@ -25,9 +25,9 @@ const meta = {
     const { root, canvas } = createExampleCanvas(width, height);
 
     const plugins: readonly TradingChartPlugin[] = [
-      pluginClear('clear', 0),
-      pluginBackground('background', 1, '#161A25'),
-      pluginExample('example', 2),
+      pluginClear({ name: 'clear', priority: 0 }),
+      pluginBackground({ name: 'background', priority: 1, color: '#161A25' }),
+      pluginExample({ name: 'example', priority: 2 }),
     ];
 
     const { batch } = renderTradingChartExplicit(input, plugins);

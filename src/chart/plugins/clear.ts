@@ -1,10 +1,16 @@
 import { DrawItem } from '../../types';
 import { TradingChartPlugin } from '../types';
 
+export interface PluginClearOptions {
+  readonly name: string;
+  readonly priority: number;
+}
+
 export function pluginClear(
-  name: string,
-  priority: number,
+  options: PluginClearOptions,
 ): TradingChartPlugin {
+  const { name, priority } = options;
+
   return {
     name,
     priority,

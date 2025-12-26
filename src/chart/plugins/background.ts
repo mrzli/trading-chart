@@ -1,11 +1,17 @@
 import { DrawItem, DrawPathCommand } from '../../types';
 import { TradingChartPlugin } from '../types';
 
+export interface PluginBackgroundOptions {
+  readonly name: string;
+  readonly priority: number;
+  readonly color: string;
+}
+
 export function pluginBackground(
-  name: string,
-  priority: number,
-  color: string,
+  options: PluginBackgroundOptions,
 ): TradingChartPlugin {
+  const { name, priority, color } = options;
+
   return {
     name,
     priority,
