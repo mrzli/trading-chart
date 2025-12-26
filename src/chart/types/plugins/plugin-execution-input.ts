@@ -1,5 +1,5 @@
 import { DrawItem } from '../../../types';
-import { TradingChartInputExplicit } from '../trading-chart-input-explicit';
+import { TradingChartInputExplicit } from '../core';
 
 export interface PluginExecutionInput {
   readonly chartInput: TradingChartInputExplicit;

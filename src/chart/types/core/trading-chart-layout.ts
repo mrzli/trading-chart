@@ -1,4 +1,4 @@
-import { Margin } from "../../types";
+import { Margin } from '../../../types';
 
 export interface TradingChartLayout {
   readonly padding: Margin;

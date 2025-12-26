@@ -1,4 +1,4 @@
-import { DrawItem } from '../../types';
+import { DrawItem } from '../../../types';
 
 export interface TradingChartResult {
   readonly batch: readonly DrawItem[];
