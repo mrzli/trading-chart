@@ -1,3 +1,4 @@
+import { DrawItem } from '../../types';
 import { TradingChartPlugin } from '../types';
 
 export function pluginClear(
@@ -10,18 +11,20 @@ export function pluginClear(
     execute: ({ chartInput, context }) => {
       const { width, height } = chartInput.size
 
-      return {
-        batch: [
-          {
-            kind: 'clear',
-            area: {
-              x: 0,
-              y: 0,
-              width,
-              height
-            },
+      const newBatch: readonly DrawItem[] = [
+        {
+          kind: 'clear',
+          area: {
+            x: 0,
+            y: 0,
+            width,
+            height
           },
-        ],
+        },
+      ];
+
+      return {
+        batch: newBatch,
         context: context,
       };
     },

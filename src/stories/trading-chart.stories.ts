@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/html-vite';
 import { drawToCanvas } from '../html-canvas-draw';
 import { createExampleCanvas } from './util';
 import {
+  pluginBackground,
   pluginClear,
   renderTradingChartExplicit,
   TradingChartInputExplicit,
@@ -25,7 +26,8 @@ const meta = {
 
     const plugins: readonly TradingChartPlugin[] = [
       pluginClear('clear', 0),
-      pluginExample('example', 1),
+      pluginBackground('background', 1, '#161A25'),
+      pluginExample('example', 2),
     ];
 
     const { batch } = renderTradingChartExplicit(input, plugins);
