@@ -33,40 +33,4 @@ export function renderTradingChartExplicit(
   }
 
   return { batch: pluginOutput.batch, context: pluginOutput.context };
-
-  // return {
-  //   batch: [
-  //     {
-  //       kind: 'clear',
-  //       area: {
-  //         x: 0,
-  //         y: 0,
-  //         width: size.width,
-  //         height: size.height,
-  //       },
-  //     },
-  //     {
-  //       kind: 'batch',
-  //       style: {
-  //         fillStrokeStyle: { fillStyle: 'orange', strokeStyle: 'black' },
-  //       },
-  //       items: [
-  //         {
-  //           kind: 'path',
-  //           fillStrokeType: 'both',
-  //           commands: [
-  //             {
-  //               kind: 'rect',
-  //               x: 20,
-  //               y: 30,
-  //               width: 400,
-  //               height: 150,
-  //             },
-  //           ],
-  //         },
-  //       ],
-  //     },
-  //   ],
-  //   context: {},
-  // };
 }
