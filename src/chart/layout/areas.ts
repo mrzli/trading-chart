@@ -23,7 +23,7 @@ export function calculateTradingChartAreas(
   };
 
   let currentY = top;
-  const mains: TradingChartAreaMainWithYAxis[] = [];
+  const segments: TradingChartAreaMainWithYAxis[] = [];
   
   for (const currHeight of heights) {
     const main: Rect = {
@@ -40,7 +40,7 @@ export function calculateTradingChartAreas(
       height: currHeight,
     };
 
-    mains.push({ main, yAxis });
+    segments.push({ main, yAxis });
     currentY += currHeight;
   }
 
@@ -61,7 +61,7 @@ export function calculateTradingChartAreas(
   return {
     entire,
     all,
-    mains,
+    segments,
     xAxis,
     corner,
   };

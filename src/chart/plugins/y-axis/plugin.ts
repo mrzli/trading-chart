@@ -28,7 +28,7 @@ export function pluginYAxis(options: PlugingYAxisOptions): TradingChartPlugin {
   return {
     name,
     priority,
-    execute: ({ chartInput, batch, context }) => {
+    execute: ({ chartInput, areas, batch, context }) => {
       const { theme } = chartInput;
       const { textColor, gridLineColor } = theme;
 

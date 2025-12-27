@@ -3,7 +3,7 @@ import { Rect } from "../../../types";
 export interface TradingChartAreas {
   readonly entire: Rect;
   readonly all: Rect;
-  readonly mains: readonly TradingChartAreaMainWithYAxis[];
+  readonly segments: readonly TradingChartAreaMainWithYAxis[];
   readonly xAxis: Rect;
   readonly corner: Rect;
 }

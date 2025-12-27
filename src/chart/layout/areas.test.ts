@@ -29,7 +29,7 @@ describe('areas', () => {
         expected: {
           entire: { x: 0, y: 0, width: 800, height: 600 },
           all: { x: 0, y: 0, width: 800, height: 600 },
-          mains: [
+          segments: [
             {
               main: { x: 0, y: 0, width: 700, height: 500 },
               yAxis: { x: 700, y: 0, width: 100, height: 500 },
@@ -53,7 +53,7 @@ describe('areas', () => {
         expected: {
           entire: { x: 0, y: 0, width: 800, height: 600 },
           all: { x: 10, y: 30, width: 770, height: 530 },
-          mains: [
+          segments: [
             {
               main: { x: 10, y: 30, width: 670, height: 500 },
               yAxis: { x: 680, y: 30, width: 100, height: 500 },
@@ -77,7 +77,7 @@ describe('areas', () => {
         expected: {
           entire: { x: 0, y: 0, width: 1000, height: 800 },
           all: { x: 15, y: 35, width: 960, height: 720 },
-          mains: [
+          segments: [
             {
               main: { x: 15, y: 35, width: 840, height: 300 },
               yAxis: { x: 855, y: 35, width: 120, height: 300 },
