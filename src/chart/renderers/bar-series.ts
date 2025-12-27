@@ -1,7 +1,7 @@
 import { applyFn } from '@gmjs/apply-function';
 import { groupBy, map, toArray } from '@gmjs/value-transformers';
-import { DrawItem, DrawItemBatch, DrawItemPath, Rect } from '../../../types';
-import { rectToClipPath } from '../../../util';
+import { DrawItem, DrawItemBatch, DrawItemPath, Rect } from '../../types';
+import { rectToClipPath } from '../../util';
 
 export interface BarSeriesRenderItem {
   readonly xItem: number;

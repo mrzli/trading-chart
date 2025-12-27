@@ -1,5 +1,5 @@
+import { renderClear } from '../renderers';
 import { TradingChartPlugin } from '../types';
-import { renderClear } from './renderers';
 
 export interface PluginClearOptions {
   readonly name: string;

@@ -7,12 +7,12 @@ import {
   PathStyle,
   Point,
   Rect,
-} from '../../../types';
+} from '../../types';
 import {
   DEFAULT_THICKNESS,
   getPixelAdjustment,
   rectToClipPath,
-} from '../../../util';
+} from '../../util';
 
 export interface RenderSimpleCursorInput {
   readonly fullArea: Rect;

@@ -1,4 +1,4 @@
-import { DrawItem, DrawPathCommand, Size } from '../../../types';
+import { DrawItem, DrawPathCommand, Size } from '../../types';
 
 export interface RenderBackgroundInput {
   readonly size: Size;

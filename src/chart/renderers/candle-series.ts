@@ -6,8 +6,8 @@ import {
   DrawItemPath,
   DrawPathCommand,
   Rect,
-} from '../../../types';
-import { rectToClipPath } from '../../../util';
+} from '../../types';
+import { rectToClipPath } from '../../util';
 
 export interface CandleSeriesRenderItem {
   readonly xCenter: number;

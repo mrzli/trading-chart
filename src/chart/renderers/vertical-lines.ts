@@ -8,12 +8,12 @@ import {
   FillStrokeStyle,
   PathStyle,
   Rect,
-} from '../../../types';
+} from '../../types';
 import {
   DEFAULT_THICKNESS,
   getPixelAdjustment,
   rectToClipPath,
-} from '../../../util';
+} from '../../util';
 
 export interface VerticalLineBatch {
   readonly color?: string;

@@ -6,12 +6,12 @@ import {
   DrawPathCommand,
   FontStyle,
   Rect,
-} from '../../../types';
+} from '../../types';
 import {
   DEFAULT_THICKNESS,
   getPixelAdjustment,
   rectToClipPath,
-} from '../../../util';
+} from '../../util';
 
 export interface SimpleHorizontalAxisTickItem {
   readonly offset: number;

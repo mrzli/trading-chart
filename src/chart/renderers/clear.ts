@@ -1,4 +1,4 @@
-import { DrawItem, Size } from '../../../types';
+import { DrawItem, Size } from '../../types';
 
 export interface RenderClearInput {
   readonly size: Size;

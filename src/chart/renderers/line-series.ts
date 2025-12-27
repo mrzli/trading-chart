@@ -4,8 +4,8 @@ import {
   DrawItemPath,
   DrawPathCommand,
   Rect,
-} from '../../../types';
-import { rectToClipPath } from '../../../util';
+} from '../../types';
+import { rectToClipPath } from '../../util';
 
 export interface LineSeriesRenderItem {
   readonly x: number;

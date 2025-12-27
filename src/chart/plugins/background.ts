@@ -1,5 +1,5 @@
+import { renderBackground } from '../renderers';
 import { TradingChartPlugin } from '../types';
-import { renderBackground } from './renderers';
 
 export interface PluginBackgroundOptions {
   readonly name: string;
