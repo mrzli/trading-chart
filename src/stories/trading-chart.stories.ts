@@ -4,6 +4,7 @@ import { createExampleCanvas } from './util';
 import {
   pluginBackground,
   pluginClear,
+  pluginYAxis,
   renderTradingChartExplicit,
   TradingChartInputExplicit,
   TradingChartPlugin,
@@ -27,7 +28,8 @@ const meta = {
     const plugins: readonly TradingChartPlugin[] = [
       pluginClear({ name: 'clear', priority: 0 }),
       pluginBackground({ name: 'background', priority: 1, color: '#161A25' }),
-      pluginExample({ name: 'example', priority: 2 }),
+      // pluginExample({ name: 'example', priority: 2 }),
+      pluginYAxis({ name: 'y-axis', priority: 3 }),
     ];
 
     const { batch } = renderTradingChartExplicit(input, plugins);
