@@ -7,12 +7,15 @@ import {
   TradingChartResult,
 } from '../types';
 import { sort, toArray } from '@gmjs/value-transformers';
+import { calculateTradingChartAreas } from '../layout/areas';
 
 export function renderTradingChartExplicit(
   input: TradingChartInputExplicit,
   plugins: readonly TradingChartPlugin[],
 ): TradingChartResult {
   const { size, layout } = input;
+
+  const areas = calculateTradingChartAreas(size, layout);
 
   const sortedPlugins = applyFn(
     plugins,
@@ -25,6 +28,7 @@ export function renderTradingChartExplicit(
   for (const plugin of sortedPlugins) {
     const pluginInput: PluginExecutionInput = {
       chartInput: input,
+      areas,
       batch: pluginOutput.batch,
       context: pluginOutput.context,
     };
