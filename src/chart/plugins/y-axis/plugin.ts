@@ -29,6 +29,9 @@ export function pluginYAxis(options: PlugingYAxisOptions): TradingChartPlugin {
     name,
     priority,
     execute: ({ chartInput, batch, context }) => {
+      const { theme } = chartInput;
+      const { textColor, gridLineColor } = theme;
+
       const priceAxisInput: NumericAxisInput = {
         minTickDistance: 30,
         range: {
@@ -55,7 +58,7 @@ export function pluginYAxis(options: PlugingYAxisOptions): TradingChartPlugin {
 
       const renderAxisInput: RenderSimpleVerticalAxisInput = {
         area,
-        color: 'white',
+        color: textColor,
         fontStyle: {},
         xOffset: 5,
         ticks: yAxisTicks,
@@ -71,7 +74,7 @@ export function pluginYAxis(options: PlugingYAxisOptions): TradingChartPlugin {
         },
         batches: [
           {
-            color: 'white',
+            color: gridLineColor,
             offsets: yAxisOffsets,
           },
         ],

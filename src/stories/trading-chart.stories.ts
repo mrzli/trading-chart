@@ -27,7 +27,7 @@ const meta = {
 
     const plugins: readonly TradingChartPlugin[] = [
       pluginClear({ name: 'clear', priority: 0 }),
-      pluginBackground({ name: 'background', priority: 1, color: '#161A25' }),
+      pluginBackground({ name: 'background', priority: 1 }),
       // pluginExample({ name: 'example', priority: 2 }),
       pluginYAxis({ name: 'y-axis', priority: 3 }),
     ];
@@ -57,6 +57,11 @@ export const Basic: Story = {
         xAxisHeight: 20,
         yAxisWidth: 50,
       },
+      theme: {
+        backgroundColor: '#161A25',
+        textColor: 'white',
+        gridLineColor: 'rgba(255, 255, 255, 0.08)',
+      }
     },
   },
 };
