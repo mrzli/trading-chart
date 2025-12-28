@@ -18,16 +18,21 @@ export function drawBatch(
   c: CanvasRenderingContext2D,
   batch: DrawItemBatch,
 ): void {
-  const { clipPath, style, items } = batch;
+  const { offset, clipPath, style, items } = batch;
 
   if (items.length === 0) {
     return;
   }
 
-  const hasStateChanges = clipPath !== undefined || style !== undefined;
+  const hasStateChanges =
+    offset !== undefined || clipPath !== undefined || style !== undefined;
 
   if (hasStateChanges) {
     c.save();
+  }
+
+  if (offset !== undefined) {
+    c.translate(offset.x, offset.y);
   }
 
   if (clipPath !== undefined) {

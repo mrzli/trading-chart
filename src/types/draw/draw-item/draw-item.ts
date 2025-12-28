@@ -1,4 +1,4 @@
-import { Rect } from '../../geometry';
+import { Point, Rect } from '../../geometry';
 import { Margin } from '../../layout';
 import { PathOperation } from '../simple-types';
 import { DrawStyle } from '../styles';
@@ -20,6 +20,7 @@ export interface DrawItemBase {
 
 export interface DrawItemBatch extends DrawItemBase {
   readonly kind: 'batch';
+  readonly offset?: Point;
   readonly clipPath?: readonly DrawPathCommand[];
   readonly style?: DrawStyle;
   readonly items: readonly DrawItem[];
