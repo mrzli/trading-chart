@@ -94,7 +94,7 @@ function getCandleDrawBatch(
 ): DrawItemBatch {
   const path: DrawItemPath = {
     kind: 'path',
-    fillStrokeType: 'fill',
+    operation: 'fill',
     commands: items.flatMap((item) =>
       getCandleDrawCommands(
         item,

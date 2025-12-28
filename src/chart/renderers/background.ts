@@ -29,7 +29,7 @@ export function renderBackground(
       items: [
         {
           kind: 'path',
-          fillStrokeType: 'fill',
+          operation: 'fill',
           commands: [rectCommand],
         },
       ],

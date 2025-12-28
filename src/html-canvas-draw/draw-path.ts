@@ -1,11 +1,11 @@
 import { ensureNever } from '@gmjs/assert';
-import { DrawItemPath, DrawPathCommand, FillStrokeType } from '../types';
+import { DrawItemPath, DrawPathCommand, PathOperation } from '../types';
 
 export function drawPath(c: CanvasRenderingContext2D, p: DrawItemPath): void {
-  const { fillStrokeType, commands } = p;
+  const { operation, commands } = p;
 
   executeDrawPathCommands(c, commands);
-  executeFillStroke(c, fillStrokeType);
+  executePathOperation(c, operation);
 }
 
 export function executeDrawPathCommands(
@@ -79,11 +79,11 @@ export function executeDrawPathCommands(
   }
 }
 
-function executeFillStroke(
+function executePathOperation(
   c: CanvasRenderingContext2D,
-  t: FillStrokeType,
+  operation: PathOperation,
 ): void {
-  switch (t) {
+  switch (operation) {
     case 'fill': {
       c.fill();
       break;
@@ -98,7 +98,7 @@ function executeFillStroke(
       break;
     }
     default: {
-      return ensureNever(t);
+      return ensureNever(operation);
     }
   }
 }

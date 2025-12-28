@@ -5,7 +5,7 @@ export function drawTextBox(
   c: CanvasRenderingContext2D,
   t: DrawItemTextBox,
 ): void {
-  const { text, x, y, boxFillStrokeType, boxPadding } = t;
+  const { text, x, y, operation, boxPadding } = t;
 
   const tm = c.measureText(text);
 
@@ -29,7 +29,7 @@ export function drawTextBox(
 
   const boxPath: DrawItemPath = {
     kind: 'path',
-    fillStrokeType: boxFillStrokeType,
+    operation,
     commands: [{ kind: 'rect', x: xRect, y: yRect, width, height }],
   };
 

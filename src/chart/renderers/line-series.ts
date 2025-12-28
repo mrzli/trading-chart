@@ -25,7 +25,7 @@ export function renderLineSeries(
 
   const pathItem: DrawItemPath = {
     kind: 'path',
-    fillStrokeType: 'stroke',
+    operation: 'stroke',
     commands: getPathCommands(items),
   };
 

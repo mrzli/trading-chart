@@ -25,7 +25,7 @@ export function pluginExample(
           items: [
             {
               kind: 'path',
-              fillStrokeType: 'both',
+              operation: 'both',
               commands: [
                 {
                   kind: 'rect',

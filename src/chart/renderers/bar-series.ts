@@ -57,7 +57,7 @@ function getBarDrawBatch(
 ): DrawItemBatch {
   const path: DrawItemPath = {
     kind: 'path',
-    fillStrokeType: 'fill',
+    operation: 'fill',
     commands: items.map((item) => ({
       kind: 'rect',
       x: area.x + item.xItem + barXOffset,

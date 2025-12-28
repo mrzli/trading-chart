@@ -106,7 +106,7 @@ function getTicksBatch(
 
   const ticksItem: DrawItemPath = {
     kind: 'path',
-    fillStrokeType: 'stroke',
+    operation: 'stroke',
     commands,
   };
 

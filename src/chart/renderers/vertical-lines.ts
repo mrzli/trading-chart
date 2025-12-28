@@ -56,7 +56,7 @@ function getDrawBatch(area: Rect, batch: VerticalLineBatch): DrawItemBatch {
 
   const item: DrawItemPath = {
     kind: 'path',
-    fillStrokeType: 'stroke',
+    operation: 'stroke',
     commands: getPathCommands(area, offsets, thickness),
   };
 

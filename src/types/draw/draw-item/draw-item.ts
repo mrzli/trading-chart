@@ -1,6 +1,6 @@
 import { Rect } from '../../geometry';
 import { Margin } from '../../layout';
-import { FillStrokeType } from '../simple-types';
+import { PathOperation } from '../simple-types';
 import { DrawStyle } from '../styles';
 import { DrawPathCommand } from './draw-path-command';
 
@@ -32,7 +32,7 @@ export interface DrawItemClear extends DrawItemBase {
 
 export interface DrawItemPath extends DrawItemBase {
   readonly kind: 'path';
-  readonly fillStrokeType: FillStrokeType;
+  readonly operation: PathOperation;
   readonly commands: readonly DrawPathCommand[];
 }
 
@@ -49,7 +49,7 @@ export interface DrawItemTextBox extends DrawItemBase {
   readonly text: string;
   readonly x: number;
   readonly y: number;
-  readonly boxFillStrokeType: FillStrokeType;
+  readonly operation: PathOperation;
   readonly boxPadding?: Margin;
 }
 

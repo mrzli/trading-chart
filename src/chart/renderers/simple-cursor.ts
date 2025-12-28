@@ -129,7 +129,7 @@ function getCursorLinesBatch(
     items: [
       {
         kind: 'path',
-        fillStrokeType: 'stroke',
+        operation: 'stroke',
         commands: [
           // vertical line
           { kind: 'move-to', x, y: mainArea.y },
@@ -185,7 +185,7 @@ function getXAxisBatch(
             text,
             x: position.x,
             y,
-            boxFillStrokeType: 'fill',
+            operation: 'fill',
             boxPadding: padding,
           },
         ],
@@ -252,7 +252,7 @@ function getYAxisBatch(
             text,
             x,
             y: position.y,
-            boxFillStrokeType: 'fill',
+            operation: 'fill',
             boxPadding: padding,
           },
         ],

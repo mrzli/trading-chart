@@ -75,7 +75,7 @@ function createDemoBatch(args: DrawToCanvasStoryArgs): DrawItemBatch {
     const y = y0 + (i / gridCount) * h;
     return {
       kind: 'path' as const,
-      fillStrokeType: 'stroke' as const,
+      operation: 'stroke' as const,
       commands: [
         { kind: 'move-to' as const, x: x0, y },
         { kind: 'line-to' as const, x: x0 + w, y },
@@ -96,7 +96,7 @@ function createDemoBatch(args: DrawToCanvasStoryArgs): DrawItemBatch {
       items: [
         {
           kind: 'path',
-          fillStrokeType: 'fill',
+          operation: 'fill',
           commands: [{ kind: 'rect', x: 0, y: 0, width, height }],
         },
       ],
@@ -118,7 +118,7 @@ function createDemoBatch(args: DrawToCanvasStoryArgs): DrawItemBatch {
       items: [
         {
           kind: 'path',
-          fillStrokeType: 'stroke',
+          operation: 'stroke',
           commands: lineCommands,
         },
       ],
@@ -178,7 +178,7 @@ function createOptionalLabelItems(args: {
           text: labelText,
           x: labelX,
           y: labelY,
-          boxFillStrokeType: 'both',
+          operation: 'both',
           boxPadding: { top: 4, right: 6, bottom: 4, left: 6 },
         },
         {
