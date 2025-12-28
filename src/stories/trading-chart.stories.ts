@@ -4,6 +4,7 @@ import { createExampleCanvas } from './util';
 import {
   Ohlc,
   pluginBackground,
+  pluginCandleSeries,
   pluginClear,
   pluginXAxis,
   pluginYAxis,
@@ -33,6 +34,7 @@ const meta = {
       // pluginExample({ name: 'example', priority: 2 }),
       pluginXAxis({ name: 'x-axis', priority: 3 }),
       pluginYAxis({ name: 'y-axis', priority: 3, segmentIndex: 0 }),
+      pluginCandleSeries({ name: 'candle-series', priority: 4, segmentIndex: 0 }),
     ];
 
     const { batch } = renderTradingChartExplicit(input, plugins);
