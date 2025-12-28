@@ -10,13 +10,13 @@ import { TradingChartPlugin } from '../../types';
 import { processNumericAxisData } from './data-processing/process';
 import { NumericAxisInput } from './data-processing/types';
 
-export interface PlugingYAxisOptions {
+export interface PluginYAxisOptions {
   readonly name: string;
   readonly priority: number;
   readonly segmentIndex: number;
 }
 
-export function pluginYAxis(options: PlugingYAxisOptions): TradingChartPlugin {
+export function pluginYAxis(options: PluginYAxisOptions): TradingChartPlugin {
   const { name, priority, segmentIndex } = options;
 
   return {
