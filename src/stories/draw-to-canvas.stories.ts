@@ -178,7 +178,7 @@ function createOptionalLabelItems(args: {
           text: labelText,
           x: labelX,
           y: labelY,
-          operation: 'both',
+          operation: 'fill-stroke',
           boxPadding: { top: 4, right: 6, bottom: 4, left: 6 },
         },
         {

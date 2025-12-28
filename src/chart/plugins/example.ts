@@ -25,7 +25,7 @@ export function pluginExample(
           items: [
             {
               kind: 'path',
-              operation: 'both',
+              operation: 'fill-stroke',
               commands: [
                 {
                   kind: 'rect',

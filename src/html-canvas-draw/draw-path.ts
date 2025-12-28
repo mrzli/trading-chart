@@ -92,7 +92,7 @@ function executePathOperation(
       c.stroke();
       break;
     }
-    case 'both': {
+    case 'fill-stroke': {
       c.fill();
       c.stroke();
       break;
