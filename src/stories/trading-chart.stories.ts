@@ -56,7 +56,7 @@ export const Basic: Story = {
       size: { width: 800, height: 600 },
       layout: {
         padding: { top: 10, right: 10, bottom: 10, left: 10 },
-        heights: [500],
+        heights: [600 - 10 - 10 - 20],
         xAxisHeight: 20,
         yAxisWidth: 50,
       },
