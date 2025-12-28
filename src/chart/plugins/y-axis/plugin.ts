@@ -1,4 +1,4 @@
-import { Rect } from '../../../types';
+import { invariant } from '@gmjs/assert';
 import {
   renderHorizontalLines,
   RenderHorizontalLinesInput,
@@ -13,24 +13,26 @@ import { NumericAxisInput } from './data-processing/types';
 export interface PlugingYAxisOptions {
   readonly name: string;
   readonly priority: number;
+  readonly segmentIndex: number;
 }
 
 export function pluginYAxis(options: PlugingYAxisOptions): TradingChartPlugin {
-  const { name, priority } = options;
-
-  const area: Rect = {
-    x: 400,
-    y: 0,
-    width: 100,
-    height: 400,
-  };
+  const { name, priority, segmentIndex } = options;
 
   return {
     name,
     priority,
     execute: ({ chartInput, areas, batch, context }) => {
       const { theme } = chartInput;
+      const { segments } = areas;
       const { textColor, gridLineColor } = theme;
+
+      invariant(
+        segmentIndex >= 0 && segmentIndex < segments.length,
+        'Invalid segment index.',
+      );
+
+      const { main, yAxis } = segments[segmentIndex];
 
       const priceAxisInput: NumericAxisInput = {
         minTickDistance: 30,
@@ -38,7 +40,7 @@ export function pluginYAxis(options: PlugingYAxisOptions): TradingChartPlugin {
           from: 0,
           to: 200,
         },
-        axisLength: 400,
+        axisLength: yAxis.height,
         precision: 1,
         tickSize: 10,
       };
@@ -57,7 +59,7 @@ export function pluginYAxis(options: PlugingYAxisOptions): TradingChartPlugin {
       );
 
       const renderAxisInput: RenderSimpleVerticalAxisInput = {
-        area,
+        area: yAxis,
         color: textColor,
         fontStyle: {},
         xOffset: 5,
@@ -66,12 +68,7 @@ export function pluginYAxis(options: PlugingYAxisOptions): TradingChartPlugin {
       const axisBatch = renderSimpleVerticalAxis(renderAxisInput);
 
       const renderLinesInput: RenderHorizontalLinesInput = {
-        area: {
-          x: 0,
-          y: 0,
-          width: 400,
-          height: 400,
-        },
+        area: main,
         batches: [
           {
             color: gridLineColor,

@@ -29,7 +29,7 @@ const meta = {
       pluginClear({ name: 'clear', priority: 0 }),
       pluginBackground({ name: 'background', priority: 1 }),
       // pluginExample({ name: 'example', priority: 2 }),
-      pluginYAxis({ name: 'y-axis', priority: 3 }),
+      pluginYAxis({ name: 'y-axis', priority: 3, segmentIndex: 0 }),
     ];
 
     const { batch } = renderTradingChartExplicit(input, plugins);
