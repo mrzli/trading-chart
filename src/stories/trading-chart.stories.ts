@@ -4,6 +4,7 @@ import { createExampleCanvas } from './util';
 import {
   pluginBackground,
   pluginClear,
+  pluginXAxis,
   pluginYAxis,
   renderTradingChartExplicit,
   TradingChartInputExplicit,
@@ -29,6 +30,7 @@ const meta = {
       pluginClear({ name: 'clear', priority: 0 }),
       pluginBackground({ name: 'background', priority: 1 }),
       // pluginExample({ name: 'example', priority: 2 }),
+      pluginXAxis({ name: 'x-axis', priority: 3 }),
       pluginYAxis({ name: 'y-axis', priority: 3, segmentIndex: 0 }),
     ];
 
@@ -61,7 +63,7 @@ export const Basic: Story = {
         backgroundColor: '#161A25',
         textColor: 'white',
         gridLineColor: 'rgba(255, 255, 255, 0.08)',
-      }
+      },
     },
   },
 };
