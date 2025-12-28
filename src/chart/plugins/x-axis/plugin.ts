@@ -29,8 +29,8 @@ export function pluginXAxis(options: PluginXAxisOptions): TradingChartPlugin {
       const timeAxisInput: TimeAxisInput = {
         minTickDistance: 80,
         position: {
-          rightItemOffset: 10,
-          itemSpan: 20,
+          rightItemOffset: 60,
+          itemSpan: 100,
         },
         axisLength: main.width,
         data,
