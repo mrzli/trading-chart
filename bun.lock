@@ -6,6 +6,7 @@
       "name": "@gmjs/trading-chart",
       "dependencies": {
         "@gmjs/apply-function": "^0.0.3",
+        "@gmjs/array-create": "^0.0.1",
         "@gmjs/array-transformers": "^0.0.3",
         "@gmjs/assert": "^0.0.6",
         "@gmjs/data-container-util": "^0.0.1",
@@ -117,6 +118,8 @@
     "@eslint/plugin-kit": ["@eslint/plugin-kit@0.4.1", "", { "dependencies": { "@eslint/core": "^0.17.0", "levn": "^0.4.1" } }, "sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA=="],
 
     "@gmjs/apply-function": ["@gmjs/apply-function@0.0.3", "", { "dependencies": { "@gmjs/compose-function": "^0.0.2", "@gmjs/generic-types": "^0.0.1", "tslib": "^2.6.2" } }, "sha512-J+GYW5yTBEjryQsqm7rQn4KXr9aoDExyXhzxa6LwOy0UDKSceYVmLAex6ut1hN4RYi8FsXZIJGeAdI1w5qaRfg=="],
+
+    "@gmjs/array-create": ["@gmjs/array-create@0.0.1", "", { "dependencies": { "tslib": "^2.6.0" } }, "sha512-sgahvPdokMh0+rpeaMXNalWVWigsckVVmD++kXCAEdx34nnxj+Xv5xsfkIffNbiu7PJe+RBb1Aj6W8hH7KbkIQ=="],
 
     "@gmjs/array-transformers": ["@gmjs/array-transformers@0.0.3", "", { "dependencies": { "tslib": "^2.6.2" } }, "sha512-8tZJ4QURa127TWyBNOU90W/Jy1xi10ztwHOD6cV2A1+mWw+WjiypLukXYPPgTs2n/Eh2POBGU5Vh5DugdKSJTg=="],
 
