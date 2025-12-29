@@ -34,7 +34,11 @@ const meta = {
       // pluginExample({ name: 'example', priority: 2 }),
       pluginXAxis({ name: 'x-axis', priority: 3 }),
       pluginYAxis({ name: 'y-axis', priority: 3, segmentIndex: 0 }),
-      pluginCandleSeries({ name: 'candle-series', priority: 4, segmentIndex: 0 }),
+      pluginCandleSeries({
+        name: 'candle-series',
+        priority: 4,
+        segmentIndex: 0,
+      }),
     ];
 
     const { batch } = renderTradingChartExplicit(input, plugins);
@@ -66,6 +70,8 @@ export const Basic: Story = {
         backgroundColor: '#161A25',
         textColor: 'white',
         gridLineColor: 'rgba(255, 255, 255, 0.08)',
+        bullColor: '#089981',
+        bearColor: '#F23645',
       },
       data: getExampleData(100),
       timeframe: {
@@ -103,7 +109,10 @@ function getExampleData(count: number): readonly Ohlc[] {
       const volume = referentVolume + i * volumeChange;
       data.push({ time, open, high, low, close, volume });
     } else {
-      const open = referentPrice + bodySize + (intervalSize - 1 - inIntervalIndex) * priceChange;
+      const open =
+        referentPrice +
+        bodySize +
+        (intervalSize - 1 - inIntervalIndex) * priceChange;
       const close = open - bodySize;
       const high = open + wickSize;
       const low = close - wickSize;

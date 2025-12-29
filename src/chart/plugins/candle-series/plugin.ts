@@ -28,14 +28,14 @@ export function pluginCandleSeries(
     execute: ({ chartInput, areas, batch, context }) => {
       const { theme, data } = chartInput;
       const { segments } = areas;
-      const { textColor, gridLineColor } = theme;
+      const { bullColor, bearColor } = theme;
 
       invariant(
         segmentIndex >= 0 && segmentIndex < segments.length,
         'Invalid segment index.',
       );
 
-      const { main, yAxis } = segments[segmentIndex];
+      const { main } = segments[segmentIndex];
 
       const candleSeriesInput: CandleSeriesInput = {
         data,
@@ -62,7 +62,7 @@ export function pluginCandleSeries(
             y2: item.y2,
             y3: item.y3,
             y4: item.y4,
-            color: item.type === 'bull' ? 'green' : 'red',
+            color: item.type === 'bull' ? bullColor : bearColor,
           };
         });
 
