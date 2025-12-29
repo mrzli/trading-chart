@@ -26,7 +26,13 @@ export function pluginCandleSeries(
     name,
     priority,
     execute: ({ chartInput, areas, batch, context }) => {
-      const { theme, data, dataVisibleSpan, position } = chartInput;
+      const {
+        theme,
+        segments: segmentInputs,
+        data,
+        dataVisibleSpan,
+        position,
+      } = chartInput;
       const { segments } = areas;
       const { bullColor, bearColor } = theme;
 
@@ -35,6 +41,7 @@ export function pluginCandleSeries(
         'Invalid segment index.',
       );
 
+      const { range } = segmentInputs[segmentIndex];
       const { main } = segments[segmentIndex];
 
       const candleSeriesInput: CandleSeriesInput = {
@@ -42,10 +49,7 @@ export function pluginCandleSeries(
         dataVisibleSpan,
         position,
         xAxisLength: main.width,
-        priceRange: {
-          from: 0,
-          to: 200,
-        },
+        priceRange: range,
         yAxisLength: main.height,
       };
 

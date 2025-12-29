@@ -23,7 +23,7 @@ export function pluginYAxis(options: PluginYAxisOptions): TradingChartPlugin {
     name,
     priority,
     execute: ({ chartInput, areas, batch, context }) => {
-      const { theme } = chartInput;
+      const { theme, segments: segmentInputs } = chartInput;
       const { segments } = areas;
       const { textColor, gridLineColor } = theme;
 
@@ -32,14 +32,12 @@ export function pluginYAxis(options: PluginYAxisOptions): TradingChartPlugin {
         'Invalid segment index.',
       );
 
+      const { range } = segmentInputs[segmentIndex];
       const { main, yAxis } = segments[segmentIndex];
 
       const priceAxisInput: NumericAxisInput = {
         minTickDistance: 30,
-        range: {
-          from: 0,
-          to: 200,
-        },
+        range,
         axisLength: yAxis.height,
         precision: 1,
         tickSize: 10,
