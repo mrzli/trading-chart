@@ -13,9 +13,9 @@ export function renderTradingChartExplicit(
   input: TradingChartInputExplicit,
   plugins: readonly TradingChartPlugin[],
 ): TradingChartResult {
-  const { size, layout } = input;
+  const { size, layout, segments } = input;
 
-  const areas = calculateTradingChartAreas(size, layout);
+  const areas = calculateTradingChartAreas(size, layout, segments);
 
   const sortedPlugins = applyFn(
     plugins,

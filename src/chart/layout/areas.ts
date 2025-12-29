@@ -3,14 +3,16 @@ import {
   TradingChartAreaMainWithYAxis,
   TradingChartAreas,
   TradingChartLayout,
+  TradingChartSegmentInputExplicit,
 } from '../types';
 
 export function calculateTradingChartAreas(
   size: Size,
   layout: TradingChartLayout,
+  segments: readonly TradingChartSegmentInputExplicit[],
 ): TradingChartAreas {
   const { width, height } = size;
-  const { padding, heights, xAxisHeight, yAxisWidth } = layout;
+  const { padding, xAxisHeight, yAxisWidth } = layout;
   const { left, right, top, bottom } = padding;
 
   const entire: Rect = { x: 0, y: 0, width, height };
@@ -23,25 +25,27 @@ export function calculateTradingChartAreas(
   };
 
   let currentY = top;
-  const segments: TradingChartAreaMainWithYAxis[] = [];
+  const segmentAreas: TradingChartAreaMainWithYAxis[] = [];
   
-  for (const currHeight of heights) {
+  for (const segment of segments) {
+    const { height } = segment;
+
     const main: Rect = {
       x: left,
       y: currentY,
       width: all.width - yAxisWidth,
-      height: currHeight,
+      height: segment.height,
     };
 
     const yAxis: Rect = {
       x: left + all.width - yAxisWidth,
       y: currentY,
       width: yAxisWidth,
-      height: currHeight,
+      height,
     };
 
-    segments.push({ main, yAxis });
-    currentY += currHeight;
+    segmentAreas.push({ main, yAxis });
+    currentY += height;
   }
 
   const xAxis: Rect = {
@@ -61,7 +65,7 @@ export function calculateTradingChartAreas(
   return {
     entire,
     all,
-    segments,
+    segments: segmentAreas,
     xAxis,
     corner,
   };

@@ -62,10 +62,15 @@ export const Basic: Story = {
       size: { width: 800, height: 600 },
       layout: {
         padding: { top: 10, right: 10, bottom: 10, left: 10 },
-        heights: [600 - 10 - 10 - 20],
         xAxisHeight: 20,
         yAxisWidth: 50,
       },
+      segments: [
+        {
+          height: 600 - 10 - 10 - 20,
+          range: { from: 0, to: 200 },
+        },
+      ],
       theme: {
         backgroundColor: '#161A25',
         textColor: 'white',
