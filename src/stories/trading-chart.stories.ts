@@ -74,11 +74,16 @@ export const Basic: Story = {
         bearColor: '#F23645',
       },
       data: getExampleData(100),
+      dataVisibleSpan: undefined,
       timeframe: {
         unit: 'm',
         value: 1,
       },
       timezone: 'UTC',
+      position: {
+        rightItemOffset: 60,
+        itemSpan: 100,
+      },
     },
   },
 };

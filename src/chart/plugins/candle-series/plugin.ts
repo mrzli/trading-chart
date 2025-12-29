@@ -26,7 +26,7 @@ export function pluginCandleSeries(
     name,
     priority,
     execute: ({ chartInput, areas, batch, context }) => {
-      const { theme, data } = chartInput;
+      const { theme, data, dataVisibleSpan, position } = chartInput;
       const { segments } = areas;
       const { bullColor, bearColor } = theme;
 
@@ -39,11 +39,8 @@ export function pluginCandleSeries(
 
       const candleSeriesInput: CandleSeriesInput = {
         data,
-        dataDisplayRange: undefined,
-        position: {
-          rightItemOffset: 60,
-          itemSpan: 100,
-        },
+        dataVisibleSpan,
+        position,
         xAxisLength: main.width,
         priceRange: {
           from: 0,

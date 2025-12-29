@@ -12,7 +12,7 @@ export function processCandleSeriesData(
 ): CandleSeriesOutput {
   const {
     data,
-    dataDisplayRange,
+    dataVisibleSpan,
     position,
     xAxisLength,
     priceRange,
@@ -28,12 +28,12 @@ export function processCandleSeriesData(
   const nonConstrainedFirstIndex = getFirstVisibleIndex(position, data.length);
   const firstIndex = Math.max(
     nonConstrainedFirstIndex,
-    dataDisplayRange?.from ?? nonConstrainedFirstIndex,
+    dataVisibleSpan?.from ?? nonConstrainedFirstIndex,
   );
   const nonConstrainedLastIndex = getLastVisibleIndex(position, data.length);
   const lastIndex = Math.min(
     nonConstrainedLastIndex,
-    dataDisplayRange?.to ?? nonConstrainedLastIndex,
+    dataVisibleSpan?.to ?? nonConstrainedLastIndex,
   );
 
   // y-axis
