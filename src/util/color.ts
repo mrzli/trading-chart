@@ -28,3 +28,11 @@ function componentToHex(c: number): string {
   const hex = c.toString(16);
   return hex.length === 1 ? '0' + hex : hex;
 }
+
+export function rgbToString({ r, g, b }: Rgb): string {
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+export function rgbaToString({ r, g, b, a }: Rgb & { a: number }): string {
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
+}

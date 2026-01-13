@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'bun:test';
-import { hexToRgb, hexToRgba, rgbToHex } from './color';
+import {
+  hexToRgb,
+  hexToRgba,
+  rgbToHex,
+  rgbToString,
+  rgbaToString,
+} from './color';
 import { Rgb, Rgba } from '../types';
 
 describe('color', () => {
@@ -66,7 +72,7 @@ describe('color', () => {
         readonly hex: string;
         readonly alpha: number;
       };
-    readonly expected: Rgba
+      readonly expected: Rgba;
     }
 
     const EXAMPLES: readonly Example[] = [
@@ -144,6 +150,96 @@ describe('color', () => {
     for (const example of EXAMPLES) {
       it(JSON.stringify(example.input), () => {
         const actual = rgbToHex(example.input);
+        expect(actual).toEqual(example.expected);
+      });
+    }
+  });
+
+  describe('rgbToString()', () => {
+    interface Example {
+      readonly input: Rgb;
+      readonly expected: string;
+    }
+
+    const EXAMPLES: readonly Example[] = [
+      {
+        input: { r: 0, g: 0, b: 0 },
+        expected: 'rgb(0, 0, 0)',
+      },
+      {
+        input: { r: 255, g: 255, b: 255 },
+        expected: 'rgb(255, 255, 255)',
+      },
+      {
+        input: { r: 255, g: 0, b: 0 },
+        expected: 'rgb(255, 0, 0)',
+      },
+      {
+        input: { r: 0, g: 255, b: 0 },
+        expected: 'rgb(0, 255, 0)',
+      },
+      {
+        input: { r: 0, g: 0, b: 255 },
+        expected: 'rgb(0, 0, 255)',
+      },
+      {
+        input: { r: 18, g: 52, b: 86 },
+        expected: 'rgb(18, 52, 86)',
+      },
+      {
+        input: { r: 171, g: 205, b: 239 },
+        expected: 'rgb(171, 205, 239)',
+      },
+    ];
+
+    for (const example of EXAMPLES) {
+      it(JSON.stringify(example.input), () => {
+        const actual = rgbToString(example.input);
+        expect(actual).toEqual(example.expected);
+      });
+    }
+  });
+
+  describe('rgbaToString()', () => {
+    interface Example {
+      readonly input: Rgba;
+      readonly expected: string;
+    }
+
+    const EXAMPLES: readonly Example[] = [
+      {
+        input: { r: 0, g: 0, b: 0, a: 0 },
+        expected: 'rgba(0, 0, 0, 0)',
+      },
+      {
+        input: { r: 0, g: 0, b: 0, a: 1 },
+        expected: 'rgba(0, 0, 0, 1)',
+      },
+      {
+        input: { r: 255, g: 255, b: 255, a: 0.5 },
+        expected: 'rgba(255, 255, 255, 0.5)',
+      },
+      {
+        input: { r: 255, g: 0, b: 0, a: 0.8 },
+        expected: 'rgba(255, 0, 0, 0.8)',
+      },
+      {
+        input: { r: 0, g: 255, b: 0, a: 0.25 },
+        expected: 'rgba(0, 255, 0, 0.25)',
+      },
+      {
+        input: { r: 18, g: 52, b: 86, a: 0.75 },
+        expected: 'rgba(18, 52, 86, 0.75)',
+      },
+      {
+        input: { r: 171, g: 205, b: 239, a: 0.1 },
+        expected: 'rgba(171, 205, 239, 0.1)',
+      },
+    ];
+
+    for (const example of EXAMPLES) {
+      it(JSON.stringify(example.input), () => {
+        const actual = rgbaToString(example.input);
         expect(actual).toEqual(example.expected);
       });
     }
