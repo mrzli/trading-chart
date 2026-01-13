@@ -1,7 +1,11 @@
 import { describe, expect, it } from 'bun:test';
-import { TradingChartAreas, TradingChartLayout } from '../types';
-import { calculateTradingChartAreas } from './areas';
 import { Size } from '../../types';
+import {
+  TradingChartAreas,
+  TradingChartLayout,
+  TradingChartSegmentInputExplicit,
+} from '../types';
+import { calculateTradingChartAreas } from './areas';
 
 describe('areas', () => {
   describe('calcuateTradingChartAreas()', () => {
@@ -10,6 +14,7 @@ describe('areas', () => {
       readonly input: {
         readonly size: Size;
         readonly layout: TradingChartLayout;
+        readonly segments: readonly TradingChartSegmentInputExplicit[];
       };
       readonly expected: TradingChartAreas;
     }
@@ -21,10 +26,10 @@ describe('areas', () => {
           size: { width: 800, height: 600 },
           layout: {
             padding: { left: 0, right: 0, top: 0, bottom: 0 },
-            heights: [500],
             xAxisHeight: 50,
             yAxisWidth: 100,
           },
+          segments: [createSegment(500)],
         },
         expected: {
           entire: { x: 0, y: 0, width: 800, height: 600 },
@@ -45,10 +50,10 @@ describe('areas', () => {
           size: { width: 800, height: 600 },
           layout: {
             padding: { left: 10, right: 20, top: 30, bottom: 40 },
-            heights: [500],
             xAxisHeight: 50,
             yAxisWidth: 100,
           },
+          segments: [createSegment(500)],
         },
         expected: {
           entire: { x: 0, y: 0, width: 800, height: 600 },
@@ -69,10 +74,10 @@ describe('areas', () => {
           size: { width: 1000, height: 800 },
           layout: {
             padding: { left: 15, right: 25, top: 35, bottom: 45 },
-            heights: [300, 200],
             xAxisHeight: 60,
             yAxisWidth: 120,
           },
+          segments: [createSegment(300), createSegment(200)],
         },
         expected: {
           entire: { x: 0, y: 0, width: 1000, height: 800 },
@@ -95,10 +100,16 @@ describe('areas', () => {
 
     for (const example of EXAMPLES) {
       it(example.description, () => {
-        const { size, layout } = example.input;
-        const actual = calculateTradingChartAreas(size, layout);
+        const { size, layout, segments } = example.input;
+        const actual = calculateTradingChartAreas(size, layout, segments);
         expect(actual).toEqual(example.expected);
       });
     }
   });
 });
+
+const DEFAULT_SEGMENT_RANGE = { from: 0, to: 200 };
+
+function createSegment(height: number): TradingChartSegmentInputExplicit {
+  return { height, range: DEFAULT_SEGMENT_RANGE };
+}
