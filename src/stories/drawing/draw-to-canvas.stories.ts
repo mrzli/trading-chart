@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
-import type { DrawItemBatch } from '../types';
-import { drawToCanvas } from '../html-canvas-draw';
-import { createExampleCanvas } from './util';
+import { drawToCanvas } from '../../html-canvas-draw';
+import type { DrawItemBatch } from '../../types';
+import { createExampleCanvas } from '../util';
 
 interface DrawToCanvasStoryArgs {
   readonly width: number;
