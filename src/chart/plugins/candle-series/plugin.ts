@@ -18,9 +18,9 @@ export interface PluginCandleSeriesOptions {
 }
 
 export function pluginCandleSeries(
-  config: PluginCandleSeriesOptions,
+  options: PluginCandleSeriesOptions,
 ): TradingChartPlugin {
-  const { name, priority, segmentIndex } = config;
+  const { name, priority, segmentIndex } = options;
 
   return {
     name,

@@ -6,6 +6,8 @@ import {
   pluginBackground,
   pluginCandleSeries,
   pluginClear,
+  pluginExample,
+  pluginVolumeSeries,
   pluginXAxis,
   pluginYAxis,
   renderTradingChartExplicit,
@@ -13,7 +15,7 @@ import {
   TradingChartPlugin,
 } from '../chart';
 import { DrawItemBatch } from '../types';
-import { pluginExample } from '../chart/plugins/example';
+import { hexToRgba, rgbaToString } from '../util';
 
 interface TradingChartStoryArgs {
   readonly input: TradingChartInputExplicit;
@@ -34,9 +36,15 @@ const meta = {
       // pluginExample({ name: 'example', priority: 2 }),
       pluginXAxis({ name: 'x-axis', priority: 3 }),
       pluginYAxis({ name: 'y-axis', priority: 3, segmentIndex: 0 }),
+      pluginVolumeSeries({
+        name: 'volume-series',
+        priority: 4,
+        segmentIndex: 0,
+        heightFraction: 0.2,
+      }),
       pluginCandleSeries({
         name: 'candle-series',
-        priority: 4,
+        priority: 5,
         segmentIndex: 0,
       }),
     ];
@@ -77,6 +85,8 @@ export const Basic: Story = {
         gridLineColor: 'rgba(255, 255, 255, 0.08)',
         bullColor: '#089981',
         bearColor: '#F23645',
+        volumeBullColor: rgbaToString(hexToRgba('#089981', 0.3)),
+        volumeBearColor: rgbaToString(hexToRgba('#F23645', 0.3)),
       },
       data: getExampleData(100),
       dataVisibleSpan: undefined,

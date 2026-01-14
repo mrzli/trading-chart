@@ -4,4 +4,6 @@ export interface TradingChartTheme {
   readonly gridLineColor: string;
   readonly bullColor: string;
   readonly bearColor: string;
+  readonly volumeBullColor: string;
+  readonly volumeBearColor: string;
 }
