@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
-import { drawToCanvas } from '../html-canvas-draw';
-import { createExampleCanvas } from './util';
 import {
   Ohlc,
   pluginBackground,
@@ -14,9 +12,11 @@ import {
   renderTradingChartExplicit,
   TradingChartInputExplicit,
   TradingChartPlugin,
-} from '../chart';
-import { DrawItemBatch } from '../types';
-import { hexToRgba, rgbaToString } from '../util';
+} from '../../chart';
+import { drawToCanvas } from '../../html-canvas-draw';
+import { DrawItemBatch } from '../../types';
+import { hexToRgba, rgbaToString } from '../../util';
+import { createExampleCanvas } from '../util';
 
 interface TradingChartStoryArgs {
   readonly input: TradingChartInputExplicit;
