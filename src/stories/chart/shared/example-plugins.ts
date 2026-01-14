@@ -55,3 +55,11 @@ export function getExamplePluginsMain(): readonly TradingChartPlugin[] {
 
   return plugins;
 }
+
+export function getExamplePluginsOverlay(): readonly TradingChartPlugin[] {
+  const plugins: readonly TradingChartPlugin[] = [
+    pluginCursor({ name: 'cursor', priority: 6 }),
+  ];
+
+  return plugins;
+}
