@@ -87,6 +87,7 @@ export const Basic: Story = {
         bearColor: '#F23645',
         volumeBullColor: rgbaToString(hexToRgba('#089981', 0.3)),
         volumeBearColor: rgbaToString(hexToRgba('#F23645', 0.3)),
+        textBoxColor: '#3d3d3d',
       },
       data: getExampleData(100),
       dataVisibleSpan: undefined,

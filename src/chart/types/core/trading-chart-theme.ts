@@ -6,4 +6,5 @@ export interface TradingChartTheme {
   readonly bearColor: string;
   readonly volumeBullColor: string;
   readonly volumeBearColor: string;
+  readonly textBoxColor: string;
 }
