@@ -5,7 +5,7 @@ import {
 } from '../../chart';
 import { drawToCanvas } from '../../html-canvas-draw';
 import { DrawItemBatch, Size } from '../../types';
-import { createChartDom, createExampleCanvas } from '../util';
+import { createChartDom, createExampleCanvas, fullscreenDecorator } from '../util';
 import {
   createEventEmitter,
   DomEventName,
@@ -55,6 +55,10 @@ export const Basic: Story = {
 };
 
 export const MainWithOverlay: Story = {
+  parameters: {
+    layout: 'fullscreen',
+  },
+  decorators: [fullscreenDecorator],
   render: (args) => {
     const input = args.input;
 
@@ -72,7 +76,15 @@ export const MainWithOverlay: Story = {
     });
 
     eventEmitter.on((event) => {
+      const size = getSizeFromResizeEvent(event);
+      if (size) {
+        console.log('Resizing canvases to', size);
+        updateCanvas(chartMain, size);
+        //updateCanvas(chartOverlay, size);
+      }
+
       const finalInput = getFinalInput(input, event);
+      console.log('Rendering with input size', finalInput.size);
 
       const { batch: batchMain } = renderTradingChartExplicit(
         finalInput,
@@ -85,16 +97,16 @@ export const MainWithOverlay: Story = {
 
       drawToCanvas(chartMain, batchObjectMain);
 
-      const { batch: batchOverlay } = renderTradingChartExplicit(
-        finalInput,
-        pluginsOverlay,
-      );
-      const batchObjectOverlay: DrawItemBatch = {
-        kind: 'batch',
-        items: batchOverlay,
-      };
+      // const { batch: batchOverlay } = renderTradingChartExplicit(
+      //   finalInput,
+      //   pluginsOverlay,
+      // );
+      // const batchObjectOverlay: DrawItemBatch = {
+      //   kind: 'batch',
+      //   items: batchOverlay,
+      // };
 
-      drawToCanvas(chartOverlay, batchObjectOverlay);
+      // drawToCanvas(chartOverlay, batchObjectOverlay);
     });
 
     return root;
@@ -109,16 +121,11 @@ function getFinalInput(
   event: UiEvent,
 ): TradingChartInputExplicit {
   if (event.kind === 'resize') {
-    const entry = event.event;
-    const borderBoxSize = entry.borderBoxSize?.[0];
-    if (borderBoxSize) {
-      const newSize: Size = {
-        width: borderBoxSize.inlineSize,
-        height: borderBoxSize.blockSize,
-      };
+    const size = getSizeFromResizeEvent(event);
+    if (size) {
       return {
         ...input,
-        size: newSize,
+        size,
       };
     }
 
@@ -128,4 +135,33 @@ function getFinalInput(
   } else {
     return input;
   }
+}
+
+function getSizeFromResizeEvent(event: UiEvent): Size | undefined {
+  if (event.kind === 'resize') {
+    const entry = event.event;
+    const borderBoxSize = entry.borderBoxSize?.[0];
+    if (borderBoxSize) {
+      return {
+        width: borderBoxSize.inlineSize,
+        height: borderBoxSize.blockSize,
+      };
+    }
+  }
+  return undefined;
+}
+
+function updateCanvas(
+  canvas: HTMLCanvasElement,
+  size: Size,
+): void {
+  if (canvas.width !== size.width) {
+    canvas.width = size.width;
+  }
+  if (canvas.height !== size.height) {
+    canvas.height = size.height;
+  }
+  // if (canvas.style.cursor !== cursor) {
+  //   canvas.style.cursor = cursor;
+  // }
 }

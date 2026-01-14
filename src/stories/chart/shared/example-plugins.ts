@@ -58,6 +58,7 @@ export function getExamplePluginsMain(): readonly TradingChartPlugin[] {
 
 export function getExamplePluginsOverlay(): readonly TradingChartPlugin[] {
   const plugins: readonly TradingChartPlugin[] = [
+    pluginClear({ name: 'clear', priority: 0 }),
     pluginCursor({ name: 'cursor', priority: 6 }),
   ];
 
