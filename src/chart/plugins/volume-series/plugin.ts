@@ -28,13 +28,7 @@ export function pluginVolumeSeries(
     name,
     priority,
     execute: ({ chartInput, areas, batch, context }) => {
-      const {
-        theme,
-        segments: segmentInputs,
-        data,
-        dataVisibleSpan,
-        position,
-      } = chartInput;
+      const { theme, data, dataVisibleSpan, position } = chartInput;
       const { segments } = areas;
       const { volumeBullColor, volumeBearColor } = theme;
 
