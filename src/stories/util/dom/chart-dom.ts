@@ -2,12 +2,10 @@ export interface CreateChartCanvasesReturnValue {
   readonly root: HTMLDivElement;
   readonly chartMain: HTMLCanvasElement;
   readonly chartOverlay: HTMLCanvasElement;
-  readonly infoContainer: HTMLDivElement;
+  // readonly infoContainer: HTMLDivElement;
 }
 
 export function createChartDom(
-  width: number,
-  height: number,
 ): CreateChartCanvasesReturnValue {
   const root = document.createElement('div');
   root.id = 'chart-wrapper';
@@ -24,6 +22,8 @@ export function createChartDom(
   chartMain.style.top = '0';
   chartMain.style.left = '0';
   chartMain.style.outline = 'none';
+  chartMain.style.width = '1000px';
+  chartMain.style.height = '1000px';
 
   const chartOverlay = document.createElement('canvas');
   chartOverlay.id = 'chart-overlay';
@@ -33,30 +33,17 @@ export function createChartDom(
   chartOverlay.style.left = '0';
   chartOverlay.style.outline = 'none';
   chartOverlay.style.pointerEvents = 'none';
+  chartOverlay.style.width = '1000px';
+  chartOverlay.style.height = '1000px';
 
-  const dpr = globalThis.devicePixelRatio ?? 1;
-  const canvasWidth = Math.max(1, Math.floor(width * dpr));
-  const canvasHeight = Math.max(1, Math.floor(height * dpr));
-
-  chartMain.width = canvasWidth;
-  chartMain.height = canvasHeight;
-  chartOverlay.width = canvasWidth;
-  chartOverlay.height = canvasHeight;
-
-  const infoContainer = document.createElement('div');
-  infoContainer.style.position = 'absolute';
-  infoContainer.style.top = '0.5rem';
-  infoContainer.style.left = '0.5rem';
+  // const infoContainer = document.createElement('div');
+  // infoContainer.style.position = 'absolute';
+  // infoContainer.style.top = '0.5rem';
+  // infoContainer.style.left = '0.5rem';
 
   root.appendChild(chartMain);
   root.appendChild(chartOverlay);
-  root.appendChild(infoContainer);
+  // root.appendChild(infoContainer);
 
-  const mainContext = chartMain.getContext('2d')!;
-  const overlayContext = chartOverlay.getContext('2d')!;
-
-  mainContext.setTransform(dpr, 0, 0, dpr, 0, 0);
-  overlayContext.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-  return { root, chartMain, chartOverlay, infoContainer };
+  return { root, chartMain, chartOverlay /*, infoContainer */ };
 }
