@@ -37,22 +37,26 @@ export function pluginCursor(options: PluginCursorOptions): TradingChartPlugin {
         timezone,
         timeframe,
         position,
+        cursorPosition,
       } = chartInput;
       const { all, segments, xAxis } = areas;
       const { textColor, textBoxColor } = theme;
 
-      const segmentIndex = 0;
+      if (cursorPosition === undefined) {
+        return { batch, context };
+      }
 
-      const segmentInput = segmentInputs[segmentIndex];
+      const {
+        seriesItemIndex: cursorSeriesItemIndex,
+        segmentIndex: cursorSegmentIndex,
+        value: cursorValue,
+      } = cursorPosition;
+
+      const segmentInput = segmentInputs[cursorSegmentIndex];
       const { range } = segmentInput;
 
-      const segment = segments[segmentIndex];
+      const segment = segments[cursorSegmentIndex];
       const { main, yAxis } = segment;
-
-      const cursorPosition: TradingChartCursorPosition | undefined = {
-        seriesItemIndex: 0,
-        value: 10,
-      };
 
       const cursorPixelPosition = getCursorPixelPosition(
         cursorPosition,
@@ -61,17 +65,14 @@ export function pluginCursor(options: PluginCursorOptions): TradingChartPlugin {
         range,
       );
 
-      const xAxisText =
-        cursorPosition !== undefined
-          ? formatTime(
-              getTime(data, cursorPosition.seriesItemIndex),
-              timezone,
-              timeframe,
-              cursorPosition.seriesItemIndex,
-            )
-          : undefined;
+      const xAxisText = formatTime(
+        getTime(data, cursorSeriesItemIndex),
+        timezone,
+        timeframe,
+        cursorSeriesItemIndex,
+      );
 
-      const yAxisText = formatPrice(cursorPosition?.value ?? 0, 1);
+      const yAxisText = formatPrice(cursorValue, 1);
 
       const renderInput: RenderSimpleCursorInput = {
         fullArea: all,

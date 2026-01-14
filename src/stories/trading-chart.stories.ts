@@ -6,6 +6,7 @@ import {
   pluginBackground,
   pluginCandleSeries,
   pluginClear,
+  pluginCursor,
   pluginExample,
   pluginVolumeSeries,
   pluginXAxis,
@@ -47,6 +48,7 @@ const meta = {
         priority: 5,
         segmentIndex: 0,
       }),
+      pluginCursor({ name: 'cursor', priority: 6 }),
     ];
 
     const { batch } = renderTradingChartExplicit(input, plugins);
@@ -99,6 +101,11 @@ export const Basic: Story = {
       position: {
         rightItemOffset: 60,
         itemSpan: 100,
+      },
+      cursorPosition: {
+        seriesItemIndex: 20,
+        segmentIndex: 0,
+        value: 254,
       },
     },
   },

@@ -1,6 +1,6 @@
 import { Range, Size } from '../../../types';
 import { Ohlc, TradingChartTimeframe } from '../data';
-import { SeriesPosition } from '../position';
+import { SeriesPosition, TradingChartCursorPosition } from '../position';
 import { TradingChartLayout } from './trading-chart-layout';
 import { TradingChartSegmentInputExplicit } from './trading-chart-segment-input-explicit';
 import { TradingChartTheme } from './trading-chart-theme';
@@ -15,4 +15,5 @@ export interface TradingChartInputExplicit {
   readonly timeframe: TradingChartTimeframe;
   readonly timezone: string;
   readonly position: SeriesPosition;
+  readonly cursorPosition: TradingChartCursorPosition | undefined;
 }
