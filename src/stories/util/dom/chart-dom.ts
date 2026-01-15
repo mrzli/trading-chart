@@ -16,28 +16,28 @@ export function createChartDom(
   root.style.outline = 'none';
   root.tabIndex = 0;
 
-  const defaultSize = '400px';
+  const defaultSize = 400;
 
   const chartMain = document.createElement('canvas');
   chartMain.id = 'chart-main';
   chartMain.tabIndex = 0;
+  chartMain.width = defaultSize;
+  chartMain.height = defaultSize;
   chartMain.style.position = 'absolute';
   chartMain.style.top = '0';
   chartMain.style.left = '0';
   chartMain.style.outline = 'none';
-  chartMain.style.width = defaultSize;
-  chartMain.style.height = defaultSize;
 
   const chartOverlay = document.createElement('canvas');
   chartOverlay.id = 'chart-overlay';
   chartOverlay.tabIndex = 0;
+  chartOverlay.width = defaultSize;
+  chartOverlay.height = defaultSize;
   chartOverlay.style.position = 'absolute';
   chartOverlay.style.top = '0';
   chartOverlay.style.left = '0';
   chartOverlay.style.outline = 'none';
   chartOverlay.style.pointerEvents = 'none';
-  chartOverlay.style.width = defaultSize;
-  chartOverlay.style.height = defaultSize;
 
   // const infoContainer = document.createElement('div');
   // infoContainer.style.position = 'absolute';

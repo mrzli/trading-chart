@@ -5,7 +5,11 @@ import {
 } from '../../chart';
 import { drawToCanvas } from '../../html-canvas-draw';
 import { DrawItemBatch, Size } from '../../types';
-import { createChartDom, createExampleCanvas, fullscreenDecorator } from '../util';
+import {
+  createChartDom,
+  createExampleCanvas,
+  fullscreenDecorator,
+} from '../util';
 import {
   createEventEmitter,
   DomEventName,
@@ -17,6 +21,7 @@ import {
   subscribeToResize,
   UiEvent,
 } from './shared';
+import { isSizeEqual } from '../../util';
 
 interface TradingChartStoryArgs {
   readonly input: TradingChartInputExplicit;
@@ -78,35 +83,37 @@ export const MainWithOverlay: Story = {
     eventEmitter.on((event) => {
       const size = getSizeFromResizeEvent(event);
       if (size) {
-        console.log('Resizing canvases to', size);
         updateCanvas(chartMain, size);
-        //updateCanvas(chartOverlay, size);
+        updateCanvas(chartOverlay, size);
       }
 
-      const finalInput = getFinalInput(input, event);
-      console.log('Rendering with input size', finalInput.size);
+      const newInput = getNewInput(input, event);
 
-      const { batch: batchMain } = renderTradingChartExplicit(
-        finalInput,
-        pluginsMain,
-      );
-      const batchObjectMain: DrawItemBatch = {
-        kind: 'batch',
-        items: batchMain,
-      };
+      if (isMainInputChanged(input, newInput)) {
+        const { batch: batchMain } = renderTradingChartExplicit(
+          newInput,
+          pluginsMain,
+        );
+        const batchObjectMain: DrawItemBatch = {
+          kind: 'batch',
+          items: batchMain,
+        };
 
-      drawToCanvas(chartMain, batchObjectMain);
+        drawToCanvas(chartMain, batchObjectMain);
+      }
 
-      // const { batch: batchOverlay } = renderTradingChartExplicit(
-      //   finalInput,
-      //   pluginsOverlay,
-      // );
-      // const batchObjectOverlay: DrawItemBatch = {
-      //   kind: 'batch',
-      //   items: batchOverlay,
-      // };
+      if (!isOverlayInputChanged(input, newInput)) {
+        const { batch: batchOverlay } = renderTradingChartExplicit(
+          newInput,
+          pluginsOverlay,
+        );
+        const batchObjectOverlay: DrawItemBatch = {
+          kind: 'batch',
+          items: batchOverlay,
+        };
 
-      // drawToCanvas(chartOverlay, batchObjectOverlay);
+        drawToCanvas(chartOverlay, batchObjectOverlay);
+      }
     });
 
     return root;
@@ -116,7 +123,7 @@ export const MainWithOverlay: Story = {
   },
 };
 
-function getFinalInput(
+function getNewInput(
   input: TradingChartInputExplicit,
   event: UiEvent,
 ): TradingChartInputExplicit {
@@ -151,10 +158,7 @@ function getSizeFromResizeEvent(event: UiEvent): Size | undefined {
   return undefined;
 }
 
-function updateCanvas(
-  canvas: HTMLCanvasElement,
-  size: Size,
-): void {
+function updateCanvas(canvas: HTMLCanvasElement, size: Size): void {
   if (canvas.width !== size.width) {
     canvas.width = size.width;
   }
@@ -164,4 +168,54 @@ function updateCanvas(
   // if (canvas.style.cursor !== cursor) {
   //   canvas.style.cursor = cursor;
   // }
+}
+
+function isMainInputChanged(
+  oldInput: TradingChartInputExplicit,
+  newInput: TradingChartInputExplicit,
+): boolean {
+  if (!isSizeEqual(oldInput.size, newInput.size)) {
+    return true;
+  }
+  if (oldInput.layout !== newInput.layout) {
+    return true;
+  }
+  if (oldInput.theme !== newInput.theme) {
+    return true;
+  }
+  if (oldInput.segments !== newInput.segments) {
+    return true;
+  }
+  if (oldInput.data !== newInput.data) {
+    return true;
+  }
+  if (oldInput.dataVisibleSpan !== newInput.dataVisibleSpan) {
+    return true;
+  }
+  if (oldInput.timeframe !== newInput.timeframe) {
+    return true;
+  }
+  if (oldInput.timezone !== newInput.timezone) {
+    return true;
+  }
+  if (oldInput.position !== newInput.position) {
+    return true;
+  }
+  // if (oldInput.cursorPosition !== newInput.cursorPosition) {
+  //   return true;
+  // }
+  return false;
+}
+
+function isOverlayInputChanged(
+  oldInput: TradingChartInputExplicit,
+  newInput: TradingChartInputExplicit,
+): boolean {
+  if (isMainInputChanged(oldInput, newInput)) {
+    return true;
+  }
+  if (oldInput.cursorPosition !== newInput.cursorPosition) {
+    return true;
+  }
+  return false;
 }
