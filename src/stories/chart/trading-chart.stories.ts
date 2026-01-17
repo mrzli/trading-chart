@@ -130,9 +130,24 @@ function getNewInput(
   if (event.kind === 'resize') {
     const size = getSizeFromResizeEvent(event);
     if (size) {
+      const segment = input.segments[0];
+      const layout = input.layout;
+      const newHeight =
+        size.height - layout.xAxisHeight - layout.padding.top - layout.padding.bottom;
+
+      const segments = newHeight !== segment.height
+        ? [
+            {
+              ...segment,
+              height: newHeight,
+            },
+          ]
+        : input.segments;
+
       return {
         ...input,
         size,
+        segments,
       };
     }
 

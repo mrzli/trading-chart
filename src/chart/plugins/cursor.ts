@@ -40,7 +40,7 @@ export function pluginCursor(options: PluginCursorOptions): TradingChartPlugin {
         cursorPosition,
       } = chartInput;
       const { all, segments, xAxis } = areas;
-      const { textColor, textBoxColor } = theme;
+      const { cursorLineColor, textColor, textBoxColor } = theme;
 
       if (cursorPosition === undefined) {
         return { batch, context };
@@ -80,7 +80,7 @@ export function pluginCursor(options: PluginCursorOptions): TradingChartPlugin {
         xAxisArea: xAxis,
         yAxisArea: yAxis,
         position: cursorPixelPosition,
-        lineColor: textColor,
+        lineColor: cursorLineColor,
         fontColor: textColor,
         textBoxColor,
         pathStyle: { lineDash: [5, 5] },
