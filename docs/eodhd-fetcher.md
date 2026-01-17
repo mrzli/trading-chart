@@ -122,8 +122,55 @@ Logs are stored in the `logs` directory.
 
 ## Fetching Commands
 
+All fetch commands are cached. If data was fetched recently, it will not be fetched again. Use the `--force` flag to fetch anyway.
+
+Some commands support filtering by exchange and symbol using glob patterns:
+
+- `--exchanges <glob[,glob...]>`
+- `--symbols <glob[,glob...]>`
+
+When both filters are provided, both must match for an item to be included. If a filter is omitted, it is treated as "match all". These filters apply to `fetch symbols`, `fetch meta`, `fetch eod`, and `fetch intraday`.
+
 ### Fetch Exchange List
 
 ```bash
 fetch exchanges
 ```
+
+- Uses the cache unless `--force` is provided.
+
+### Fetch Symbols
+
+```bash
+fetch symbols
+```
+
+- Uses the cache unless `--force` is provided.
+- Supports `--exchanges` and `--symbols` filters.
+
+### Fetch Metadata
+
+```bash
+fetch meta
+```
+
+- Uses the cache unless `--force` is provided.
+- Supports `--exchanges` and `--symbols` filters.
+
+### Fetch End-of-Day Data
+
+```bash
+fetch eod
+```
+
+- Uses the cache unless `--force` is provided.
+- Supports `--exchanges` and `--symbols` filters.
+
+### Fetch Intraday Data
+
+```bash
+fetch intraday
+```
+
+- Uses the cache unless `--force` is provided.
+- Supports `--exchanges` and `--symbols` filters.
