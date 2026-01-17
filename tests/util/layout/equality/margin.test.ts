@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'bun:test';
-import { Margin } from '../../../types';
-import { isMarginEqual } from './margin';
+import { Margin } from '@/types';
+import { isMarginEqual } from '@/util';
 
 describe('margin', () => {
   describe('isMarginEqual()', () => {

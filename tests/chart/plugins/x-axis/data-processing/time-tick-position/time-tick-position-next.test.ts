@@ -1,7 +1,7 @@
 import { isoDateTimeToUnixSeconds } from '@gmjs/date-util';
 import { describe, it, expect } from 'bun:test';
-import { TimeTickTimeframe } from '../types';
-import { getTimeTickPositionNext } from './time-tick-position-next';
+import { TimeTickTimeframe } from '@/chart/plugins/x-axis/data-processing';
+import { getTimeTickPositionNext } from '@/chart/plugins/x-axis/data-processing/time-tick-position';
 
 describe('time-tick-position-next', () => {
   describe('getTimeTickPositionNext()', () => {

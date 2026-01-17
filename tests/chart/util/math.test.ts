@@ -5,7 +5,7 @@ import {
   getNextHigherValue,
   getNextHigherValueWithOrderOfMagnitude,
   getNumIntegerDigits,
-} from './math';
+} from '@/chart';
 
 describe('math', () => {
   describe('getNumIntegerDigits()', () => {

@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'bun:test';
-import { renderBackground, RenderBackgroundInput } from './background';
-import { DrawItem, DrawPathCommand } from '../../types';
+import {
+  renderBackground,
+  RenderBackgroundInput,
+} from '@/chart/renderers';
+import { DrawItem, DrawPathCommand } from '@/types';
 
 describe('background', () => {
   describe('renderBackground()', () => {

@@ -1,6 +1,6 @@
+import { TimeAxisInput, TimeTickTimeframe } from '@/chart/plugins/x-axis/data-processing';
+import { getMinTimeTickTimeframe } from '@/chart/plugins/x-axis/data-processing/03-time-tick-timeframe';
 import { describe, it, expect } from 'bun:test';
-import { getMinTimeTickTimeframe } from './time-tick-timeframe';
-import { TimeAxisInput, TimeTickTimeframe } from '../types';
 
 describe('time-tick-timeframe', () => {
   describe('getMinTimeTickTimeframe()', () => {

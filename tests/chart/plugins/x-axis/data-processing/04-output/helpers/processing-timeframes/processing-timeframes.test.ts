@@ -1,6 +1,6 @@
+import { TimeTickTimeframe } from '@/chart/plugins/x-axis/data-processing';
+import { getTimeAxisProcessingTimeframes } from '@/chart/plugins/x-axis/data-processing/04-output/helpers/processing-timeframes';
 import { describe, expect, it } from 'bun:test';
-import { TimeTickTimeframe } from '../../../types';
-import { getTimeAxisProcessingTimeframes } from './processing-timeframes';
 
 describe('processing-timeframes', () => {
   describe('getTimeAxisProcessingTimeframes()', () => {

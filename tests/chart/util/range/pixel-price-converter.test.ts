@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'bun:test';
-import { Range } from '../../../types';
 import {
   pixelToNumericValue,
   numericValueToPixel,
-} from './pixel-numeric-converter';
+} from '@/chart';
+import { Range } from '@/types';
 
 describe('pixel-numeric-converter', () => {
   const RANGE: Range = { from: 1000, to: 5000 };

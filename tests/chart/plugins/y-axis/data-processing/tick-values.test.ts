@@ -1,7 +1,7 @@
 import { expect, describe, it } from 'bun:test';
-import { TickValue } from '../../../types';
-import { getNumericAxisTickValues } from './tick-values';
-import { NumericAxisInput } from './types';
+import { TickValue } from '@/chart';
+import { NumericAxisInput } from '@/chart/plugins/y-axis/data-processing';
+import { getNumericAxisTickValues } from '@/chart/plugins/y-axis/data-processing/tick-values';
 
 describe('tick-values', () => {
   describe('getNumericAxisTickValues()', () => {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'bun:test';
-import { Size } from '../../../types';
-import { isSizeEqual } from './size';
+import { Size } from '@/types';
+import { isSizeEqual } from '@/util';
 
 describe('size', () => {
   describe('isPointEqual()', () => {

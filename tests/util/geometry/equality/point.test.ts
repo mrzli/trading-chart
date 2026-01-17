@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'bun:test';
-import { Point } from '../../../types';
-import { isPointEqual } from './point';
+import { Point } from '@/types';
+import { isPointEqual } from '@/util';
 
 describe('point', () => {
   describe('isPointEqual()', () => {

@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'bun:test';
-import { Size } from '../../types';
+import { Size } from '../../../src/types';
 import {
   TradingChartAreas,
   TradingChartLayout,
   TradingChartSegmentInputExplicit,
-} from '../types';
-import { calculateTradingChartAreas } from './areas';
+} from '../../../src/chart/types';
+import { calculateTradingChartAreas } from '../../../src/chart/layout/areas';
 
 describe('areas', () => {
   describe('calcuateTradingChartAreas()', () => {

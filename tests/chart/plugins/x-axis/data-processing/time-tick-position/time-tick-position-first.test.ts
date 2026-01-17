@@ -4,8 +4,11 @@ import {
   isoDateTimeToUnixSeconds,
 } from '@gmjs/date-util';
 import { describe, it, expect } from 'bun:test';
-import { TimeAxisExtendedDataItem, TimeTickTimeframe } from '../types';
-import { getTimeTickPositionFirst } from './time-tick-position-first';
+import {
+  TimeAxisExtendedDataItem,
+  TimeTickTimeframe,
+} from '@/chart/plugins/x-axis/data-processing';
+import { getTimeTickPositionFirst } from '@/chart/plugins/x-axis/data-processing/time-tick-position';
 
 describe('time-tick-position-first', () => {
   describe('getTimeTickPositionFirst()', () => {

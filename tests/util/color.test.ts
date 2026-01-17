@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'bun:test';
+import { Rgb, Rgba } from '@/types';
 import {
   hexToRgb,
   hexToRgba,
   rgbToHex,
   rgbToString,
   rgbaToString,
-} from './color';
-import { Rgb, Rgba } from '../types';
+} from '@/util';
 
 describe('color', () => {
   describe('hexToRgb()', () => {

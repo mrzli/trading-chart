@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'bun:test';
-import { SeriesPosition } from '../../types';
 import {
   pixelToSeriesIndexFractional,
   seriesIndexFractionalToPixel,
-} from './pixel-series-index-converter';
+  SeriesPosition,
+} from '@/chart';
 
 describe('pixel-series-index-converter', () => {
   const AXIS_LENGTH = 1000;

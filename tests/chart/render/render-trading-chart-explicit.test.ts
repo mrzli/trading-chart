@@ -1,6 +1,9 @@
 import { describe, it, expect } from 'bun:test';
-import { TradingChartInputExplicit, TradingChartResult } from '../types';
-import { renderTradingChartExplicit } from './render-trading-chart-explicit';
+import {
+  renderTradingChartExplicit,
+  TradingChartInputExplicit,
+  TradingChartResult,
+} from '@/chart';
 
 describe('render-trading-chart-explicit', () => {
   describe('renderTradingChartExplicit()', () => {

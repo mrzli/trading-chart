@@ -1,6 +1,6 @@
 import { DateObjectTz } from '@gmjs/date-util';
 import { describe, it, expect } from 'bun:test';
-import { dateObjectToWeekday } from './weekday';
+import { dateObjectToWeekday } from '@/chart';
 
 describe('weekday', () => {
   describe('dateObjectToWeekday()', () => {

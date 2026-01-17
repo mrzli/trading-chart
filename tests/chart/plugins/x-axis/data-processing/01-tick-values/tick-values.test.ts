@@ -1,8 +1,8 @@
+import { Ohlc } from '@/chart';
+import { TimeAxisInput, TimeAxisTickValueData } from '@/chart/plugins/x-axis/data-processing';
+import { getTimeAxisTickValueData } from '@/chart/plugins/x-axis/data-processing/01-tick-values';
 import { range } from '@gmjs/array-create';
 import { describe, expect, it } from 'bun:test';
-import { Ohlc } from '../../../../types';
-import { TimeAxisInput, TimeAxisTickValueData } from '../types';
-import { getTimeAxisTickValueData } from './tick-values';
 
 describe('tick-values', () => {
   describe('getTimeAxisTickValueData()', () => {
@@ -23,7 +23,7 @@ describe('tick-values', () => {
       },
       axisLength: 1000,
       data: [],
-      interval: {
+      timeframe: {
         unit: 'm',
         value: 1,
       },
