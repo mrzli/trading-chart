@@ -45,7 +45,7 @@ export function getExampleTradingChartInput(): TradingChartInputExplicit {
     cursorPosition: {
       seriesItemIndex: 20,
       segmentIndex: 0,
-      value: 254,
+      value: 54,
     },
   };
 }
