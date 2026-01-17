@@ -1,8 +1,5 @@
 import { describe, expect, it } from 'bun:test';
-import {
-  renderBackground,
-  RenderBackgroundInput,
-} from '@/chart/renderers';
+import { renderBackground, RenderBackgroundInput } from '@/chart/renderers';
 import { DrawItem, DrawPathCommand } from '@/types';
 
 describe('background', () => {
@@ -11,39 +8,6 @@ describe('background', () => {
       readonly input: RenderBackgroundInput;
       readonly expected: readonly DrawItem[];
     }
-
-    const makeExpected = (
-      input: RenderBackgroundInput,
-    ): readonly DrawItem[] => {
-      const { size, color } = input;
-      const { width, height } = size;
-      const rectCommand: DrawPathCommand = {
-        kind: 'rect',
-        x: 0,
-        y: 0,
-        width,
-        height,
-      };
-
-      const batch: readonly DrawItem[] = [
-        {
-          kind: 'batch',
-          clipPath: [rectCommand],
-          style: {
-            fillStrokeStyle: { fillStyle: color },
-          },
-          items: [
-            {
-              kind: 'path',
-              operation: 'fill',
-              commands: [rectCommand],
-            },
-          ],
-        },
-      ];
-
-      return batch;
-    };
 
     const EXAMPLES: readonly Example[] = [
       {
@@ -80,3 +44,34 @@ describe('background', () => {
     }
   });
 });
+
+function makeExpected(input: RenderBackgroundInput): readonly DrawItem[] {
+  const { size, color } = input;
+  const { width, height } = size;
+  const rectCommand: DrawPathCommand = {
+    kind: 'rect',
+    x: 0,
+    y: 0,
+    width,
+    height,
+  };
+
+  const batch: readonly DrawItem[] = [
+    {
+      kind: 'batch',
+      clipPath: [rectCommand],
+      style: {
+        fillStrokeStyle: { fillStyle: color },
+      },
+      items: [
+        {
+          kind: 'path',
+          operation: 'fill',
+          commands: [rectCommand],
+        },
+      ],
+    },
+  ];
+
+  return batch;
+}
