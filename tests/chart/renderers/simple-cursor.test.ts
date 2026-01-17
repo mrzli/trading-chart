@@ -60,8 +60,8 @@ describe('simple-cursor', () => {
       };
 
       const adjustment = getPixelAdjustment(pathStyle.lineWidth ?? 1);
-      const x = 50 + adjustment;
-      const y = 30 + adjustment;
+      const x = mainArea.x + 50 + adjustment;
+      const y = mainArea.y + 30 + adjustment;
 
       const expected: readonly DrawItem[] = [
         {
@@ -109,7 +109,7 @@ describe('simple-cursor', () => {
                     {
                       kind: 'text-box',
                       text: '10:00',
-                      x: 50,
+                      x: 60,
                       y: 74,
                       operation: 'fill',
                       boxPadding: xAxisBoxPadding,
@@ -125,7 +125,7 @@ describe('simple-cursor', () => {
                     {
                       kind: 'text',
                       text: '10:00',
-                      x: 50,
+                      x: 60,
                       y: 75,
                     },
                   ],
@@ -154,7 +154,7 @@ describe('simple-cursor', () => {
                       kind: 'text-box',
                       text: '123',
                       x: 3,
-                      y: 30,
+                      y: 40,
                       operation: 'fill',
                       boxPadding: yAxisBoxPadding,
                     },
@@ -170,7 +170,7 @@ describe('simple-cursor', () => {
                       kind: 'text',
                       text: '123',
                       x: 6,
-                      y: 30,
+                      y: 40,
                     },
                   ],
                 },

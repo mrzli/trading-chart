@@ -59,8 +59,13 @@ export function renderSimpleCursor(
     return [];
   }
 
+  const positionInMain: Point = {
+    x: mainArea.x + position.x,
+    y: mainArea.y + position.y,
+  };
+
   const cursorLinesBatch = getCursorLinesBatch(
-    position,
+    positionInMain,
     mainArea,
     lineColor,
     pathStyle,
@@ -70,7 +75,7 @@ export function renderSimpleCursor(
     xAxisText === undefined || xAxisArea === undefined
       ? undefined
       : getXAxisBatch(
-          position,
+          positionInMain,
           xAxisArea,
           fontColor,
           textBoxColor,
@@ -84,7 +89,7 @@ export function renderSimpleCursor(
     yAxisText === undefined || yAxisArea === undefined
       ? undefined
       : getYAxisBatch(
-          position,
+          positionInMain,
           yAxisArea,
           fontColor,
           textBoxColor,
