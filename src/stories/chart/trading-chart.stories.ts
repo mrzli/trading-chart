@@ -133,7 +133,7 @@ function getNewInput(
 ): TradingChartInputExplicit {
   if (event.kind === 'resize') {
     const size = getSizeFromResizeEvent(event);
-    if (size) {
+    if (size && size.width > 0 && size.height > 0) {
       const segment = input.segments[0];
       const layout = input.layout;
       const newHeight =
