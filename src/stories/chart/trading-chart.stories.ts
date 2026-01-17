@@ -80,6 +80,8 @@ export const MainWithOverlay: Story = {
       subscribeToDom(eventEmitter, root, eventType);
     });
 
+    let currentInput = input;
+
     eventEmitter.on((event) => {
       const size = getSizeFromResizeEvent(event);
       if (size) {
@@ -87,9 +89,9 @@ export const MainWithOverlay: Story = {
         updateCanvas(chartOverlay, size);
       }
 
-      const newInput = getNewInput(input, event);
+      const newInput = getNewInput(currentInput, event);
 
-      if (isMainInputChanged(input, newInput)) {
+      if (isMainInputChanged(currentInput, newInput)) {
         const { batch: batchMain } = renderTradingChartExplicit(
           newInput,
           pluginsMain,
@@ -102,7 +104,7 @@ export const MainWithOverlay: Story = {
         drawToCanvas(chartMain, batchObjectMain);
       }
 
-      if (!isOverlayInputChanged(input, newInput)) {
+      if (isOverlayInputChanged(currentInput, newInput)) {
         const { batch: batchOverlay } = renderTradingChartExplicit(
           newInput,
           pluginsOverlay,
@@ -114,6 +116,8 @@ export const MainWithOverlay: Story = {
 
         drawToCanvas(chartOverlay, batchObjectOverlay);
       }
+
+      currentInput = newInput;
     });
 
     return root;
@@ -133,16 +137,20 @@ function getNewInput(
       const segment = input.segments[0];
       const layout = input.layout;
       const newHeight =
-        size.height - layout.xAxisHeight - layout.padding.top - layout.padding.bottom;
+        size.height -
+        layout.xAxisHeight -
+        layout.padding.top -
+        layout.padding.bottom;
 
-      const segments = newHeight !== segment.height
-        ? [
-            {
-              ...segment,
-              height: newHeight,
-            },
-          ]
-        : input.segments;
+      const segments =
+        newHeight !== segment.height
+          ? [
+              {
+                ...segment,
+                height: newHeight,
+              },
+            ]
+          : input.segments;
 
       return {
         ...input,
