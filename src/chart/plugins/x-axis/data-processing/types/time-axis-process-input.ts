@@ -1,6 +1,6 @@
 import { TimeAxisExtendedDataItem } from './time-axis-extended-data-item';
 import { TimeAxisInput } from './time-axis-input';
-import { TimeTickTimeframe } from './time-tick-interval';
+import { TimeTickTimeframe } from './time-tick-timeframe';
 
 export interface TimeAxisProcessInput {
   readonly timeAxisInput: TimeAxisInput;
