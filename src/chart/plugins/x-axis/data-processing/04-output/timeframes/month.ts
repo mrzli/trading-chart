@@ -12,11 +12,11 @@ import { getTakenTicks, canAddTick, addTakenTick } from './shared';
 export function processTimeTickOutputMonth(
   input: TimeAxisProcessInput,
   existingTicks: readonly TimeDisplayType[],
-  currentTimeTickInterval: TimeTickTimeframeMonth,
+  currentTimeTickTimeframe: TimeTickTimeframeMonth,
 ): readonly TimeDisplayType[] {
   const { extendedItems, minTickItemDistance } = input;
 
-  const { value: tickIntervalValue } = currentTimeTickInterval;
+  const { value: tickIntervalValue } = currentTimeTickTimeframe;
 
   const transitionMonths = mapGetOrThrow(
     TRANSITION_MONTHS_MAP,

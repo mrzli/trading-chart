@@ -5,6 +5,6 @@ import { TimeTickTimeframe } from './time-tick-timeframe';
 export interface TimeAxisProcessInput {
   readonly timeAxisInput: TimeAxisInput;
   readonly extendedItems: readonly TimeAxisExtendedDataItem[];
-  readonly timeTickInterval: TimeTickTimeframe;
+  readonly timeTickTimeframe: TimeTickTimeframe;
   readonly minTickItemDistance: number;
 }

@@ -12,11 +12,11 @@ import { getTakenTicks, canAddTick, addTakenTick } from './shared';
 export function processTimeTickOutputMinute(
   input: TimeAxisProcessInput,
   existingTicks: readonly TimeDisplayType[],
-  currentTimeTickInterval: TimeTickTimeframeMinute,
+  currentTimeTickTimeframe: TimeTickTimeframeMinute,
 ): readonly TimeDisplayType[] {
   const { extendedItems, minTickItemDistance } = input;
 
-  const { value: tickIntervalValue } = currentTimeTickInterval;
+  const { value: tickIntervalValue } = currentTimeTickTimeframe;
 
   const transitionMinutes = mapGetOrThrow(
     TRANSITION_MINUTE_MAP,

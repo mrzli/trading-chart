@@ -12,11 +12,11 @@ import { getTakenTicks, canAddTick, addTakenTick } from './shared';
 export function processTimeTickOutputHour(
   input: TimeAxisProcessInput,
   existingTicks: readonly TimeDisplayType[],
-  currentTimeTickInterval: TimeTickTimeframeHour,
+  currentTimeTickTimeframe: TimeTickTimeframeHour,
 ): readonly TimeDisplayType[] {
   const { extendedItems, minTickItemDistance } = input;
 
-  const { value: tickIntervalValue } = currentTimeTickInterval;
+  const { value: tickIntervalValue } = currentTimeTickTimeframe;
 
   const transitionHours = mapGetOrThrow(TRANSITION_HOUR_MAP, tickIntervalValue);
   const transitionHourSet: ReadonlySet<number> = new Set(transitionHours);

@@ -12,11 +12,11 @@ import { TimeDisplayType } from '../types';
 export function processTimeTickOutputDay(
   input: TimeAxisProcessInput,
   existingTicks: readonly TimeDisplayType[],
-  currentTimeTickInterval: TimeTickTimeframeDay,
+  currentTimeTickTimeframe: TimeTickTimeframeDay,
 ): readonly TimeDisplayType[] {
   const { extendedItems, minTickItemDistance } = input;
 
-  const { value: tickIntervalValue } = currentTimeTickInterval;
+  const { value: tickIntervalValue } = currentTimeTickTimeframe;
 
   const transitionDays = mapGetOrThrow(TRANSITION_DAY_MAP, tickIntervalValue);
 

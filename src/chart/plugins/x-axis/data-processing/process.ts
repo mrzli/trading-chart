@@ -23,7 +23,7 @@ export function processTimeAxisData(
   const extendedItems = getTimeAxisExtendedItems(tickValueData, timezone);
 
   // get minimum distance between ticks, in terms of time
-  const timeTickInterval = getMinTimeTickTimeframe(input);
+  const timeTickTimeframe = getMinTimeTickTimeframe(input);
 
   // get minimum distance between ticks, in terms of items
   const minTickItemDistance = getMinTickDistance(input);
@@ -31,7 +31,7 @@ export function processTimeAxisData(
   const processInput: TimeAxisProcessInput = {
     timeAxisInput: input,
     extendedItems,
-    timeTickInterval,
+    timeTickTimeframe,
     minTickItemDistance,
   };
 

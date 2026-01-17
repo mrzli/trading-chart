@@ -10,11 +10,11 @@ import { getTakenTicks, canAddTick, addTakenTick } from './shared';
 export function processTimeTickOutputYear(
   input: TimeAxisProcessInput,
   existingTicks: readonly TimeDisplayType[],
-  currentTimeTickInterval: TimeTickTimeframeYear,
+  currentTimeTickTimeframe: TimeTickTimeframeYear,
 ): readonly TimeDisplayType[] {
   const { extendedItems, minTickItemDistance } = input;
 
-  const { value: tickIntervalValue } = currentTimeTickInterval;
+  const { value: tickIntervalValue } = currentTimeTickTimeframe;
 
   const updatedTicks: TimeDisplayType[] = [...existingTicks];
 

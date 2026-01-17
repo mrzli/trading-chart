@@ -21,7 +21,7 @@ import { TimeDisplayType } from './types';
 export function getTimeTickOutputItems(
   input: TimeAxisProcessInput,
 ): readonly TimeAxisOutputItem[] {
-  const { timeAxisInput, extendedItems, timeTickInterval } = input;
+  const { timeAxisInput, extendedItems, timeTickTimeframe } = input;
 
   const initialTicks: readonly TimeDisplayType[] = arrayOfConstant(
     extendedItems.length,
@@ -31,7 +31,7 @@ export function getTimeTickOutputItems(
   let ticks = initialTicks;
 
   const processingTickTimeframes = getTimeAxisProcessingTimeframeRange(
-    timeTickInterval,
+    timeTickTimeframe,
     timeAxisInput.timeframe,
     extendedItems[0].previousDateObject,
     extendedItems.at(-1)!.dateObject,
